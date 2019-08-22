@@ -67,6 +67,12 @@
     <Compile Include="Vista\FrmPrimerUso.Designer.cs">
       <DependentUpon>FrmPrimerUso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FrmPrimerUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmPrimerUsuario.Designer.cs">
+      <DependentUpon>FrmPrimerUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmRecuperar_Contraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmPrimerUso.resx">
       <DependentUpon>FrmPrimerUso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmPrimerUsuario.resx">
+      <DependentUpon>FrmPrimerUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRecuperar_Contraseña.resx">
       <DependentUpon>frmRecuperar_Contraseña.cs</DependentUpon>
@@ -149,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close_window_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sistema.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
