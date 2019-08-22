@@ -73,6 +73,12 @@
     <Compile Include="Vista\FrmPrimerUsuario.Designer.cs">
       <DependentUpon>FrmPrimerUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmRecuperar_Contraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmPrimerUsuario.resx">
       <DependentUpon>FrmPrimerUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRecuperar_Contraseña.resx">
       <DependentUpon>frmRecuperar_Contraseña.cs</DependentUpon>
@@ -161,6 +170,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sistema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crop-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full-screen-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

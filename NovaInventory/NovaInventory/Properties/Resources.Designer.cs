@@ -93,6 +93,16 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_button {
+            get {
+                object obj = ResourceManager.GetObject("cancel-button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_window_26px {
             get {
                 object obj = ResourceManager.GetObject("close_window_26px", resourceCulture);
@@ -106,6 +116,16 @@ namespace NovaInventory.Properties {
         internal static System.Drawing.Bitmap collapse_26px {
             get {
                 object obj = ResourceManager.GetObject("collapse_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crop_button {
+            get {
+                object obj = ResourceManager.GetObject("crop-button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +156,26 @@ namespace NovaInventory.Properties {
         internal static System.Drawing.Bitmap expand_26px {
             get {
                 object obj = ResourceManager.GetObject("expand_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap expand_button {
+            get {
+                object obj = ResourceManager.GetObject("expand-button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_screen_exit {
+            get {
+                object obj = ResourceManager.GetObject("full-screen-exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -37,7 +37,6 @@
             this.grpEmpresa = new System.Windows.Forms.GroupBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnExaminar = new System.Windows.Forms.Button();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtLegal = new System.Windows.Forms.TextBox();
             this.TxtNit = new System.Windows.Forms.TextBox();
@@ -54,18 +53,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnSalir = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripButton();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.grpContactos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
             this.grpEmpresa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // grpContactos
             // 
+            this.grpContactos.Controls.Add(this.button3);
             this.grpContactos.Controls.Add(this.button2);
             this.grpContactos.Controls.Add(this.button1);
             this.grpContactos.Controls.Add(this.dgvContactos);
@@ -73,7 +75,7 @@
             this.grpContactos.Controls.Add(this.label11);
             this.grpContactos.Location = new System.Drawing.Point(847, 38);
             this.grpContactos.Name = "grpContactos";
-            this.grpContactos.Size = new System.Drawing.Size(260, 493);
+            this.grpContactos.Size = new System.Drawing.Size(260, 510);
             this.grpContactos.TabIndex = 46;
             this.grpContactos.TabStop = false;
             this.grpContactos.Text = "Números Telefónicos";
@@ -113,7 +115,7 @@
             this.dgvContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContactos.Location = new System.Drawing.Point(26, 178);
             this.dgvContactos.Name = "dgvContactos";
-            this.dgvContactos.Size = new System.Drawing.Size(208, 298);
+            this.dgvContactos.Size = new System.Drawing.Size(208, 256);
             this.dgvContactos.TabIndex = 47;
             // 
             // maskedTextBox1
@@ -129,7 +131,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(23, 52);
+            this.label11.Location = new System.Drawing.Point(23, 60);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(140, 16);
@@ -157,7 +159,7 @@
             this.grpEmpresa.Controls.Add(this.label1);
             this.grpEmpresa.Location = new System.Drawing.Point(29, 38);
             this.grpEmpresa.Name = "grpEmpresa";
-            this.grpEmpresa.Size = new System.Drawing.Size(800, 493);
+            this.grpEmpresa.Size = new System.Drawing.Size(800, 510);
             this.grpEmpresa.TabIndex = 45;
             this.grpEmpresa.TabStop = false;
             this.grpEmpresa.Text = "Datos de la empresa";
@@ -169,17 +171,18 @@
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(581, 438);
+            this.BtnGuardar.Location = new System.Drawing.Point(581, 449);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(187, 38);
             this.BtnGuardar.TabIndex = 42;
             this.BtnGuardar.Text = "Guardar y Continuar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnExaminar
             // 
-            this.BtnExaminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BtnExaminar.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.BtnExaminar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
             this.BtnExaminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -191,17 +194,6 @@
             this.BtnExaminar.TabIndex = 41;
             this.BtnExaminar.Text = "Examinar";
             this.BtnExaminar.UseVisualStyleBackColor = false;
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.BackColor = System.Drawing.Color.White;
-            this.pbLogo.Location = new System.Drawing.Point(616, 76);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(126, 183);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 38;
-            this.pbLogo.TabStop = false;
             // 
             // TxtDireccion
             // 
@@ -339,7 +331,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(630, 56);
+            this.label10.Location = new System.Drawing.Point(630, 64);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 16);
@@ -379,14 +371,6 @@
             this.BtnSalir.Size = new System.Drawing.Size(38, 22);
             this.BtnSalir.Text = "Salir ";
             // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.toolStripLabel2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(104, 22);
-            this.toolStripLabel2.Text = "Elecnova System";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -397,6 +381,41 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(159, 22);
             this.toolStripLabel1.Text = "Configuración de primer uso";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.toolStripLabel2.Image = global::NovaInventory.Properties.Resources.sistema;
+            this.toolStripLabel2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(120, 22);
+            this.toolStripLabel2.Text = "Elecnova System";
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.White;
+            this.pbLogo.Location = new System.Drawing.Point(616, 76);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(126, 183);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 38;
+            this.pbLogo.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(26, 449);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(208, 38);
+            this.button3.TabIndex = 42;
+            this.button3.Text = "Finalizar Registro";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // FrmPrimerUso
             // 
@@ -410,14 +429,15 @@
             this.Name = "FrmPrimerUso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrimerUso";
+            this.Load += new System.EventHandler(this.FrmPrimerUso_Load);
             this.grpContactos.ResumeLayout(false);
             this.grpContactos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
             this.grpEmpresa.ResumeLayout(false);
             this.grpEmpresa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,5 +474,6 @@
         private System.Windows.Forms.ToolStripButton toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.Button button3;
     }
 }
