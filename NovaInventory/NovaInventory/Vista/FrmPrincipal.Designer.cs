@@ -29,7 +29,13 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.PanelSidebar = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,26 +50,17 @@
             this.administraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelDeNavegaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.gráficosYReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gráficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresarNuevoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarTodosLosProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelDeNavegaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gráficosYReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.gráficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verCatalogoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,6 +83,54 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.toolStripLabel1.Image = global::NovaInventory.Properties.Resources.sistema;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(107, 22);
+            this.toolStripLabel1.Text = "NovaInventory";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::NovaInventory.Properties.Resources.cancel_button;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Salir";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::NovaInventory.Properties.Resources.crop_button;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "Maximizar";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::NovaInventory.Properties.Resources.full_screen_exit;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "Restaurar a tamaño normal";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = global::NovaInventory.Properties.Resources.expand_button;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "Minimizar";
+            // 
             // panelMain
             // 
             this.panelMain.Controls.Add(this.PanelContenedor);
@@ -96,6 +141,14 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1280, 695);
             this.panelMain.TabIndex = 2;
+            // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(236, 24);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(1044, 671);
+            this.PanelContenedor.TabIndex = 2;
             // 
             // PanelSidebar
             // 
@@ -205,13 +258,22 @@
             // 
             this.controlDeProductosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresarNuevoProductoToolStripMenuItem,
-            this.mostrarTodosLosProductosToolStripMenuItem,
-            this.actualizarProductoToolStripMenuItem,
-            this.eliminarProductoToolStripMenuItem,
-            this.buscarProductoToolStripMenuItem});
+            this.mostrarTodosLosProductosToolStripMenuItem});
             this.controlDeProductosToolStripMenuItem.Name = "controlDeProductosToolStripMenuItem";
             this.controlDeProductosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.controlDeProductosToolStripMenuItem.Text = "Productos";
+            // 
+            // ingresarNuevoProductoToolStripMenuItem
+            // 
+            this.ingresarNuevoProductoToolStripMenuItem.Name = "ingresarNuevoProductoToolStripMenuItem";
+            this.ingresarNuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.ingresarNuevoProductoToolStripMenuItem.Text = "Ingresar nuevo producto";
+            // 
+            // mostrarTodosLosProductosToolStripMenuItem
+            // 
+            this.mostrarTodosLosProductosToolStripMenuItem.Name = "mostrarTodosLosProductosToolStripMenuItem";
+            this.mostrarTodosLosProductosToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.mostrarTodosLosProductosToolStripMenuItem.Text = "Mostrar Inventario";
             // 
             // verToolStripMenuItem
             // 
@@ -228,62 +290,6 @@
             this.panelDeNavegaciónToolStripMenuItem.Text = "Mostar panel de Navegación";
             this.panelDeNavegaciónToolStripMenuItem.Click += new System.EventHandler(this.panelDeNavegaciónToolStripMenuItem_Click);
             // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(236, 24);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1044, 671);
-            this.PanelContenedor.TabIndex = 2;
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.toolStripLabel1.Image = global::NovaInventory.Properties.Resources.sistema;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(107, 22);
-            this.toolStripLabel1.Text = "NovaInventory";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::NovaInventory.Properties.Resources.cancel_button;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Salir";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::NovaInventory.Properties.Resources.crop_button;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "Maximizar";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::NovaInventory.Properties.Resources.full_screen_exit;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "Restaurar a tamaño normal";
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::NovaInventory.Properties.Resources.expand_button;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "Minimizar";
-            // 
             // gráficosYReportesToolStripMenuItem
             // 
             this.gráficosYReportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -299,8 +305,20 @@
             this.ventasToolStripMenuItem,
             this.ventasToolStripMenuItem1});
             this.reporesToolStripMenuItem.Name = "reporesToolStripMenuItem";
-            this.reporesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.reporesToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.reporesToolStripMenuItem.Text = "Repotres";
+            // 
+            // ventasToolStripMenuItem
+            // 
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.ventasToolStripMenuItem.Text = "Compras";
+            // 
+            // ventasToolStripMenuItem1
+            // 
+            this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.ventasToolStripMenuItem1.Text = "Ventas";
             // 
             // gráficosToolStripMenuItem
             // 
@@ -308,62 +326,20 @@
             this.ventasToolStripMenuItem2,
             this.ventasToolStripMenuItem3});
             this.gráficosToolStripMenuItem.Name = "gráficosToolStripMenuItem";
-            this.gráficosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gráficosToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.gráficosToolStripMenuItem.Text = "Gráficos";
-            // 
-            // ventasToolStripMenuItem
-            // 
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.ventasToolStripMenuItem.Text = "Compras";
-            // 
-            // ventasToolStripMenuItem1
-            // 
-            this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.ventasToolStripMenuItem1.Text = "Ventas";
             // 
             // ventasToolStripMenuItem2
             // 
             this.ventasToolStripMenuItem2.Name = "ventasToolStripMenuItem2";
-            this.ventasToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
             this.ventasToolStripMenuItem2.Text = "Compras";
             // 
             // ventasToolStripMenuItem3
             // 
             this.ventasToolStripMenuItem3.Name = "ventasToolStripMenuItem3";
-            this.ventasToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem3.Size = new System.Drawing.Size(122, 22);
             this.ventasToolStripMenuItem3.Text = "Ventas";
-            // 
-            // ingresarNuevoProductoToolStripMenuItem
-            // 
-            this.ingresarNuevoProductoToolStripMenuItem.Name = "ingresarNuevoProductoToolStripMenuItem";
-            this.ingresarNuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.ingresarNuevoProductoToolStripMenuItem.Text = "Ingresar nuevo producto";
-            // 
-            // mostrarTodosLosProductosToolStripMenuItem
-            // 
-            this.mostrarTodosLosProductosToolStripMenuItem.Name = "mostrarTodosLosProductosToolStripMenuItem";
-            this.mostrarTodosLosProductosToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.mostrarTodosLosProductosToolStripMenuItem.Text = "Mostrar todos los productos";
-            // 
-            // actualizarProductoToolStripMenuItem
-            // 
-            this.actualizarProductoToolStripMenuItem.Name = "actualizarProductoToolStripMenuItem";
-            this.actualizarProductoToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.actualizarProductoToolStripMenuItem.Text = "Actualizar producto";
-            // 
-            // eliminarProductoToolStripMenuItem
-            // 
-            this.eliminarProductoToolStripMenuItem.Name = "eliminarProductoToolStripMenuItem";
-            this.eliminarProductoToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.eliminarProductoToolStripMenuItem.Text = "Eliminar producto";
-            // 
-            // buscarProductoToolStripMenuItem
-            // 
-            this.buscarProductoToolStripMenuItem.Name = "buscarProductoToolStripMenuItem";
-            this.buscarProductoToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.buscarProductoToolStripMenuItem.Text = "Buscar producto";
             // 
             // facturaciónToolStripMenuItem
             // 
@@ -446,9 +422,6 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem ingresarNuevoProductoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarTodosLosProductosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actualizarProductoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarProductoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarProductoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verCatalogoDeFacturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaVentaToolStripMenuItem;
