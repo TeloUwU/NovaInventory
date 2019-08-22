@@ -16,5 +16,18 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            /*Hay que validar boton para que cuando se registre la empresa
+             se pueda activar el groupbox de telefono, donde inicialmente el groupbox
+             de telefono estará inhabilitado.*/
+            grpContactos.Enabled = true;
+        }
+
+        private void FrmPrimerUso_Load(object sender, EventArgs e)
+        {
+            grpContactos.Enabled = false;
+        }
     }
 }
