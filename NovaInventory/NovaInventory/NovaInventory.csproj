@@ -123,6 +123,33 @@
   <ItemGroup>
     <None Include="Resources\book_26px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_post_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator_104px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_window_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_window_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_window_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_26px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -45,6 +45,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(121, 64);
@@ -55,6 +56,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(84, 263);
             this.label2.Name = "label2";
@@ -64,8 +66,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(359, 263);
+            this.label3.Location = new System.Drawing.Point(366, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 13);
             this.label3.TabIndex = 5;
@@ -73,6 +76,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(591, 263);
             this.label4.Name = "label4";
@@ -88,12 +92,12 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
             this.toolStrip1.TabIndex = 7;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.Text = "tsRecuperar_Contraseña";
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.Image = global::NovaInventory.Properties.Resources.delete_sign_26px;
+            this.toolStripButton1.Image = global::NovaInventory.Properties.Resources.close_window_26px;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(102, 22);
@@ -101,28 +105,38 @@
             // 
             // pbIntervenciónAdmi_Recu
             // 
+            this.pbIntervenciónAdmi_Recu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbIntervenciónAdmi_Recu.Image = global::NovaInventory.Properties.Resources.administrator_104px;
             this.pbIntervenciónAdmi_Recu.Location = new System.Drawing.Point(579, 116);
             this.pbIntervenciónAdmi_Recu.Name = "pbIntervenciónAdmi_Recu";
             this.pbIntervenciónAdmi_Recu.Size = new System.Drawing.Size(170, 135);
+            this.pbIntervenciónAdmi_Recu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbIntervenciónAdmi_Recu.TabIndex = 3;
             this.pbIntervenciónAdmi_Recu.TabStop = false;
             // 
             // pbCorreo_Recu
             // 
-            this.pbCorreo_Recu.Location = new System.Drawing.Point(319, 116);
+            this.pbCorreo_Recu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbCorreo_Recu.Image = global::NovaInventory.Properties.Resources.new_post_104px;
+            this.pbCorreo_Recu.Location = new System.Drawing.Point(326, 116);
             this.pbCorreo_Recu.Name = "pbCorreo_Recu";
             this.pbCorreo_Recu.Size = new System.Drawing.Size(170, 135);
+            this.pbCorreo_Recu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCorreo_Recu.TabIndex = 2;
             this.pbCorreo_Recu.TabStop = false;
             this.pbCorreo_Recu.Click += new System.EventHandler(this.pbCorreo_Recu_Click);
             // 
             // pbPreguntas_Recu
             // 
+            this.pbPreguntas_Recu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbPreguntas_Recu.Image = global::NovaInventory.Properties.Resources.book_104px;
             this.pbPreguntas_Recu.Location = new System.Drawing.Point(62, 116);
             this.pbPreguntas_Recu.Name = "pbPreguntas_Recu";
             this.pbPreguntas_Recu.Size = new System.Drawing.Size(170, 135);
+            this.pbPreguntas_Recu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPreguntas_Recu.TabIndex = 1;
             this.pbPreguntas_Recu.TabStop = false;
+            this.pbPreguntas_Recu.Click += new System.EventHandler(this.pbPreguntas_Recu_Click);
             // 
             // frmRecuperar_Contraseña
             // 

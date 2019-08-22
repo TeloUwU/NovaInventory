@@ -21,5 +21,17 @@ namespace NovaInventory.Vista
         {
 
         }
+
+        private void btnIniciar_Sesion_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lklRecuperar_Contraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRecuperar_Contraseña recu = new frmRecuperar_Contraseña();
+            recu.Show();
+            this.Hide();
+        }
     }
 }

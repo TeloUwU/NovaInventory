@@ -21,5 +21,12 @@ namespace NovaInventory.Vista
         {
 
         }
+
+        private void pbPreguntas_Recu_Click(object sender, EventArgs e)
+        {
+            frmPreguntasSeguridad_RecuperarContra pregunta = new frmPreguntasSeguridad_RecuperarContra();
+            pregunta.Show();
+            this.Hide();
+        }
     }
 }
