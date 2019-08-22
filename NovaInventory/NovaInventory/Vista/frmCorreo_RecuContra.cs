@@ -10,23 +10,18 @@ using System.Windows.Forms;
 
 namespace NovaInventory.Vista
 {
-    public partial class frmPreguntasSeguridad_RecuperarContra : Form
+    public partial class frmCorreo_RecuContra : Form
     {
-        public frmPreguntasSeguridad_RecuperarContra()
+        public frmCorreo_RecuContra()
         {
             InitializeComponent();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void btnCambiar_Recu_Click(object sender, EventArgs e)
         {
             frmRecuperar_Contraseña Recuperar = new frmRecuperar_Contraseña();
             Recuperar.Show();
-            this.Close();
-        }
-
-        private void frmPreguntasSeguridad_RecuperarContra_Load(object sender, EventArgs e)
-        {
-
+            this.Hide();
         }
     }
 }

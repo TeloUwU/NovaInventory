@@ -33,5 +33,29 @@ namespace NovaInventory.Vista
             recu.Show();
             this.Hide();
         }
+
+        private void btnCerrar_Login_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinmizar_Login_Click(object sender, EventArgs e)
+        {
+            WindowState  = FormWindowState.Minimized;
+        }
+
+        private void btnMaximizar_Login_Click(object sender, EventArgs e)
+        {
+            btnMaximizar_Login.Visible = false;
+            btnVentana_Login.Visible = true;
+            WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnVentana_Login_Click(object sender, EventArgs e)
+        {
+            btnMaximizar_Login.Visible = true;
+            btnVentana_Login.Visible = false;
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

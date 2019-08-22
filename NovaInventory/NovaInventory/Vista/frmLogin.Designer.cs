@@ -36,10 +36,10 @@
             this.lklRecuperar_Contraseña = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.btnCerrar_Login = new System.Windows.Forms.ToolStripButton();
+            this.btnMaximizar_Login = new System.Windows.Forms.ToolStripButton();
+            this.btnVentana_Login = new System.Windows.Forms.ToolStripButton();
+            this.btnMinmizar_Login = new System.Windows.Forms.ToolStripButton();
             this.pbLogo_Login = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Login)).BeginInit();
@@ -47,7 +47,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(261, 212);
@@ -58,7 +58,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(261, 244);
@@ -69,7 +69,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsuario.Location = new System.Drawing.Point(432, 212);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
@@ -77,7 +77,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraseña.Location = new System.Drawing.Point(432, 242);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
@@ -85,7 +85,7 @@
             // 
             // btnIniciar_Sesion
             // 
-            this.btnIniciar_Sesion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnIniciar_Sesion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnIniciar_Sesion.BackColor = System.Drawing.Color.Green;
             this.btnIniciar_Sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar_Sesion.ForeColor = System.Drawing.Color.White;
@@ -99,7 +99,7 @@
             // 
             // lklRecuperar_Contraseña
             // 
-            this.lklRecuperar_Contraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lklRecuperar_Contraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lklRecuperar_Contraseña.AutoSize = true;
             this.lklRecuperar_Contraseña.Location = new System.Drawing.Point(338, 336);
             this.lklRecuperar_Contraseña.Name = "lklRecuperar_Contraseña";
@@ -111,7 +111,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(336, 35);
@@ -123,60 +123,64 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4});
+            this.btnCerrar_Login,
+            this.btnMaximizar_Login,
+            this.btnVentana_Login,
+            this.btnMinmizar_Login});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // btnCerrar_Login
             // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::NovaInventory.Properties.Resources.close_window_26px;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.btnCerrar_Login.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnCerrar_Login.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCerrar_Login.Image = global::NovaInventory.Properties.Resources.close_window_26px;
+            this.btnCerrar_Login.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCerrar_Login.Name = "btnCerrar_Login";
+            this.btnCerrar_Login.Size = new System.Drawing.Size(23, 22);
+            this.btnCerrar_Login.Text = "toolStripButton1";
+            this.btnCerrar_Login.Click += new System.EventHandler(this.btnCerrar_Login_Click);
             // 
-            // toolStripButton2
+            // btnMaximizar_Login
             // 
-            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.btnMaximizar_Login.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMaximizar_Login.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMaximizar_Login.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
+            this.btnMaximizar_Login.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMaximizar_Login.Name = "btnMaximizar_Login";
+            this.btnMaximizar_Login.Size = new System.Drawing.Size(23, 22);
+            this.btnMaximizar_Login.Text = "toolStripButton2";
+            this.btnMaximizar_Login.Click += new System.EventHandler(this.btnMaximizar_Login_Click);
             // 
-            // toolStripButton3
+            // btnVentana_Login
             // 
-            this.toolStripButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
-            this.toolStripButton3.Visible = false;
+            this.btnVentana_Login.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnVentana_Login.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnVentana_Login.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
+            this.btnVentana_Login.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVentana_Login.Name = "btnVentana_Login";
+            this.btnVentana_Login.Size = new System.Drawing.Size(23, 22);
+            this.btnVentana_Login.Text = "toolStripButton3";
+            this.btnVentana_Login.Visible = false;
+            this.btnVentana_Login.Click += new System.EventHandler(this.btnVentana_Login_Click);
             // 
-            // toolStripButton4
+            // btnMinmizar_Login
             // 
-            this.toolStripButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::NovaInventory.Properties.Resources.minimize_window_26px;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.btnMinmizar_Login.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMinmizar_Login.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMinmizar_Login.Image = global::NovaInventory.Properties.Resources.minimize_window_26px;
+            this.btnMinmizar_Login.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMinmizar_Login.Name = "btnMinmizar_Login";
+            this.btnMinmizar_Login.Size = new System.Drawing.Size(23, 22);
+            this.btnMinmizar_Login.Text = "toolStripButton4";
+            this.btnMinmizar_Login.Click += new System.EventHandler(this.btnMinmizar_Login_Click);
             // 
             // pbLogo_Login
             // 
-            this.pbLogo_Login.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbLogo_Login.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbLogo_Login.Location = new System.Drawing.Point(305, 79);
             this.pbLogo_Login.Name = "pbLogo_Login";
             this.pbLogo_Login.Size = new System.Drawing.Size(182, 111);
@@ -222,9 +226,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pbLogo_Login;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton btnVentana_Login;
+        private System.Windows.Forms.ToolStripButton btnMinmizar_Login;
+        private System.Windows.Forms.ToolStripButton btnCerrar_Login;
+        private System.Windows.Forms.ToolStripButton btnMaximizar_Login;
     }
 }

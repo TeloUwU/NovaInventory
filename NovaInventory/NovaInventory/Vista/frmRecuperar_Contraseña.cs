@@ -26,7 +26,12 @@ namespace NovaInventory.Vista
         {
             frmPreguntasSeguridad_RecuperarContra pregunta = new frmPreguntasSeguridad_RecuperarContra();
             pregunta.Show();
-            this.Hide();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmLogin Login = new frmLogin();
+            Login.Show();
         }
     }
 }
