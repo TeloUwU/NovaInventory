@@ -24,7 +24,9 @@ namespace NovaInventory.Vista
 
         private void btnIniciar_Sesion_Click(object sender, EventArgs e)
         {
-            
+            FrmPrincipal Main = new FrmPrincipal();
+            Main.Show();
+            this.Hide();
         }
 
         private void lklRecuperar_Contraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -56,6 +58,11 @@ namespace NovaInventory.Vista
             btnMaximizar_Login.Visible = true;
             btnVentana_Login.Visible = false;
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCerrar_Login_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

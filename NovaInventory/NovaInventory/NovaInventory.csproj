@@ -97,6 +97,12 @@
     <Compile Include="Vista\frmRecuperar_Contraseña.Designer.cs">
       <DependentUpon>frmRecuperar_Contraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRecuperar_Contraseña.resx">
       <DependentUpon>frmRecuperar_Contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -203,6 +212,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\expand-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_104px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

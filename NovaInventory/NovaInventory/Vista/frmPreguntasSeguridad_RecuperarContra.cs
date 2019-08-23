@@ -28,5 +28,10 @@ namespace NovaInventory.Vista
         {
 
         }
+
+        private void btnCambiar_Recu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

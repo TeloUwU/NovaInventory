@@ -103,9 +103,9 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap close_window_26px {
+        internal static System.Drawing.Bitmap close_window_80px {
             get {
-                object obj = ResourceManager.GetObject("close_window_26px", resourceCulture);
+                object obj = ResourceManager.GetObject("close_window_80px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +183,16 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maximize_window_26px {
             get {
                 object obj = ResourceManager.GetObject("maximize_window_26px", resourceCulture);
@@ -216,6 +226,26 @@ namespace NovaInventory.Properties {
         internal static System.Drawing.Bitmap restore_window_26px {
             get {
                 object obj = ResourceManager.GetObject("restore_window_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sistema {
+            get {
+                object obj = ResourceManager.GetObject("sistema", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap undo_26px {
+            get {
+                object obj = ResourceManager.GetObject("undo_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
