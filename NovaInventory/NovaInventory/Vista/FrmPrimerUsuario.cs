@@ -32,7 +32,7 @@ namespace NovaInventory.Vista
             {
                
                     constructor_primer_usuario usuario = new constructor_primer_usuario();
-                    usuario.usuario = txtUsuario.Text;
+                    usuario.nickname = txtUsuario.Text;
                     usuario.nombre_usuario = txtUsuario.Text;
                     usuario.apellido_usuario = txtApellidos.Text;
                     usuario.Correo = txtEmail.Text;

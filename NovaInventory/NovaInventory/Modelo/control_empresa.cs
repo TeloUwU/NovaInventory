@@ -93,7 +93,7 @@ namespace NovaInventory.Controlador
                 retorno = Convert.ToBoolean(cmddel.ExecuteNonQuery());
                 if (retorno == true)
                 {
-                    MessageBox.Show("El numero de telefono fue eliminado correctamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El numero de telefono a sido eliminado correctamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -115,7 +115,7 @@ namespace NovaInventory.Controlador
             try
             {
                 string query5 = "SELECT id_datos_empresa FROM  Datos_empresa";
-                MySqlCommand cmdselect = new MySqlCommand(string.Format(query5, jj.id_nums_tel), Conexion.obtenerconexion());
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query5, jj.id_num_tel), Conexion.obtenerconexion());
                 datos = Convert.ToInt16(cmdselect.ExecuteScalar());
                 if (datos >= 1)
                 {

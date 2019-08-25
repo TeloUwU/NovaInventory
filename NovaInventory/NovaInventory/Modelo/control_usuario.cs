@@ -19,7 +19,7 @@ namespace NovaInventory.Modelo
             try
             {
                 MySqlCommand cmdselect = new MySqlCommand(query, Conexion.obtenerconexion());
-                cmdselect.Parameters.Add(new MySqlParameter("param1", usu.usuario));
+                cmdselect.Parameters.Add(new MySqlParameter("param1", usu.nickname));
                 cmdselect.Parameters.Add(new MySqlParameter("param2", usu.nit));
                 bool existencia = Convert.ToBoolean(cmdselect.ExecuteNonQuery());
                 if (existencia == false)
@@ -28,7 +28,7 @@ namespace NovaInventory.Modelo
                 }
                 else
                 {
-                    MySqlCommand comandoAgregar = new MySqlCommand(string.Format("INSERT INTO Datos_empresa(nickname, nombre_usuario, apellido_usuario, contraseña_usuario, telefono, Foto_usuario, Correo, nit, id_estados, id_tipo_usuarios, intentos, empresa)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", usu.usuario, usu.nombre_usuario, usu.apellido_usuario, usu.contraseña_usuario, usu.telefono, usu.Foto_usuario, usu.Correo, usu.nit, usu.id_estados, usu.id_tipo_usuarios, usu.intentos, usu.empresa), Conexion.obtenerconexion());
+                    MySqlCommand comandoAgregar = new MySqlCommand(string.Format("INSERT INTO Datos_empresa(nickname, nombre_usuario, apellido_usuario, contraseña_usuario, telefono, Foto_usuario, Correo, nit, id_estados, id_tipo_usuarios, intentos, empresa)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", usu.nickname, usu.nombre_usuario, usu.apellido_usuario, usu.contraseña_usuario, usu.telefono, usu.Foto_usuario, usu.Correo, usu.nit, usu.id_estados, usu.id_tipo_usuarios, usu.intentos, usu.empresa), Conexion.obtenerconexion());
                     retorno = Convert.ToInt32(comandoAgregar.ExecuteNonQuery());
                     if (retorno >= 1)
                     {
