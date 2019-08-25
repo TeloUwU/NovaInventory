@@ -40,9 +40,9 @@ namespace NovaInventory.Modelo
                 retorno = Convert.ToBoolean(cmdselect.ExecuteScalar());
                 return retorno;
             }
-            catch (Exception EX)
+            catch (Exception ex)
             {
-                MessageBox.Show("No se pudo verificar el usuario", EX + "error unico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudo verificar el usuario", ex + "error unico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
 
