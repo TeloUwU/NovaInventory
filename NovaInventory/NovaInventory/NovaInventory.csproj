@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\funcion_usuario_root.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vista\frmAdministrar_Empresa.cs">
@@ -192,7 +193,6 @@
   <ItemGroup>
     <Folder Include="Config\" />
     <Folder Include="Controlador\" />
-    <Folder Include="Modelo\" />
     <Folder Include="Reportes\" />
   </ItemGroup>
   <ItemGroup>
