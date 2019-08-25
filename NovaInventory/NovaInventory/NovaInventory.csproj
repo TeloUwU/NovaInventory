@@ -74,6 +74,12 @@
     <Compile Include="Vista\frmCorreo_RecuContra.Designer.cs">
       <DependentUpon>frmCorreo_RecuContra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmFacturacion.Designer.cs">
+      <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmItervencionAdmin_RecuCOntra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,12 +128,6 @@
     <Compile Include="Vista\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmVenta.Designer.cs">
-      <DependentUpon>frmVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +156,9 @@
     <EmbeddedResource Include="Vista\frmCorreo_RecuContra.resx">
       <DependentUpon>frmCorreo_RecuContra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmFacturacion.resx">
+      <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmItervencionAdmin_RecuCOntra.resx">
       <DependentUpon>frmItervencionAdmin_RecuCOntra.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,9 +182,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmVenta.resx">
-      <DependentUpon>frmVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
