@@ -41,6 +41,7 @@
             this.btnVentana_Login = new System.Windows.Forms.ToolStripButton();
             this.btnMinmizar_Login = new System.Windows.Forms.ToolStripButton();
             this.pbLogo_Login = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Login)).BeginInit();
             this.SuspendLayout();
@@ -194,12 +195,23 @@
             this.pbLogo_Login.TabIndex = 6;
             this.pbLogo_Login.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(407, 97);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(243, 137);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Primera vez?";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1067, 455);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pbLogo_Login);
             this.Controls.Add(this.label3);
@@ -237,5 +249,6 @@
         private System.Windows.Forms.ToolStripButton btnMinmizar_Login;
         private System.Windows.Forms.ToolStripButton btnCerrar_Login;
         private System.Windows.Forms.ToolStripButton btnMaximizar_Login;
+        private System.Windows.Forms.Button button1;
     }
 }
