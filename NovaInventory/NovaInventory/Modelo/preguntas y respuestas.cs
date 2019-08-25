@@ -25,7 +25,7 @@ namespace NovaInventory.Modelo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("oops, No se pudo cargar las preguntas contacte con el programador para solucionarlo" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("oops, No se pudo cargar las preguntas contacte con el programador para solucionarlo" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return datos;
             }
         }

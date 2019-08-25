@@ -8,7 +8,7 @@ namespace NovaInventory.Controlador
 {
     class constructor_para_celulares
     {
-        public int id_num_tel { get; set; }
+        public int id_nums_tel { get; set; }
         public string numeros_tel {get; set; }
         public int empresas { get; set; }
     }

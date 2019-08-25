@@ -9,6 +9,6 @@ namespace NovaInventory.Controlador
     class constructor_preguntas
     {
         public int id_pregunta { get; set; }
-        public string pregunta { get; set; }
+        public string preguntas { get; set; }
     }
 }

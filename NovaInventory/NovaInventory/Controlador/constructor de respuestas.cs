@@ -10,7 +10,7 @@ namespace NovaInventory.Controlador
     {
         public  int id_respuesta { get; set; }
         public int preguntas { get; set; }
-        public string Respuesta { get; set; }
+        public string Respuestas { get; set; }
         public int usuarioss { get; set; }
     }
 }
