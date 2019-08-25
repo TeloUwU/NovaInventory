@@ -135,12 +135,6 @@
     <Compile Include="Vista\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmVentas.Designer.cs">
-      <DependentUpon>frmVentas.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -186,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmVentas.resx">
-      <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -268,6 +259,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\book_104px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round-account-button-with-user-inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-button1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

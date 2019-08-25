@@ -135,7 +135,11 @@
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
             this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
-         
+            // 
+            // btnCambiar_Recu
+            // 
+            this.btnCambiar_Recu.Name = "btnCambiar_Recu";
+            this.btnCambiar_Recu.Size = new System.Drawing.Size(23, 22);
             // 
             // label2
             // 
@@ -155,9 +159,9 @@
             this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(452, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(325, 36);
+            this.label3.Size = new System.Drawing.Size(333, 36);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Ingresa tu resuesta \r\n(Personal, no necesariamente resonde la pregunta)";
+            this.label3.Text = "Ingresa tu resuesta \r\n(Personal, no necesariamente responde la pregunta)";
             // 
             // btnSelect_Preguntas
             // 
