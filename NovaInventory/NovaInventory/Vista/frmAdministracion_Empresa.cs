@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NovaInventory.Vista
 {
-    public partial class frmVenta : Form
+    public partial class frmAdministracion_Empresa : Form
     {
-        public frmVenta()
+        public frmAdministracion_Empresa()
         {
             InitializeComponent();
         }

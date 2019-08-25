@@ -103,6 +103,16 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_button1 {
+            get {
+                object obj = ResourceManager.GetObject("cancel-button1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_window_80px {
             get {
                 object obj = ResourceManager.GetObject("close_window_80px", resourceCulture);
@@ -226,6 +236,16 @@ namespace NovaInventory.Properties {
         internal static System.Drawing.Bitmap restore_window_26px {
             get {
                 object obj = ResourceManager.GetObject("restore_window_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap round_account_button_with_user_inside {
+            get {
+                object obj = ResourceManager.GetObject("round-account-button-with-user-inside", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

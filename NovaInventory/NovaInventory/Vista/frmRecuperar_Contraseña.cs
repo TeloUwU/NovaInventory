@@ -19,7 +19,9 @@ namespace NovaInventory.Vista
 
         private void pbCorreo_Recu_Click(object sender, EventArgs e)
         {
-
+            frmCorreo_RecuContra frm = new frmCorreo_RecuContra();
+            frm.Show();
+            this.Hide();
         }
 
         private void pbPreguntas_Recu_Click(object sender, EventArgs e)
@@ -41,6 +43,20 @@ namespace NovaInventory.Vista
             frmPreguntasSeguridad_RecuperarContra Pregunta = new frmPreguntasSeguridad_RecuperarContra();
             Pregunta.Show();
             this.Close();
+        }
+
+        private void pbPreguntas_Click(object sender, EventArgs e)
+        {
+            frmPreguntasSeguridad_RecuperarContra frm = new frmPreguntasSeguridad_RecuperarContra();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void pbIntervenciónAdmi_Recu_Click(object sender, EventArgs e)
+        {
+            frmItervencionAdmin_RecuContra frm = new frmItervencionAdmin_RecuContra();
+            frm.Show();
+            this.Hide();
         }
     }
 }
