@@ -9,7 +9,7 @@ namespace NovaInventory.Controlador
     class constructor_primer_usuario
     {
         public int id_usuarios { get; set; }
-        public string nickname { get; set; }
+        public string usuario { get; set; }
         public string nombre_usuario { get; set; }
         public string apellido_usuario { get; set; }
         public string contraseña_usuario { get; set; }
