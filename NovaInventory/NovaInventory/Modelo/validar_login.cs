@@ -39,7 +39,7 @@ namespace NovaInventory.Modelo
                         MySqlDataReader _reader = cmdselect.ExecuteReader();
                         while (_reader.Read())
                         {
-                            Constructor_login.nombres = _reader.GetString(2) + " ";
+                            Constructor_login.nombre = _reader.GetString(2) + " ";
                             Constructor_login.apellido = _reader.GetString(3) + " ";
                             Constructor_login.nivel = _reader.GetInt16(11);
                             if (rest >= 1)
