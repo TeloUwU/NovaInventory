@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NovaInventory.Vista;
+using NovaInventory.Controlador;
+using NovaInventory.Modelo;
 
 namespace NovaInventory.Vista
 {
@@ -25,16 +26,16 @@ namespace NovaInventory.Vista
             }
             else
             {
-                //Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
-                //Constructor_login.usuario = txtUsuario.Text;
-                //login.clave = txtContraseña.Text;
-                //bool datos = validar_login.acceso(login);
-                //if (datos == true)
-                //{
+                Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
+                Constructor_login.usuario = txtUsuario.Text;
+                login.clave = txtContraseña.Text;
+                bool datos = validar_login.acceso(login);
+                if (datos == true)
+                {
                     FrmPrincipal main = new FrmPrincipal();
                     main.Show();
                     this.Hide();
-                //}
+                }
 
             }
         }
