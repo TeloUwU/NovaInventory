@@ -33,10 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\OneDrive\Escritorio\clases tecnicas\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,13 +54,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\Conexion.cs" />
+    <Compile Include="Controlador\Actualizar_root.cs" />
     <Compile Include="Controlador\clsFunciones.cs" />
+    <Compile Include="Controlador\Config_Root.cs" />
     <Compile Include="Controlador\constructor de respuestas.cs" />
     <Compile Include="Controlador\constructor preguntas.cs" />
     <Compile Include="Controlador\Constructor_empresa.cs" />
     <Compile Include="Controlador\Constructor_login.cs" />
     <Compile Include="Controlador\constructor_para_celulares.cs" />
     <Compile Include="Controlador\constructor_primer_usuario.cs" />
+    <Compile Include="Modelo\Actualizar_Root.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
     <Compile Include="Modelo\preguntas y respuestas.cs" />
