@@ -20,6 +20,8 @@ namespace NovaInventory.Vista
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             PanelSidebar.Visible = false;
+            btnAdministrar_Empresas.Visible = false;
+            btnConfig_Root.Visible = false;
         }
 
         private void panelDeNavegaciónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace NovaInventory.Vista
 
         private void PanelContenedor_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -61,7 +63,30 @@ namespace NovaInventory.Vista
             WindowState = FormWindowState.Maximized;
         }
 
-        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfiguación_Sistema_Click(object sender, EventArgs e)
+        {
+            if (btnAdministrar_Empresas.Visible == true && btnConfig_Root.Visible == true)
+            {
+                btnAdministrar_Empresas.Visible = false;
+                btnConfig_Root.Visible = false;
+
+            }
+            else
+            {
+                btnConfig_Root.Visible = true;
+                btnAdministrar_Empresas.Visible = true;
+                btnAdministrar_Empresas.Location = new Point(23, 527);
+                btnConfig_Root.Location = new Point(23, 461);
+
+            }
+        }
+
+        private void btnConfig_Root_Click(object sender, EventArgs e)
         {
 
         }
