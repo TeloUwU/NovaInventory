@@ -30,9 +30,26 @@
         {
             this.tsPrincipal = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.btnCerrar_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnMaximizar_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnVentana_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnMinimizar_Principal = new System.Windows.Forms.ToolStripButton();
             this.panelMain = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.PanelSidebar = new System.Windows.Forms.Panel();
+            this.Kardex = new System.Windows.Forms.Button();
+            this.btnSalidas = new System.Windows.Forms.Button();
+            this.btnExistencias = new System.Windows.Forms.Button();
+            this.btnConfig_Root = new System.Windows.Forms.Button();
+            this.btnEntradas = new System.Windows.Forms.Button();
+            this.btnAdministrar_Empresas = new System.Windows.Forms.Button();
+            this.btnInformacion_Empresa = new System.Windows.Forms.Button();
+            this.btnBodegas = new System.Windows.Forms.Button();
+            this.btnConfiguación_Sistema = new System.Windows.Forms.Button();
+            this.btnProveedores = new System.Windows.Forms.Button();
+            this.btnInventario_Principal = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnEmpresa_Dropdown = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,11 +60,18 @@
             this.proveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bodegaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bodegaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioGeneralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioPorBodegaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresarNuevoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarTodosLosProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,30 +88,6 @@
             this.verCatalogoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.proveedorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.bodegaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnInventario_Principal = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
-            this.btnEmpresa_Dropdown = new System.Windows.Forms.Button();
-            this.btnProveedores = new System.Windows.Forms.Button();
-            this.btnBodegas = new System.Windows.Forms.Button();
-            this.btnInformacion_Empresa = new System.Windows.Forms.Button();
-            this.btnEntradas = new System.Windows.Forms.Button();
-            this.btnExistencias = new System.Windows.Forms.Button();
-            this.btnSalidas = new System.Windows.Forms.Button();
-            this.btnConfiguación_Sistema = new System.Windows.Forms.Button();
-            this.btnAdministrar_Empresas = new System.Windows.Forms.Button();
-            this.btnConfig_Root = new System.Windows.Forms.Button();
-            this.Kardex = new System.Windows.Forms.Button();
-            this.btnCerrar_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnMaximizar_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnVentana_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnMinimizar_Principal = new System.Windows.Forms.ToolStripButton();
             this.tsPrincipal.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.PanelSidebar.SuspendLayout();
@@ -113,6 +113,49 @@
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(0, 24);
+            // 
+            // btnCerrar_Principal
+            // 
+            this.btnCerrar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnCerrar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCerrar_Principal.Image = global::NovaInventory.Properties.Resources.close_window_80px;
+            this.btnCerrar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCerrar_Principal.Name = "btnCerrar_Principal";
+            this.btnCerrar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnCerrar_Principal.Text = "Salir";
+            this.btnCerrar_Principal.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // btnMaximizar_Principal
+            // 
+            this.btnMaximizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMaximizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMaximizar_Principal.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
+            this.btnMaximizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMaximizar_Principal.Name = "btnMaximizar_Principal";
+            this.btnMaximizar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnMaximizar_Principal.Text = "Maximizar";
+            this.btnMaximizar_Principal.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // btnVentana_Principal
+            // 
+            this.btnVentana_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnVentana_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnVentana_Principal.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
+            this.btnVentana_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVentana_Principal.Name = "btnVentana_Principal";
+            this.btnVentana_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnVentana_Principal.Text = "Restaurar a tamaño normal";
+            this.btnVentana_Principal.Visible = false;
+            // 
+            // btnMinimizar_Principal
+            // 
+            this.btnMinimizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMinimizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMinimizar_Principal.Image = global::NovaInventory.Properties.Resources.minimize_window_26px;
+            this.btnMinimizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMinimizar_Principal.Name = "btnMinimizar_Principal";
+            this.btnMinimizar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnMinimizar_Principal.Text = "Minimizar";
             // 
             // panelMain
             // 
@@ -155,6 +198,172 @@
             this.PanelSidebar.Name = "PanelSidebar";
             this.PanelSidebar.Size = new System.Drawing.Size(236, 665);
             this.PanelSidebar.TabIndex = 1;
+            // 
+            // Kardex
+            // 
+            this.Kardex.BackColor = System.Drawing.Color.Green;
+            this.Kardex.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Kardex.ForeColor = System.Drawing.Color.White;
+            this.Kardex.Location = new System.Drawing.Point(24, 339);
+            this.Kardex.Name = "Kardex";
+            this.Kardex.Size = new System.Drawing.Size(184, 68);
+            this.Kardex.TabIndex = 10;
+            this.Kardex.Text = "Visualizar Inventario";
+            this.Kardex.UseVisualStyleBackColor = false;
+            // 
+            // btnSalidas
+            // 
+            this.btnSalidas.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnSalidas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalidas.ForeColor = System.Drawing.Color.White;
+            this.btnSalidas.Location = new System.Drawing.Point(24, 339);
+            this.btnSalidas.Name = "btnSalidas";
+            this.btnSalidas.Size = new System.Drawing.Size(184, 60);
+            this.btnSalidas.TabIndex = 6;
+            this.btnSalidas.Text = "Ventas";
+            this.btnSalidas.UseVisualStyleBackColor = false;
+            this.btnSalidas.Visible = false;
+            // 
+            // btnExistencias
+            // 
+            this.btnExistencias.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnExistencias.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExistencias.ForeColor = System.Drawing.Color.White;
+            this.btnExistencias.Location = new System.Drawing.Point(24, 339);
+            this.btnExistencias.Name = "btnExistencias";
+            this.btnExistencias.Size = new System.Drawing.Size(184, 60);
+            this.btnExistencias.TabIndex = 5;
+            this.btnExistencias.Text = "Existencias";
+            this.btnExistencias.UseVisualStyleBackColor = false;
+            this.btnExistencias.Visible = false;
+            // 
+            // btnConfig_Root
+            // 
+            this.btnConfig_Root.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnConfig_Root.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig_Root.ForeColor = System.Drawing.Color.White;
+            this.btnConfig_Root.Location = new System.Drawing.Point(24, 527);
+            this.btnConfig_Root.Name = "btnConfig_Root";
+            this.btnConfig_Root.Size = new System.Drawing.Size(184, 60);
+            this.btnConfig_Root.TabIndex = 9;
+            this.btnConfig_Root.Text = "Configuración Usuario Root";
+            this.btnConfig_Root.UseVisualStyleBackColor = false;
+            this.btnConfig_Root.Visible = false;
+            this.btnConfig_Root.Click += new System.EventHandler(this.btnConfig_Root_Click);
+            // 
+            // btnEntradas
+            // 
+            this.btnEntradas.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnEntradas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntradas.ForeColor = System.Drawing.Color.White;
+            this.btnEntradas.Location = new System.Drawing.Point(24, 339);
+            this.btnEntradas.Name = "btnEntradas";
+            this.btnEntradas.Size = new System.Drawing.Size(184, 60);
+            this.btnEntradas.TabIndex = 4;
+            this.btnEntradas.Text = "Compras";
+            this.btnEntradas.UseVisualStyleBackColor = false;
+            this.btnEntradas.Visible = false;
+            // 
+            // btnAdministrar_Empresas
+            // 
+            this.btnAdministrar_Empresas.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnAdministrar_Empresas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministrar_Empresas.ForeColor = System.Drawing.Color.White;
+            this.btnAdministrar_Empresas.Location = new System.Drawing.Point(24, 527);
+            this.btnAdministrar_Empresas.Name = "btnAdministrar_Empresas";
+            this.btnAdministrar_Empresas.Size = new System.Drawing.Size(184, 60);
+            this.btnAdministrar_Empresas.TabIndex = 8;
+            this.btnAdministrar_Empresas.Text = "Administrar Empresas";
+            this.btnAdministrar_Empresas.UseVisualStyleBackColor = false;
+            this.btnAdministrar_Empresas.Visible = false;
+            // 
+            // btnInformacion_Empresa
+            // 
+            this.btnInformacion_Empresa.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnInformacion_Empresa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformacion_Empresa.ForeColor = System.Drawing.Color.White;
+            this.btnInformacion_Empresa.Location = new System.Drawing.Point(24, 212);
+            this.btnInformacion_Empresa.Name = "btnInformacion_Empresa";
+            this.btnInformacion_Empresa.Size = new System.Drawing.Size(184, 60);
+            this.btnInformacion_Empresa.TabIndex = 3;
+            this.btnInformacion_Empresa.Text = "Información de la Empresa";
+            this.btnInformacion_Empresa.UseVisualStyleBackColor = false;
+            this.btnInformacion_Empresa.Visible = false;
+            // 
+            // btnBodegas
+            // 
+            this.btnBodegas.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnBodegas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBodegas.ForeColor = System.Drawing.Color.White;
+            this.btnBodegas.Location = new System.Drawing.Point(24, 212);
+            this.btnBodegas.Name = "btnBodegas";
+            this.btnBodegas.Size = new System.Drawing.Size(184, 60);
+            this.btnBodegas.TabIndex = 2;
+            this.btnBodegas.Text = "Bodegas";
+            this.btnBodegas.UseVisualStyleBackColor = false;
+            this.btnBodegas.Visible = false;
+            // 
+            // btnConfiguación_Sistema
+            // 
+            this.btnConfiguación_Sistema.BackColor = System.Drawing.Color.Blue;
+            this.btnConfiguación_Sistema.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguación_Sistema.ForeColor = System.Drawing.Color.White;
+            this.btnConfiguación_Sistema.Location = new System.Drawing.Point(12, 593);
+            this.btnConfiguación_Sistema.Name = "btnConfiguación_Sistema";
+            this.btnConfiguación_Sistema.Size = new System.Drawing.Size(205, 60);
+            this.btnConfiguación_Sistema.TabIndex = 7;
+            this.btnConfiguación_Sistema.Text = "Configuración del Sistema";
+            this.btnConfiguación_Sistema.UseVisualStyleBackColor = false;
+            this.btnConfiguación_Sistema.Click += new System.EventHandler(this.btnConfiguación_Sistema_Click);
+            // 
+            // btnProveedores
+            // 
+            this.btnProveedores.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnProveedores.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedores.ForeColor = System.Drawing.Color.White;
+            this.btnProveedores.Location = new System.Drawing.Point(24, 212);
+            this.btnProveedores.Name = "btnProveedores";
+            this.btnProveedores.Size = new System.Drawing.Size(184, 60);
+            this.btnProveedores.TabIndex = 1;
+            this.btnProveedores.Text = "Proveedores";
+            this.btnProveedores.UseVisualStyleBackColor = false;
+            this.btnProveedores.Visible = false;
+            // 
+            // btnInventario_Principal
+            // 
+            this.btnInventario_Principal.BackColor = System.Drawing.Color.Green;
+            this.btnInventario_Principal.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario_Principal.ForeColor = System.Drawing.Color.White;
+            this.btnInventario_Principal.Location = new System.Drawing.Point(12, 316);
+            this.btnInventario_Principal.Name = "btnInventario_Principal";
+            this.btnInventario_Principal.Size = new System.Drawing.Size(205, 69);
+            this.btnInventario_Principal.TabIndex = 0;
+            this.btnInventario_Principal.Text = "Inventario";
+            this.btnInventario_Principal.UseVisualStyleBackColor = false;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.Green;
+            this.btnUsuarios.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Location = new System.Drawing.Point(12, 74);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(205, 69);
+            this.btnUsuarios.TabIndex = 1;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            // 
+            // btnEmpresa_Dropdown
+            // 
+            this.btnEmpresa_Dropdown.BackColor = System.Drawing.Color.Green;
+            this.btnEmpresa_Dropdown.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpresa_Dropdown.ForeColor = System.Drawing.Color.White;
+            this.btnEmpresa_Dropdown.Location = new System.Drawing.Point(12, 189);
+            this.btnEmpresa_Dropdown.Name = "btnEmpresa_Dropdown";
+            this.btnEmpresa_Dropdown.Size = new System.Drawing.Size(205, 69);
+            this.btnEmpresa_Dropdown.TabIndex = 3;
+            this.btnEmpresa_Dropdown.Text = "Empresa";
+            this.btnEmpresa_Dropdown.UseVisualStyleBackColor = false;
             // 
             // menuStrip1
             // 
@@ -238,6 +447,48 @@
             this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.usuarioToolStripMenuItem.Text = "Usuario";
             // 
+            // añadirToolStripMenuItem
+            // 
+            this.añadirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productoToolStripMenuItem1,
+            this.facturaToolStripMenuItem1,
+            this.proveedorToolStripMenuItem1,
+            this.bodegaToolStripMenuItem1,
+            this.usuarioToolStripMenuItem1});
+            this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.añadirToolStripMenuItem.Text = "Añadir";
+            // 
+            // productoToolStripMenuItem1
+            // 
+            this.productoToolStripMenuItem1.Name = "productoToolStripMenuItem1";
+            this.productoToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.productoToolStripMenuItem1.Text = "Producto";
+            // 
+            // facturaToolStripMenuItem1
+            // 
+            this.facturaToolStripMenuItem1.Name = "facturaToolStripMenuItem1";
+            this.facturaToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.facturaToolStripMenuItem1.Text = "Factura";
+            // 
+            // proveedorToolStripMenuItem1
+            // 
+            this.proveedorToolStripMenuItem1.Name = "proveedorToolStripMenuItem1";
+            this.proveedorToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.proveedorToolStripMenuItem1.Text = "Proveedor";
+            // 
+            // bodegaToolStripMenuItem1
+            // 
+            this.bodegaToolStripMenuItem1.Name = "bodegaToolStripMenuItem1";
+            this.bodegaToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.bodegaToolStripMenuItem1.Text = "Bodega";
+            // 
+            // usuarioToolStripMenuItem1
+            // 
+            this.usuarioToolStripMenuItem1.Name = "usuarioToolStripMenuItem1";
+            this.usuarioToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
+            this.usuarioToolStripMenuItem1.Text = "Usuario";
+            // 
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -275,6 +526,12 @@
             this.controlDeUsuariosToolStripMenuItem.Name = "controlDeUsuariosToolStripMenuItem";
             this.controlDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.controlDeUsuariosToolStripMenuItem.Text = "Control de usuarios";
+            // 
+            // ingresarUsuarioToolStripMenuItem
+            // 
+            this.ingresarUsuarioToolStripMenuItem.Name = "ingresarUsuarioToolStripMenuItem";
+            this.ingresarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
+            this.ingresarUsuarioToolStripMenuItem.Text = "Ingresar Usuario";
             // 
             // controlDeProductosToolStripMenuItem
             // 
@@ -391,262 +648,6 @@
             this.nuevaCompraToolStripMenuItem.Name = "nuevaCompraToolStripMenuItem";
             this.nuevaCompraToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
             this.nuevaCompraToolStripMenuItem.Text = "Nueva Compra";
-            // 
-            // ingresarUsuarioToolStripMenuItem
-            // 
-            this.ingresarUsuarioToolStripMenuItem.Name = "ingresarUsuarioToolStripMenuItem";
-            this.ingresarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.ingresarUsuarioToolStripMenuItem.Text = "Ingresar Usuario";
-            // 
-            // añadirToolStripMenuItem
-            // 
-            this.añadirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productoToolStripMenuItem1,
-            this.facturaToolStripMenuItem1,
-            this.proveedorToolStripMenuItem1,
-            this.bodegaToolStripMenuItem1,
-            this.usuarioToolStripMenuItem1});
-            this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
-            this.añadirToolStripMenuItem.Text = "Añadir";
-            // 
-            // productoToolStripMenuItem1
-            // 
-            this.productoToolStripMenuItem1.Name = "productoToolStripMenuItem1";
-            this.productoToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
-            this.productoToolStripMenuItem1.Text = "Producto";
-            // 
-            // facturaToolStripMenuItem1
-            // 
-            this.facturaToolStripMenuItem1.Name = "facturaToolStripMenuItem1";
-            this.facturaToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
-            this.facturaToolStripMenuItem1.Text = "Factura";
-            // 
-            // proveedorToolStripMenuItem1
-            // 
-            this.proveedorToolStripMenuItem1.Name = "proveedorToolStripMenuItem1";
-            this.proveedorToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
-            this.proveedorToolStripMenuItem1.Text = "Proveedor";
-            // 
-            // bodegaToolStripMenuItem1
-            // 
-            this.bodegaToolStripMenuItem1.Name = "bodegaToolStripMenuItem1";
-            this.bodegaToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
-            this.bodegaToolStripMenuItem1.Text = "Bodega";
-            // 
-            // usuarioToolStripMenuItem1
-            // 
-            this.usuarioToolStripMenuItem1.Name = "usuarioToolStripMenuItem1";
-            this.usuarioToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
-            this.usuarioToolStripMenuItem1.Text = "Usuario";
-            // 
-            // btnInventario_Principal
-            // 
-            this.btnInventario_Principal.BackColor = System.Drawing.Color.Green;
-            this.btnInventario_Principal.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventario_Principal.ForeColor = System.Drawing.Color.White;
-            this.btnInventario_Principal.Location = new System.Drawing.Point(12, 316);
-            this.btnInventario_Principal.Name = "btnInventario_Principal";
-            this.btnInventario_Principal.Size = new System.Drawing.Size(205, 69);
-            this.btnInventario_Principal.TabIndex = 0;
-            this.btnInventario_Principal.Text = "Inventario";
-            this.btnInventario_Principal.UseVisualStyleBackColor = false;
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.Green;
-            this.btnUsuarios.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Location = new System.Drawing.Point(12, 74);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(205, 69);
-            this.btnUsuarios.TabIndex = 1;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            // 
-            // btnEmpresa_Dropdown
-            // 
-            this.btnEmpresa_Dropdown.BackColor = System.Drawing.Color.Green;
-            this.btnEmpresa_Dropdown.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpresa_Dropdown.ForeColor = System.Drawing.Color.White;
-            this.btnEmpresa_Dropdown.Location = new System.Drawing.Point(12, 189);
-            this.btnEmpresa_Dropdown.Name = "btnEmpresa_Dropdown";
-            this.btnEmpresa_Dropdown.Size = new System.Drawing.Size(205, 69);
-            this.btnEmpresa_Dropdown.TabIndex = 3;
-            this.btnEmpresa_Dropdown.Text = "Empresa";
-            this.btnEmpresa_Dropdown.UseVisualStyleBackColor = false;
-            // 
-            // btnProveedores
-            // 
-            this.btnProveedores.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnProveedores.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedores.ForeColor = System.Drawing.Color.White;
-            this.btnProveedores.Location = new System.Drawing.Point(24, 212);
-            this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(184, 60);
-            this.btnProveedores.TabIndex = 1;
-            this.btnProveedores.Text = "Proveedores";
-            this.btnProveedores.UseVisualStyleBackColor = false;
-            this.btnProveedores.Visible = false;
-            // 
-            // btnBodegas
-            // 
-            this.btnBodegas.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnBodegas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBodegas.ForeColor = System.Drawing.Color.White;
-            this.btnBodegas.Location = new System.Drawing.Point(24, 212);
-            this.btnBodegas.Name = "btnBodegas";
-            this.btnBodegas.Size = new System.Drawing.Size(184, 60);
-            this.btnBodegas.TabIndex = 2;
-            this.btnBodegas.Text = "Bodegas";
-            this.btnBodegas.UseVisualStyleBackColor = false;
-            this.btnBodegas.Visible = false;
-            // 
-            // btnInformacion_Empresa
-            // 
-            this.btnInformacion_Empresa.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnInformacion_Empresa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInformacion_Empresa.ForeColor = System.Drawing.Color.White;
-            this.btnInformacion_Empresa.Location = new System.Drawing.Point(24, 212);
-            this.btnInformacion_Empresa.Name = "btnInformacion_Empresa";
-            this.btnInformacion_Empresa.Size = new System.Drawing.Size(184, 60);
-            this.btnInformacion_Empresa.TabIndex = 3;
-            this.btnInformacion_Empresa.Text = "Información de la Empresa";
-            this.btnInformacion_Empresa.UseVisualStyleBackColor = false;
-            this.btnInformacion_Empresa.Visible = false;
-            // 
-            // btnEntradas
-            // 
-            this.btnEntradas.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnEntradas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntradas.ForeColor = System.Drawing.Color.White;
-            this.btnEntradas.Location = new System.Drawing.Point(24, 339);
-            this.btnEntradas.Name = "btnEntradas";
-            this.btnEntradas.Size = new System.Drawing.Size(184, 60);
-            this.btnEntradas.TabIndex = 4;
-            this.btnEntradas.Text = "Compras";
-            this.btnEntradas.UseVisualStyleBackColor = false;
-            this.btnEntradas.Visible = false;
-            // 
-            // btnExistencias
-            // 
-            this.btnExistencias.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnExistencias.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExistencias.ForeColor = System.Drawing.Color.White;
-            this.btnExistencias.Location = new System.Drawing.Point(24, 339);
-            this.btnExistencias.Name = "btnExistencias";
-            this.btnExistencias.Size = new System.Drawing.Size(184, 60);
-            this.btnExistencias.TabIndex = 5;
-            this.btnExistencias.Text = "Existencias";
-            this.btnExistencias.UseVisualStyleBackColor = false;
-            this.btnExistencias.Visible = false;
-            // 
-            // btnSalidas
-            // 
-            this.btnSalidas.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnSalidas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalidas.ForeColor = System.Drawing.Color.White;
-            this.btnSalidas.Location = new System.Drawing.Point(24, 339);
-            this.btnSalidas.Name = "btnSalidas";
-            this.btnSalidas.Size = new System.Drawing.Size(184, 60);
-            this.btnSalidas.TabIndex = 6;
-            this.btnSalidas.Text = "Ventas";
-            this.btnSalidas.UseVisualStyleBackColor = false;
-            this.btnSalidas.Visible = false;
-            // 
-            // btnConfiguación_Sistema
-            // 
-            this.btnConfiguación_Sistema.BackColor = System.Drawing.Color.Blue;
-            this.btnConfiguación_Sistema.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguación_Sistema.ForeColor = System.Drawing.Color.White;
-            this.btnConfiguación_Sistema.Location = new System.Drawing.Point(12, 593);
-            this.btnConfiguación_Sistema.Name = "btnConfiguación_Sistema";
-            this.btnConfiguación_Sistema.Size = new System.Drawing.Size(205, 60);
-            this.btnConfiguación_Sistema.TabIndex = 7;
-            this.btnConfiguación_Sistema.Text = "Configuración del Sistema";
-            this.btnConfiguación_Sistema.UseVisualStyleBackColor = false;
-            this.btnConfiguación_Sistema.Click += new System.EventHandler(this.btnConfiguación_Sistema_Click);
-            // 
-            // btnAdministrar_Empresas
-            // 
-            this.btnAdministrar_Empresas.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnAdministrar_Empresas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrar_Empresas.ForeColor = System.Drawing.Color.White;
-            this.btnAdministrar_Empresas.Location = new System.Drawing.Point(24, 527);
-            this.btnAdministrar_Empresas.Name = "btnAdministrar_Empresas";
-            this.btnAdministrar_Empresas.Size = new System.Drawing.Size(184, 60);
-            this.btnAdministrar_Empresas.TabIndex = 8;
-            this.btnAdministrar_Empresas.Text = "Administrar Empresas";
-            this.btnAdministrar_Empresas.UseVisualStyleBackColor = false;
-            this.btnAdministrar_Empresas.Visible = false;
-            // 
-            // btnConfig_Root
-            // 
-            this.btnConfig_Root.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnConfig_Root.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfig_Root.ForeColor = System.Drawing.Color.White;
-            this.btnConfig_Root.Location = new System.Drawing.Point(24, 527);
-            this.btnConfig_Root.Name = "btnConfig_Root";
-            this.btnConfig_Root.Size = new System.Drawing.Size(184, 60);
-            this.btnConfig_Root.TabIndex = 9;
-            this.btnConfig_Root.Text = "Configuración Usuario Root";
-            this.btnConfig_Root.UseVisualStyleBackColor = false;
-            this.btnConfig_Root.Visible = false;
-            // 
-            // Kardex
-            // 
-            this.Kardex.BackColor = System.Drawing.Color.Green;
-            this.Kardex.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Kardex.ForeColor = System.Drawing.Color.White;
-            this.Kardex.Location = new System.Drawing.Point(24, 339);
-            this.Kardex.Name = "Kardex";
-            this.Kardex.Size = new System.Drawing.Size(184, 68);
-            this.Kardex.TabIndex = 10;
-            this.Kardex.Text = "Visualizar Inventario";
-            this.Kardex.UseVisualStyleBackColor = false;
-            // 
-            // btnCerrar_Principal
-            // 
-            this.btnCerrar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnCerrar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCerrar_Principal.Image = global::NovaInventory.Properties.Resources.close_window_80px;
-            this.btnCerrar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCerrar_Principal.Name = "btnCerrar_Principal";
-            this.btnCerrar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnCerrar_Principal.Text = "Salir";
-            this.btnCerrar_Principal.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // btnMaximizar_Principal
-            // 
-            this.btnMaximizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnMaximizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnMaximizar_Principal.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
-            this.btnMaximizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMaximizar_Principal.Name = "btnMaximizar_Principal";
-            this.btnMaximizar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnMaximizar_Principal.Text = "Maximizar";
-            this.btnMaximizar_Principal.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // btnVentana_Principal
-            // 
-            this.btnVentana_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnVentana_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnVentana_Principal.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
-            this.btnVentana_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnVentana_Principal.Name = "btnVentana_Principal";
-            this.btnVentana_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnVentana_Principal.Text = "Restaurar a tamaño normal";
-            this.btnVentana_Principal.Visible = false;
-            // 
-            // btnMinimizar_Principal
-            // 
-            this.btnMinimizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnMinimizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnMinimizar_Principal.Image = global::NovaInventory.Properties.Resources.minimize_window_26px;
-            this.btnMinimizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMinimizar_Principal.Name = "btnMinimizar_Principal";
-            this.btnMinimizar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnMinimizar_Principal.Text = "Minimizar";
             // 
             // FrmPrincipal
             // 

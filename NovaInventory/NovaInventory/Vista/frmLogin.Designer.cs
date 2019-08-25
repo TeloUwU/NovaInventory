@@ -127,6 +127,7 @@
             this.label3.Size = new System.Drawing.Size(169, 37);
             this.label3.TabIndex = 5;
             this.label3.Text = "Inicia Sesión";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // toolStrip1
             // 
@@ -144,11 +145,8 @@
             // 
             // btnCerrar_Login
             // 
-            this.btnCerrar_Login.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnCerrar_Login.Image = global::NovaInventory.Properties.Resources.close_window_80px;
             this.btnCerrar_Login.Name = "btnCerrar_Login";
-            this.btnCerrar_Login.Size = new System.Drawing.Size(24, 24);
-            this.btnCerrar_Login.Click += new System.EventHandler(this.btnCerrar_Login_Click_1);
+            this.btnCerrar_Login.Size = new System.Drawing.Size(23, 24);
             // 
             // btnMaximizar_Login
             // 

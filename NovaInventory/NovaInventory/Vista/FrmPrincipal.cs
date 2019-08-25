@@ -85,5 +85,10 @@ namespace NovaInventory.Vista
 
             }
         }
+
+        private void btnConfig_Root_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
