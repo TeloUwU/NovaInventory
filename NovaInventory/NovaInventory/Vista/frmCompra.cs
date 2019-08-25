@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace NovaInventory.Vista
 {
-    public partial class frmVentas : Form
+    public partial class frmCompra : Form
     {
-        public frmVentas()
+        public frmCompra()
         {
             InitializeComponent();
         }
 
-        private void frmVentas_Load(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmCompra_Load(object sender, EventArgs e)
         {
 
         }
