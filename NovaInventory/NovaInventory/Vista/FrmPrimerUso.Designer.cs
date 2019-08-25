@@ -160,6 +160,7 @@
             // 
             // grpEmpresa
             // 
+            this.grpEmpresa.Controls.Add(this.textBox1);
             this.grpEmpresa.Controls.Add(this.BtnGuardar);
             this.grpEmpresa.Controls.Add(this.BtnExaminar);
             this.grpEmpresa.Controls.Add(this.pbLogo);
@@ -423,7 +424,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1447, 30);
+            this.textBox1.Location = new System.Drawing.Point(1031, 22);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(29, 22);
             this.textBox1.TabIndex = 43;
@@ -433,7 +434,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1511, 704);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.grpContactos);
             this.Controls.Add(this.grpEmpresa);
