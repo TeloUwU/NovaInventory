@@ -68,10 +68,11 @@
             this.txtId = new System.Windows.Forms.ToolStripTextBox();
             this.lblIdusuario = new System.Windows.Forms.ToolStripLabel();
             this.label15 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_cel = new System.Windows.Forms.MaskedTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.CargarImagen = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
@@ -133,6 +134,7 @@
             this.BtnGuardar.TabIndex = 18;
             this.BtnGuardar.Text = "Continuar...";
             this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnExaminar
             // 
@@ -147,6 +149,7 @@
             this.BtnExaminar.TabIndex = 13;
             this.BtnExaminar.Text = "Cargar Imagen";
             this.BtnExaminar.UseVisualStyleBackColor = false;
+            this.BtnExaminar.Click += new System.EventHandler(this.BtnExaminar_Click);
             // 
             // cmbTipoUsuario
             // 
@@ -467,13 +470,13 @@
             this.label15.TabIndex = 40;
             this.label15.Text = "Numero Telefonico:";
             // 
-            // maskedTextBox1
+            // txt_cel
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(424, 175);
-            this.maskedTextBox1.Mask = "(000) 0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(312, 24);
-            this.maskedTextBox1.TabIndex = 6;
+            this.txt_cel.Location = new System.Drawing.Point(424, 175);
+            this.txt_cel.Mask = "(000) 0000-0000";
+            this.txt_cel.Name = "txt_cel";
+            this.txt_cel.Size = new System.Drawing.Size(312, 24);
+            this.txt_cel.TabIndex = 6;
             // 
             // textBox1
             // 
@@ -502,12 +505,16 @@
             this.pbFoto.TabIndex = 52;
             this.pbFoto.TabStop = false;
             // 
+            // CargarImagen
+            // 
+            this.CargarImagen.FileName = "openFileDialog1";
+            // 
             // FrmPrimerUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1041, 720);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txt_cel);
             this.Controls.Add(this.cmbPregunta4);
             this.Controls.Add(this.cmbPregunta3);
             this.Controls.Add(this.cmbPregunta2);
@@ -599,10 +606,11 @@
         private System.Windows.Forms.ToolStripTextBox txtId;
         private System.Windows.Forms.ToolStripLabel lblIdusuario;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txt_cel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.OpenFileDialog CargarImagen;
     }
 }

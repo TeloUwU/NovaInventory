@@ -60,5 +60,10 @@ namespace NovaInventory.Vista
 
             WindowState = FormWindowState.Maximized;
         }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

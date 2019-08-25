@@ -33,9 +33,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvContactos = new System.Windows.Forms.DataGridView();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_cel = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.grpEmpresa = new System.Windows.Forms.GroupBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnExaminar = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
@@ -58,6 +59,7 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.CargarImagen = new System.Windows.Forms.OpenFileDialog();
             this.grpContactos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
             this.grpEmpresa.SuspendLayout();
@@ -71,7 +73,7 @@
             this.grpContactos.Controls.Add(this.button2);
             this.grpContactos.Controls.Add(this.button1);
             this.grpContactos.Controls.Add(this.dgvContactos);
-            this.grpContactos.Controls.Add(this.maskedTextBox1);
+            this.grpContactos.Controls.Add(this.txt_cel);
             this.grpContactos.Controls.Add(this.label11);
             this.grpContactos.Location = new System.Drawing.Point(847, 38);
             this.grpContactos.Name = "grpContactos";
@@ -94,6 +96,7 @@
             this.button3.TabIndex = 42;
             this.button3.Text = "Finalizar Registro";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -109,6 +112,7 @@
             this.button2.TabIndex = 42;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -124,6 +128,7 @@
             this.button1.TabIndex = 42;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvContactos
             // 
@@ -132,14 +137,15 @@
             this.dgvContactos.Name = "dgvContactos";
             this.dgvContactos.Size = new System.Drawing.Size(208, 256);
             this.dgvContactos.TabIndex = 47;
+            this.dgvContactos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContactos_CellClick);
             // 
-            // maskedTextBox1
+            // txt_cel
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(26, 76);
-            this.maskedTextBox1.Mask = "0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(208, 20);
-            this.maskedTextBox1.TabIndex = 46;
+            this.txt_cel.Location = new System.Drawing.Point(26, 76);
+            this.txt_cel.Mask = "0000-0000";
+            this.txt_cel.Name = "txt_cel";
+            this.txt_cel.Size = new System.Drawing.Size(208, 20);
+            this.txt_cel.TabIndex = 46;
             // 
             // label11
             // 
@@ -155,6 +161,7 @@
             // 
             // grpEmpresa
             // 
+            this.grpEmpresa.Controls.Add(this.txt_id);
             this.grpEmpresa.Controls.Add(this.BtnGuardar);
             this.grpEmpresa.Controls.Add(this.BtnExaminar);
             this.grpEmpresa.Controls.Add(this.pbLogo);
@@ -178,6 +185,14 @@
             this.grpEmpresa.TabIndex = 45;
             this.grpEmpresa.TabStop = false;
             this.grpEmpresa.Text = "Datos de la empresa";
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(40, 20);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(38, 20);
+            this.txt_id.TabIndex = 43;
+            this.txt_id.Visible = false;
             // 
             // BtnGuardar
             // 
@@ -209,6 +224,7 @@
             this.BtnExaminar.TabIndex = 41;
             this.BtnExaminar.Text = "Examinar";
             this.BtnExaminar.UseVisualStyleBackColor = false;
+            this.BtnExaminar.Click += new System.EventHandler(this.BtnExaminar_Click);
             // 
             // pbLogo
             // 
@@ -413,6 +429,10 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(176, 22);
             this.toolStripLabel1.Text = "Configuración de primer uso";
             // 
+            // CargarImagen
+            // 
+            this.CargarImagen.FileName = "openFileDialog1";
+            // 
             // FrmPrimerUso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,7 +465,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvContactos;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txt_cel;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox grpEmpresa;
         private System.Windows.Forms.Button BtnGuardar;
@@ -471,5 +491,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.OpenFileDialog CargarImagen;
+        private System.Windows.Forms.TextBox txt_id;
     }
 }
