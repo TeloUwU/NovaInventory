@@ -15,11 +15,12 @@ namespace NovaInventory.Modelo
         public static bool acceso(Constructor_login log)
         {
             bool retorno = false;
-            string query = "SELECT * FROM tbusuarios WHERE nickname = ?user";
+            string query = "SELECT * FROM tbusuarios WHERE nickname = ?user AND contraseña_usuario = ?pass";
             try
             {
                 MySqlCommand cmdselect = new MySqlCommand(query, Conexion.obtenerconexion());
                 cmdselect.Parameters.Add(new MySqlParameter("user", Constructor_login.usuario));
+                cmdselect.Parameters.Add(new MySqlParameter("pass", log.clave));
                 retorno = Convert.ToBoolean(cmdselect.ExecuteScalar());
                 if (retorno == true)
                 {
@@ -83,7 +84,7 @@ namespace NovaInventory.Modelo
                 }
                 else
                 {
-                    MessageBox.Show("El usuario ingresado no esta en la base de datos", "Verifique los campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("El usuario o la contraseña ingresado no son los correctos", "Verifique los campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 }
                 return retorno;

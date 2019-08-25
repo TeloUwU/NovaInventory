@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace NovaInventory.Controlador
 {
-    class constructor_para_celulares
+    class constructor_preguntas
     {
-        public int id_num_tel { get; set; }
-        public string numeros_tel {get; set; }
-        public int empresas { get; set; }
+        public int id_pregunta { get; set; }
+        public string pregunta { get; set; }
     }
 }

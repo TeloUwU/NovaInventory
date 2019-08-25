@@ -9,7 +9,7 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
-namespace NovaInventory.Modelo
+namespace NovaInventory.Controlador
 {
     class control_empresa
     {
@@ -71,7 +71,7 @@ namespace NovaInventory.Modelo
             try
             {
                 string query = "SELECT * FROM  numeros_telefonicos";
-                MySqlCommand cmdselect = new MySqlCommand(string.Format(query, Conexion.obtenerconexion()));
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 datos = new DataTable();
                 adapter.Fill(datos);
@@ -107,8 +107,29 @@ namespace NovaInventory.Modelo
                 MessageBox.Show("Ha ocurrido un problema, revise su internet o los servicios del servidor, Consulte al programador" + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
-
+            
         }
-
+        public static int Id(constructor_para_celulares jj)
+        {
+            int datos =0;
+            try
+            {
+                string query5 = "SELECT id_datos_empresa FROM  Datos_empresa";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query5, jj.id_num_tel), Conexion.obtenerconexion());
+                datos = Convert.ToInt16(cmdselect.ExecuteScalar());
+                if (datos >= 1)
+                {
+                    MessageBox.Show("se pudo contactar con su empresa", "FELICIDADES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                return datos;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("no se pudo contactar con su empresa", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return datos;
+            }
+         
+        }
     }
+
 }
