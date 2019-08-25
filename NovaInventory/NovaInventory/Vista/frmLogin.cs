@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using NovaInventory.Vista;
 
 namespace NovaInventory.Vista
 {
@@ -19,24 +19,24 @@ namespace NovaInventory.Vista
         }
         void Validar_Campos()
         {
-            //if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text))
-            //{
-            //    MessageBox.Show("Existen campos vacíos", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
-            //    Constructor_login.usuario = txtUsuario.Text;
-            //    login.clave = txtContraseña.Text;
-            //    bool datos = validar_login.acceso(login);
-            //    if (datos == true)
-            //    {
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtContraseña.Text))
+            {
+                MessageBox.Show("Existen campos vacíos", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                //Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
+                //Constructor_login.usuario = txtUsuario.Text;
+                //login.clave = txtContraseña.Text;
+                //bool datos = validar_login.acceso(login);
+                //if (datos == true)
+                //{
                     FrmPrincipal main = new FrmPrincipal();
                     main.Show();
                     this.Hide();
-            //    }
+                //}
 
-            //}
+            }
         }
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -77,11 +77,6 @@ namespace NovaInventory.Vista
             btnMaximizar_Login.Visible = true;
             btnVentana_Login.Visible = false;
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
