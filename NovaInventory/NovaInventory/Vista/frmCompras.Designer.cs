@@ -34,28 +34,29 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dgvCompras = new System.Windows.Forms.DataGridView();
+            this.btnVer_Kardex_Compra = new System.Windows.Forms.Button();
+            this.btnMostrar_Factura_Compra = new System.Windows.Forms.Button();
+            this.btnAgregar_Compra = new System.Windows.Forms.Button();
             this.nUdCantidad_Productos_Compra = new System.Windows.Forms.NumericUpDown();
             this.txtTotal_Compra = new System.Windows.Forms.TextBox();
             this.txtMOdelo_Compra = new System.Windows.Forms.TextBox();
             this.txtPrecio_UNidad_Compra = new System.Windows.Forms.TextBox();
             this.txtCategoría_Compra = new System.Windows.Forms.TextBox();
             this.txtProducto_Compra = new System.Windows.Forms.TextBox();
-            this.btnVer_Kardex_Compra = new System.Windows.Forms.Button();
-            this.btnMostrar_Factura_Compra = new System.Windows.Forms.Button();
-            this.btnAgregar_Compra = new System.Windows.Forms.Button();
-            this.dgvCompras = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUdCantidad_Productos_Compra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUdCantidad_Productos_Compra)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -98,6 +99,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.dgvCompras);
             this.tabPage1.Controls.Add(this.btnVer_Kardex_Compra);
             this.tabPage1.Controls.Add(this.btnMostrar_Factura_Compra);
@@ -122,15 +124,87 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // dgvCompras
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 71);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompras.Location = new System.Drawing.Point(39, 307);
+            this.dgvCompras.Name = "dgvCompras";
+            this.dgvCompras.RowTemplate.Height = 24;
+            this.dgvCompras.Size = new System.Drawing.Size(1193, 336);
+            this.dgvCompras.TabIndex = 6;
+            // 
+            // btnVer_Kardex_Compra
+            // 
+            this.btnVer_Kardex_Compra.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVer_Kardex_Compra.Location = new System.Drawing.Point(918, 205);
+            this.btnVer_Kardex_Compra.Name = "btnVer_Kardex_Compra";
+            this.btnVer_Kardex_Compra.Size = new System.Drawing.Size(243, 77);
+            this.btnVer_Kardex_Compra.TabIndex = 9;
+            this.btnVer_Kardex_Compra.Text = "Ver Kardex";
+            this.btnVer_Kardex_Compra.UseVisualStyleBackColor = true;
+            // 
+            // btnMostrar_Factura_Compra
+            // 
+            this.btnMostrar_Factura_Compra.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrar_Factura_Compra.Location = new System.Drawing.Point(510, 205);
+            this.btnMostrar_Factura_Compra.Name = "btnMostrar_Factura_Compra";
+            this.btnMostrar_Factura_Compra.Size = new System.Drawing.Size(243, 77);
+            this.btnMostrar_Factura_Compra.TabIndex = 8;
+            this.btnMostrar_Factura_Compra.Text = "Mostrar Factura";
+            this.btnMostrar_Factura_Compra.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar_Compra
+            // 
+            this.btnAgregar_Compra.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar_Compra.Location = new System.Drawing.Point(71, 205);
+            this.btnAgregar_Compra.Name = "btnAgregar_Compra";
+            this.btnAgregar_Compra.Size = new System.Drawing.Size(243, 77);
+            this.btnAgregar_Compra.TabIndex = 7;
+            this.btnAgregar_Compra.Text = "Agregar Factura";
+            this.btnAgregar_Compra.UseVisualStyleBackColor = true;
+            // 
+            // nUdCantidad_Productos_Compra
+            // 
+            this.nUdCantidad_Productos_Compra.Location = new System.Drawing.Point(50, 150);
+            this.nUdCantidad_Productos_Compra.Name = "nUdCantidad_Productos_Compra";
+            this.nUdCantidad_Productos_Compra.Size = new System.Drawing.Size(275, 22);
+            this.nUdCantidad_Productos_Compra.TabIndex = 2;
+            // 
+            // txtTotal_Compra
+            // 
+            this.txtTotal_Compra.Enabled = false;
+            this.txtTotal_Compra.Location = new System.Drawing.Point(902, 149);
+            this.txtTotal_Compra.Name = "txtTotal_Compra";
+            this.txtTotal_Compra.Size = new System.Drawing.Size(275, 22);
+            this.txtTotal_Compra.TabIndex = 25;
+            // 
+            // txtMOdelo_Compra
+            // 
+            this.txtMOdelo_Compra.Location = new System.Drawing.Point(902, 66);
+            this.txtMOdelo_Compra.Name = "txtMOdelo_Compra";
+            this.txtMOdelo_Compra.Size = new System.Drawing.Size(275, 22);
+            this.txtMOdelo_Compra.TabIndex = 4;
+            // 
+            // txtPrecio_UNidad_Compra
+            // 
+            this.txtPrecio_UNidad_Compra.Location = new System.Drawing.Point(492, 149);
+            this.txtPrecio_UNidad_Compra.Name = "txtPrecio_UNidad_Compra";
+            this.txtPrecio_UNidad_Compra.Size = new System.Drawing.Size(275, 22);
+            this.txtPrecio_UNidad_Compra.TabIndex = 5;
+            // 
+            // txtCategoría_Compra
+            // 
+            this.txtCategoría_Compra.Location = new System.Drawing.Point(492, 66);
+            this.txtCategoría_Compra.Name = "txtCategoría_Compra";
+            this.txtCategoría_Compra.Size = new System.Drawing.Size(275, 22);
+            this.txtCategoría_Compra.TabIndex = 3;
+            // 
+            // txtProducto_Compra
+            // 
+            this.txtProducto_Compra.Location = new System.Drawing.Point(50, 66);
+            this.txtProducto_Compra.Name = "txtProducto_Compra";
+            this.txtProducto_Compra.Size = new System.Drawing.Size(275, 22);
+            this.txtProducto_Compra.TabIndex = 1;
             // 
             // label6
             // 
@@ -192,87 +266,22 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Producto";
             // 
-            // nUdCantidad_Productos_Compra
+            // tabPage2
             // 
-            this.nUdCantidad_Productos_Compra.Location = new System.Drawing.Point(50, 150);
-            this.nUdCantidad_Productos_Compra.Name = "nUdCantidad_Productos_Compra";
-            this.nUdCantidad_Productos_Compra.Size = new System.Drawing.Size(275, 22);
-            this.nUdCantidad_Productos_Compra.TabIndex = 2;
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1272, 664);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // txtTotal_Compra
+            // textBox1
             // 
-            this.txtTotal_Compra.Enabled = false;
-            this.txtTotal_Compra.Location = new System.Drawing.Point(902, 149);
-            this.txtTotal_Compra.Name = "txtTotal_Compra";
-            this.txtTotal_Compra.Size = new System.Drawing.Size(275, 22);
-            this.txtTotal_Compra.TabIndex = 25;
-            // 
-            // txtMOdelo_Compra
-            // 
-            this.txtMOdelo_Compra.Location = new System.Drawing.Point(902, 66);
-            this.txtMOdelo_Compra.Name = "txtMOdelo_Compra";
-            this.txtMOdelo_Compra.Size = new System.Drawing.Size(275, 22);
-            this.txtMOdelo_Compra.TabIndex = 4;
-            // 
-            // txtPrecio_UNidad_Compra
-            // 
-            this.txtPrecio_UNidad_Compra.Location = new System.Drawing.Point(492, 149);
-            this.txtPrecio_UNidad_Compra.Name = "txtPrecio_UNidad_Compra";
-            this.txtPrecio_UNidad_Compra.Size = new System.Drawing.Size(275, 22);
-            this.txtPrecio_UNidad_Compra.TabIndex = 5;
-            // 
-            // txtCategoría_Compra
-            // 
-            this.txtCategoría_Compra.Location = new System.Drawing.Point(492, 66);
-            this.txtCategoría_Compra.Name = "txtCategoría_Compra";
-            this.txtCategoría_Compra.Size = new System.Drawing.Size(275, 22);
-            this.txtCategoría_Compra.TabIndex = 3;
-            // 
-            // txtProducto_Compra
-            // 
-            this.txtProducto_Compra.Location = new System.Drawing.Point(50, 66);
-            this.txtProducto_Compra.Name = "txtProducto_Compra";
-            this.txtProducto_Compra.Size = new System.Drawing.Size(275, 22);
-            this.txtProducto_Compra.TabIndex = 1;
-            // 
-            // btnVer_Kardex_Compra
-            // 
-            this.btnVer_Kardex_Compra.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVer_Kardex_Compra.Location = new System.Drawing.Point(918, 205);
-            this.btnVer_Kardex_Compra.Name = "btnVer_Kardex_Compra";
-            this.btnVer_Kardex_Compra.Size = new System.Drawing.Size(243, 77);
-            this.btnVer_Kardex_Compra.TabIndex = 9;
-            this.btnVer_Kardex_Compra.Text = "Ver Kardex";
-            this.btnVer_Kardex_Compra.UseVisualStyleBackColor = true;
-            // 
-            // btnMostrar_Factura_Compra
-            // 
-            this.btnMostrar_Factura_Compra.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrar_Factura_Compra.Location = new System.Drawing.Point(510, 205);
-            this.btnMostrar_Factura_Compra.Name = "btnMostrar_Factura_Compra";
-            this.btnMostrar_Factura_Compra.Size = new System.Drawing.Size(243, 77);
-            this.btnMostrar_Factura_Compra.TabIndex = 8;
-            this.btnMostrar_Factura_Compra.Text = "Mostrar Factura";
-            this.btnMostrar_Factura_Compra.UseVisualStyleBackColor = true;
-            // 
-            // btnAgregar_Compra
-            // 
-            this.btnAgregar_Compra.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar_Compra.Location = new System.Drawing.Point(71, 205);
-            this.btnAgregar_Compra.Name = "btnAgregar_Compra";
-            this.btnAgregar_Compra.Size = new System.Drawing.Size(243, 77);
-            this.btnAgregar_Compra.TabIndex = 7;
-            this.btnAgregar_Compra.Text = "Agregar Factura";
-            this.btnAgregar_Compra.UseVisualStyleBackColor = true;
-            // 
-            // dgvCompras
-            // 
-            this.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCompras.Location = new System.Drawing.Point(39, 307);
-            this.dgvCompras.Name = "dgvCompras";
-            this.dgvCompras.RowTemplate.Height = 24;
-            this.dgvCompras.Size = new System.Drawing.Size(1193, 336);
-            this.dgvCompras.TabIndex = 6;
+            this.textBox1.Location = new System.Drawing.Point(1237, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(27, 22);
+            this.textBox1.TabIndex = 26;
             // 
             // frmCompras
             // 
@@ -289,8 +298,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUdCantidad_Productos_Compra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUdCantidad_Productos_Compra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,5 +329,6 @@
         private System.Windows.Forms.Button btnMostrar_Factura_Compra;
         private System.Windows.Forms.Button btnAgregar_Compra;
         private System.Windows.Forms.DataGridView dgvCompras;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
