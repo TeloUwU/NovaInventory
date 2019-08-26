@@ -16,7 +16,7 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
-
+        Form currentForm;
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             PanelSidebar.Visible = false;
@@ -54,7 +54,34 @@ namespace NovaInventory.Vista
 
             }
         }
+        public void AbrirFormulario<MiForm>() where MiForm : Form, new()
 
+        {
+            Form formulario;
+            formulario = PanelContenedor.Controls.OfType<MiForm>().FirstOrDefault();
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+
+                if (currentForm != null)
+                {
+                    currentForm.Close();
+                    PanelContenedor.Controls.Remove(currentForm);
+                }
+                currentForm = formulario;
+                PanelContenedor.Controls.Add(formulario);
+                PanelContenedor.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+            }
+            else
+            {
+                formulario.BringToFront();
+            }
+        }
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
 
@@ -64,6 +91,35 @@ namespace NovaInventory.Vista
         private void verToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void nuevaVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmFacturacion>();
+        }
+
+        private void btnCerrar_Principal_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximizar_Principal_Click(object sender, EventArgs e)
+        {
+            btnMaximizar_Principal.Visible = false;
+            btnVentana_Principal.Visible = true;
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnMinimizar_Principal_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnVentana_Principal_Click(object sender, EventArgs e)
+        {
+            btnMaximizar_Principal.Visible = true;
+            btnVentana_Principal.Visible = false;
+            this.WindowState = FormWindowState.Normal;
         }
     }
 }
