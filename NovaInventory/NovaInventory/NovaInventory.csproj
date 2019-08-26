@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\Conexion.cs" />
+    <Compile Include="Config\Validaciones.cs" />
     <Compile Include="Controlador\Actualizar_root.cs" />
     <Compile Include="Controlador\clsFunciones.cs" />
     <Compile Include="Controlador\Config_Root.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Controlador\Constructor_login.cs" />
     <Compile Include="Controlador\constructor_para_celulares.cs" />
     <Compile Include="Controlador\constructor_primer_usuario.cs" />
+    <Compile Include="Modelo\Actualizar_empresa.cs" />
     <Compile Include="Modelo\Actualizar_Root.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
@@ -76,6 +78,12 @@
     </Compile>
     <Compile Include="Vista\frmAdministracion_Empresa.Designer.cs">
       <DependentUpon>frmAdministracion_Empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmClaveDefecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmClaveDefecto.Designer.cs">
+      <DependentUpon>FrmClaveDefecto.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmCompra.cs">
       <SubType>Form</SubType>
@@ -161,6 +169,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\frmAdministracion_Empresa.resx">
       <DependentUpon>frmAdministracion_Empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmClaveDefecto.resx">
+      <DependentUpon>FrmClaveDefecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmCompra.resx">
       <DependentUpon>frmCompra.cs</DependentUpon>

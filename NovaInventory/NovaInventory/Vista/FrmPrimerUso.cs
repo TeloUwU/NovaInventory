@@ -150,5 +150,10 @@ namespace NovaInventory.Vista
             }
 
         }
+
+        private void TxtEmpresa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,6 +33,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtid_Empresa_Modificacion = new System.Windows.Forms.TextBox();
             this.BtnGuardar_Gestor = new System.Windows.Forms.Button();
             this.BtnExaminar_Gestor = new System.Windows.Forms.Button();
             this.pbLogo_Gestor = new System.Windows.Forms.PictureBox();
@@ -54,7 +55,7 @@
             this.dgvContactos = new System.Windows.Forms.DataGridView();
             this.txt_cel_Gestor = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtid_Empresa_Modificacion = new System.Windows.Forms.TextBox();
+            this.cargar_imagen = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Gestor)).BeginInit();
@@ -116,6 +117,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(736, 573);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtid_Empresa_Modificacion
+            // 
+            this.txtid_Empresa_Modificacion.Location = new System.Drawing.Point(683, 16);
+            this.txtid_Empresa_Modificacion.Name = "txtid_Empresa_Modificacion";
+            this.txtid_Empresa_Modificacion.Size = new System.Drawing.Size(39, 22);
+            this.txtid_Empresa_Modificacion.TabIndex = 70;
+            this.txtid_Empresa_Modificacion.Visible = false;
             // 
             // BtnGuardar_Gestor
             // 
@@ -132,6 +142,7 @@
             this.BtnGuardar_Gestor.TabIndex = 7;
             this.BtnGuardar_Gestor.Text = "Guardar y Continuar";
             this.BtnGuardar_Gestor.UseVisualStyleBackColor = false;
+            this.BtnGuardar_Gestor.Click += new System.EventHandler(this.BtnGuardar_Gestor_Click);
             // 
             // BtnExaminar_Gestor
             // 
@@ -148,6 +159,7 @@
             this.BtnExaminar_Gestor.TabIndex = 6;
             this.BtnExaminar_Gestor.Text = "Examinar";
             this.BtnExaminar_Gestor.UseVisualStyleBackColor = false;
+            this.BtnExaminar_Gestor.Click += new System.EventHandler(this.BtnExaminar_Gestor_Click);
             // 
             // pbLogo_Gestor
             // 
@@ -216,6 +228,7 @@
             this.TxtEmpresa_Gestor.Name = "TxtEmpresa_Gestor";
             this.TxtEmpresa_Gestor.Size = new System.Drawing.Size(494, 26);
             this.TxtEmpresa_Gestor.TabIndex = 1;
+            this.TxtEmpresa_Gestor.TextChanged += new System.EventHandler(this.TxtEmpresa_Gestor_TextChanged);
             // 
             // label4
             // 
@@ -377,14 +390,6 @@
             this.label11.TabIndex = 63;
             this.label11.Text = "Numeros Telefonicos:";
             // 
-            // txtid_Empresa_Modificacion
-            // 
-            this.txtid_Empresa_Modificacion.Location = new System.Drawing.Point(683, 16);
-            this.txtid_Empresa_Modificacion.Name = "txtid_Empresa_Modificacion";
-            this.txtid_Empresa_Modificacion.Size = new System.Drawing.Size(39, 22);
-            this.txtid_Empresa_Modificacion.TabIndex = 70;
-            this.txtid_Empresa_Modificacion.Visible = false;
-            // 
             // frmAdministracion_Empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -396,6 +401,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdministracion_Empresa";
             this.Text = "frmAdministracion_Empresa";
+            this.Load += new System.EventHandler(this.frmAdministracion_Empresa_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -437,5 +443,6 @@
         private System.Windows.Forms.MaskedTextBox txt_cel_Gestor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtid_Empresa_Modificacion;
+        private System.Windows.Forms.OpenFileDialog cargar_imagen;
     }
 }
