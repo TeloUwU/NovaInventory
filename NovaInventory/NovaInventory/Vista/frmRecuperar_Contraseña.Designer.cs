@@ -34,10 +34,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnVolver_Login = new System.Windows.Forms.ToolStripButton();
+            this.pbPreguntas = new System.Windows.Forms.PictureBox();
             this.pbIntervenciónAdmi_Recu = new System.Windows.Forms.PictureBox();
             this.pbCorreo_Recu = new System.Windows.Forms.PictureBox();
             this.pbPreguntas_Recu = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPreguntas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIntervenciónAdmi_Recu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCorreo_Recu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreguntas_Recu)).BeginInit();
@@ -58,7 +60,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 268);
+            this.label2.Location = new System.Drawing.Point(84, 268);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 13);
             this.label2.TabIndex = 4;
@@ -93,7 +95,23 @@
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "tsRecuperar_Contraseña";
-     
+            // 
+            // btnVolver_Login
+            // 
+            this.btnVolver_Login.Name = "btnVolver_Login";
+            this.btnVolver_Login.Size = new System.Drawing.Size(23, 22);
+            // 
+            // pbPreguntas
+            // 
+            this.pbPreguntas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbPreguntas.Image = global::NovaInventory.Properties.Resources.book_104px;
+            this.pbPreguntas.Location = new System.Drawing.Point(71, 116);
+            this.pbPreguntas.Name = "pbPreguntas";
+            this.pbPreguntas.Size = new System.Drawing.Size(170, 135);
+            this.pbPreguntas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPreguntas.TabIndex = 9;
+            this.pbPreguntas.TabStop = false;
+            this.pbPreguntas.Click += new System.EventHandler(this.pbPreguntas_Click);
             // 
             // pbIntervenciónAdmi_Recu
             // 
@@ -105,6 +123,7 @@
             this.pbIntervenciónAdmi_Recu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbIntervenciónAdmi_Recu.TabIndex = 3;
             this.pbIntervenciónAdmi_Recu.TabStop = false;
+            this.pbIntervenciónAdmi_Recu.Click += new System.EventHandler(this.pbIntervenciónAdmi_Recu_Click);
             // 
             // pbCorreo_Recu
             // 
@@ -117,7 +136,14 @@
             this.pbCorreo_Recu.TabIndex = 2;
             this.pbCorreo_Recu.TabStop = false;
             this.pbCorreo_Recu.Click += new System.EventHandler(this.pbCorreo_Recu_Click);
-       
+            // 
+            // pbPreguntas_Recu
+            // 
+            this.pbPreguntas_Recu.Location = new System.Drawing.Point(0, 0);
+            this.pbPreguntas_Recu.Name = "pbPreguntas_Recu";
+            this.pbPreguntas_Recu.Size = new System.Drawing.Size(100, 50);
+            this.pbPreguntas_Recu.TabIndex = 8;
+            this.pbPreguntas_Recu.TabStop = false;
             // 
             // frmRecuperar_Contraseña
             // 
@@ -125,6 +151,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 370);
+            this.Controls.Add(this.pbPreguntas);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -138,6 +165,7 @@
             this.Text = "frmRecuperar_Contraseña";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPreguntas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbIntervenciónAdmi_Recu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCorreo_Recu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPreguntas_Recu)).EndInit();
@@ -157,5 +185,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnVolver_Login;
+        private System.Windows.Forms.PictureBox pbPreguntas;
     }
 }

@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NovaInventory.Vista;
+using NovaInventory.Modelo;
+using NovaInventory.Controlador;
 
 namespace NovaInventory.Vista
 {
@@ -25,16 +26,16 @@ namespace NovaInventory.Vista
             }
             else
             {
-                //Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
-                //Constructor_login.usuario = txtUsuario.Text;
-                //login.clave = txtContraseña.Text;
-                //bool datos = validar_login.acceso(login);
-                //if (datos == true)
-                //{
+               Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
+               Constructor_login.usuario = txtUsuario.Text;
+                login.clave = txtContraseña.Text;
+                bool datos = validar_login.acceso(login);
+                if (datos == true)
+                {
                     FrmPrincipal main = new FrmPrincipal();
                     main.Show();
                     this.Hide();
-                //}
+                }
 
             }
         }
@@ -68,15 +69,45 @@ namespace NovaInventory.Vista
         private void btnMaximizar_Login_Click(object sender, EventArgs e)
         {
             btnMaximizar_Login.Visible = false;
-            btnVentana_Login.Visible = true;
+            btnNormal.Visible = true;
             WindowState = FormWindowState.Maximized;
         }
 
         private void btnVentana_Login_Click(object sender, EventArgs e)
         {
             btnMaximizar_Login.Visible = true;
-            btnVentana_Login.Visible = false;
+            btnNormal.Visible = false;
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

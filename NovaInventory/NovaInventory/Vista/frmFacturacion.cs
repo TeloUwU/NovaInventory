@@ -74,17 +74,17 @@ namespace NovaInventory.Vista
         {
             clsFunciones.CreaTicket Ticket1 = new clsFunciones.CreaTicket();
 
-            Ticket1.TextoCentro("Empresa xxxx ");
+            Ticket1.TextoCentro("Empresa Elecnova ");
             Ticket1.TextoCentro("**********************************");
 
-            Ticket1.TextoIzquierda("Dirc: xxxx");
-            Ticket1.TextoIzquierda("Tel: xxxx");
+            Ticket1.TextoIzquierda("Dirc: San Salvador");
+            Ticket1.TextoIzquierda("Tel: 7127-6891");
             Ticket1.TextoIzquierda("Rnc: xxxx");
             Ticket1.TextoIzquierda("");
             Ticket1.TextoCentro("Factura de Venta");
-            Ticket1.TextoIzquierda("No Fac: 000");
+            Ticket1.TextoIzquierda("No Fac: 001");
             Ticket1.TextoIzquierda("Fecha:" + DateTime.Now.ToShortDateString() + " Hora:" + DateTime.Now.ToShortTimeString());
-            Ticket1.TextoIzquierda("Le Atendio: xxxx ");///////////////////////////////////
+            Ticket1.TextoIzquierda("Le Atendio: Andrea Turcios ");
             Ticket1.TextoIzquierda("");
             clsFunciones.CreaTicket.LineasGuion();
 
@@ -96,20 +96,18 @@ namespace NovaInventory.Vista
 
                 Ticket1.AgregaArticulo(r.Cells[1].Value.ToString(), double.Parse(r.Cells[3].Value.ToString()), int.Parse(r.Cells[2].Value.ToString()), double.Parse(r.Cells[4].Value.ToString())); //imprime una linea de descripcion
             }
-            //Ticket1.AgregaArticulo(txtNombre.Text,double.Parse (txtPrecio.Text),int.Parse (txtcantidad.Text),double.Parse( "123"));
+            
 
             clsFunciones.CreaTicket.LineasGuion();
-            Ticket1.AgregaTotales("Sub-Total", double.Parse("0")); // imprime linea con total
-            Ticket1.AgregaTotales("Menos Descuento", double.Parse("0")); // imprime linea con total
-            Ticket1.AgregaTotales("Mas ITBIS", double.Parse("0")); // imprime linea con total
+            Ticket1.AgregaTotales("Sub-Total", double.Parse("0")); 
+            Ticket1.AgregaTotales("Menos Descuento", double.Parse("0")); 
+            Ticket1.AgregaTotales("Mas ITBIS", double.Parse("0")); 
             Ticket1.TextoIzquierda(" ");
-            Ticket1.AgregaTotales("Total", double.Parse(lblCostoAPagar.Text)); // imprime linea con total
+            Ticket1.AgregaTotales("Total", double.Parse(lblCostoAPagar.Text)); 
             Ticket1.TextoIzquierda(" ");
             Ticket1.AgregaTotales("Efectivo Entregado:", double.Parse(txtEfectivo.Text));
             Ticket1.AgregaTotales("Efectivo Devuelto:", double.Parse(lblDevolucion.Text));
-
-
-            // Ticket1.LineasTotales(); // imprime linea 
+            
 
             Ticket1.TextoIzquierda(" ");
             Ticket1.TextoCentro("**********************************");
@@ -117,15 +115,13 @@ namespace NovaInventory.Vista
 
             Ticket1.TextoCentro("**********************************");
             Ticket1.TextoIzquierda(" ");
-            string impresora = "Microsoft XPS Document Writer"; //mpueden usar variable
+            string impresora = "Microsoft XPS Document Writer"; 
             Ticket1.ImprimirTiket(impresora);
-            //hasta aqui el codigo de imprimir
 
 
             Fila = 0;
-            while (dgvLista.RowCount > 0)//limpia el dgv
+            while (dgvLista.RowCount > 0)
             { dgvLista.Rows.Remove(dgvLista.CurrentRow); }
-            //LBLIDnuevaFACTURA.Text = ClaseFunciones.ClsFunciones.IDNUEVAFACTURA().ToString();
             txtIdArticulo.Text = txtNombre.Text = txtPrecio.Text = txtCantidad.Text = txtEfectivo.Text = "";
             lblCostoAPagar.Text = lblDevolucion.Text = "0.00";
         }

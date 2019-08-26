@@ -16,6 +16,7 @@ namespace NovaInventory.Controlador
         public string telefono { get; set; }
         public string Foto_usuario { get; set; }
         public string Correo  { get; set; }
+        public string dui { get; set; }
         public string nit { get; set; }
         public int id_estados { get; set; }
         public int id_tipo_usuarios { get; set; }

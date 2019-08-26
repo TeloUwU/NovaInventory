@@ -36,6 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tsAdmin_Usuarios = new System.Windows.Forms.ToolStrip();
+            this.btnCerrar_AdminUsuarios = new System.Windows.Forms.ToolStripButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -58,7 +59,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnSeleccionarFoto_Usuario = new System.Windows.Forms.Button();
             this.pbFoto_Usuario = new System.Windows.Forms.PictureBox();
-            this.btnCerrar_AdminUsuarios = new System.Windows.Forms.ToolStripButton();
+            this.CargarImagen = new System.Windows.Forms.OpenFileDialog();
             this.tsAdmin_Usuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar_Usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Usuario)).BeginInit();
@@ -68,9 +69,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(296, 27);
+            this.label1.Location = new System.Drawing.Point(222, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 46);
+            this.label1.Size = new System.Drawing.Size(352, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Administración de Usuarios";
             // 
@@ -78,9 +80,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 80);
+            this.label2.Location = new System.Drawing.Point(16, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 23);
+            this.label2.Size = new System.Drawing.Size(142, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombres del Usuario:";
             // 
@@ -88,9 +91,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 144);
+            this.label3.Location = new System.Drawing.Point(16, 117);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 23);
+            this.label3.Size = new System.Drawing.Size(144, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Apellidos del Usuario:";
             // 
@@ -98,9 +102,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 210);
+            this.label4.Location = new System.Drawing.Point(16, 171);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 23);
+            this.label4.Size = new System.Drawing.Size(59, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "Usuario:";
             // 
@@ -108,9 +113,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 278);
+            this.label5.Location = new System.Drawing.Point(16, 226);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 23);
+            this.label5.Size = new System.Drawing.Size(67, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "Telefono:";
             // 
@@ -118,9 +124,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 340);
+            this.label6.Location = new System.Drawing.Point(16, 276);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 23);
+            this.label6.Size = new System.Drawing.Size(40, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "Foto:";
             // 
@@ -128,9 +135,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(281, 80);
+            this.label7.Location = new System.Drawing.Point(211, 65);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 23);
+            this.label7.Size = new System.Drawing.Size(54, 18);
             this.label7.TabIndex = 6;
             this.label7.Text = "Correo:";
             // 
@@ -141,210 +149,9 @@
             this.btnCerrar_AdminUsuarios});
             this.tsAdmin_Usuarios.Location = new System.Drawing.Point(0, 0);
             this.tsAdmin_Usuarios.Name = "tsAdmin_Usuarios";
-            this.tsAdmin_Usuarios.Size = new System.Drawing.Size(1044, 27);
+            this.tsAdmin_Usuarios.Size = new System.Drawing.Size(783, 27);
             this.tsAdmin_Usuarios.TabIndex = 7;
             this.tsAdmin_Usuarios.Text = "toolStrip1";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(277, 144);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 23);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "DUI:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(277, 210);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 23);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "NIT:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(281, 278);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 23);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Estado:";
-            // 
-            // txtNombres_Usuario
-            // 
-            this.txtNombres_Usuario.Location = new System.Drawing.Point(26, 106);
-            this.txtNombres_Usuario.Name = "txtNombres_Usuario";
-            this.txtNombres_Usuario.Size = new System.Drawing.Size(208, 22);
-            this.txtNombres_Usuario.TabIndex = 1;
-            // 
-            // txtApellidos_Usuario
-            // 
-            this.txtApellidos_Usuario.Location = new System.Drawing.Point(26, 170);
-            this.txtApellidos_Usuario.Name = "txtApellidos_Usuario";
-            this.txtApellidos_Usuario.Size = new System.Drawing.Size(207, 22);
-            this.txtApellidos_Usuario.TabIndex = 2;
-            this.txtApellidos_Usuario.TextChanged += new System.EventHandler(this.txtApellidos_Usuario_TextChanged);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(25, 236);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(208, 22);
-            this.txtUsuario.TabIndex = 3;
-            // 
-            // txtCorreo_Usuario
-            // 
-            this.txtCorreo_Usuario.Location = new System.Drawing.Point(285, 106);
-            this.txtCorreo_Usuario.Name = "txtCorreo_Usuario";
-            this.txtCorreo_Usuario.Size = new System.Drawing.Size(188, 22);
-            this.txtCorreo_Usuario.TabIndex = 5;
-            // 
-            // txtTelefono_Usuario
-            // 
-            this.txtTelefono_Usuario.Location = new System.Drawing.Point(26, 304);
-            this.txtTelefono_Usuario.Mask = "0000-0000";
-            this.txtTelefono_Usuario.Name = "txtTelefono_Usuario";
-            this.txtTelefono_Usuario.Size = new System.Drawing.Size(147, 22);
-            this.txtTelefono_Usuario.TabIndex = 4;
-            // 
-            // txtNIT_Usuario
-            // 
-            this.txtNIT_Usuario.Location = new System.Drawing.Point(285, 236);
-            this.txtNIT_Usuario.Mask = "0000-000000-000-0";
-            this.txtNIT_Usuario.Name = "txtNIT_Usuario";
-            this.txtNIT_Usuario.Size = new System.Drawing.Size(178, 22);
-            this.txtNIT_Usuario.TabIndex = 7;
-            // 
-            // cbEstado_Usuario
-            // 
-            this.cbEstado_Usuario.FormattingEnabled = true;
-            this.cbEstado_Usuario.Location = new System.Drawing.Point(281, 304);
-            this.cbEstado_Usuario.Name = "cbEstado_Usuario";
-            this.cbEstado_Usuario.Size = new System.Drawing.Size(170, 24);
-            this.cbEstado_Usuario.TabIndex = 8;
-            // 
-            // txtDUI_Usuario
-            // 
-            this.txtDUI_Usuario.Location = new System.Drawing.Point(285, 170);
-            this.txtDUI_Usuario.Mask = "00000000-0";
-            this.txtDUI_Usuario.Name = "txtDUI_Usuario";
-            this.txtDUI_Usuario.Size = new System.Drawing.Size(178, 22);
-            this.txtDUI_Usuario.TabIndex = 6;
-            // 
-            // dgvMostrar_Usuarios
-            // 
-            this.dgvMostrar_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrar_Usuarios.Location = new System.Drawing.Point(555, 80);
-            this.dgvMostrar_Usuarios.Name = "dgvMostrar_Usuarios";
-            this.dgvMostrar_Usuarios.RowTemplate.Height = 24;
-            this.dgvMostrar_Usuarios.Size = new System.Drawing.Size(464, 409);
-            this.dgvMostrar_Usuarios.TabIndex = 21;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(69, 563);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 50);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Agregar Usuario";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Green;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(304, 563);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 50);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Mostrar Usuario";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Green;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(555, 563);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 50);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Actualizar Usuario";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Green;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(790, 563);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 50);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Eliminar Usuario";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // dtpFechaCreación_Usuario
-            // 
-            this.dtpFechaCreación_Usuario.Location = new System.Drawing.Point(805, 44);
-            this.dtpFechaCreación_Usuario.Name = "dtpFechaCreación_Usuario";
-            this.dtpFechaCreación_Usuario.Size = new System.Drawing.Size(155, 22);
-            this.dtpFechaCreación_Usuario.TabIndex = 26;
-            this.dtpFechaCreación_Usuario.Visible = false;
-            // 
-            // txtid_Usuario
-            // 
-            this.txtid_Usuario.Location = new System.Drawing.Point(986, 44);
-            this.txtid_Usuario.Name = "txtid_Usuario";
-            this.txtid_Usuario.Size = new System.Drawing.Size(33, 22);
-            this.txtid_Usuario.TabIndex = 27;
-            this.txtid_Usuario.Visible = false;
-            // 
-            // cbTipo_Usuario
-            // 
-            this.cbTipo_Usuario.FormattingEnabled = true;
-            this.cbTipo_Usuario.Location = new System.Drawing.Point(285, 367);
-            this.cbTipo_Usuario.Name = "cbTipo_Usuario";
-            this.cbTipo_Usuario.Size = new System.Drawing.Size(166, 24);
-            this.cbTipo_Usuario.TabIndex = 9;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(282, 340);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 23);
-            this.label11.TabIndex = 29;
-            this.label11.Text = "Tipo de Usuario:";
-            // 
-            // btnSeleccionarFoto_Usuario
-            // 
-            this.btnSeleccionarFoto_Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnSeleccionarFoto_Usuario.Location = new System.Drawing.Point(281, 439);
-            this.btnSeleccionarFoto_Usuario.Name = "btnSeleccionarFoto_Usuario";
-            this.btnSeleccionarFoto_Usuario.Size = new System.Drawing.Size(170, 50);
-            this.btnSeleccionarFoto_Usuario.TabIndex = 10;
-            this.btnSeleccionarFoto_Usuario.Text = "Seleccionar Foto";
-            this.btnSeleccionarFoto_Usuario.UseVisualStyleBackColor = false;
-            // 
-            // pbFoto_Usuario
-            // 
-            this.pbFoto_Usuario.Location = new System.Drawing.Point(26, 367);
-            this.pbFoto_Usuario.Name = "pbFoto_Usuario";
-            this.pbFoto_Usuario.Size = new System.Drawing.Size(213, 122);
-            this.pbFoto_Usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFoto_Usuario.TabIndex = 16;
-            this.pbFoto_Usuario.TabStop = false;
             // 
             // btnCerrar_AdminUsuarios
             // 
@@ -352,15 +159,248 @@
             this.btnCerrar_AdminUsuarios.Image = global::NovaInventory.Properties.Resources.close_window_80px;
             this.btnCerrar_AdminUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCerrar_AdminUsuarios.Name = "btnCerrar_AdminUsuarios";
-            this.btnCerrar_AdminUsuarios.Size = new System.Drawing.Size(149, 24);
+            this.btnCerrar_AdminUsuarios.Size = new System.Drawing.Size(136, 24);
             this.btnCerrar_AdminUsuarios.Text = "Cerrar Formulario";
             this.btnCerrar_AdminUsuarios.Click += new System.EventHandler(this.btnCerrar_AdminUsuarios_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(208, 117);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 18);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "DUI:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(208, 171);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 18);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "NIT:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(211, 226);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 18);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Estado:";
+            // 
+            // txtNombres_Usuario
+            // 
+            this.txtNombres_Usuario.Location = new System.Drawing.Point(20, 86);
+            this.txtNombres_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombres_Usuario.Name = "txtNombres_Usuario";
+            this.txtNombres_Usuario.Size = new System.Drawing.Size(157, 20);
+            this.txtNombres_Usuario.TabIndex = 1;
+            // 
+            // txtApellidos_Usuario
+            // 
+            this.txtApellidos_Usuario.Location = new System.Drawing.Point(20, 138);
+            this.txtApellidos_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidos_Usuario.Name = "txtApellidos_Usuario";
+            this.txtApellidos_Usuario.Size = new System.Drawing.Size(156, 20);
+            this.txtApellidos_Usuario.TabIndex = 2;
+            this.txtApellidos_Usuario.TextChanged += new System.EventHandler(this.txtApellidos_Usuario_TextChanged);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(19, 192);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(157, 20);
+            this.txtUsuario.TabIndex = 3;
+            // 
+            // txtCorreo_Usuario
+            // 
+            this.txtCorreo_Usuario.Location = new System.Drawing.Point(214, 86);
+            this.txtCorreo_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo_Usuario.Name = "txtCorreo_Usuario";
+            this.txtCorreo_Usuario.Size = new System.Drawing.Size(142, 20);
+            this.txtCorreo_Usuario.TabIndex = 5;
+            // 
+            // txtTelefono_Usuario
+            // 
+            this.txtTelefono_Usuario.Location = new System.Drawing.Point(20, 247);
+            this.txtTelefono_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefono_Usuario.Mask = "0000-0000";
+            this.txtTelefono_Usuario.Name = "txtTelefono_Usuario";
+            this.txtTelefono_Usuario.Size = new System.Drawing.Size(111, 20);
+            this.txtTelefono_Usuario.TabIndex = 4;
+            // 
+            // txtNIT_Usuario
+            // 
+            this.txtNIT_Usuario.Location = new System.Drawing.Point(214, 192);
+            this.txtNIT_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNIT_Usuario.Mask = "0000-000000-000-0";
+            this.txtNIT_Usuario.Name = "txtNIT_Usuario";
+            this.txtNIT_Usuario.Size = new System.Drawing.Size(134, 20);
+            this.txtNIT_Usuario.TabIndex = 7;
+            // 
+            // cbEstado_Usuario
+            // 
+            this.cbEstado_Usuario.FormattingEnabled = true;
+            this.cbEstado_Usuario.Location = new System.Drawing.Point(211, 247);
+            this.cbEstado_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.cbEstado_Usuario.Name = "cbEstado_Usuario";
+            this.cbEstado_Usuario.Size = new System.Drawing.Size(128, 21);
+            this.cbEstado_Usuario.TabIndex = 8;
+            // 
+            // txtDUI_Usuario
+            // 
+            this.txtDUI_Usuario.Location = new System.Drawing.Point(214, 138);
+            this.txtDUI_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDUI_Usuario.Mask = "00000000-0";
+            this.txtDUI_Usuario.Name = "txtDUI_Usuario";
+            this.txtDUI_Usuario.Size = new System.Drawing.Size(134, 20);
+            this.txtDUI_Usuario.TabIndex = 6;
+            // 
+            // dgvMostrar_Usuarios
+            // 
+            this.dgvMostrar_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrar_Usuarios.Location = new System.Drawing.Point(416, 65);
+            this.dgvMostrar_Usuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvMostrar_Usuarios.Name = "dgvMostrar_Usuarios";
+            this.dgvMostrar_Usuarios.RowTemplate.Height = 24;
+            this.dgvMostrar_Usuarios.Size = new System.Drawing.Size(348, 332);
+            this.dgvMostrar_Usuarios.TabIndex = 21;
+            this.dgvMostrar_Usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrar_Usuarios_CellClick);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(52, 457);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 41);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Agregar Usuario";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Green;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(228, 457);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 41);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Mostrar Usuario";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Green;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(416, 457);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(128, 41);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Actualizar Usuario";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Green;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(592, 457);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(128, 41);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Eliminar Usuario";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // dtpFechaCreación_Usuario
+            // 
+            this.dtpFechaCreación_Usuario.Location = new System.Drawing.Point(604, 36);
+            this.dtpFechaCreación_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFechaCreación_Usuario.Name = "dtpFechaCreación_Usuario";
+            this.dtpFechaCreación_Usuario.Size = new System.Drawing.Size(117, 20);
+            this.dtpFechaCreación_Usuario.TabIndex = 26;
+            this.dtpFechaCreación_Usuario.Visible = false;
+            // 
+            // txtid_Usuario
+            // 
+            this.txtid_Usuario.Location = new System.Drawing.Point(740, 36);
+            this.txtid_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtid_Usuario.Name = "txtid_Usuario";
+            this.txtid_Usuario.Size = new System.Drawing.Size(26, 20);
+            this.txtid_Usuario.TabIndex = 27;
+            this.txtid_Usuario.Visible = false;
+            // 
+            // cbTipo_Usuario
+            // 
+            this.cbTipo_Usuario.FormattingEnabled = true;
+            this.cbTipo_Usuario.Location = new System.Drawing.Point(214, 298);
+            this.cbTipo_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.cbTipo_Usuario.Name = "cbTipo_Usuario";
+            this.cbTipo_Usuario.Size = new System.Drawing.Size(126, 21);
+            this.cbTipo_Usuario.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(212, 276);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 18);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Tipo de Usuario:";
+            // 
+            // btnSeleccionarFoto_Usuario
+            // 
+            this.btnSeleccionarFoto_Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSeleccionarFoto_Usuario.Location = new System.Drawing.Point(211, 357);
+            this.btnSeleccionarFoto_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSeleccionarFoto_Usuario.Name = "btnSeleccionarFoto_Usuario";
+            this.btnSeleccionarFoto_Usuario.Size = new System.Drawing.Size(128, 41);
+            this.btnSeleccionarFoto_Usuario.TabIndex = 10;
+            this.btnSeleccionarFoto_Usuario.Text = "Seleccionar Foto";
+            this.btnSeleccionarFoto_Usuario.UseVisualStyleBackColor = false;
+            this.btnSeleccionarFoto_Usuario.Click += new System.EventHandler(this.btnSeleccionarFoto_Usuario_Click);
+            // 
+            // pbFoto_Usuario
+            // 
+            this.pbFoto_Usuario.Location = new System.Drawing.Point(20, 298);
+            this.pbFoto_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.pbFoto_Usuario.Name = "pbFoto_Usuario";
+            this.pbFoto_Usuario.Size = new System.Drawing.Size(160, 99);
+            this.pbFoto_Usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto_Usuario.TabIndex = 16;
+            this.pbFoto_Usuario.TabStop = false;
+            // 
+            // CargarImagen
+            // 
+            this.CargarImagen.FileName = "openFileDialog1";
+            // 
             // frmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 665);
+            this.ClientSize = new System.Drawing.Size(783, 540);
             this.Controls.Add(this.btnSeleccionarFoto_Usuario);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.cbTipo_Usuario);
@@ -392,8 +432,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";
+            this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.tsAdmin_Usuarios.ResumeLayout(false);
             this.tsAdmin_Usuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar_Usuarios)).EndInit();
@@ -436,5 +478,6 @@
         private System.Windows.Forms.ComboBox cbTipo_Usuario;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnSeleccionarFoto_Usuario;
+        private System.Windows.Forms.OpenFileDialog CargarImagen;
     }
 }
