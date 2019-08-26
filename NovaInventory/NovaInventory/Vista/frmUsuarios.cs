@@ -153,7 +153,7 @@ namespace NovaInventory.Vista
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            cbEstado_Usuario.DataSource = Funciones_usuarios.c
+         
         }
     }
 }
