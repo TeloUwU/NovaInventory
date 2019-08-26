@@ -97,5 +97,29 @@ namespace NovaInventory.Vista
         {
             AbrirFormulario<frmFacturacion>();
         }
+
+        private void btnCerrar_Principal_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximizar_Principal_Click(object sender, EventArgs e)
+        {
+            btnMaximizar_Principal.Visible = false;
+            btnVentana_Principal.Visible = true;
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnMinimizar_Principal_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnVentana_Principal_Click(object sender, EventArgs e)
+        {
+            btnMaximizar_Principal.Visible = true;
+            btnVentana_Principal.Visible = false;
+            this.WindowState = FormWindowState.Normal;
+        }
     }
 }

@@ -104,6 +104,7 @@
             this.btnCerrar_Principal.Name = "btnCerrar_Principal";
             this.btnCerrar_Principal.Size = new System.Drawing.Size(24, 24);
             this.btnCerrar_Principal.Text = "Salir";
+            this.btnCerrar_Principal.Click += new System.EventHandler(this.btnCerrar_Principal_Click);
             // 
             // btnMaximizar_Principal
             // 
@@ -114,6 +115,7 @@
             this.btnMaximizar_Principal.Name = "btnMaximizar_Principal";
             this.btnMaximizar_Principal.Size = new System.Drawing.Size(24, 24);
             this.btnMaximizar_Principal.Text = "Maximizar";
+            this.btnMaximizar_Principal.Click += new System.EventHandler(this.btnMaximizar_Principal_Click);
             // 
             // btnVentana_Principal
             // 
@@ -125,6 +127,7 @@
             this.btnVentana_Principal.Size = new System.Drawing.Size(24, 24);
             this.btnVentana_Principal.Text = "Restaurar a tamaño normal";
             this.btnVentana_Principal.Visible = false;
+            this.btnVentana_Principal.Click += new System.EventHandler(this.btnVentana_Principal_Click);
             // 
             // btnMinimizar_Principal
             // 
@@ -135,6 +138,7 @@
             this.btnMinimizar_Principal.Name = "btnMinimizar_Principal";
             this.btnMinimizar_Principal.Size = new System.Drawing.Size(24, 24);
             this.btnMinimizar_Principal.Text = "Minimizar";
+            this.btnMinimizar_Principal.Click += new System.EventHandler(this.btnMinimizar_Principal_Click);
             // 
             // panelMain
             // 

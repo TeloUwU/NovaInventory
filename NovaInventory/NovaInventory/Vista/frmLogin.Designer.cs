@@ -38,8 +38,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnCerrar_Login = new System.Windows.Forms.ToolStripButton();
             this.btnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.btnMaximizar_Login = new System.Windows.Forms.ToolStripButton();
-            this.btnNormal = new System.Windows.Forms.ToolStripButton();
             this.btnMinmizar_Login = new System.Windows.Forms.ToolStripButton();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -136,8 +134,6 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCerrar_Login,
             this.btnCerrar,
-            this.btnMaximizar_Login,
-            this.btnNormal,
             this.btnMinmizar_Login});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -160,29 +156,6 @@
             this.btnCerrar.Size = new System.Drawing.Size(24, 24);
             this.btnCerrar.Text = "toolStripButton1";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnMaximizar_Login
-            // 
-            this.btnMaximizar_Login.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnMaximizar_Login.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnMaximizar_Login.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
-            this.btnMaximizar_Login.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMaximizar_Login.Name = "btnMaximizar_Login";
-            this.btnMaximizar_Login.Size = new System.Drawing.Size(24, 24);
-            this.btnMaximizar_Login.Text = "Maximizar";
-            this.btnMaximizar_Login.Click += new System.EventHandler(this.btnMaximizar_Login_Click);
-            // 
-            // btnNormal
-            // 
-            this.btnNormal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnNormal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnNormal.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
-            this.btnNormal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNormal.Name = "btnNormal";
-            this.btnNormal.Size = new System.Drawing.Size(24, 24);
-            this.btnNormal.Text = "Normal";
-            this.btnNormal.Visible = false;
-            this.btnNormal.Click += new System.EventHandler(this.btnVentana_Login_Click);
             // 
             // btnMinmizar_Login
             // 
@@ -211,7 +184,9 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.lklRecuperar_Contraseña);
             this.panel1.Controls.Add(this.pbLogo_Login);
@@ -239,7 +214,9 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -297,10 +274,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pbLogo_Login;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnNormal;
         private System.Windows.Forms.ToolStripButton btnMinmizar_Login;
         private System.Windows.Forms.ToolStripButton btnCerrar_Login;
-        private System.Windows.Forms.ToolStripButton btnMaximizar_Login;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
