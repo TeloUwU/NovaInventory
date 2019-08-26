@@ -73,5 +73,12 @@ namespace NovaInventory.Vista
                 pbFoto.Image = Image.FromFile(CargarImagen.FileName);
             }
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            frmLogin Login = new frmLogin();
+            Login.Show();
+            this.Hide();
+        }
     }
 }
