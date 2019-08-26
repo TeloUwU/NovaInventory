@@ -35,10 +35,22 @@ namespace NovaInventory.Vista
             int id_compra = Convert.ToInt16(txtid_Compra.Text);
             int id_proveedor = Convert.ToInt16(cbProveedor_Compra.Text);
             int id_articulo = Convert.ToInt16(cbProducto_Compra.Text);
+            int Precio_Unitario = Convert.ToInt16(txtPrecio_Unitario.Text);
+            int total = Convert.ToInt16(txtTotal.Text);
+            int cantidad = Convert.ToInt16(nUDCantidad.Text);
+            int usuario = Convert.ToInt16(txtid_usuario.Text);
+            int tipo_pago = Convert.ToInt16(cbTipo_Pago.Text);
+
             agregar.id_compra = id_compra;
             agregar.id_proveedor = id_proveedor;
             agregar.id_articulos = id_articulo;
-
+            agregar.descripcion = txtDescripción.Text;
+            agregar.Preiounitario = Precio_Unitario;
+            agregar.Precio_Total = total;
+            agregar.Cantidad = cantidad;
+            agregar.fecha_compra = dtpRealización_Compra.Text;
+            agregar.id_usuario = usuario;
+            agregar.tipo_de_pago = tipo_pago;
             
         }
 
