@@ -77,20 +77,6 @@ namespace NovaInventory.Vista
             WindowState  = FormWindowState.Minimized;
         }
 
-        private void btnMaximizar_Login_Click(object sender, EventArgs e)
-        {
-            btnMaximizar_Login.Visible = false;
-            btnNormal.Visible = true;
-            WindowState = FormWindowState.Maximized;
-        }
-
-        private void btnVentana_Login_Click(object sender, EventArgs e)
-        {
-            btnMaximizar_Login.Visible = true;
-            btnNormal.Visible = false;
-            WindowState = FormWindowState.Minimized;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 

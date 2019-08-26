@@ -79,19 +79,16 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtUsuario.Location = new System.Drawing.Point(117, 148);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Location = new System.Drawing.Point(121, 152);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(132, 22);
-            this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtUsuario.TabIndex = 7;
             // 
             // txtContraseña
             // 
             this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraseña.Location = new System.Drawing.Point(121, 188);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(132, 22);
             this.txtContraseña.TabIndex = 2;
@@ -103,7 +100,7 @@
             this.btnIniciar_Sesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIniciar_Sesion.ForeColor = System.Drawing.Color.White;
             this.btnIniciar_Sesion.Location = new System.Drawing.Point(35, 220);
-            this.btnIniciar_Sesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciar_Sesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnIniciar_Sesion.Name = "btnIniciar_Sesion";
             this.btnIniciar_Sesion.Size = new System.Drawing.Size(197, 54);
             this.btnIniciar_Sesion.TabIndex = 3;
@@ -201,7 +198,7 @@
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(431, 50);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 326);
             this.panel1.TabIndex = 10;
@@ -212,7 +209,7 @@
             this.pbLogo_Login.BackColor = System.Drawing.Color.Silver;
             this.pbLogo_Login.Image = global::NovaInventory.Properties.Resources.round_account_button_with_user_inside;
             this.pbLogo_Login.Location = new System.Drawing.Point(35, 4);
-            this.pbLogo_Login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogo_Login.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogo_Login.Name = "pbLogo_Login";
             this.pbLogo_Login.Size = new System.Drawing.Size(200, 122);
             this.pbLogo_Login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -228,7 +225,7 @@
             this.panel2.Controls.Add(this.btnPrimer_Uso);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(28, 50);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(377, 326);
             this.panel2.TabIndex = 11;
@@ -238,7 +235,7 @@
             // 
             this.pictureBox1.Image = global::NovaInventory.Properties.Resources.sistema;
             this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(367, 218);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -257,7 +254,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
             this.Load += new System.EventHandler(this.frmLogin_Load);

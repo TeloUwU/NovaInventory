@@ -44,7 +44,7 @@ namespace NovaInventory.Vista
             actualizar.usuario = (txtUsuario_Root.Text);
             actualizar.id_tipo_usuarios = Convert.ToInt32(cmbTipoUsuario_Root.Text);
             actualizar.contraseña_usuario = txtClave_Root.Text;
-            Actualizar_Root.Actualizar_usuario_root(actualizar);
+
         }
 
 
