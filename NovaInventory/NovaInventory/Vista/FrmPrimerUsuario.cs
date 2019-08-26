@@ -30,20 +30,17 @@ namespace NovaInventory.Vista
             }
             else
             {
-               
-                    constructor_primer_usuario usuario = new constructor_primer_usuario();
-                    usuario.usuario = txtUsuario.Text;
-                    usuario.nombre_usuario = txtUsuario.Text;
-                    usuario.apellido_usuario = txtApellidos.Text;
-                    usuario.Correo = txtEmail.Text;
-                    usuario.nit = txtCarne.Text;
-                    usuario.telefono = txt_cel.Text;
-                    string intentos = "0";
-                    usuario.intentos = intentos;
-                    if (txtClave.Text==txtConfClave.Text)
-                    {
-                        usuario.contraseña_usuario = txtClave.Text;
-                    }
+
+                     constructor_primer_usuario usuario = new constructor_primer_usuario();
+                     usuario.usuario = txtUsuario.Text;
+                     usuario.nombre_usuario = txtUsuario.Text;
+                     usuario.apellido_usuario = txtApellidos.Text;
+                     usuario.Correo = txtEmail.Text;
+                     usuario.nit = txtCarne.Text;
+                     usuario.telefono = txt_cel.Text;
+                     string intentos = "0";
+                     usuario.intentos = intentos;
+
                     MemoryStream ms = new MemoryStream();
                     pbFoto.Image.Save(ms, ImageFormat.Jpeg);
                     byte[] aByte = ms.ToArray();
@@ -72,6 +69,25 @@ namespace NovaInventory.Vista
             {
                 pbFoto.Image = Image.FromFile(CargarImagen.FileName);
             }
+        }
+
+        private void FrmPrimerUsuario_Load(object sender, EventArgs e)
+        {
+            cmbPregunta1.DataSource = preguntas_y_respuestas.cargar();
+            cmbPregunta1.DisplayMember = "pregunta";
+            cmbPregunta1.ValueMember = "id_pregunta";
+
+            cmbPregunta2.DataSource = preguntas_y_respuestas.cargar();
+            cmbPregunta2.DisplayMember = "pregunta";
+            cmbPregunta2.ValueMember = "id_pregunta";
+
+            cmbPregunta3.DataSource = preguntas_y_respuestas.cargar();
+            cmbPregunta3.DisplayMember = "pregunta";
+            cmbPregunta3.ValueMember = "id_pregunta";
+
+            cmbPregunta4.DataSource = preguntas_y_respuestas.cargar();
+            cmbPregunta4.DisplayMember = "pregunta";
+            cmbPregunta4.ValueMember = "id_pregunta";
         }
     }
 }

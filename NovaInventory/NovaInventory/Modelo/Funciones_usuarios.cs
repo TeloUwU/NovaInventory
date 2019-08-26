@@ -120,7 +120,24 @@ namespace NovaInventory.Modelo
                 return datos;
             }
         }
+        public static DataTable cargar()
+        {
+            DataTable datos = new DataTable();
 
+            try
+            {
+                string query = "SELECT id_estado_usuario, CONCAT(Estado_usuario) AS Estado_usuario FROM estado_usuario";
+                MySqlCommand mcdquery = new MySqlCommand(query, Conexion.obtenerconexion());
+                MySqlDataAdapter adaptar = new MySqlDataAdapter(mcdquery);
+                adaptar.Fill(datos);
+                return datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("oops, no se pudieron cargar los datos de la base de datos porfavor comunicarse con el programador" + ex, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datos;
+            }
+        }
     }
 
 
