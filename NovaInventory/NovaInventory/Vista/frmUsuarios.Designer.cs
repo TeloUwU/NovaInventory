@@ -199,7 +199,7 @@
             // txtNombres_Usuario
             // 
             this.txtNombres_Usuario.Location = new System.Drawing.Point(20, 86);
-            this.txtNombres_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombres_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombres_Usuario.Name = "txtNombres_Usuario";
             this.txtNombres_Usuario.Size = new System.Drawing.Size(157, 20);
             this.txtNombres_Usuario.TabIndex = 1;
@@ -207,7 +207,7 @@
             // txtApellidos_Usuario
             // 
             this.txtApellidos_Usuario.Location = new System.Drawing.Point(20, 138);
-            this.txtApellidos_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidos_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos_Usuario.Name = "txtApellidos_Usuario";
             this.txtApellidos_Usuario.Size = new System.Drawing.Size(156, 20);
             this.txtApellidos_Usuario.TabIndex = 2;
@@ -216,7 +216,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(19, 192);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(157, 20);
             this.txtUsuario.TabIndex = 3;
@@ -224,7 +224,7 @@
             // txtCorreo_Usuario
             // 
             this.txtCorreo_Usuario.Location = new System.Drawing.Point(214, 86);
-            this.txtCorreo_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo_Usuario.Name = "txtCorreo_Usuario";
             this.txtCorreo_Usuario.Size = new System.Drawing.Size(142, 20);
             this.txtCorreo_Usuario.TabIndex = 5;
@@ -232,7 +232,7 @@
             // txtTelefono_Usuario
             // 
             this.txtTelefono_Usuario.Location = new System.Drawing.Point(20, 247);
-            this.txtTelefono_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono_Usuario.Mask = "0000-0000";
             this.txtTelefono_Usuario.Name = "txtTelefono_Usuario";
             this.txtTelefono_Usuario.Size = new System.Drawing.Size(111, 20);
@@ -241,7 +241,7 @@
             // txtNIT_Usuario
             // 
             this.txtNIT_Usuario.Location = new System.Drawing.Point(214, 192);
-            this.txtNIT_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNIT_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtNIT_Usuario.Mask = "0000-000000-000-0";
             this.txtNIT_Usuario.Name = "txtNIT_Usuario";
             this.txtNIT_Usuario.Size = new System.Drawing.Size(134, 20);
@@ -251,7 +251,7 @@
             // 
             this.cbEstado_Usuario.FormattingEnabled = true;
             this.cbEstado_Usuario.Location = new System.Drawing.Point(211, 247);
-            this.cbEstado_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEstado_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.cbEstado_Usuario.Name = "cbEstado_Usuario";
             this.cbEstado_Usuario.Size = new System.Drawing.Size(128, 21);
             this.cbEstado_Usuario.TabIndex = 8;
@@ -259,7 +259,7 @@
             // txtDUI_Usuario
             // 
             this.txtDUI_Usuario.Location = new System.Drawing.Point(214, 138);
-            this.txtDUI_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDUI_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtDUI_Usuario.Mask = "00000000-0";
             this.txtDUI_Usuario.Name = "txtDUI_Usuario";
             this.txtDUI_Usuario.Size = new System.Drawing.Size(134, 20);
@@ -269,7 +269,7 @@
             // 
             this.dgvMostrar_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMostrar_Usuarios.Location = new System.Drawing.Point(416, 65);
-            this.dgvMostrar_Usuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMostrar_Usuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMostrar_Usuarios.Name = "dgvMostrar_Usuarios";
             this.dgvMostrar_Usuarios.RowTemplate.Height = 24;
             this.dgvMostrar_Usuarios.Size = new System.Drawing.Size(348, 332);
@@ -282,7 +282,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(52, 457);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 41);
             this.button1.TabIndex = 11;
@@ -296,12 +296,13 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(228, 457);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 41);
             this.button2.TabIndex = 12;
             this.button2.Text = "Mostrar Usuario";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -309,12 +310,13 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(416, 457);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 41);
             this.button3.TabIndex = 13;
             this.button3.Text = "Actualizar Usuario";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -322,17 +324,18 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(592, 457);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 41);
             this.button4.TabIndex = 14;
             this.button4.Text = "Eliminar Usuario";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dtpFechaCreación_Usuario
             // 
             this.dtpFechaCreación_Usuario.Location = new System.Drawing.Point(604, 36);
-            this.dtpFechaCreación_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaCreación_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaCreación_Usuario.Name = "dtpFechaCreación_Usuario";
             this.dtpFechaCreación_Usuario.Size = new System.Drawing.Size(117, 20);
             this.dtpFechaCreación_Usuario.TabIndex = 26;
@@ -341,7 +344,7 @@
             // txtid_Usuario
             // 
             this.txtid_Usuario.Location = new System.Drawing.Point(740, 36);
-            this.txtid_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtid_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtid_Usuario.Name = "txtid_Usuario";
             this.txtid_Usuario.Size = new System.Drawing.Size(26, 20);
             this.txtid_Usuario.TabIndex = 27;
@@ -351,7 +354,7 @@
             // 
             this.cbTipo_Usuario.FormattingEnabled = true;
             this.cbTipo_Usuario.Location = new System.Drawing.Point(214, 298);
-            this.cbTipo_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTipo_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.cbTipo_Usuario.Name = "cbTipo_Usuario";
             this.cbTipo_Usuario.Size = new System.Drawing.Size(126, 21);
             this.cbTipo_Usuario.TabIndex = 9;
@@ -371,7 +374,7 @@
             // 
             this.btnSeleccionarFoto_Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnSeleccionarFoto_Usuario.Location = new System.Drawing.Point(211, 357);
-            this.btnSeleccionarFoto_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSeleccionarFoto_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeleccionarFoto_Usuario.Name = "btnSeleccionarFoto_Usuario";
             this.btnSeleccionarFoto_Usuario.Size = new System.Drawing.Size(128, 41);
             this.btnSeleccionarFoto_Usuario.TabIndex = 10;
@@ -382,7 +385,7 @@
             // pbFoto_Usuario
             // 
             this.pbFoto_Usuario.Location = new System.Drawing.Point(20, 298);
-            this.pbFoto_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbFoto_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.pbFoto_Usuario.Name = "pbFoto_Usuario";
             this.pbFoto_Usuario.Size = new System.Drawing.Size(160, 99);
             this.pbFoto_Usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -429,7 +432,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";
             this.tsAdmin_Usuarios.ResumeLayout(false);

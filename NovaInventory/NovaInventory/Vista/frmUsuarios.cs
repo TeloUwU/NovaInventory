@@ -85,8 +85,6 @@ namespace NovaInventory.Vista
             txtNIT_Usuario.Clear();
             txtCorreo_Usuario.Clear();
         }
-     
-
         
 
         private void btnCerrar_AdminUsuarios_Click(object sender, EventArgs e)
@@ -134,6 +132,23 @@ namespace NovaInventory.Vista
             txtCorreo_Usuario.Text = this.dgvMostrar_Usuarios[5, posision].Value.ToString();
             txtDUI_Usuario.Text = this.dgvMostrar_Usuarios[6, posision].Value.ToString();
             txtNIT_Usuario.Text = this.dgvMostrar_Usuarios[7, posision].Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mostrar();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            actualizares();
+            mostrar();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            eliminarusu();
+            mostrar();
         }
     }
 }
