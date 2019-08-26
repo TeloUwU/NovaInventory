@@ -67,16 +67,8 @@ namespace NovaInventory.Vista
             }
 
             lblCostoAPagar.Text = CostoTotal.ToString();
-
-
-
-
-
-
-
+            
         }
-
-        /// </summary>
 
 
 
@@ -100,7 +92,7 @@ namespace NovaInventory.Vista
             Ticket1.TextoCentro("Factura de Venta");
             Ticket1.TextoIzquierda("No Fac: 000");
             Ticket1.TextoIzquierda("Fecha:" + DateTime.Now.ToShortDateString() + " Hora:" + DateTime.Now.ToShortTimeString());
-            Ticket1.TextoIzquierda("Le Atendio: xxxx ");
+            Ticket1.TextoIzquierda("Le Atendio: Andrea Turcios ");
             Ticket1.TextoIzquierda("");
             clsFunciones.CreaTicket.LineasGuion();
 

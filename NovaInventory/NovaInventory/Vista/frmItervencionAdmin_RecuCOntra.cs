@@ -41,14 +41,20 @@ namespace NovaInventory.Vista
                     frmNuevaContraseña frm = new frmNuevaContraseña();
                     frm.Show();
                     this.Hide();
+                    MessageBox.Show("Usuario Root");
                 }
-                else { label.Text = "El usuario no existe"; }
+                else { labelMensaje.Text = "El usuario no existe"; }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en encontrar usuario" + ex, "Error de encontrame al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             cn.Close();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
     }

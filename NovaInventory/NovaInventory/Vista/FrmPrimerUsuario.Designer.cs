@@ -559,7 +559,6 @@
             this.Name = "FrmPrimerUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrimerUsuario";
-            this.Load += new System.EventHandler(this.FrmPrimerUsuario_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
