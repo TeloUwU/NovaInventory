@@ -68,15 +68,40 @@ namespace NovaInventory.Vista
         private void btnMaximizar_Login_Click(object sender, EventArgs e)
         {
             btnMaximizar_Login.Visible = false;
-            btnVentana_Login.Visible = true;
+            btnNormal.Visible = true;
             WindowState = FormWindowState.Maximized;
         }
 
         private void btnVentana_Login_Click(object sender, EventArgs e)
         {
             btnMaximizar_Login.Visible = true;
-            btnVentana_Login.Visible = false;
+            btnNormal.Visible = false;
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
