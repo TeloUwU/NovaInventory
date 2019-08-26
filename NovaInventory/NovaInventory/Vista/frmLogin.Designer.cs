@@ -37,19 +37,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnCerrar_Login = new System.Windows.Forms.ToolStripButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.ToolStripButton();
             this.btnMaximizar_Login = new System.Windows.Forms.ToolStripButton();
             this.btnNormal = new System.Windows.Forms.ToolStripButton();
             this.btnMinmizar_Login = new System.Windows.Forms.ToolStripButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pbLogo_Login = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Login)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +84,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtContraseña
             // 
@@ -149,47 +150,16 @@
             this.btnCerrar_Login.Name = "btnCerrar_Login";
             this.btnCerrar_Login.Size = new System.Drawing.Size(23, 24);
             // 
-            // button1
+            // btnCerrar
             // 
-            this.button1.BackColor = System.Drawing.Color.LimeGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 216);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(283, 49);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Primer Uso";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.lklRecuperar_Contraseña);
-            this.panel1.Controls.Add(this.pbLogo_Login);
-            this.panel1.Controls.Add(this.btnIniciar_Sesion);
-            this.panel1.Controls.Add(this.txtContraseña);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtUsuario);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(323, 41);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 265);
-            this.panel1.TabIndex = 10;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(21, 41);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(283, 265);
-            this.panel2.TabIndex = 11;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.btnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnCerrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCerrar.Image = global::NovaInventory.Properties.Resources.cancel_button1;
+            this.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(24, 24);
+            this.btnCerrar.Text = "toolStripButton1";
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnMaximizar_Login
             // 
@@ -225,6 +195,36 @@
             this.btnMinmizar_Login.Text = "Minimizar";
             this.btnMinmizar_Login.Click += new System.EventHandler(this.btnMinmizar_Login_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LimeGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 216);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(283, 49);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Primer Uso";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.lklRecuperar_Contraseña);
+            this.panel1.Controls.Add(this.pbLogo_Login);
+            this.panel1.Controls.Add(this.btnIniciar_Sesion);
+            this.panel1.Controls.Add(this.txtContraseña);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtUsuario);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(323, 41);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(199, 265);
+            this.panel1.TabIndex = 10;
+            // 
             // pbLogo_Login
             // 
             this.pbLogo_Login.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -237,6 +237,18 @@
             this.pbLogo_Login.TabIndex = 6;
             this.pbLogo_Login.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(21, 41);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(283, 265);
+            this.panel2.TabIndex = 11;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::NovaInventory.Properties.Resources.sistema;
@@ -247,17 +259,6 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnCerrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCerrar.Image = global::NovaInventory.Properties.Resources.cancel_button1;
-            this.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(24, 24);
-            this.btnCerrar.Text = "toolStripButton1";
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmLogin
             // 
@@ -277,8 +278,8 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Login)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -48,6 +48,7 @@
             this.btnCargarLista = new System.Windows.Forms.Button();
             this.txtIdArticulo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblCantidad = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lblFecha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -245,6 +245,15 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(375, 62);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(35, 13);
+            this.lblFecha.TabIndex = 11;
+            this.lblFecha.Text = "label2";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(193, 21);
@@ -258,6 +267,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(87, 146);
+            this.txtCantidad.MaxLength = 7;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 9;
@@ -283,6 +293,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(87, 104);
+            this.txtPrecio.MaxLength = 7;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 8;
@@ -327,15 +338,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 0;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(375, 62);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(35, 13);
-            this.lblFecha.TabIndex = 11;
-            this.lblFecha.Text = "label2";
             // 
             // frmFacturacion
             // 
