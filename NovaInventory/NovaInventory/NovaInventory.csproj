@@ -56,6 +56,8 @@
     <Compile Include="Controlador\Constructor_login.cs" />
     <Compile Include="Controlador\constructor_para_celulares.cs" />
     <Compile Include="Controlador\constructor_primer_usuario.cs" />
+    <Compile Include="Controlador\cosntructor_Compra.cs" />
+    <Compile Include="Controlador\crudCompra.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
     <Compile Include="Modelo\preguntas y respuestas.cs" />
