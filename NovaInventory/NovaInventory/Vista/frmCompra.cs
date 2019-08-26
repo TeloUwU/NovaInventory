@@ -38,6 +38,7 @@ namespace NovaInventory.Vista
             agregar.id_compra = id_compra;
             agregar.id_proveedor = id_proveedor;
             agregar.id_articulos = id_articulo;
+
             
         }
 
