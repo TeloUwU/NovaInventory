@@ -32,7 +32,7 @@ namespace NovaInventory.Vista
             agregar.Correo = txtCorreo_Usuario.Text;
             agregar.dui = txtDUI_Usuario.Text;
             agregar.nit = txtNIT_Usuario.Text;
-            agregar.id_estados = Convert.ToInt32(cbEstado_Usuario.Text);
+            agregar.id_estados = Convert.ToInt16(cbEstado_Usuario.Text);
             agregar.id_tipo_usuarios = Convert.ToInt16(cbTipo_Usuario.Text);
             int intentos = 1;
             agregar.intentos = Convert.ToString(intentos);
@@ -153,13 +153,7 @@ namespace NovaInventory.Vista
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            cbTipo_Usuario.DataSource = Funciones_usuarios.cargarUSU();
-            cbTipo_Usuario.DisplayMember = "tipo_usuario";
-            cbTipo_Usuario.ValueMember = "id_tipo_usuario";
-
-            cbEstado_Usuario.DataSource = Funciones_usuarios.cargar();
-            cbEstado_Usuario.DisplayMember = "Estado_usuario";
-            cbEstado_Usuario.ValueMember = "id_estado_usuario";
+            
         }
     }
 }

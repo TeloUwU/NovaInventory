@@ -58,13 +58,14 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lblFecha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVender
             // 
+            this.btnVender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVender.Location = new System.Drawing.Point(752, 184);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(178, 43);
@@ -115,6 +116,8 @@
             // 
             // txtEfectivo
             // 
+            this.txtEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEfectivo.Location = new System.Drawing.Point(752, 157);
             this.txtEfectivo.MaxLength = 7;
             this.txtEfectivo.Name = "txtEfectivo";
@@ -133,6 +136,8 @@
             // 
             // lblDevolucion
             // 
+            this.lblDevolucion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDevolucion.AutoSize = true;
             this.lblDevolucion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblDevolucion.ForeColor = System.Drawing.Color.Yellow;
@@ -155,6 +160,8 @@
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.SystemColors.InfoText;
             this.textBox2.Location = new System.Drawing.Point(752, 82);
             this.textBox2.Name = "textBox2";
@@ -163,6 +170,8 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(803, 66);
             this.label9.Name = "label9";
@@ -172,6 +181,8 @@
             // 
             // lblCostoAPagar
             // 
+            this.lblCostoAPagar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCostoAPagar.AutoSize = true;
             this.lblCostoAPagar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCostoAPagar.ForeColor = System.Drawing.Color.Lime;
@@ -183,6 +194,8 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(794, 24);
             this.label7.Name = "label7";
@@ -203,6 +216,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.SystemColors.InfoText;
             this.textBox1.Location = new System.Drawing.Point(752, 41);
             this.textBox1.Name = "textBox1";
@@ -228,7 +243,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblFecha);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.lblCantidad);
@@ -258,6 +272,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(87, 146);
+            this.txtCantidad.MaxLength = 7;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 9;
@@ -283,6 +298,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(87, 104);
+            this.txtPrecio.MaxLength = 7;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 8;
@@ -327,15 +343,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 0;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(375, 62);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(35, 13);
-            this.lblFecha.TabIndex = 11;
-            this.lblFecha.Text = "label2";
             // 
             // frmFacturacion
             // 
@@ -400,6 +407,5 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label lblFecha;
     }
 }

@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NovaInventory.Controlador;
 using NovaInventory.Modelo;
+using NovaInventory.Controlador;
 
 namespace NovaInventory.Vista
 {
@@ -26,8 +26,8 @@ namespace NovaInventory.Vista
             }
             else
             {
-                Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
-                Constructor_login.usuario = txtUsuario.Text;
+               Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
+               Constructor_login.usuario = txtUsuario.Text;
                 login.clave = txtContraseña.Text;
                 bool datos = validar_login.acceso(login);
                 if (datos == true)
@@ -41,10 +41,33 @@ namespace NovaInventory.Vista
         }
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            if (Validar_primer_uso.verificar_emo() == true)
+            {
+                if (Validar_primer_uso.verificar_usu() == true)
+                {
+                    btnPrimer_Uso.Visible = false;
+                }
+                else
+                {
+                    pbLogo_Login.Enabled = false;
+                    txtUsuario.Enabled = false;
+                    txtContraseña.Enabled = false;
+                    btnPrimer_Uso.Visible = true;
+                    btnPrimer_Uso.Text = "Primer Usuario";
+                }
+            }
+            else
+            {
+                pbLogo_Login.Enabled = false;
+                txtUsuario.Enabled = false;
+                txtContraseña.Enabled = false;
+                btnPrimer_Uso.Visible = true;
+            }
         }
 
-        private void btnIniciar_Sesion_Click(object sender, EventArgs e)
+    
+
+    private void btnIniciar_Sesion_Click(object sender, EventArgs e)
         {
             Validar_Campos();
         }
@@ -66,23 +89,21 @@ namespace NovaInventory.Vista
             WindowState  = FormWindowState.Minimized;
         }
 
-        private void btnMaximizar_Login_Click(object sender, EventArgs e)
-        {
-            btnMaximizar_Login.Visible = false;
-            btnNormal.Visible = true;
-            WindowState = FormWindowState.Maximized;
-        }
-
-        private void btnVentana_Login_Click(object sender, EventArgs e)
-        {
-            btnMaximizar_Login.Visible = true;
-            btnNormal.Visible = false;
-            WindowState = FormWindowState.Minimized;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (btnPrimer_Uso.Text == "Primer Uso")
+            {
+                FrmPrimerUso primer_uso = new FrmPrimerUso();
+                primer_uso.Show();
+                this.Hide();
+            }
+            else
+            {
+                FrmPrimerUsuario primer_usuario = new FrmPrimerUsuario();
+                primer_usuario.Show();
+                this.Hide();
+            }
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -101,6 +122,11 @@ namespace NovaInventory.Vista
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }
