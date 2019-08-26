@@ -32,10 +32,10 @@ namespace NovaInventory.Vista
             agregar.Correo = txtCorreo_Usuario.Text;
             agregar.dui = txtDUI_Usuario.Text;
             agregar.nit = txtNIT_Usuario.Text;
-            agregar.id_estados = Convert.ToInt16( cbEstado_Usuario.Text );
-            agregar.id_tipo_usuarios = Convert.ToInt16 (cbTipo_Usuario.Text);
+            agregar.id_estados = Convert.ToInt16(cbEstado_Usuario.Text);
+            agregar.id_tipo_usuarios = Convert.ToInt16(cbTipo_Usuario.Text);
             int intentos = 1;
-            agregar.intentos = Convert.ToString( intentos);
+            agregar.intentos = Convert.ToString(intentos);
 
             MemoryStream ms = new MemoryStream();
             pbFoto_Usuario.Image.Save(ms, ImageFormat.Jpeg);
@@ -44,11 +44,11 @@ namespace NovaInventory.Vista
             agregar.Foto_usuario = imagen;
             int retorno = Funciones_usuarios.agregar_usu(agregar);
 
-            
+
         }
         public void mostrar()
         {
-            dgvMostrar_Usuarios.DataSource= Funciones_usuarios.mostrar_usu();
+            dgvMostrar_Usuarios.DataSource = Funciones_usuarios.mostrar_usu();
         }
         public void actualizares()
         {
@@ -85,7 +85,7 @@ namespace NovaInventory.Vista
             txtNIT_Usuario.Clear();
             txtCorreo_Usuario.Clear();
         }
-        
+
 
         private void btnCerrar_AdminUsuarios_Click(object sender, EventArgs e)
         {
@@ -149,6 +149,11 @@ namespace NovaInventory.Vista
         {
             eliminarusu();
             mostrar();
+        }
+
+        private void frmUsuarios_Load(object sender, EventArgs e)
+        {
+            cbEstado_Usuario.DataSource = Funciones_usuarios.c
         }
     }
 }

@@ -102,13 +102,13 @@ namespace NovaInventory.Modelo
             }
 
         }
-        public static DataTable cargardocente()
+        public static DataTable cargarUSU()
         {
             DataTable datos = new DataTable();
            
             try
             {
-                string query = "SELECT id_tipo_usuario, CONCAT(ntipo_usuario) AS tipo_usuario FROM Tipo_usuario";
+                string query = "SELECT id_tipo_usuario, CONCAT(tipo_usuario) AS tipo_usuario FROM Tipo_usuario";
                 MySqlCommand mcdquery = new MySqlCommand(query, Conexion.obtenerconexion());
                 MySqlDataAdapter adaptar = new MySqlDataAdapter(mcdquery);
                 adaptar.Fill(datos);

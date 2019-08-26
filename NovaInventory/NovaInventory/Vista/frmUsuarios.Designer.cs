@@ -435,6 +435,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";
+            this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.tsAdmin_Usuarios.ResumeLayout(false);
             this.tsAdmin_Usuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar_Usuarios)).EndInit();
