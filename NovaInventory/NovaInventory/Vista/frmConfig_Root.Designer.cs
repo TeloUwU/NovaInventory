@@ -62,6 +62,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtid_Root = new System.Windows.Forms.TextBox();
+            this.openCargarImagen = new System.Windows.Forms.OpenFileDialog();
+            this.Guardar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Root)).BeginInit();
             this.SuspendLayout();
@@ -95,18 +97,20 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(149, 24);
             this.toolStripButton2.Text = "Cerrar Formulario";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // btnSobreescribir_Root
             // 
             this.btnSobreescribir_Root.BackColor = System.Drawing.Color.Green;
             this.btnSobreescribir_Root.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSobreescribir_Root.ForeColor = System.Drawing.Color.White;
-            this.btnSobreescribir_Root.Location = new System.Drawing.Point(406, 521);
+            this.btnSobreescribir_Root.Location = new System.Drawing.Point(398, 518);
             this.btnSobreescribir_Root.Name = "btnSobreescribir_Root";
             this.btnSobreescribir_Root.Size = new System.Drawing.Size(323, 61);
             this.btnSobreescribir_Root.TabIndex = 14;
             this.btnSobreescribir_Root.Text = "Actualizar Datos";
             this.btnSobreescribir_Root.UseVisualStyleBackColor = false;
+            this.btnSobreescribir_Root.Click += new System.EventHandler(this.btnSobreescribir_Root_Click);
             // 
             // txt_cel_Root
             // 
@@ -129,6 +133,7 @@
             this.BtnExaminar_Root.TabIndex = 13;
             this.BtnExaminar_Root.Text = "Cargar Imagen";
             this.BtnExaminar_Root.UseVisualStyleBackColor = false;
+            this.BtnExaminar_Root.Click += new System.EventHandler(this.BtnExaminar_Root_Click);
             // 
             // cmbTipoUsuario_Root
             // 
@@ -413,11 +418,52 @@
             this.txtid_Root.TabIndex = 110;
             this.txtid_Root.Visible = false;
             // 
+            // openCargarImagen
+            // 
+            this.openCargarImagen.FileName = "openCargarImagen";
+            // 
+            // Guardar
+            // 
+            this.Guardar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.Guardar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Guardar.BorderRadius = 0;
+            this.Guardar.ButtonText = "             Guardar";
+            this.Guardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Guardar.DisabledColor = System.Drawing.Color.Gray;
+            this.Guardar.Iconcolor = System.Drawing.Color.Transparent;
+            this.Guardar.Iconimage = ((System.Drawing.Image)(resources.GetObject("Guardar.Iconimage")));
+            this.Guardar.Iconimage_right = null;
+            this.Guardar.Iconimage_right_Selected = null;
+            this.Guardar.Iconimage_Selected = null;
+            this.Guardar.IconMarginLeft = 0;
+            this.Guardar.IconMarginRight = 0;
+            this.Guardar.IconRightVisible = true;
+            this.Guardar.IconRightZoom = 0D;
+            this.Guardar.IconVisible = true;
+            this.Guardar.IconZoom = 90D;
+            this.Guardar.IsTab = false;
+            this.Guardar.Location = new System.Drawing.Point(823, 454);
+            this.Guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Guardar.Name = "Guardar";
+            this.Guardar.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.Guardar.OnHovercolor = System.Drawing.SystemColors.MenuHighlight;
+            this.Guardar.OnHoverTextColor = System.Drawing.Color.White;
+            this.Guardar.selected = false;
+            this.Guardar.Size = new System.Drawing.Size(188, 51);
+            this.Guardar.TabIndex = 111;
+            this.Guardar.Text = "             Guardar";
+            this.Guardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Guardar.Textcolor = System.Drawing.Color.White;
+            this.Guardar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
+            // 
             // frmConfig_Root
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 665);
+            this.Controls.Add(this.Guardar);
             this.Controls.Add(this.txtid_Root);
             this.Controls.Add(this.btnSobreescribir_Root);
             this.Controls.Add(this.txt_cel_Root);
@@ -452,6 +498,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConfig_Root";
             this.Text = "frmConfig_Root";
+            //this.Load += new System.EventHandler(this.frmConfig_Root_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Root)).EndInit();
@@ -495,5 +542,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtid_Root;
+        private System.Windows.Forms.OpenFileDialog openCargarImagen;
+        private Bunifu.Framework.UI.BunifuFlatButton Guardar;
     }
 }

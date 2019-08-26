@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace NovaInventory.Controlador
 {
-    class constructor_Compra
+    class Actualizar_root
     {
-        
     }
 }
