@@ -13,7 +13,7 @@ namespace NovaInventory.Config
         public static MySqlConnection obtenerconexion()
         {
             string server = "127.0.0.1";
-            string database = "novainventory12";
+            string database = "DB_NOVAINVENTORY_25";
             string uid = "root";
             string pwd = "";
             MySqlConnection con;

@@ -58,6 +58,7 @@
     <Compile Include="Controlador\constructor_primer_usuario.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
+    <Compile Include="Modelo\Funciones_usuarios.cs" />
     <Compile Include="Modelo\preguntas y respuestas.cs" />
     <Compile Include="Modelo\validar_login.cs" />
     <Compile Include="Modelo\Validar_primer_uso.cs" />
