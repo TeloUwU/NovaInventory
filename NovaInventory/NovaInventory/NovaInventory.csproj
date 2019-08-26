@@ -109,6 +109,12 @@
     <Compile Include="Vista\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmNuevaContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmNuevaContraseña.Designer.cs">
+      <DependentUpon>frmNuevaContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmPreguntasSeguridad_RecuperarContra.cs">
       <SubType>Form</SubType>
     </Compile>

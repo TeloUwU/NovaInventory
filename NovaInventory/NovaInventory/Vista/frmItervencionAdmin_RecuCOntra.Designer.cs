@@ -35,14 +35,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtContraseña_Root = new System.Windows.Forms.TextBox();
             this.panelUsuario_Root = new System.Windows.Forms.Panel();
+            this.txtIdRoot = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panelUsuario_Recu = new System.Windows.Forms.Panel();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbUsuario_Cambiar = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtConfirmar_Contraseña = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnEnviar_Contra = new System.Windows.Forms.Button();
+            this.label = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panelUsuario_Root.SuspendLayout();
             this.panelUsuario_Recu.SuspendLayout();
@@ -57,14 +60,18 @@
             this.toolStrip1.Size = new System.Drawing.Size(644, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-      
+            // 
+            // btnCorreoVolver_Recu
+            // 
+            this.btnCorreoVolver_Recu.Name = "btnCorreoVolver_Recu";
+            this.btnCorreoVolver_Recu.Size = new System.Drawing.Size(23, 22);
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 9);
+            this.label1.Location = new System.Drawing.Point(72, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(217, 18);
             this.label1.TabIndex = 1;
@@ -73,7 +80,7 @@
             // txtUsuario_Root
             // 
             this.txtUsuario_Root.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtUsuario_Root.Location = new System.Drawing.Point(218, 40);
+            this.txtUsuario_Root.Location = new System.Drawing.Point(117, 39);
             this.txtUsuario_Root.Name = "txtUsuario_Root";
             this.txtUsuario_Root.Size = new System.Drawing.Size(123, 20);
             this.txtUsuario_Root.TabIndex = 1;
@@ -83,7 +90,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(205, 76);
+            this.label2.Location = new System.Drawing.Point(98, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 18);
             this.label2.TabIndex = 3;
@@ -92,7 +99,7 @@
             // txtContraseña_Root
             // 
             this.txtContraseña_Root.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtContraseña_Root.Location = new System.Drawing.Point(217, 106);
+            this.txtContraseña_Root.Location = new System.Drawing.Point(110, 92);
             this.txtContraseña_Root.Name = "txtContraseña_Root";
             this.txtContraseña_Root.Size = new System.Drawing.Size(123, 20);
             this.txtContraseña_Root.TabIndex = 2;
@@ -100,6 +107,8 @@
             // panelUsuario_Root
             // 
             this.panelUsuario_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelUsuario_Root.Controls.Add(this.txtIdRoot);
+            this.panelUsuario_Root.Controls.Add(this.label6);
             this.panelUsuario_Root.Controls.Add(this.label1);
             this.panelUsuario_Root.Controls.Add(this.txtContraseña_Root);
             this.panelUsuario_Root.Controls.Add(this.txtUsuario_Root);
@@ -110,15 +119,42 @@
             this.panelUsuario_Root.TabIndex = 5;
             this.panelUsuario_Root.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUsuario_Root_Paint);
             // 
+            // txtIdRoot
+            // 
+            this.txtIdRoot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtIdRoot.Location = new System.Drawing.Point(364, 39);
+            this.txtIdRoot.Name = "txtIdRoot";
+            this.txtIdRoot.Size = new System.Drawing.Size(123, 20);
+            this.txtIdRoot.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(385, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 18);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Id del root:";
+            // 
             // panelUsuario_Recu
             // 
             this.panelUsuario_Recu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panelUsuario_Recu.Controls.Add(this.cbUsuario_Cambiar);
+            this.panelUsuario_Recu.Controls.Add(this.txtUsuario);
             this.panelUsuario_Recu.Controls.Add(this.label3);
             this.panelUsuario_Recu.Location = new System.Drawing.Point(35, 194);
             this.panelUsuario_Recu.Name = "panelUsuario_Recu";
             this.panelUsuario_Recu.Size = new System.Drawing.Size(568, 98);
             this.panelUsuario_Recu.TabIndex = 6;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtUsuario.Location = new System.Drawing.Point(217, 50);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(123, 20);
+            this.txtUsuario.TabIndex = 4;
             // 
             // label3
             // 
@@ -129,14 +165,6 @@
             this.label3.Size = new System.Drawing.Size(132, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Usuario A Modificar:";
-            // 
-            // cbUsuario_Cambiar
-            // 
-            this.cbUsuario_Cambiar.FormattingEnabled = true;
-            this.cbUsuario_Cambiar.Location = new System.Drawing.Point(217, 49);
-            this.cbUsuario_Cambiar.Name = "cbUsuario_Cambiar";
-            this.cbUsuario_Cambiar.Size = new System.Drawing.Size(123, 21);
-            this.cbUsuario_Cambiar.TabIndex = 3;
             // 
             // textBox1
             // 
@@ -187,12 +215,23 @@
             this.btnEnviar_Contra.TabIndex = 6;
             this.btnEnviar_Contra.Text = "Enviar Contraseña Nueva";
             this.btnEnviar_Contra.UseVisualStyleBackColor = false;
+            this.btnEnviar_Contra.Click += new System.EventHandler(this.btnEnviar_Contra_Click);
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.ForeColor = System.Drawing.Color.Red;
+            this.label.Location = new System.Drawing.Point(322, 24);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(0, 13);
+            this.label.TabIndex = 4;
             // 
             // frmItervencionAdmin_RecuContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 447);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.btnEnviar_Contra);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -225,12 +264,15 @@
         private System.Windows.Forms.TextBox txtContraseña_Root;
         private System.Windows.Forms.Panel panelUsuario_Root;
         private System.Windows.Forms.Panel panelUsuario_Recu;
-        private System.Windows.Forms.ComboBox cbUsuario_Cambiar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtConfirmar_Contraseña;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnEnviar_Contra;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox txtIdRoot;
+        private System.Windows.Forms.Label label6;
     }
 }

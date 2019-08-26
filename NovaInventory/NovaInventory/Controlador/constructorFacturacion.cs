@@ -38,4 +38,4 @@ namespace NovaInventory.Controlador
 
     }
 }
-}
+
