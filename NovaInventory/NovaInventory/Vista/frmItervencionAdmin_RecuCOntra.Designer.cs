@@ -69,7 +69,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(128, 97);
+            this.label1.Location = new System.Drawing.Point(115, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 18);
             this.label1.TabIndex = 1;
@@ -78,7 +78,7 @@
             // txtUsuario_Root
             // 
             this.txtUsuario_Root.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtUsuario_Root.Location = new System.Drawing.Point(144, 118);
+            this.txtUsuario_Root.Location = new System.Drawing.Point(131, 119);
             this.txtUsuario_Root.Name = "txtUsuario_Root";
             this.txtUsuario_Root.Size = new System.Drawing.Size(123, 20);
             this.txtUsuario_Root.TabIndex = 1;
@@ -88,7 +88,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(134, 150);
+            this.label2.Location = new System.Drawing.Point(121, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 18);
             this.label2.TabIndex = 3;
@@ -97,7 +97,7 @@
             // txtContraseña_Root
             // 
             this.txtContraseña_Root.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtContraseña_Root.Location = new System.Drawing.Point(144, 171);
+            this.txtContraseña_Root.Location = new System.Drawing.Point(131, 172);
             this.txtContraseña_Root.Name = "txtContraseña_Root";
             this.txtContraseña_Root.Size = new System.Drawing.Size(123, 20);
             this.txtContraseña_Root.TabIndex = 2;
@@ -121,7 +121,7 @@
             // txtIdRoot
             // 
             this.txtIdRoot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtIdRoot.Location = new System.Drawing.Point(144, 221);
+            this.txtIdRoot.Location = new System.Drawing.Point(131, 222);
             this.txtIdRoot.Name = "txtIdRoot";
             this.txtIdRoot.Size = new System.Drawing.Size(123, 20);
             this.txtIdRoot.TabIndex = 5;
@@ -131,7 +131,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(167, 200);
+            this.label6.Location = new System.Drawing.Point(154, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 18);
             this.label6.TabIndex = 4;

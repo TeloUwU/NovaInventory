@@ -182,6 +182,9 @@
     <EmbeddedResource Include="Vista\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmNuevaContraseña.resx">
+      <DependentUpon>frmNuevaContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmPreguntasSeguridad_RecuperarContra.resx">
       <DependentUpon>frmPreguntasSeguridad_RecuperarContra.cs</DependentUpon>
     </EmbeddedResource>
