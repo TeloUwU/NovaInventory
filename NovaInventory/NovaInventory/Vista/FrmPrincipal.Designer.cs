@@ -40,7 +40,6 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombres_Usuario = new System.Windows.Forms.Label();
-            this.lblApellidos_Usuario = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,16 +57,17 @@
             this.mostrarTodosLosProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelDeNavegaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gráficosYReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.gráficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verCatalogoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.lblApellidos = new System.Windows.Forms.Label();
+            this.lblNivel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.PanelSidebar.SuspendLayout();
@@ -158,14 +158,22 @@
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1044, 669);
             this.PanelContenedor.TabIndex = 2;
+            this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint_1);
             // 
             // PanelSidebar
             // 
             this.PanelSidebar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.PanelSidebar.Controls.Add(this.lblNivel);
+            this.PanelSidebar.Controls.Add(this.lblApellidos);
+            this.PanelSidebar.Controls.Add(this.button6);
+            this.PanelSidebar.Controls.Add(this.button4);
+            this.PanelSidebar.Controls.Add(this.button5);
+            this.PanelSidebar.Controls.Add(this.button3);
+            this.PanelSidebar.Controls.Add(this.button2);
+            this.PanelSidebar.Controls.Add(this.button1);
             this.PanelSidebar.Controls.Add(this.lblEstado);
             this.PanelSidebar.Controls.Add(this.pictureBox1);
             this.PanelSidebar.Controls.Add(this.lblNombres_Usuario);
-            this.PanelSidebar.Controls.Add(this.lblApellidos_Usuario);
             this.PanelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelSidebar.Location = new System.Drawing.Point(0, 24);
             this.PanelSidebar.Name = "PanelSidebar";
@@ -175,7 +183,7 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(153, 82);
+            this.lblEstado.Location = new System.Drawing.Point(147, 98);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(55, 17);
             this.lblEstado.TabIndex = 3;
@@ -192,20 +200,11 @@
             // lblNombres_Usuario
             // 
             this.lblNombres_Usuario.AutoSize = true;
-            this.lblNombres_Usuario.Location = new System.Drawing.Point(153, 19);
+            this.lblNombres_Usuario.Location = new System.Drawing.Point(147, 19);
             this.lblNombres_Usuario.Name = "lblNombres_Usuario";
-            this.lblNombres_Usuario.Size = new System.Drawing.Size(42, 17);
+            this.lblNombres_Usuario.Size = new System.Drawing.Size(0, 17);
             this.lblNombres_Usuario.TabIndex = 1;
-            this.lblNombres_Usuario.Text = "label1";
-            // 
-            // lblApellidos_Usuario
-            // 
-            this.lblApellidos_Usuario.AutoSize = true;
-            this.lblApellidos_Usuario.Location = new System.Drawing.Point(153, 51);
-            this.lblApellidos_Usuario.Name = "lblApellidos_Usuario";
-            this.lblApellidos_Usuario.Size = new System.Drawing.Size(42, 17);
-            this.lblApellidos_Usuario.TabIndex = 2;
-            this.lblApellidos_Usuario.Text = "label2";
+            this.lblNombres_Usuario.Click += new System.EventHandler(this.lblNombres_Usuario_Click);
             // 
             // menuStrip1
             // 
@@ -216,7 +215,6 @@
             this.inventarioToolStripMenuItem,
             this.administraciónToolStripMenuItem,
             this.verToolStripMenuItem,
-            this.gráficosYReportesToolStripMenuItem,
             this.facturaciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -235,7 +233,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // buscarToolStripMenuItem
@@ -253,25 +251,25 @@
             this.facturaToolStripMenuItem,
             this.proveedorToolStripMenuItem});
             this.buscarToolStripMenuItem1.Name = "buscarToolStripMenuItem1";
-            this.buscarToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
+            this.buscarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.buscarToolStripMenuItem1.Text = "Buscar";
             // 
             // productoToolStripMenuItem
             // 
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productoToolStripMenuItem.Text = "Producto";
             // 
             // facturaToolStripMenuItem
             // 
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.facturaToolStripMenuItem.Text = "Factura";
             // 
             // proveedorToolStripMenuItem
             // 
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.proveedorToolStripMenuItem.Text = "Proveedor";
             // 
             // inventarioToolStripMenuItem
@@ -340,57 +338,6 @@
             this.panelDeNavegaciónToolStripMenuItem.Text = "Mostar panel de Navegación";
             this.panelDeNavegaciónToolStripMenuItem.Click += new System.EventHandler(this.panelDeNavegaciónToolStripMenuItem_Click);
             // 
-            // gráficosYReportesToolStripMenuItem
-            // 
-            this.gráficosYReportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reporesToolStripMenuItem,
-            this.gráficosToolStripMenuItem});
-            this.gráficosYReportesToolStripMenuItem.Name = "gráficosYReportesToolStripMenuItem";
-            this.gráficosYReportesToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
-            this.gráficosYReportesToolStripMenuItem.Text = "Gráficos y Reportes";
-            // 
-            // reporesToolStripMenuItem
-            // 
-            this.reporesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ventasToolStripMenuItem,
-            this.ventasToolStripMenuItem1});
-            this.reporesToolStripMenuItem.Name = "reporesToolStripMenuItem";
-            this.reporesToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.reporesToolStripMenuItem.Text = "Repotres";
-            // 
-            // ventasToolStripMenuItem
-            // 
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.ventasToolStripMenuItem.Text = "Compras";
-            // 
-            // ventasToolStripMenuItem1
-            // 
-            this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
-            this.ventasToolStripMenuItem1.Text = "Ventas";
-            // 
-            // gráficosToolStripMenuItem
-            // 
-            this.gráficosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ventasToolStripMenuItem2,
-            this.ventasToolStripMenuItem3});
-            this.gráficosToolStripMenuItem.Name = "gráficosToolStripMenuItem";
-            this.gráficosToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.gráficosToolStripMenuItem.Text = "Gráficos";
-            // 
-            // ventasToolStripMenuItem2
-            // 
-            this.ventasToolStripMenuItem2.Name = "ventasToolStripMenuItem2";
-            this.ventasToolStripMenuItem2.Size = new System.Drawing.Size(122, 22);
-            this.ventasToolStripMenuItem2.Text = "Compras";
-            // 
-            // ventasToolStripMenuItem3
-            // 
-            this.ventasToolStripMenuItem3.Name = "ventasToolStripMenuItem3";
-            this.ventasToolStripMenuItem3.Size = new System.Drawing.Size(122, 22);
-            this.ventasToolStripMenuItem3.Text = "Ventas";
-            // 
             // facturaciónToolStripMenuItem
             // 
             this.facturaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -412,6 +359,77 @@
             this.nuevaVentaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.nuevaVentaToolStripMenuItem.Text = "Nueva venta";
             this.nuevaVentaToolStripMenuItem.Click += new System.EventHandler(this.nuevaVentaToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 157);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(236, 43);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Productos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(0, 232);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(236, 43);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Generar Factura";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(0, 301);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(236, 43);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Control de Usuarios";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(0, 366);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(236, 43);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Inventario General";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(0, 428);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(236, 43);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Administrar Root";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(0, 490);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(236, 43);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Administrar Empresa";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // lblApellidos
+            // 
+            this.lblApellidos.AutoSize = true;
+            this.lblApellidos.Location = new System.Drawing.Point(147, 40);
+            this.lblApellidos.Name = "lblApellidos";
+            this.lblApellidos.Size = new System.Drawing.Size(0, 17);
+            this.lblApellidos.TabIndex = 11;
+            // 
+            // lblNivel
+            // 
+            this.lblNivel.AutoSize = true;
+            this.lblNivel.Location = new System.Drawing.Point(147, 81);
+            this.lblNivel.Name = "lblNivel";
+            this.lblNivel.Size = new System.Drawing.Size(0, 17);
+            this.lblNivel.TabIndex = 12;
             // 
             // FrmPrincipal
             // 
@@ -467,13 +485,6 @@
         private System.Windows.Forms.ToolStripButton btnMaximizar_Principal;
         private System.Windows.Forms.ToolStripButton btnVentana_Principal;
         private System.Windows.Forms.ToolStripButton btnMinimizar_Principal;
-        private System.Windows.Forms.ToolStripMenuItem gráficosYReportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem gráficosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem ingresarNuevoProductoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarTodosLosProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
@@ -481,7 +492,14 @@
         private System.Windows.Forms.ToolStripMenuItem nuevaVentaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblNombres_Usuario;
-        private System.Windows.Forms.Label lblApellidos_Usuario;
+        public System.Windows.Forms.Label lblNombres_Usuario;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label lblApellidos;
+        private System.Windows.Forms.Label lblNivel;
     }
 }

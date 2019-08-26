@@ -16,5 +16,15 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
+
+        private void BtnGuardar_Gestor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarTelefono_Gestor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

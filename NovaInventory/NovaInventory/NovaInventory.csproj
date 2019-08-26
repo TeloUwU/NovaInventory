@@ -52,6 +52,7 @@
     <Compile Include="Controlador\clsFunciones.cs" />
     <Compile Include="Controlador\constructor de respuestas.cs" />
     <Compile Include="Controlador\constructor preguntas.cs" />
+    <Compile Include="Controlador\constructorecuperacion.cs" />
     <Compile Include="Controlador\constructorFacturacion.cs" />
     <Compile Include="Controlador\Constructor_empresa.cs" />
     <Compile Include="Controlador\Constructor_login.cs" />

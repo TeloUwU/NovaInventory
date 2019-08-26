@@ -35,6 +35,7 @@ namespace NovaInventory.Vista
                     FrmPrincipal main = new FrmPrincipal();
                     main.Show();
                     this.Hide();
+                    
                 }
 
             }
@@ -128,7 +129,6 @@ namespace NovaInventory.Vista
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

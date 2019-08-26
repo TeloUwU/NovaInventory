@@ -132,5 +132,10 @@ namespace NovaInventory.Vista
             txtIdArticulo.Text = txtNombre.Text = txtPrecio.Text = txtCantidad.Text = txtEfectivo.Text = "";
             lblCostoAPagar.Text = lblDevolucion.Text = "0.00";
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
