@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\Conexion.cs" />
+    <Compile Include="Config\Validaciones.cs" />
     <Compile Include="Controlador\clsFunciones.cs" />
     <Compile Include="Controlador\constructor de respuestas.cs" />
     <Compile Include="Controlador\constructor preguntas.cs" />
