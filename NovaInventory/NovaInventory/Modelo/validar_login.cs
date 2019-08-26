@@ -44,7 +44,7 @@ namespace NovaInventory.Modelo
                             Constructor_login.nivel = _reader.GetInt16(11);
                             if (rest >= 1)
                             {
-                                MessageBox.Show("Bienvenido Usuario" + Constructor_login.usuario, "Acceso Concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Bienvenido Usuario " + Constructor_login.usuario, "Acceso Concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
 

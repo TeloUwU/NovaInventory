@@ -151,9 +151,11 @@ namespace NovaInventory.Vista
 
         }
 
-        private void TxtEmpresa_TextChanged(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
-
+            frmLogin Login = new frmLogin();
+            Login.Show();
+            this.Hide();
         }
     }
 }
