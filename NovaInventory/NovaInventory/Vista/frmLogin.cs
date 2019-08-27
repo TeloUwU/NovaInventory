@@ -43,6 +43,7 @@ namespace NovaInventory.Vista
                         FrmPrincipal main = new FrmPrincipal();
                         main.Show();
                         this.Hide();
+                    
                     //}
                   
                 }

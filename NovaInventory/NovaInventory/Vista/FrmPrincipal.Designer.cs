@@ -36,20 +36,8 @@
             this.btnMinimizar_Principal = new System.Windows.Forms.ToolStripButton();
             this.panelMain = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.PanelSidebar = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.lblNivel = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombres_Usuario = new System.Windows.Forms.Label();
             this.lblApellidos_Usuario = new System.Windows.Forms.Label();
@@ -83,6 +71,18 @@
             this.verCatalogoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
@@ -185,94 +185,13 @@
             this.PanelContenedor.TabIndex = 2;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint_1);
             // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(171, 392);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(157, 51);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "Artículos";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(469, 500);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(157, 51);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "Proveedor";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(469, 443);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(157, 51);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Bodega";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(469, 329);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 51);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Ver Kardex";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(171, 278);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 51);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Compras";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(171, 335);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 51);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Ventas";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(469, 386);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 51);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Ver Existencias";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(40, 594);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(157, 51);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Configuración Usuario Root";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(40, 537);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(157, 51);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Administración de Empresas";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
             // PanelSidebar
             // 
             this.PanelSidebar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.PanelSidebar.Controls.Add(this.button12);
             this.PanelSidebar.Controls.Add(this.button11);
             this.PanelSidebar.Controls.Add(this.button7);
-            this.PanelSidebar.Controls.Add(this.lblNivel);
+            this.PanelSidebar.Controls.Add(this.lblEstado);
             this.PanelSidebar.Controls.Add(this.pictureBox1);
             this.PanelSidebar.Controls.Add(this.lblNombres_Usuario);
             this.PanelSidebar.Controls.Add(this.lblApellidos_Usuario);
@@ -282,39 +201,14 @@
             this.PanelSidebar.Size = new System.Drawing.Size(236, 665);
             this.PanelSidebar.TabIndex = 1;
             // 
-            // button12
+            // lblEstado
             // 
-            this.button12.Location = new System.Drawing.Point(12, 317);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(211, 51);
-            this.button12.TabIndex = 13;
-            this.button12.Text = "Transacciónes";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(12, 227);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(211, 51);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "Administración de Usuarios";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(12, 573);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(211, 51);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "Configuración del Sistema";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // lblNivel
-            // 
-            this.lblNivel.Location = new System.Drawing.Point(125, 62);
-            this.lblNivel.Name = "lblNivel";
-            this.lblNivel.Size = new System.Drawing.Size(100, 23);
-            this.lblNivel.TabIndex = 14;
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(133, 93);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(67, 21);
+            this.lblEstado.TabIndex = 3;
+            this.lblEstado.Text = "En Línea";
             // 
             // pictureBox1
             // 
@@ -336,10 +230,13 @@
             // 
             // lblApellidos_Usuario
             // 
-            this.lblApellidos_Usuario.Location = new System.Drawing.Point(0, 0);
+            this.lblApellidos_Usuario.AutoSize = true;
+            this.lblApellidos_Usuario.Location = new System.Drawing.Point(133, 62);
             this.lblApellidos_Usuario.Name = "lblApellidos_Usuario";
-            this.lblApellidos_Usuario.Size = new System.Drawing.Size(100, 23);
-            this.lblApellidos_Usuario.TabIndex = 15;
+            this.lblApellidos_Usuario.Size = new System.Drawing.Size(52, 21);
+            this.lblApellidos_Usuario.TabIndex = 2;
+            this.lblApellidos_Usuario.Text = "label2";
+            this.lblApellidos_Usuario.Click += new System.EventHandler(this.lblApellidos_Usuario_Click);
             // 
             // menuStrip1
             // 
@@ -568,6 +465,114 @@
             this.nuevaCompraToolStripMenuItem.Size = new System.Drawing.Size(245, 26);
             this.nuevaCompraToolStripMenuItem.Text = "Nueva Compra";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(469, 329);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 51);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Ver Kardex";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(171, 278);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(157, 51);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Compras";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(171, 335);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(157, 51);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Ventas";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(469, 386);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(157, 51);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Ver Existencias";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(40, 537);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(157, 51);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Administración de Empresas";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(40, 594);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(157, 51);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Configuración Usuario Root";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(12, 573);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(211, 51);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "Configuración del Sistema";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(469, 443);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(157, 51);
+            this.button8.TabIndex = 10;
+            this.button8.Text = "Bodega";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(469, 500);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(157, 51);
+            this.button9.TabIndex = 11;
+            this.button9.Text = "Proveedor";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(171, 392);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(157, 51);
+            this.button10.TabIndex = 12;
+            this.button10.Text = "Artículos";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(12, 227);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(211, 51);
+            this.button11.TabIndex = 13;
+            this.button11.Text = "Administración de Usuarios";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(12, 317);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(211, 51);
+            this.button12.TabIndex = 13;
+            this.button12.Text = "Transacciónes";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -636,7 +641,7 @@
         private System.Windows.Forms.ToolStripMenuItem verCatalogoDeFacturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaVentaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblNivel;
+        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblNombres_Usuario;
         private System.Windows.Forms.Label lblApellidos_Usuario;
         private System.Windows.Forms.ToolStripMenuItem agregarProductoToolStripMenuItem;

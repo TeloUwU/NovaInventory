@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data;
 using NovaInventory.Controlador;
-using System.Data.SqlClient;
+
 
 namespace NovaInventory.Modelo
 {
@@ -19,7 +19,7 @@ namespace NovaInventory.Modelo
             int retorno = 0;
             try
             {
-                SqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbusuarios(nickname, nombre_usuario, apellido_usuario, contraseña_usuario, telefono, Foto_usuario, Correo, dui, nit, id_estados, id_tipo_usuarios, intentos, empresa) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", add.usuario, add.nombre_usuario, add.apellido_usuario, add.contraseña_usuario, add.telefono, add.Foto_usuario,add.Correo, add.dui, add.nit, add.id_estados, add.id_tipo_usuarios, add.intentos, add.empresa), Conexion.obtenerconexion());
+                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbusuarios(nickname, nombre_usuario, apellido_usuario, contraseña_usuario, telefono, Foto_usuario, Correo, dui, nit, id_estados, id_tipo_usuarios, intentos, empresa) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", add.usuario, add.nombre_usuario, add.apellido_usuario, add.contraseña_usuario, add.telefono, add.Foto_usuario,add.Correo, add.dui, add.nit, add.id_estados, add.id_tipo_usuarios, add.intentos, add.empresa), Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(cmdagregar.ExecuteNonQuery());
                 if (retorno > 0)
                 {
