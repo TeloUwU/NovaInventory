@@ -115,6 +115,7 @@
             this.btnCargarLista.TabIndex = 5;
             this.btnCargarLista.Text = "Cargar a Lista";
             this.btnCargarLista.UseVisualStyleBackColor = true;
+            this.btnCargarLista.Click += new System.EventHandler(this.btnCargarLista_Click_1);
             // 
             // groupBox1
             // 
