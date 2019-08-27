@@ -16,5 +16,40 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
+
+        private void frmConfig_Root_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSobreescribir_Root_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConfClave_Root_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtClave_Root_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
