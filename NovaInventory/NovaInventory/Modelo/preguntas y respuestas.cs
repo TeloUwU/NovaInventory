@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using NovaInventory.Config;
-using System.Data.SqlClient;
-
 namespace NovaInventory.Modelo
 {
     class preguntas_y_respuestas
@@ -20,7 +18,7 @@ namespace NovaInventory.Modelo
             MySqlCommand mcdquery = new MySqlCommand((query), Conexion.obtenerconexion());
             try
             {
-                SqlDataAdapter adaptar = new MySqlDataAdapter(mcdquery);
+                MySqlDataAdapter adaptar = new MySqlDataAdapter(mcdquery);
                 adaptar.Fill(datos);
                 return datos;
             }

@@ -193,6 +193,16 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap https_symbol {
+            get {
+                object obj = ResourceManager.GetObject("https-symbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -246,6 +256,16 @@ namespace NovaInventory.Properties {
         internal static System.Drawing.Bitmap round_account_button_with_user_inside {
             get {
                 object obj = ResourceManager.GetObject("round-account-button-with-user-inside", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap round_account_button_with_user_inside1 {
+            get {
+                object obj = ResourceManager.GetObject("round-account-button-with-user-inside1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

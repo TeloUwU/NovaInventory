@@ -293,6 +293,12 @@
   <ItemGroup>
     <None Include="Resources\cancel-button1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round-account-button-with-user-inside1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\https-symbol.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
