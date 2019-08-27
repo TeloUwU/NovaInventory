@@ -23,7 +23,7 @@ namespace NovaInventory.Vista
             PanelSidebar.Visible = false;
 
             lblNombres_Usuario.Text = Constructor_login.nombre;
-            lblApellidos.Text = Constructor_login.apellido;
+            lblApellidos_Usuario.Text = Constructor_login.apellido;
             if (Constructor_login.nivel == 1) 
             {
                 lblNivel.Text = ("Root");
