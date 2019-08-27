@@ -41,18 +41,7 @@ namespace NovaInventory.Vista
             int usuario = Convert.ToInt16(txtid_usuario.Text);
             int tipo_pago = Convert.ToInt16(cbTipo_Pago.Text);
             int numero_fact = Convert.ToInt16(txtNum_factura.Text);
-
-            agregar.id_compra = id_compra;
-            agregar.id_proveedor = id_proveedor;
-            agregar.id_articulos = id_articulo;
-            agregar.descripcion = txtDescripción.Text;
-            agregar.Preiounitario = Precio_Unitario;
-            agregar.Precio_Total = total;
-            agregar.Cantidad = cantidad;
-            agregar.fecha_compra = dtpRealización_Compra.Text;
-            agregar.id_usuario = usuario;
-            agregar.tipo_de_pago = tipo_pago;
-            agregar.num_factura = numero_fact;
+            
             
         }
 

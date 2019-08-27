@@ -9,15 +9,17 @@ namespace NovaInventory.Config
 {
     class Validaciones
     {
-        public static string md5(string Value)
+       public static string md5 (string value)
         {
             MD5CryptoServiceProvider x = new MD5CryptoServiceProvider();
-            byte[] data = Encoding.ASCII.GetBytes(Value);
+            byte[] data = Encoding.ASCII.GetBytes(value);
             data = x.ComputeHash(data);
-            string ret = "";
+            string rest = "";
             for (int i = 0; i < data.Length; i++)
-                ret += data[i].ToString("x2").ToLower();
-            return ret;
+                rest += data[i].ToString("x2").ToLower();
+            return rest;
+
+           
         }
     }
 }
