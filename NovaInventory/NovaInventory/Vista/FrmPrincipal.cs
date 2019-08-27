@@ -172,5 +172,10 @@ namespace NovaInventory.Vista
         {
             string nombre = "Maria";
         }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmConfig_Root>();
+        }
     }
 }

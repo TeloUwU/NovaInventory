@@ -30,10 +30,6 @@
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btnCerrar_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnMaximizar_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnVentana_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnMinimizar_Principal = new System.Windows.Forms.ToolStripButton();
             this.panelMain = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -46,11 +42,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.PanelSidebar = new System.Windows.Forms.Panel();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.lblNivel = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombres_Usuario = new System.Windows.Forms.Label();
             this.lblApellidos_Usuario = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -83,13 +76,19 @@
             this.verCatalogoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblNivel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCerrar_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnMaximizar_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnVentana_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnMinimizar_Principal = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
             this.PanelSidebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -112,51 +111,6 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(0, 24);
             // 
-            // btnCerrar_Principal
-            // 
-            this.btnCerrar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnCerrar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCerrar_Principal.Image = global::NovaInventory.Properties.Resources.close_window_80px;
-            this.btnCerrar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCerrar_Principal.Name = "btnCerrar_Principal";
-            this.btnCerrar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnCerrar_Principal.Text = "Salir";
-            this.btnCerrar_Principal.Click += new System.EventHandler(this.btnCerrar_Principal_Click);
-            // 
-            // btnMaximizar_Principal
-            // 
-            this.btnMaximizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnMaximizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnMaximizar_Principal.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
-            this.btnMaximizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMaximizar_Principal.Name = "btnMaximizar_Principal";
-            this.btnMaximizar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnMaximizar_Principal.Text = "Maximizar";
-            this.btnMaximizar_Principal.Click += new System.EventHandler(this.btnMaximizar_Principal_Click);
-            // 
-            // btnVentana_Principal
-            // 
-            this.btnVentana_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnVentana_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnVentana_Principal.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
-            this.btnVentana_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnVentana_Principal.Name = "btnVentana_Principal";
-            this.btnVentana_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnVentana_Principal.Text = "Restaurar a tamaño normal";
-            this.btnVentana_Principal.Visible = false;
-            this.btnVentana_Principal.Click += new System.EventHandler(this.btnVentana_Principal_Click);
-            // 
-            // btnMinimizar_Principal
-            // 
-            this.btnMinimizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnMinimizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnMinimizar_Principal.Image = global::NovaInventory.Properties.Resources.minimize_window_26px;
-            this.btnMinimizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMinimizar_Principal.Name = "btnMinimizar_Principal";
-            this.btnMinimizar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnMinimizar_Principal.Text = "Minimizar";
-            this.btnMinimizar_Principal.Click += new System.EventHandler(this.btnMinimizar_Principal_Click);
-            // 
             // panelMain
             // 
             this.panelMain.Controls.Add(this.PanelContenedor);
@@ -170,15 +124,9 @@
             // 
             // PanelContenedor
             // 
-            this.PanelContenedor.Controls.Add(this.button10);
-            this.PanelContenedor.Controls.Add(this.button9);
-            this.PanelContenedor.Controls.Add(this.button8);
-            this.PanelContenedor.Controls.Add(this.button1);
-            this.PanelContenedor.Controls.Add(this.button2);
-            this.PanelContenedor.Controls.Add(this.button3);
-            this.PanelContenedor.Controls.Add(this.button4);
-            this.PanelContenedor.Controls.Add(this.button6);
-            this.PanelContenedor.Controls.Add(this.button5);
+            this.PanelContenedor.Controls.Add(this.pictureBox2);
+            this.PanelContenedor.Controls.Add(this.lblNombres_Usuario);
+            this.PanelContenedor.Controls.Add(this.lblApellidos_Usuario);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(236, 24);
             this.PanelContenedor.Name = "PanelContenedor";
@@ -188,81 +136,82 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(171, 392);
+            this.button10.Location = new System.Drawing.Point(0, 253);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(157, 51);
+            this.button10.Size = new System.Drawing.Size(236, 36);
             this.button10.TabIndex = 12;
             this.button10.Text = "Artículos";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(469, 500);
+            this.button9.Location = new System.Drawing.Point(0, 465);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(157, 51);
+            this.button9.Size = new System.Drawing.Size(236, 36);
             this.button9.TabIndex = 11;
             this.button9.Text = "Proveedor";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(469, 443);
+            this.button8.Location = new System.Drawing.Point(0, 361);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(157, 51);
+            this.button8.Size = new System.Drawing.Size(236, 36);
             this.button8.TabIndex = 10;
             this.button8.Text = "Bodega";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(469, 329);
+            this.button1.Location = new System.Drawing.Point(0, 305);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 51);
+            this.button1.Size = new System.Drawing.Size(236, 36);
             this.button1.TabIndex = 4;
             this.button1.Text = "Ver Kardex";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(171, 278);
+            this.button2.Location = new System.Drawing.Point(0, 150);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 51);
+            this.button2.Size = new System.Drawing.Size(236, 36);
             this.button2.TabIndex = 5;
             this.button2.Text = "Compras";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(171, 335);
+            this.button3.Location = new System.Drawing.Point(0, 201);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 51);
+            this.button3.Size = new System.Drawing.Size(236, 36);
             this.button3.TabIndex = 6;
             this.button3.Text = "Ventas";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(469, 386);
+            this.button4.Location = new System.Drawing.Point(0, 413);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(157, 51);
+            this.button4.Size = new System.Drawing.Size(236, 36);
             this.button4.TabIndex = 7;
             this.button4.Text = "Ver Existencias";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(40, 594);
+            this.button6.Location = new System.Drawing.Point(0, 568);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(157, 51);
+            this.button6.Size = new System.Drawing.Size(236, 36);
             this.button6.TabIndex = 9;
             this.button6.Text = "Configuración Usuario Root";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(40, 537);
+            this.button5.Location = new System.Drawing.Point(0, 516);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(157, 51);
+            this.button5.Size = new System.Drawing.Size(236, 36);
             this.button5.TabIndex = 8;
             this.button5.Text = "Administración de Empresas";
             this.button5.UseVisualStyleBackColor = true;
@@ -270,70 +219,49 @@
             // PanelSidebar
             // 
             this.PanelSidebar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.PanelSidebar.Controls.Add(this.button6);
+            this.PanelSidebar.Controls.Add(this.button9);
+            this.PanelSidebar.Controls.Add(this.button5);
+            this.PanelSidebar.Controls.Add(this.button10);
+            this.PanelSidebar.Controls.Add(this.button8);
             this.PanelSidebar.Controls.Add(this.lblNivel);
-            this.PanelSidebar.Controls.Add(this.button12);
-            this.PanelSidebar.Controls.Add(this.button11);
-            this.PanelSidebar.Controls.Add(this.button7);
+            this.PanelSidebar.Controls.Add(this.button1);
+            this.PanelSidebar.Controls.Add(this.button4);
             this.PanelSidebar.Controls.Add(this.lblEstado);
             this.PanelSidebar.Controls.Add(this.pictureBox1);
-            this.PanelSidebar.Controls.Add(this.lblNombres_Usuario);
-            this.PanelSidebar.Controls.Add(this.lblApellidos_Usuario);
+            this.PanelSidebar.Controls.Add(this.button2);
+            this.PanelSidebar.Controls.Add(this.button3);
             this.PanelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelSidebar.Location = new System.Drawing.Point(0, 24);
             this.PanelSidebar.Name = "PanelSidebar";
             this.PanelSidebar.Size = new System.Drawing.Size(236, 669);
             this.PanelSidebar.TabIndex = 1;
             // 
-            // button12
+            // lblNivel
             // 
-            this.button12.Location = new System.Drawing.Point(12, 317);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(211, 51);
-            this.button12.TabIndex = 13;
-            this.button12.Text = "Transacciónes";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(12, 227);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(211, 51);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "Administración de Usuarios";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(12, 573);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(211, 51);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "Configuración del Sistema";
-            this.button7.UseVisualStyleBackColor = true;
+            this.lblNivel.AutoSize = true;
+            this.lblNivel.Location = new System.Drawing.Point(146, 41);
+            this.lblNivel.Name = "lblNivel";
+            this.lblNivel.Size = new System.Drawing.Size(42, 17);
+            this.lblNivel.TabIndex = 14;
+            this.lblNivel.Text = "label2";
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(133, 93);
+            this.lblEstado.Location = new System.Drawing.Point(146, 98);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(55, 17);
             this.lblEstado.TabIndex = 3;
             this.lblEstado.Text = "En Línea";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 96);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblNombres_Usuario
             // 
             this.lblNombres_Usuario.AutoSize = true;
-            this.lblNombres_Usuario.Location = new System.Drawing.Point(125, 19);
+            this.lblNombres_Usuario.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombres_Usuario.Location = new System.Drawing.Point(201, 110);
             this.lblNombres_Usuario.Name = "lblNombres_Usuario";
-            this.lblNombres_Usuario.Size = new System.Drawing.Size(42, 17);
+            this.lblNombres_Usuario.Size = new System.Drawing.Size(87, 32);
             this.lblNombres_Usuario.TabIndex = 1;
             this.lblNombres_Usuario.Text = "label1";
             this.lblNombres_Usuario.Click += new System.EventHandler(this.lblNombres_Usuario_Click);
@@ -341,9 +269,10 @@
             // lblApellidos_Usuario
             // 
             this.lblApellidos_Usuario.AutoSize = true;
-            this.lblApellidos_Usuario.Location = new System.Drawing.Point(125, 36);
+            this.lblApellidos_Usuario.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidos_Usuario.Location = new System.Drawing.Point(201, 154);
             this.lblApellidos_Usuario.Name = "lblApellidos_Usuario";
-            this.lblApellidos_Usuario.Size = new System.Drawing.Size(42, 17);
+            this.lblApellidos_Usuario.Size = new System.Drawing.Size(87, 32);
             this.lblApellidos_Usuario.TabIndex = 2;
             this.lblApellidos_Usuario.Text = "label2";
             // 
@@ -574,14 +503,70 @@
             this.nuevaCompraToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.nuevaCompraToolStripMenuItem.Text = "Nueva Compra";
             // 
-            // lblNivel
+            // pictureBox2
             // 
-            this.lblNivel.AutoSize = true;
-            this.lblNivel.Location = new System.Drawing.Point(140, 76);
-            this.lblNivel.Name = "lblNivel";
-            this.lblNivel.Size = new System.Drawing.Size(42, 17);
-            this.lblNivel.TabIndex = 14;
-            this.lblNivel.Text = "label2";
+            this.pictureBox2.Image = global::NovaInventory.Properties.Resources.round_account_button_with_user_inside1;
+            this.pictureBox2.Location = new System.Drawing.Point(318, 110);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 117);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::NovaInventory.Properties.Resources.framed_portrait;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(107, 96);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCerrar_Principal
+            // 
+            this.btnCerrar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnCerrar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCerrar_Principal.Image = global::NovaInventory.Properties.Resources.close_window_80px;
+            this.btnCerrar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCerrar_Principal.Name = "btnCerrar_Principal";
+            this.btnCerrar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnCerrar_Principal.Text = "Salir";
+            this.btnCerrar_Principal.Click += new System.EventHandler(this.btnCerrar_Principal_Click);
+            // 
+            // btnMaximizar_Principal
+            // 
+            this.btnMaximizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMaximizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMaximizar_Principal.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
+            this.btnMaximizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMaximizar_Principal.Name = "btnMaximizar_Principal";
+            this.btnMaximizar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnMaximizar_Principal.Text = "Maximizar";
+            this.btnMaximizar_Principal.Click += new System.EventHandler(this.btnMaximizar_Principal_Click);
+            // 
+            // btnVentana_Principal
+            // 
+            this.btnVentana_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnVentana_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnVentana_Principal.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
+            this.btnVentana_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVentana_Principal.Name = "btnVentana_Principal";
+            this.btnVentana_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnVentana_Principal.Text = "Restaurar a tamaño normal";
+            this.btnVentana_Principal.Visible = false;
+            this.btnVentana_Principal.Click += new System.EventHandler(this.btnVentana_Principal_Click);
+            // 
+            // btnMinimizar_Principal
+            // 
+            this.btnMinimizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMinimizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMinimizar_Principal.Image = global::NovaInventory.Properties.Resources.minimize_window_26px;
+            this.btnMinimizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMinimizar_Principal.Name = "btnMinimizar_Principal";
+            this.btnMinimizar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnMinimizar_Principal.Text = "Minimizar";
+            this.btnMinimizar_Principal.Click += new System.EventHandler(this.btnMinimizar_Principal_Click);
             // 
             // FrmPrincipal
             // 
@@ -602,11 +587,13 @@
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.PanelContenedor.ResumeLayout(false);
+            this.PanelContenedor.PerformLayout();
             this.PanelSidebar.ResumeLayout(false);
             this.PanelSidebar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,7 +645,6 @@
         private System.Windows.Forms.ToolStripMenuItem agregarProveedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaCompraToolStripMenuItem;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
@@ -667,8 +653,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label lblNivel;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
