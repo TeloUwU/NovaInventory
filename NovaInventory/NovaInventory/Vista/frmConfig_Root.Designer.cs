@@ -63,8 +63,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton_regresar = new System.Windows.Forms.ToolStripButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.toolStripButton_regresar = new System.Windows.Forms.ToolStripButton();
             this.pbFoto_Root = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Root)).BeginInit();
@@ -80,7 +80,7 @@
             this.btnCambiar_clave.Margin = new System.Windows.Forms.Padding(2);
             this.btnCambiar_clave.Name = "btnCambiar_clave";
             this.btnCambiar_clave.Size = new System.Drawing.Size(242, 50);
-            this.btnCambiar_clave.TabIndex = 14;
+            this.btnCambiar_clave.TabIndex = 12;
             this.btnCambiar_clave.Text = "Cambiar Clave";
             this.btnCambiar_clave.UseVisualStyleBackColor = false;
             this.btnCambiar_clave.Click += new System.EventHandler(this.btnSobreescribir_Root_Click);
@@ -179,7 +179,7 @@
             this.txtConfClave_Root.Name = "txtConfClave_Root";
             this.txtConfClave_Root.PasswordChar = '*';
             this.txtConfClave_Root.Size = new System.Drawing.Size(235, 20);
-            this.txtConfClave_Root.TabIndex = 12;
+            this.txtConfClave_Root.TabIndex = 15;
             // 
             // txtApellidos_Root
             // 
@@ -221,7 +221,7 @@
             this.txtClave_Root.Name = "txtClave_Root";
             this.txtClave_Root.PasswordChar = '*';
             this.txtClave_Root.Size = new System.Drawing.Size(234, 20);
-            this.txtClave_Root.TabIndex = 11;
+            this.txtClave_Root.TabIndex = 14;
             this.txtClave_Root.TextChanged += new System.EventHandler(this.txtClave_Root_TextChanged_1);
             // 
             // txtCarne
@@ -424,7 +424,7 @@
             this.button_actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.button_actualizar.Name = "button_actualizar";
             this.button_actualizar.Size = new System.Drawing.Size(242, 50);
-            this.button_actualizar.TabIndex = 111;
+            this.button_actualizar.TabIndex = 11;
             this.button_actualizar.Text = "Actualizar Datos";
             this.button_actualizar.UseVisualStyleBackColor = false;
             this.button_actualizar.Click += new System.EventHandler(this.button1_Click);
@@ -438,7 +438,7 @@
             this.txtclave_anterior_root.Name = "txtclave_anterior_root";
             this.txtclave_anterior_root.PasswordChar = '*';
             this.txtclave_anterior_root.Size = new System.Drawing.Size(234, 20);
-            this.txtclave_anterior_root.TabIndex = 112;
+            this.txtclave_anterior_root.TabIndex = 13;
             // 
             // label10
             // 
@@ -469,6 +469,16 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(127, 22);
             this.toolStripLabel1.Text = "Configuracion de Root";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(475, 518);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(274, 13);
+            this.linkLabel1.TabIndex = 115;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "La contraseña debe de tener un maximo de 8 caracteres";
+            // 
             // toolStripButton_regresar
             // 
             this.toolStripButton_regresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -479,16 +489,6 @@
             this.toolStripButton_regresar.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton_regresar.Text = "Regresar";
             this.toolStripButton_regresar.Click += new System.EventHandler(this.toolStripButton_regresar_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(475, 518);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(274, 13);
-            this.linkLabel1.TabIndex = 115;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "La contraseña debe de tener un maximo de 8 caracteres";
             // 
             // pbFoto_Root
             // 

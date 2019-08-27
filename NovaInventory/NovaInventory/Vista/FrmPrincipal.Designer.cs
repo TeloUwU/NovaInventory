@@ -82,6 +82,7 @@
             this.btnMaximizar_Principal = new System.Windows.Forms.ToolStripButton();
             this.btnVentana_Principal = new System.Windows.Forms.ToolStripButton();
             this.btnMinimizar_Principal = new System.Windows.Forms.ToolStripButton();
+            this.button7 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
@@ -219,6 +220,7 @@
             // PanelSidebar
             // 
             this.PanelSidebar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.PanelSidebar.Controls.Add(this.button7);
             this.PanelSidebar.Controls.Add(this.button6);
             this.PanelSidebar.Controls.Add(this.button9);
             this.PanelSidebar.Controls.Add(this.button5);
@@ -568,6 +570,16 @@
             this.btnMinimizar_Principal.Text = "Minimizar";
             this.btnMinimizar_Principal.Click += new System.EventHandler(this.btnMinimizar_Principal_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(0, 621);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(236, 36);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Generar Factura";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -655,5 +667,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label lblNivel;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button7;
     }
 }
