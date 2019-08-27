@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace NovaInventory.Vista
 {
@@ -16,10 +19,43 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
+        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = novainventorybase");
+        MySqlCommand cmd = new MySqlCommand();
 
         private void panelUsuario_Root_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void btnEnviar_Contra_Click(object sender, EventArgs e)
+        {
+            cn.Open();
+            cmd.Connection = cn;
+            try
+            {
+                cmd.CommandText = "select count(*) from tbusuarios where nickname = '" + txtUsuario_Root.Text + "'and contraseña_usuario = '" + txtContraseña_Root.Text + "'and id_tipo_usuarios = '" + 1 +"'";
+                int valor = int.Parse(cmd.ExecuteScalar().ToString());
+                //Comparamos si el valor recibido es 1 entonces existe si no NO
+                if (valor == 1)
+                {
+                    frmNuevaContraseña frm = new frmNuevaContraseña();
+                    frm.Show();
+                    this.Hide();
+                    MessageBox.Show("Usuario Root");
+                }
+                else { labelMensaje.Text = "El usuario no existe"; }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en encontrar usuario" + ex, "Error de encontrame al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            cn.Close();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
-}
+    }
+

@@ -60,6 +60,8 @@
             this.btnSeleccionarFoto_Usuario = new System.Windows.Forms.Button();
             this.pbFoto_Usuario = new System.Windows.Forms.PictureBox();
             this.CargarImagen = new System.Windows.Forms.OpenFileDialog();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cmb_emp = new System.Windows.Forms.ComboBox();
             this.tsAdmin_Usuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar_Usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Usuario)).BeginInit();
@@ -189,7 +191,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(211, 226);
+            this.label10.Location = new System.Drawing.Point(211, 216);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 18);
@@ -250,11 +252,12 @@
             // cbEstado_Usuario
             // 
             this.cbEstado_Usuario.FormattingEnabled = true;
-            this.cbEstado_Usuario.Location = new System.Drawing.Point(211, 247);
+            this.cbEstado_Usuario.Location = new System.Drawing.Point(211, 237);
             this.cbEstado_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.cbEstado_Usuario.Name = "cbEstado_Usuario";
             this.cbEstado_Usuario.Size = new System.Drawing.Size(128, 21);
             this.cbEstado_Usuario.TabIndex = 8;
+            this.cbEstado_Usuario.SelectedIndexChanged += new System.EventHandler(this.cbEstado_Usuario_SelectedIndexChanged);
             // 
             // txtDUI_Usuario
             // 
@@ -353,7 +356,7 @@
             // cbTipo_Usuario
             // 
             this.cbTipo_Usuario.FormattingEnabled = true;
-            this.cbTipo_Usuario.Location = new System.Drawing.Point(214, 298);
+            this.cbTipo_Usuario.Location = new System.Drawing.Point(211, 285);
             this.cbTipo_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.cbTipo_Usuario.Name = "cbTipo_Usuario";
             this.cbTipo_Usuario.Size = new System.Drawing.Size(126, 21);
@@ -363,7 +366,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(212, 276);
+            this.label11.Location = new System.Drawing.Point(209, 263);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(108, 18);
@@ -396,11 +399,33 @@
             // 
             this.CargarImagen.FileName = "openFileDialog1";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(209, 310);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 18);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Empresa:";
+            // 
+            // cmb_emp
+            // 
+            this.cmb_emp.FormattingEnabled = true;
+            this.cmb_emp.Location = new System.Drawing.Point(211, 332);
+            this.cmb_emp.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_emp.Name = "cmb_emp";
+            this.cmb_emp.Size = new System.Drawing.Size(126, 21);
+            this.cmb_emp.TabIndex = 30;
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 540);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.cmb_emp);
             this.Controls.Add(this.btnSeleccionarFoto_Usuario);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.cbTipo_Usuario);
@@ -479,5 +504,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnSeleccionarFoto_Usuario;
         private System.Windows.Forms.OpenFileDialog CargarImagen;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cmb_emp;
     }
 }

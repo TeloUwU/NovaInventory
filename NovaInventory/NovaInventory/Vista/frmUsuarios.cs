@@ -32,10 +32,11 @@ namespace NovaInventory.Vista
             agregar.Correo = txtCorreo_Usuario.Text;
             agregar.dui = txtDUI_Usuario.Text;
             agregar.nit = txtNIT_Usuario.Text;
-            agregar.id_estados = Convert.ToInt16(cbEstado_Usuario.Text);
-            agregar.id_tipo_usuarios = Convert.ToInt16(cbTipo_Usuario.Text);
+            agregar.id_estados =Convert.ToInt32(cbEstado_Usuario.SelectedValue.ToString());
+            agregar.id_tipo_usuarios = Convert.ToInt32(cbTipo_Usuario.SelectedValue.ToString());
             int intentos = 1;
             agregar.intentos = Convert.ToString(intentos);
+            agregar.empresa = Convert.ToInt32(cmb_emp.SelectedValue.ToString());
 
             MemoryStream ms = new MemoryStream();
             pbFoto_Usuario.Image.Save(ms, ImageFormat.Jpeg);
@@ -59,6 +60,8 @@ namespace NovaInventory.Vista
             actualizar.Correo = txtCorreo_Usuario.Text;
             actualizar.dui = txtDUI_Usuario.Text;
             actualizar.nit = txtNIT_Usuario.Text;
+         
+            
 
             MemoryStream ms = new MemoryStream();
             pbFoto_Usuario.Image.Save(ms, ImageFormat.Jpeg);
@@ -153,7 +156,23 @@ namespace NovaInventory.Vista
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            
+            mostrar();
+            cbTipo_Usuario.DataSource = Funciones_usuarios.cargarUSU();
+            cbTipo_Usuario.DisplayMember = "tipo_usuario";
+            cbTipo_Usuario.ValueMember = "id_tipo_usuario";
+
+            cbEstado_Usuario.DataSource = Funciones_usuarios.cargar();
+            cbEstado_Usuario.DisplayMember = "Estado_usuario";
+            cbEstado_Usuario.ValueMember = "id_estado_usuario";
+
+            cmb_emp.DataSource = Funciones_usuarios.cargar1();
+            cmb_emp.DisplayMember = "nombre";
+            cmb_emp.ValueMember = "id_datos_empresa";
+        }
+
+        private void cbEstado_Usuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

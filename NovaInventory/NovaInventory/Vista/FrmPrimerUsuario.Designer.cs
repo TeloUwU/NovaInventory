@@ -410,6 +410,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel2,
             this.toolStripSeparator1,
@@ -446,6 +447,7 @@
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(116, 22);
             this.BtnSalir.Text = "Cerrar Formulario";
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // txtId
             // 

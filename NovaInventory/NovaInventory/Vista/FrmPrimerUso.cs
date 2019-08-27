@@ -150,5 +150,12 @@ namespace NovaInventory.Vista
             }
 
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            frmLogin Login = new frmLogin();
+            Login.Show();
+            this.Hide();
+        }
     }
 }

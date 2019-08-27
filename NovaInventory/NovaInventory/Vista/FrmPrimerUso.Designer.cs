@@ -36,13 +36,13 @@
             this.txt_cel = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.grpEmpresa = new System.Windows.Forms.GroupBox();
+            this.TxtNit = new System.Windows.Forms.MaskedTextBox();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnExaminar = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtLegal = new System.Windows.Forms.TextBox();
-            this.TxtNit = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.TxtEmpresa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -90,10 +90,10 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(26, 449);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(208, 38);
-            this.button3.TabIndex = 42;
+            this.button3.TabIndex = 10;
             this.button3.Text = "Finalizar Registro";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -106,10 +106,10 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(132, 122);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 38);
-            this.button2.TabIndex = 42;
+            this.button2.TabIndex = 9;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -122,10 +122,10 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(26, 122);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 38);
-            this.button1.TabIndex = 42;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -161,13 +161,13 @@
             // 
             // grpEmpresa
             // 
+            this.grpEmpresa.Controls.Add(this.TxtNit);
             this.grpEmpresa.Controls.Add(this.txt_id);
             this.grpEmpresa.Controls.Add(this.BtnGuardar);
             this.grpEmpresa.Controls.Add(this.BtnExaminar);
             this.grpEmpresa.Controls.Add(this.pbLogo);
             this.grpEmpresa.Controls.Add(this.TxtDireccion);
             this.grpEmpresa.Controls.Add(this.TxtLegal);
-            this.grpEmpresa.Controls.Add(this.TxtNit);
             this.grpEmpresa.Controls.Add(this.txtCorreo);
             this.grpEmpresa.Controls.Add(this.TxtEmpresa);
             this.grpEmpresa.Controls.Add(this.label4);
@@ -186,6 +186,15 @@
             this.grpEmpresa.TabStop = false;
             this.grpEmpresa.Text = "Datos de la empresa";
             // 
+            // TxtNit
+            // 
+            this.TxtNit.Location = new System.Drawing.Point(26, 205);
+            this.TxtNit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtNit.Mask = "0000-000000-000-0";
+            this.TxtNit.Name = "TxtNit";
+            this.TxtNit.Size = new System.Drawing.Size(532, 20);
+            this.TxtNit.TabIndex = 3;
+            // 
             // txt_id
             // 
             this.txt_id.Location = new System.Drawing.Point(40, 20);
@@ -202,10 +211,10 @@
             this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
             this.BtnGuardar.Location = new System.Drawing.Point(581, 449);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(187, 38);
-            this.BtnGuardar.TabIndex = 42;
+            this.BtnGuardar.TabIndex = 7;
             this.BtnGuardar.Text = "Guardar y Continuar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
@@ -218,10 +227,10 @@
             this.BtnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExaminar.ForeColor = System.Drawing.Color.White;
             this.BtnExaminar.Location = new System.Drawing.Point(581, 267);
-            this.BtnExaminar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnExaminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnExaminar.Name = "BtnExaminar";
             this.BtnExaminar.Size = new System.Drawing.Size(188, 38);
-            this.BtnExaminar.TabIndex = 41;
+            this.BtnExaminar.TabIndex = 6;
             this.BtnExaminar.Text = "Examinar";
             this.BtnExaminar.UseVisualStyleBackColor = false;
             this.BtnExaminar.Click += new System.EventHandler(this.BtnExaminar_Click);
@@ -230,7 +239,7 @@
             // 
             this.pbLogo.BackColor = System.Drawing.Color.White;
             this.pbLogo.Location = new System.Drawing.Point(616, 76);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(126, 183);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -241,52 +250,42 @@
             // 
             this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDireccion.Location = new System.Drawing.Point(27, 256);
-            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtDireccion.MaxLength = 150;
             this.TxtDireccion.Multiline = true;
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(531, 65);
-            this.TxtDireccion.TabIndex = 39;
+            this.TxtDireccion.TabIndex = 4;
             // 
             // TxtLegal
             // 
             this.TxtLegal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLegal.Location = new System.Drawing.Point(27, 345);
-            this.TxtLegal.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtLegal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtLegal.MaxLength = 75;
             this.TxtLegal.Name = "TxtLegal";
             this.TxtLegal.Size = new System.Drawing.Size(531, 22);
-            this.TxtLegal.TabIndex = 40;
-            // 
-            // TxtNit
-            // 
-            this.TxtNit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNit.Location = new System.Drawing.Point(28, 206);
-            this.TxtNit.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtNit.MaxLength = 17;
-            this.TxtNit.Name = "TxtNit";
-            this.TxtNit.Size = new System.Drawing.Size(531, 22);
-            this.TxtNit.TabIndex = 37;
+            this.TxtLegal.TabIndex = 5;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(28, 151);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCorreo.MaxLength = 45;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(531, 22);
-            this.txtCorreo.TabIndex = 36;
+            this.txtCorreo.TabIndex = 2;
             // 
             // TxtEmpresa
             // 
             this.TxtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmpresa.Location = new System.Drawing.Point(28, 95);
-            this.TxtEmpresa.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtEmpresa.MaxLength = 45;
             this.TxtEmpresa.Name = "TxtEmpresa";
             this.TxtEmpresa.Size = new System.Drawing.Size(531, 22);
-            this.TxtEmpresa.TabIndex = 35;
+            this.TxtEmpresa.TabIndex = 1;
             // 
             // label4
             // 
@@ -393,6 +392,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnSalir,
             this.toolStripLabel2,
@@ -400,7 +400,7 @@
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1133, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1098, 27);
             this.toolStrip1.TabIndex = 47;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -408,25 +408,27 @@
             // 
             this.BtnSalir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.BtnSalir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnSalir.Image = global::NovaInventory.Properties.Resources.undo_26px;
             this.BtnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(38, 22);
+            this.BtnSalir.Size = new System.Drawing.Size(58, 24);
             this.BtnSalir.Text = "Salir ";
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(23, 24);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(176, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(176, 24);
             this.toolStripLabel1.Text = "Configuración de primer uso";
             // 
             // CargarImagen
@@ -437,7 +439,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1133, 572);
+            this.ClientSize = new System.Drawing.Size(1098, 572);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.grpContactos);
             this.Controls.Add(this.grpEmpresa);
@@ -473,7 +475,6 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.TextBox TxtLegal;
-        private System.Windows.Forms.TextBox TxtNit;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox TxtEmpresa;
         private System.Windows.Forms.Label label4;
@@ -493,5 +494,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.OpenFileDialog CargarImagen;
         private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.MaskedTextBox TxtNit;
     }
 }

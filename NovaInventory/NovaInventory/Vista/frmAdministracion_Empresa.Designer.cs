@@ -33,6 +33,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtid_Empresa_Modificacion = new System.Windows.Forms.TextBox();
             this.BtnGuardar_Gestor = new System.Windows.Forms.Button();
             this.BtnExaminar_Gestor = new System.Windows.Forms.Button();
             this.pbLogo_Gestor = new System.Windows.Forms.PictureBox();
@@ -54,7 +55,10 @@
             this.dgvContactos = new System.Windows.Forms.DataGridView();
             this.txt_cel_Gestor = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtid_Empresa_Modificacion = new System.Windows.Forms.TextBox();
+            this.cargar_imagen = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Gestor)).BeginInit();
@@ -97,6 +101,9 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txtid_Empresa_Modificacion);
             this.panel2.Controls.Add(this.BtnGuardar_Gestor);
             this.panel2.Controls.Add(this.BtnExaminar_Gestor);
@@ -116,6 +123,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(736, 573);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtid_Empresa_Modificacion
+            // 
+            this.txtid_Empresa_Modificacion.Location = new System.Drawing.Point(683, 16);
+            this.txtid_Empresa_Modificacion.Name = "txtid_Empresa_Modificacion";
+            this.txtid_Empresa_Modificacion.Size = new System.Drawing.Size(39, 22);
+            this.txtid_Empresa_Modificacion.TabIndex = 70;
+            this.txtid_Empresa_Modificacion.Visible = false;
             // 
             // BtnGuardar_Gestor
             // 
@@ -125,13 +141,14 @@
             this.BtnGuardar_Gestor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar_Gestor.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar_Gestor.Location = new System.Drawing.Point(284, 502);
+            this.BtnGuardar_Gestor.Location = new System.Drawing.Point(14, 483);
             this.BtnGuardar_Gestor.Margin = new System.Windows.Forms.Padding(5);
             this.BtnGuardar_Gestor.Name = "BtnGuardar_Gestor";
-            this.BtnGuardar_Gestor.Size = new System.Drawing.Size(249, 47);
+            this.BtnGuardar_Gestor.Size = new System.Drawing.Size(155, 47);
             this.BtnGuardar_Gestor.TabIndex = 7;
-            this.BtnGuardar_Gestor.Text = "Guardar y Continuar";
+            this.BtnGuardar_Gestor.Text = "Agregar Empresa";
             this.BtnGuardar_Gestor.UseVisualStyleBackColor = false;
+            this.BtnGuardar_Gestor.Click += new System.EventHandler(this.BtnGuardar_Gestor_Click);
             // 
             // BtnExaminar_Gestor
             // 
@@ -148,6 +165,7 @@
             this.BtnExaminar_Gestor.TabIndex = 6;
             this.BtnExaminar_Gestor.Text = "Examinar";
             this.BtnExaminar_Gestor.UseVisualStyleBackColor = false;
+            this.BtnExaminar_Gestor.Click += new System.EventHandler(this.BtnExaminar_Gestor_Click);
             // 
             // pbLogo_Gestor
             // 
@@ -165,23 +183,23 @@
             // 
             this.TxtDireccion_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtDireccion_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDireccion_Gestor.Location = new System.Drawing.Point(8, 282);
+            this.TxtDireccion_Gestor.Location = new System.Drawing.Point(14, 282);
             this.TxtDireccion_Gestor.Margin = new System.Windows.Forms.Padding(5);
-            this.TxtDireccion_Gestor.MaxLength = 150;
+            this.TxtDireccion_Gestor.MaxLength = 3;
             this.TxtDireccion_Gestor.Multiline = true;
             this.TxtDireccion_Gestor.Name = "TxtDireccion_Gestor";
-            this.TxtDireccion_Gestor.Size = new System.Drawing.Size(494, 79);
+            this.TxtDireccion_Gestor.Size = new System.Drawing.Size(488, 79);
             this.TxtDireccion_Gestor.TabIndex = 4;
             // 
             // TxtLegal_Gestor
             // 
             this.TxtLegal_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtLegal_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLegal_Gestor.Location = new System.Drawing.Point(10, 407);
+            this.TxtLegal_Gestor.Location = new System.Drawing.Point(14, 407);
             this.TxtLegal_Gestor.Margin = new System.Windows.Forms.Padding(5);
-            this.TxtLegal_Gestor.MaxLength = 75;
+            this.TxtLegal_Gestor.MaxLength = 4;
             this.TxtLegal_Gestor.Name = "TxtLegal_Gestor";
-            this.TxtLegal_Gestor.Size = new System.Drawing.Size(494, 26);
+            this.TxtLegal_Gestor.Size = new System.Drawing.Size(490, 26);
             this.TxtLegal_Gestor.TabIndex = 5;
             // 
             // TxtNit_Gestor
@@ -190,7 +208,7 @@
             this.TxtNit_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNit_Gestor.Location = new System.Drawing.Point(14, 203);
             this.TxtNit_Gestor.Margin = new System.Windows.Forms.Padding(5);
-            this.TxtNit_Gestor.MaxLength = 17;
+            this.TxtNit_Gestor.MaxLength = 2;
             this.TxtNit_Gestor.Name = "TxtNit_Gestor";
             this.TxtNit_Gestor.Size = new System.Drawing.Size(494, 26);
             this.TxtNit_Gestor.TabIndex = 3;
@@ -201,7 +219,7 @@
             this.txtCorreo_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo_Gestor.Location = new System.Drawing.Point(14, 122);
             this.txtCorreo_Gestor.Margin = new System.Windows.Forms.Padding(5);
-            this.txtCorreo_Gestor.MaxLength = 45;
+            this.txtCorreo_Gestor.MaxLength = 1;
             this.txtCorreo_Gestor.Name = "txtCorreo_Gestor";
             this.txtCorreo_Gestor.Size = new System.Drawing.Size(494, 26);
             this.txtCorreo_Gestor.TabIndex = 2;
@@ -216,6 +234,7 @@
             this.TxtEmpresa_Gestor.Name = "TxtEmpresa_Gestor";
             this.TxtEmpresa_Gestor.Size = new System.Drawing.Size(494, 26);
             this.TxtEmpresa_Gestor.TabIndex = 1;
+            this.TxtEmpresa_Gestor.TextChanged += new System.EventHandler(this.TxtEmpresa_Gestor_TextChanged);
             // 
             // label4
             // 
@@ -313,7 +332,7 @@
             this.btnFinalizar_Gestor.Margin = new System.Windows.Forms.Padding(5);
             this.btnFinalizar_Gestor.Name = "btnFinalizar_Gestor";
             this.btnFinalizar_Gestor.Size = new System.Drawing.Size(214, 47);
-            this.btnFinalizar_Gestor.TabIndex = 11;
+            this.btnFinalizar_Gestor.TabIndex = 16;
             this.btnFinalizar_Gestor.Text = "Finalizar Registro";
             this.btnFinalizar_Gestor.UseVisualStyleBackColor = false;
             // 
@@ -328,7 +347,7 @@
             this.btnEliminarTelefono_Gestor.Margin = new System.Windows.Forms.Padding(5);
             this.btnEliminarTelefono_Gestor.Name = "btnEliminarTelefono_Gestor";
             this.btnEliminarTelefono_Gestor.Size = new System.Drawing.Size(90, 47);
-            this.btnEliminarTelefono_Gestor.TabIndex = 10;
+            this.btnEliminarTelefono_Gestor.TabIndex = 13;
             this.btnEliminarTelefono_Gestor.Text = "Eliminar";
             this.btnEliminarTelefono_Gestor.UseVisualStyleBackColor = false;
             // 
@@ -343,7 +362,7 @@
             this.btnAgregarTelefono_Gestor.Margin = new System.Windows.Forms.Padding(5);
             this.btnAgregarTelefono_Gestor.Name = "btnAgregarTelefono_Gestor";
             this.btnAgregarTelefono_Gestor.Size = new System.Drawing.Size(90, 47);
-            this.btnAgregarTelefono_Gestor.TabIndex = 9;
+            this.btnAgregarTelefono_Gestor.TabIndex = 12;
             this.btnAgregarTelefono_Gestor.Text = "Agregar";
             this.btnAgregarTelefono_Gestor.UseVisualStyleBackColor = false;
             // 
@@ -354,7 +373,7 @@
             this.dgvContactos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvContactos.Name = "dgvContactos";
             this.dgvContactos.Size = new System.Drawing.Size(214, 273);
-            this.dgvContactos.TabIndex = 65;
+            this.dgvContactos.TabIndex = 15;
             // 
             // txt_cel_Gestor
             // 
@@ -363,7 +382,7 @@
             this.txt_cel_Gestor.Mask = "0000-0000";
             this.txt_cel_Gestor.Name = "txt_cel_Gestor";
             this.txt_cel_Gestor.Size = new System.Drawing.Size(214, 22);
-            this.txt_cel_Gestor.TabIndex = 8;
+            this.txt_cel_Gestor.TabIndex = 11;
             // 
             // label11
             // 
@@ -377,13 +396,38 @@
             this.label11.TabIndex = 63;
             this.label11.Text = "Numeros Telefonicos:";
             // 
-            // txtid_Empresa_Modificacion
+            // button1
             // 
-            this.txtid_Empresa_Modificacion.Location = new System.Drawing.Point(683, 16);
-            this.txtid_Empresa_Modificacion.Name = "txtid_Empresa_Modificacion";
-            this.txtid_Empresa_Modificacion.Size = new System.Drawing.Size(39, 22);
-            this.txtid_Empresa_Modificacion.TabIndex = 70;
-            this.txtid_Empresa_Modificacion.Visible = false;
+            this.button1.BackColor = System.Drawing.Color.Goldenrod;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(198, 484);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 47);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Revisar Empresa";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkCyan;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(371, 484);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 47);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Modificar Empresa";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(544, 484);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 47);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Eliminar Empresa";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // frmAdministracion_Empresa
             // 
@@ -396,6 +440,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdministracion_Empresa";
             this.Text = "frmAdministracion_Empresa";
+            this.Load += new System.EventHandler(this.frmAdministracion_Empresa_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -437,5 +482,9 @@
         private System.Windows.Forms.MaskedTextBox txt_cel_Gestor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtid_Empresa_Modificacion;
+        private System.Windows.Forms.OpenFileDialog cargar_imagen;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }
