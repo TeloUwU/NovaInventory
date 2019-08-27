@@ -209,7 +209,6 @@
             this.lblEstado.Size = new System.Drawing.Size(67, 21);
             this.lblEstado.TabIndex = 3;
             this.lblEstado.Text = "En Línea";
-            this.lblEstado.Click += new System.EventHandler(this.lblEstado_Click);
             // 
             // pictureBox1
             // 
