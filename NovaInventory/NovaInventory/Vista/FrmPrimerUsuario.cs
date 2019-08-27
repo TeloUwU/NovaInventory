@@ -40,11 +40,11 @@ namespace NovaInventory.Vista
                     usuario.telefono = txt_cel.Text;
                     string intentos = "0";
                     usuario.intentos = intentos;
-                    if (txtClave.Text==txtConfClave.Text)
-                    {
-                        usuario.contraseña_usuario = txtClave.Text;
-                    }
-                    MemoryStream ms = new MemoryStream();
+                    usuario.id_estados = Convert.ToInt32(cmbEstado.SelectedValue.ToString());
+                usuario.id_tipo_usuarios = Convert.ToInt32(cmbTipoUsuario.SelectedValue.ToString());
+                usuario.empresa = Convert.ToInt32(cmbEmpresa.SelectedValue.ToString());
+
+                MemoryStream ms = new MemoryStream();
                     pbFoto.Image.Save(ms, ImageFormat.Jpeg);
                     byte[] aByte = ms.ToArray();
                     string imagen = Convert.ToBase64String(aByte);
@@ -79,6 +79,39 @@ namespace NovaInventory.Vista
             frmLogin Login = new frmLogin();
             Login.Show();
             this.Hide();
+        }
+
+        private void FrmPrimerUsuario_Load(object sender, EventArgs e)
+        {
+
+            cmbTipoUsuario.DataSource = Funciones_usuarios.cargarUSU();
+            cmbTipoUsuario.DisplayMember = "tipo_usuario";
+            cmbTipoUsuario.ValueMember = "id_tipo_usuario";
+
+            cmbEstado.DataSource = Funciones_usuarios.cargar();
+            cmbEstado.DisplayMember = "Estado_usuario";
+            cmbEstado.ValueMember = "id_estado_usuario";
+
+            cmbEmpresa.DataSource = Funciones_usuarios.cargar1();
+            cmbEmpresa.DisplayMember = "nombre";
+            cmbEmpresa.ValueMember = "id_datos_empresa";
+
+            cmbPregunta1.DataSource = preguntas_y_respuestas.cargar();
+            cmbPregunta1.DisplayMember = "pregunta";
+            cmbPregunta1.ValueMember = "id_pregunta";
+
+            cmbPregunta2.DataSource = preguntas_y_respuestas.cargar();
+            cmbPregunta2.DisplayMember = "pregunta";
+            cmbPregunta2.ValueMember = "id_pregunta";
+
+            cmbPregunta3.DataSource = preguntas_y_respuestas.cargar();
+            cmbPregunta3.DisplayMember = "pregunta";
+            cmbPregunta3.ValueMember = "id_pregunta";
+
+            cmbPregunta4.DataSource = preguntas_y_respuestas.cargar();
+            cmbPregunta4.DisplayMember = "pregunta*/0";
+            cmbPregunta4.ValueMember = "id_pregunta";
+
         }
     }
 }

@@ -18,6 +18,7 @@ namespace NovaInventory.Controlador
         public string Correo  { get; set; }
         public string dui { get; set; }
         public string nit { get; set; }
+        public string fecha_de_nacimiento { get; set; }
         public int id_estados { get; set; }
         public int id_tipo_usuarios { get; set; }
         public string intentos { get; set; }

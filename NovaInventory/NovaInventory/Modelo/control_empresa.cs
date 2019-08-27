@@ -109,6 +109,12 @@ namespace NovaInventory.Controlador
             }
             
         }
+
+        internal static int registrarempresa(constructor_primer_usuario empresa)
+        {
+            throw new NotImplementedException();
+        }
+
         public static int Id(constructor_para_celulares jj)
         {
             int datos =0;

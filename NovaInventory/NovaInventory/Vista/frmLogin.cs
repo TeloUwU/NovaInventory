@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Modelo;
+using NovaInventory.Config;
 using NovaInventory.Controlador;
 
 namespace NovaInventory.Vista
@@ -29,13 +30,21 @@ namespace NovaInventory.Vista
                Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
                Constructor_login.usuario = txtUsuario.Text;
                 login.clave = txtContraseña.Text;
+                    /* Validaciones.md5( txtContraseña.Text);*/
                 bool datos = validar_login.acceso(login);
                 if (datos == true)
                 {
-                    FrmPrincipal main = new FrmPrincipal();
-                    main.Show();
-                    this.Hide();
-                    
+                    //if (txtContraseña.Text== "123456")
+                    //{
+
+                    //}
+                    //else
+                    //{
+                        FrmPrincipal main = new FrmPrincipal();
+                        main.Show();
+                        this.Hide();
+                    //}
+                  
                 }
 
             }
@@ -129,6 +138,7 @@ namespace NovaInventory.Vista
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
+
         }
     }
 }

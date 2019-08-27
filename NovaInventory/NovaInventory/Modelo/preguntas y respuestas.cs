@@ -15,7 +15,7 @@ namespace NovaInventory.Modelo
         public static DataTable cargar()
         {
             DataTable datos = new DataTable();
-            string query = "SELECT id_pregunta, CONCAT(pregunta) AS nombre FROM tbpreguntas";
+            string query = "SELECT id_pregunta, CONCAT(pregunta) AS pregunta FROM tbpreguntas";
             MySqlCommand mcdquery = new MySqlCommand((query), Conexion.obtenerconexion());
             try
             {
