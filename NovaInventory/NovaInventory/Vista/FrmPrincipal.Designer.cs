@@ -140,7 +140,7 @@
             this.button10.Location = new System.Drawing.Point(0, 253);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(236, 36);
-            this.button10.TabIndex = 12;
+            this.button10.TabIndex = 3;
             this.button10.Text = "Artículos";
             this.button10.UseVisualStyleBackColor = true;
             // 
@@ -149,7 +149,7 @@
             this.button9.Location = new System.Drawing.Point(0, 465);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(236, 36);
-            this.button9.TabIndex = 11;
+            this.button9.TabIndex = 7;
             this.button9.Text = "Proveedor";
             this.button9.UseVisualStyleBackColor = true;
             // 
@@ -158,7 +158,7 @@
             this.button8.Location = new System.Drawing.Point(0, 361);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(236, 36);
-            this.button8.TabIndex = 10;
+            this.button8.TabIndex = 5;
             this.button8.Text = "Bodega";
             this.button8.UseVisualStyleBackColor = true;
             // 
@@ -176,7 +176,7 @@
             this.button2.Location = new System.Drawing.Point(0, 150);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(236, 36);
-            this.button2.TabIndex = 5;
+            this.button2.TabIndex = 1;
             this.button2.Text = "Compras";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -185,7 +185,7 @@
             this.button3.Location = new System.Drawing.Point(0, 201);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(236, 36);
-            this.button3.TabIndex = 6;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Ventas";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -194,7 +194,7 @@
             this.button4.Location = new System.Drawing.Point(0, 413);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(236, 36);
-            this.button4.TabIndex = 7;
+            this.button4.TabIndex = 6;
             this.button4.Text = "Ver Existencias";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -575,7 +575,7 @@
             this.button7.Location = new System.Drawing.Point(0, 621);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(236, 36);
-            this.button7.TabIndex = 15;
+            this.button7.TabIndex = 10;
             this.button7.Text = "Generar Factura";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
