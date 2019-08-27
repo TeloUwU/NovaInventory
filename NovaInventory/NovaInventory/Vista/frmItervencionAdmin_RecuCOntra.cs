@@ -36,7 +36,7 @@ namespace NovaInventory.Vista
                 cmd.CommandText = "select count(*) from tbusuarios where nickname = '" + txtUsuario_Root.Text + "'and contraseña_usuario = '" + txtContraseña_Root.Text + "'and id_tipo_usuarios = '" + 1 +"'";
                 int valor = int.Parse(cmd.ExecuteScalar().ToString());
                 //Comparamos si el valor recibido es 1 entonces existe si no NO
-                if (valor == 1)
+                if (txtIdRoot.Text == "1")
                 {
                     frmNuevaContraseña frm = new frmNuevaContraseña();
                     frm.Show();

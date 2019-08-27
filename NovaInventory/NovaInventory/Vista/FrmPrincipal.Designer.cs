@@ -83,6 +83,7 @@
             this.verCatalogoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblNivel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
@@ -256,7 +257,6 @@
             this.button6.TabIndex = 9;
             this.button6.Text = "Configuración Usuario Root";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -270,6 +270,7 @@
             // PanelSidebar
             // 
             this.PanelSidebar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.PanelSidebar.Controls.Add(this.lblNivel);
             this.PanelSidebar.Controls.Add(this.button12);
             this.PanelSidebar.Controls.Add(this.button11);
             this.PanelSidebar.Controls.Add(this.button7);
@@ -330,7 +331,7 @@
             // lblNombres_Usuario
             // 
             this.lblNombres_Usuario.AutoSize = true;
-            this.lblNombres_Usuario.Location = new System.Drawing.Point(133, 30);
+            this.lblNombres_Usuario.Location = new System.Drawing.Point(125, 19);
             this.lblNombres_Usuario.Name = "lblNombres_Usuario";
             this.lblNombres_Usuario.Size = new System.Drawing.Size(42, 17);
             this.lblNombres_Usuario.TabIndex = 1;
@@ -340,7 +341,7 @@
             // lblApellidos_Usuario
             // 
             this.lblApellidos_Usuario.AutoSize = true;
-            this.lblApellidos_Usuario.Location = new System.Drawing.Point(133, 62);
+            this.lblApellidos_Usuario.Location = new System.Drawing.Point(125, 36);
             this.lblApellidos_Usuario.Name = "lblApellidos_Usuario";
             this.lblApellidos_Usuario.Size = new System.Drawing.Size(42, 17);
             this.lblApellidos_Usuario.TabIndex = 2;
@@ -573,6 +574,15 @@
             this.nuevaCompraToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.nuevaCompraToolStripMenuItem.Text = "Nueva Compra";
             // 
+            // lblNivel
+            // 
+            this.lblNivel.AutoSize = true;
+            this.lblNivel.Location = new System.Drawing.Point(140, 76);
+            this.lblNivel.Name = "lblNivel";
+            this.lblNivel.Size = new System.Drawing.Size(42, 17);
+            this.lblNivel.TabIndex = 14;
+            this.lblNivel.Text = "label2";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -659,5 +669,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label lblNivel;
     }
 }

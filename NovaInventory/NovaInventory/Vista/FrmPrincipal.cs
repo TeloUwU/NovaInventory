@@ -22,28 +22,28 @@ namespace NovaInventory.Vista
         {
             PanelSidebar.Visible = false;
 
-            //lblNombres_Usuario.Text = Constructor_login.nombre;
-            //lblApellidos.Text = Constructor_login.apellido;
-            //if (Constructor_login.nivel == 1) 
-            //{
-            //    lblNivel.Text = ("Root");
-            //}
-            //else if (Constructor_login.nivel==2)
-            //{
-            //    lblNivel.Text = ("Administrador");
-            //}
-            //else if (Constructor_login.nivel == 3)
-            //{
-            //    lblNivel.Text = ("Bodeguero");
-            //}
-            //else if (Constructor_login.nivel == 4)
-            //{
-            //    lblNivel.Text = ("Cajero");
-            //}
-            //else if (Constructor_login.nivel == 5)
-            //{
-            //    lblNivel.Text = ("Gerente de inventario");
-            //}
+            lblNombres_Usuario.Text = Constructor_login.nombre;
+            lblApellidos_Usuario.Text = Constructor_login.apellido;
+            if (Constructor_login.nivel == 1) 
+            {
+                lblNivel.Text = ("Root");
+            }
+            else if (Constructor_login.nivel==2)
+            {
+                lblNivel.Text = ("Administrador");
+            }
+            else if (Constructor_login.nivel == 3)
+            {
+                lblNivel.Text = ("Bodeguero");
+            }
+            else if (Constructor_login.nivel == 4)
+            {
+                lblNivel.Text = ("Cajero");
+            }
+            else if (Constructor_login.nivel == 5)
+            {
+                lblNivel.Text = ("Gerente de inventario");
+            }
         }
 
         private void panelDeNavegaciónToolStripMenuItem_Click(object sender, EventArgs e)
