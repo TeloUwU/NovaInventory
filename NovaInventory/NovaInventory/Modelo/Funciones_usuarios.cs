@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
 using NovaInventory.Config;
-using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data;
 using NovaInventory.Controlador;
