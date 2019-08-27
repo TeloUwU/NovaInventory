@@ -121,5 +121,25 @@ namespace NovaInventory.Vista
             btnVentana_Principal.Visible = false;
             this.WindowState = FormWindowState.Normal;
         }
+
+        private void lblNombres_Usuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEstado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblApellidos_Usuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PanelContenedor_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
