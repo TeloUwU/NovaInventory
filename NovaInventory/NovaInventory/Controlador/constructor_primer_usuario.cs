@@ -24,6 +24,7 @@ namespace NovaInventory.Controlador
         public string intentos { get; set; }
         public int empresa { get; set; }
 
+        public constructor_primer_usuario() { }
 
 
     }

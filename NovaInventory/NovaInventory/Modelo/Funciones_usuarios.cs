@@ -9,7 +9,6 @@ using System.Windows.Forms;
 using System.Data;
 using NovaInventory.Controlador;
 
-using NovaInventory.Modelo;
 
 namespace NovaInventory.Modelo
 {

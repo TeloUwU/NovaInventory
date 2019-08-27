@@ -28,19 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfig_Root));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.btnCambiar_clave = new System.Windows.Forms.Button();
             this.txt_cel_Root = new System.Windows.Forms.MaskedTextBox();
-            this.BtnExaminar_Root = new System.Windows.Forms.Button();
+            this.BtnCargarImagen_Root = new System.Windows.Forms.Button();
             this.cmbTipoUsuario_Root = new System.Windows.Forms.ComboBox();
             this.cmbEstado_Root = new System.Windows.Forms.ComboBox();
             this.cmbEmpresa_Root = new System.Windows.Forms.ComboBox();
             this.dtNacimiento_Root = new System.Windows.Forms.DateTimePicker();
             this.maskDui_Root = new System.Windows.Forms.MaskedTextBox();
-            this.pbFoto_Root = new System.Windows.Forms.PictureBox();
             this.txtConfClave_Root = new System.Windows.Forms.TextBox();
             this.txtApellidos_Root = new System.Windows.Forms.TextBox();
             this.txtEmail_Root = new System.Windows.Forms.TextBox();
@@ -66,40 +61,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtclave_anterior_root = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.toolStripButton_regresar = new System.Windows.Forms.ToolStripButton();
+            this.pbFoto_Root = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Root)).BeginInit();
             this.SuspendLayout();
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(783, 27);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(174, 24);
-            this.toolStripButton1.Text = "Configuración de Usuario Root";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton2.Image = global::NovaInventory.Properties.Resources.undo_26px;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(124, 24);
-            this.toolStripButton2.Text = "Cerrar Formulario";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // btnCambiar_clave
             // 
@@ -121,23 +90,25 @@
             this.txt_cel_Root.Margin = new System.Windows.Forms.Padding(2);
             this.txt_cel_Root.Mask = "(000) 0000-0000";
             this.txt_cel_Root.Name = "txt_cel_Root";
+            this.txt_cel_Root.ShortcutsEnabled = false;
             this.txt_cel_Root.Size = new System.Drawing.Size(235, 20);
             this.txt_cel_Root.TabIndex = 6;
             // 
-            // BtnExaminar_Root
+            // BtnCargarImagen_Root
             // 
-            this.BtnExaminar_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnExaminar_Root.BackColor = System.Drawing.Color.DodgerBlue;
-            this.BtnExaminar_Root.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.BtnExaminar_Root.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExaminar_Root.ForeColor = System.Drawing.Color.White;
-            this.BtnExaminar_Root.Location = new System.Drawing.Point(617, 318);
-            this.BtnExaminar_Root.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnExaminar_Root.Name = "BtnExaminar_Root";
-            this.BtnExaminar_Root.Size = new System.Drawing.Size(141, 32);
-            this.BtnExaminar_Root.TabIndex = 13;
-            this.BtnExaminar_Root.Text = "Cargar Imagen";
-            this.BtnExaminar_Root.UseVisualStyleBackColor = false;
+            this.BtnCargarImagen_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnCargarImagen_Root.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnCargarImagen_Root.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.BtnCargarImagen_Root.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCargarImagen_Root.ForeColor = System.Drawing.Color.White;
+            this.BtnCargarImagen_Root.Location = new System.Drawing.Point(608, 287);
+            this.BtnCargarImagen_Root.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnCargarImagen_Root.Name = "BtnCargarImagen_Root";
+            this.BtnCargarImagen_Root.Size = new System.Drawing.Size(141, 32);
+            this.BtnCargarImagen_Root.TabIndex = 13;
+            this.BtnCargarImagen_Root.Text = "Cargar Imagen";
+            this.BtnCargarImagen_Root.UseVisualStyleBackColor = false;
+            this.BtnCargarImagen_Root.Click += new System.EventHandler(this.BtnCargarImagen_Root_Click);
             // 
             // cmbTipoUsuario_Root
             // 
@@ -149,6 +120,7 @@
             this.cmbTipoUsuario_Root.Name = "cmbTipoUsuario_Root";
             this.cmbTipoUsuario_Root.Size = new System.Drawing.Size(235, 21);
             this.cmbTipoUsuario_Root.TabIndex = 8;
+            this.cmbTipoUsuario_Root.SelectedIndexChanged += new System.EventHandler(this.cmbTipoUsuario_Root_SelectedIndexChanged);
             // 
             // cmbEstado_Root
             // 
@@ -160,6 +132,7 @@
             this.cmbEstado_Root.Name = "cmbEstado_Root";
             this.cmbEstado_Root.Size = new System.Drawing.Size(232, 21);
             this.cmbEstado_Root.TabIndex = 9;
+            this.cmbEstado_Root.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_Root_SelectedIndexChanged);
             // 
             // cmbEmpresa_Root
             // 
@@ -171,6 +144,7 @@
             this.cmbEmpresa_Root.Name = "cmbEmpresa_Root";
             this.cmbEmpresa_Root.Size = new System.Drawing.Size(236, 21);
             this.cmbEmpresa_Root.TabIndex = 5;
+            this.cmbEmpresa_Root.SelectedIndexChanged += new System.EventHandler(this.cmbEmpresa_Root_SelectedIndexChanged);
             // 
             // dtNacimiento_Root
             // 
@@ -190,27 +164,18 @@
             this.maskDui_Root.Margin = new System.Windows.Forms.Padding(2);
             this.maskDui_Root.Mask = "00000000-0";
             this.maskDui_Root.Name = "maskDui_Root";
+            this.maskDui_Root.ShortcutsEnabled = false;
             this.maskDui_Root.Size = new System.Drawing.Size(234, 20);
             this.maskDui_Root.TabIndex = 3;
-            // 
-            // pbFoto_Root
-            // 
-            this.pbFoto_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbFoto_Root.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pbFoto_Root.Location = new System.Drawing.Point(629, 124);
-            this.pbFoto_Root.Margin = new System.Windows.Forms.Padding(2);
-            this.pbFoto_Root.Name = "pbFoto_Root";
-            this.pbFoto_Root.Size = new System.Drawing.Size(105, 144);
-            this.pbFoto_Root.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbFoto_Root.TabIndex = 109;
-            this.pbFoto_Root.TabStop = false;
             // 
             // txtConfClave_Root
             // 
             this.txtConfClave_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtConfClave_Root.Location = new System.Drawing.Point(324, 478);
             this.txtConfClave_Root.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfClave_Root.MaxLength = 8;
             this.txtConfClave_Root.Name = "txtConfClave_Root";
+            this.txtConfClave_Root.PasswordChar = '*';
             this.txtConfClave_Root.Size = new System.Drawing.Size(235, 20);
             this.txtConfClave_Root.TabIndex = 12;
             // 
@@ -219,7 +184,9 @@
             this.txtApellidos_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtApellidos_Root.Location = new System.Drawing.Point(324, 72);
             this.txtApellidos_Root.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidos_Root.MaxLength = 50;
             this.txtApellidos_Root.Name = "txtApellidos_Root";
+            this.txtApellidos_Root.ShortcutsEnabled = false;
             this.txtApellidos_Root.Size = new System.Drawing.Size(235, 20);
             this.txtApellidos_Root.TabIndex = 2;
             // 
@@ -229,6 +196,7 @@
             this.txtEmail_Root.Location = new System.Drawing.Point(41, 237);
             this.txtEmail_Root.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail_Root.Name = "txtEmail_Root";
+            this.txtEmail_Root.ShortcutsEnabled = false;
             this.txtEmail_Root.Size = new System.Drawing.Size(235, 20);
             this.txtEmail_Root.TabIndex = 7;
             // 
@@ -237,6 +205,7 @@
             this.txtUsuario_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsuario_Root.Location = new System.Drawing.Point(325, 287);
             this.txtUsuario_Root.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuario_Root.MaxLength = 25;
             this.txtUsuario_Root.Name = "txtUsuario_Root";
             this.txtUsuario_Root.Size = new System.Drawing.Size(235, 20);
             this.txtUsuario_Root.TabIndex = 10;
@@ -246,10 +215,12 @@
             this.txtClave_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtClave_Root.Location = new System.Drawing.Point(42, 478);
             this.txtClave_Root.Margin = new System.Windows.Forms.Padding(2);
-            this.txtClave_Root.MaxLength = 45;
+            this.txtClave_Root.MaxLength = 8;
             this.txtClave_Root.Name = "txtClave_Root";
+            this.txtClave_Root.PasswordChar = '*';
             this.txtClave_Root.Size = new System.Drawing.Size(234, 20);
             this.txtClave_Root.TabIndex = 11;
+            this.txtClave_Root.TextChanged += new System.EventHandler(this.txtClave_Root_TextChanged_1);
             // 
             // txtCarne
             // 
@@ -268,6 +239,7 @@
             this.txtNombre_Root.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre_Root.MaxLength = 45;
             this.txtNombre_Root.Name = "txtNombre_Root";
+            this.txtNombre_Root.ShortcutsEnabled = false;
             this.txtNombre_Root.Size = new System.Drawing.Size(234, 20);
             this.txtNombre_Root.TabIndex = 1;
             // 
@@ -452,6 +424,7 @@
             this.button1.TabIndex = 111;
             this.button1.Text = "Actualizar Datos";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtclave_anterior_root
             // 
@@ -460,6 +433,7 @@
             this.txtclave_anterior_root.Margin = new System.Windows.Forms.Padding(2);
             this.txtclave_anterior_root.MaxLength = 45;
             this.txtclave_anterior_root.Name = "txtclave_anterior_root";
+            this.txtclave_anterior_root.PasswordChar = '*';
             this.txtclave_anterior_root.Size = new System.Drawing.Size(234, 20);
             this.txtclave_anterior_root.TabIndex = 112;
             // 
@@ -475,18 +449,70 @@
             this.label10.TabIndex = 113;
             this.label10.Text = "Clave anterior:";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.toolStripButton_regresar});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(783, 25);
+            this.toolStrip1.TabIndex = 114;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(127, 22);
+            this.toolStripLabel1.Text = "Configuracion de Root";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(475, 518);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(274, 13);
+            this.linkLabel1.TabIndex = 115;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "La contraseña debe de tener un maximo de 8 caracteres";
+            // 
+            // toolStripButton_regresar
+            // 
+            this.toolStripButton_regresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton_regresar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_regresar.Image = global::NovaInventory.Properties.Resources.back_arrow;
+            this.toolStripButton_regresar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_regresar.Name = "toolStripButton_regresar";
+            this.toolStripButton_regresar.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_regresar.Text = "Regresar";
+            this.toolStripButton_regresar.Click += new System.EventHandler(this.toolStripButton_regresar_Click);
+            // 
+            // pbFoto_Root
+            // 
+            this.pbFoto_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbFoto_Root.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pbFoto_Root.Location = new System.Drawing.Point(629, 124);
+            this.pbFoto_Root.Margin = new System.Windows.Forms.Padding(2);
+            this.pbFoto_Root.Name = "pbFoto_Root";
+            this.pbFoto_Root.Size = new System.Drawing.Size(105, 144);
+            this.pbFoto_Root.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFoto_Root.TabIndex = 109;
+            this.pbFoto_Root.TabStop = false;
+            // 
             // frmConfig_Root
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 540);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtclave_anterior_root);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtid_Root);
             this.Controls.Add(this.btnCambiar_clave);
             this.Controls.Add(this.txt_cel_Root);
-            this.Controls.Add(this.BtnExaminar_Root);
+            this.Controls.Add(this.BtnCargarImagen_Root);
             this.Controls.Add(this.cmbTipoUsuario_Root);
             this.Controls.Add(this.cmbEstado_Root);
             this.Controls.Add(this.cmbEmpresa_Root);
@@ -513,7 +539,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmConfig_Root";
@@ -527,13 +552,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Button btnCambiar_clave;
         private System.Windows.Forms.MaskedTextBox txt_cel_Root;
-        private System.Windows.Forms.Button BtnExaminar_Root;
+        private System.Windows.Forms.Button BtnCargarImagen_Root;
         private System.Windows.Forms.ComboBox cmbTipoUsuario_Root;
         private System.Windows.Forms.ComboBox cmbEstado_Root;
         private System.Windows.Forms.ComboBox cmbEmpresa_Root;
@@ -565,6 +586,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtclave_anterior_root;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton_regresar;
         //private Bunifu.Framework.UI.BunifuFlatButton Guardar;
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using NovaInventory.Config;
+
 namespace NovaInventory.Modelo
 {
     class preguntas_y_respuestas
