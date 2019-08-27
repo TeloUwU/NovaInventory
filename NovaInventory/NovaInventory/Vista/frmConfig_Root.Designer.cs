@@ -80,7 +80,7 @@
             this.btnCambiar_clave.Margin = new System.Windows.Forms.Padding(2);
             this.btnCambiar_clave.Name = "btnCambiar_clave";
             this.btnCambiar_clave.Size = new System.Drawing.Size(242, 50);
-            this.btnCambiar_clave.TabIndex = 12;
+            this.btnCambiar_clave.TabIndex = 13;
             this.btnCambiar_clave.Text = "Cambiar Clave";
             this.btnCambiar_clave.UseVisualStyleBackColor = false;
             this.btnCambiar_clave.Click += new System.EventHandler(this.btnSobreescribir_Root_Click);
@@ -107,7 +107,7 @@
             this.BtnCargarImagen_Root.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCargarImagen_Root.Name = "BtnCargarImagen_Root";
             this.BtnCargarImagen_Root.Size = new System.Drawing.Size(141, 32);
-            this.BtnCargarImagen_Root.TabIndex = 13;
+            this.BtnCargarImagen_Root.TabIndex = 11;
             this.BtnCargarImagen_Root.Text = "Cargar Imagen";
             this.BtnCargarImagen_Root.UseVisualStyleBackColor = false;
             this.BtnCargarImagen_Root.Click += new System.EventHandler(this.BtnCargarImagen_Root_Click);
@@ -179,7 +179,7 @@
             this.txtConfClave_Root.Name = "txtConfClave_Root";
             this.txtConfClave_Root.PasswordChar = '*';
             this.txtConfClave_Root.Size = new System.Drawing.Size(235, 20);
-            this.txtConfClave_Root.TabIndex = 15;
+            this.txtConfClave_Root.TabIndex = 16;
             // 
             // txtApellidos_Root
             // 
@@ -221,7 +221,7 @@
             this.txtClave_Root.Name = "txtClave_Root";
             this.txtClave_Root.PasswordChar = '*';
             this.txtClave_Root.Size = new System.Drawing.Size(234, 20);
-            this.txtClave_Root.TabIndex = 14;
+            this.txtClave_Root.TabIndex = 15;
             this.txtClave_Root.TextChanged += new System.EventHandler(this.txtClave_Root_TextChanged_1);
             // 
             // txtCarne
@@ -424,7 +424,7 @@
             this.button_actualizar.Margin = new System.Windows.Forms.Padding(2);
             this.button_actualizar.Name = "button_actualizar";
             this.button_actualizar.Size = new System.Drawing.Size(242, 50);
-            this.button_actualizar.TabIndex = 11;
+            this.button_actualizar.TabIndex = 12;
             this.button_actualizar.Text = "Actualizar Datos";
             this.button_actualizar.UseVisualStyleBackColor = false;
             this.button_actualizar.Click += new System.EventHandler(this.button1_Click);
@@ -438,7 +438,7 @@
             this.txtclave_anterior_root.Name = "txtclave_anterior_root";
             this.txtclave_anterior_root.PasswordChar = '*';
             this.txtclave_anterior_root.Size = new System.Drawing.Size(234, 20);
-            this.txtclave_anterior_root.TabIndex = 13;
+            this.txtclave_anterior_root.TabIndex = 14;
             // 
             // label10
             // 
