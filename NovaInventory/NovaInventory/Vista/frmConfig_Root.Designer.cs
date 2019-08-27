@@ -58,13 +58,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtid_Root = new System.Windows.Forms.TextBox();
             this.openCargarImagen = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_actualizar = new System.Windows.Forms.Button();
             this.txtclave_anterior_root = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolStripButton_regresar = new System.Windows.Forms.ToolStripButton();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pbFoto_Root = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Root)).BeginInit();
@@ -72,10 +72,11 @@
             // 
             // btnCambiar_clave
             // 
+            this.btnCambiar_clave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCambiar_clave.BackColor = System.Drawing.Color.Green;
             this.btnCambiar_clave.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiar_clave.ForeColor = System.Drawing.Color.White;
-            this.btnCambiar_clave.Location = new System.Drawing.Point(325, 344);
+            this.btnCambiar_clave.Location = new System.Drawing.Point(318, 334);
             this.btnCambiar_clave.Margin = new System.Windows.Forms.Padding(2);
             this.btnCambiar_clave.Name = "btnCambiar_clave";
             this.btnCambiar_clave.Size = new System.Drawing.Size(242, 50);
@@ -86,6 +87,7 @@
             // 
             // txt_cel_Root
             // 
+            this.txt_cel_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_cel_Root.Location = new System.Drawing.Point(324, 179);
             this.txt_cel_Root.Margin = new System.Windows.Forms.Padding(2);
             this.txt_cel_Root.Mask = "(000) 0000-0000";
@@ -101,7 +103,7 @@
             this.BtnCargarImagen_Root.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.BtnCargarImagen_Root.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCargarImagen_Root.ForeColor = System.Drawing.Color.White;
-            this.BtnCargarImagen_Root.Location = new System.Drawing.Point(608, 287);
+            this.BtnCargarImagen_Root.Location = new System.Drawing.Point(612, 287);
             this.BtnCargarImagen_Root.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCargarImagen_Root.Name = "BtnCargarImagen_Root";
             this.BtnCargarImagen_Root.Size = new System.Drawing.Size(141, 32);
@@ -368,7 +370,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(638, 72);
+            this.label12.Location = new System.Drawing.Point(628, 72);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 18);
@@ -412,19 +414,20 @@
             // 
             this.openCargarImagen.FileName = "openCargarImagen";
             // 
-            // button1
+            // button_actualizar
             // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(45, 344);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 50);
-            this.button1.TabIndex = 111;
-            this.button1.Text = "Actualizar Datos";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_actualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_actualizar.BackColor = System.Drawing.Color.Green;
+            this.button_actualizar.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_actualizar.ForeColor = System.Drawing.Color.White;
+            this.button_actualizar.Location = new System.Drawing.Point(36, 334);
+            this.button_actualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.button_actualizar.Name = "button_actualizar";
+            this.button_actualizar.Size = new System.Drawing.Size(242, 50);
+            this.button_actualizar.TabIndex = 111;
+            this.button_actualizar.Text = "Actualizar Datos";
+            this.button_actualizar.UseVisualStyleBackColor = false;
+            this.button_actualizar.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtclave_anterior_root
             // 
@@ -466,16 +469,6 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(127, 22);
             this.toolStripLabel1.Text = "Configuracion de Root";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(475, 518);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(274, 13);
-            this.linkLabel1.TabIndex = 115;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "La contraseña debe de tener un maximo de 8 caracteres";
-            // 
             // toolStripButton_regresar
             // 
             this.toolStripButton_regresar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -486,6 +479,16 @@
             this.toolStripButton_regresar.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton_regresar.Text = "Regresar";
             this.toolStripButton_regresar.Click += new System.EventHandler(this.toolStripButton_regresar_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(475, 518);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(274, 13);
+            this.linkLabel1.TabIndex = 115;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "La contraseña debe de tener un maximo de 8 caracteres";
             // 
             // pbFoto_Root
             // 
@@ -508,7 +511,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtclave_anterior_root);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_actualizar);
             this.Controls.Add(this.txtid_Root);
             this.Controls.Add(this.btnCambiar_clave);
             this.Controls.Add(this.txt_cel_Root);
@@ -583,7 +586,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtid_Root;
         private System.Windows.Forms.OpenFileDialog openCargarImagen;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_actualizar;
         private System.Windows.Forms.TextBox txtclave_anterior_root;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ToolStrip toolStrip1;

@@ -160,5 +160,17 @@ namespace NovaInventory.Vista
         {
             
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmConfig_Root>();
+            root();
+            button6.BackColor = Color.FromArgb(192, 0, 192);
+        }
+
+        public void root ()
+        {
+            string nombre = "Maria";
+        }
     }
 }
