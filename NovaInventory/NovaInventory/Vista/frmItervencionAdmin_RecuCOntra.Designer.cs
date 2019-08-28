@@ -88,8 +88,9 @@
             // txtUsuario_Root
             // 
             this.txtUsuario_Root.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtUsuario_Root.Location = new System.Drawing.Point(123, 129);
+            this.txtUsuario_Root.Location = new System.Drawing.Point(126, 129);
             this.txtUsuario_Root.Name = "txtUsuario_Root";
+            this.txtUsuario_Root.ShortcutsEnabled = false;
             this.txtUsuario_Root.Size = new System.Drawing.Size(123, 20);
             this.txtUsuario_Root.TabIndex = 1;
             // 
@@ -107,8 +108,9 @@
             // txtContraseña_Root
             // 
             this.txtContraseña_Root.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtContraseña_Root.Location = new System.Drawing.Point(123, 184);
+            this.txtContraseña_Root.Location = new System.Drawing.Point(126, 184);
             this.txtContraseña_Root.Name = "txtContraseña_Root";
+            this.txtContraseña_Root.ShortcutsEnabled = false;
             this.txtContraseña_Root.Size = new System.Drawing.Size(123, 20);
             this.txtContraseña_Root.TabIndex = 2;
             // 

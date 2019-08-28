@@ -183,5 +183,27 @@ namespace NovaInventory.Vista
             AbrirFormulario<frmFacturacion>();
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmAdministracion_Empresa>();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCompra>();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmLogin frm = new frmLogin();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void controlDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmUsuarios>();
+        }
     }
 }

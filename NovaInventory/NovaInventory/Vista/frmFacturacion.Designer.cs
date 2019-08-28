@@ -44,10 +44,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblCostoAPagar = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblDevolucion = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtEfectivo = new System.Windows.Forms.TextBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
@@ -77,6 +73,7 @@
             // 
             this.txtIdArticulo.Location = new System.Drawing.Point(108, 28);
             this.txtIdArticulo.Name = "txtIdArticulo";
+            this.txtIdArticulo.ShortcutsEnabled = false;
             this.txtIdArticulo.Size = new System.Drawing.Size(100, 20);
             this.txtIdArticulo.TabIndex = 1;
             // 
@@ -139,6 +136,7 @@
             // 
             this.txtCantidad.Location = new System.Drawing.Point(108, 106);
             this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.ShortcutsEnabled = false;
             this.txtCantidad.Size = new System.Drawing.Size(100, 20);
             this.txtCantidad.TabIndex = 4;
             // 
@@ -146,6 +144,7 @@
             // 
             this.txtPrecio.Location = new System.Drawing.Point(108, 82);
             this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.ShortcutsEnabled = false;
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 3;
             // 
@@ -153,6 +152,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(108, 56);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 2;
             // 
@@ -219,53 +219,6 @@
             this.lblCostoAPagar.TabIndex = 11;
             this.lblCostoAPagar.Text = "0.00";
             // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(701, 77);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Devolución";
-            // 
-            // lblDevolucion
-            // 
-            this.lblDevolucion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDevolucion.AutoSize = true;
-            this.lblDevolucion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDevolucion.ForeColor = System.Drawing.Color.Yellow;
-            this.lblDevolucion.Location = new System.Drawing.Point(692, 96);
-            this.lblDevolucion.Name = "lblDevolucion";
-            this.lblDevolucion.Size = new System.Drawing.Size(28, 13);
-            this.lblDevolucion.TabIndex = 15;
-            this.lblDevolucion.Text = "0.00";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.ForeColor = System.Drawing.Color.Yellow;
-            this.label11.Location = new System.Drawing.Point(658, 96);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 13);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "$";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.SystemColors.InfoText;
-            this.textBox2.Location = new System.Drawing.Point(650, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 20);
-            this.textBox2.TabIndex = 14;
-            // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -283,6 +236,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEfectivo.Location = new System.Drawing.Point(650, 168);
             this.txtEfectivo.Name = "txtEfectivo";
+            this.txtEfectivo.ShortcutsEnabled = false;
             this.txtEfectivo.Size = new System.Drawing.Size(178, 20);
             this.txtEfectivo.TabIndex = 10;
             // 
@@ -372,10 +326,6 @@
             this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.txtEfectivo);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.lblDevolucion);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.lblCostoAPagar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -414,10 +364,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblCostoAPagar;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblDevolucion;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtEfectivo;
         private System.Windows.Forms.DataGridView dgvLista;

@@ -32,7 +32,6 @@ namespace NovaInventory.Vista
 
         private void AgregarCompra()
         {
-            int id_compra = Convert.ToInt16(txtid_Compra.Text);
             int id_proveedor = Convert.ToInt16(cbProveedor_Compra.Text);
             int id_articulo = Convert.ToInt16(cbProducto_Compra.Text);
             int Precio_Unitario = Convert.ToInt16(txtPrecio_Unitario.Text);

@@ -19,7 +19,7 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
-        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = novainventorybase");
+        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = db_novainventory_25");
         MySqlCommand cmd = new MySqlCommand();
 
         private void panelUsuario_Root_Paint(object sender, PaintEventArgs e)
@@ -33,7 +33,7 @@ namespace NovaInventory.Vista
             cmd.Connection = cn;
             try
             {
-                cmd.CommandText = "select count(*) from tbusuarios where nickname = '" + txtUsuario_Root.Text + "'and contraseña_usuario = '" + txtContraseña_Root.Text + "'and id_tipo_usuarios = '" + 1 +"'";
+                cmd.CommandText = "select count(*) from tbusuarios where nickname = '" + txtUsuario_Root.Text + "'";
                 int valor = int.Parse(cmd.ExecuteScalar().ToString());
                 //Comparamos si el valor recibido es 1 entonces existe si no NO
                 if (valor == 1)

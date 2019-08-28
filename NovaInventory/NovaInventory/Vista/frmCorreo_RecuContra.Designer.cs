@@ -79,6 +79,7 @@
             this.txtCorreo_Recu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCorreo_Recu.Location = new System.Drawing.Point(84, 169);
             this.txtCorreo_Recu.Name = "txtCorreo_Recu";
+            this.txtCorreo_Recu.ShortcutsEnabled = false;
             this.txtCorreo_Recu.Size = new System.Drawing.Size(173, 20);
             this.txtCorreo_Recu.TabIndex = 1;
             // 

@@ -107,17 +107,11 @@ namespace NovaInventory.Controlador
                 MessageBox.Show("Ha ocurrido un problema, revise su internet o los servicios del servidor, Consulte al programador" + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
             }
-            
-        }
 
-        internal static int registrarempresa(constructor_primer_usuario empresa)
-        {
-            throw new NotImplementedException();
         }
-
         public static int Id(constructor_para_celulares jj)
         {
-            int datos =0;
+            int datos = 0;
             try
             {
                 string query5 = "SELECT id_datos_empresa FROM  Datos_empresa";
@@ -134,7 +128,7 @@ namespace NovaInventory.Controlador
                 MessageBox.Show("no se pudo contactar con su empresa", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return datos;
             }
-         
+
         }
     }
 

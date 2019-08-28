@@ -32,7 +32,7 @@ namespace NovaInventory.Vista
             agregar.Correo = txtCorreo_Usuario.Text;
             agregar.dui = txtDUI_Usuario.Text;
             agregar.nit = txtNIT_Usuario.Text;
-            agregar.id_estados =Convert.ToInt32(cbEstado_Usuario.SelectedValue.ToString());
+            agregar.id_estados = Convert.ToInt32(cbEstado_Usuario.SelectedValue.ToString());
             agregar.id_tipo_usuarios = Convert.ToInt32(cbTipo_Usuario.SelectedValue.ToString());
             int intentos = 1;
             agregar.intentos = Convert.ToString(intentos);
@@ -60,8 +60,8 @@ namespace NovaInventory.Vista
             actualizar.Correo = txtCorreo_Usuario.Text;
             actualizar.dui = txtDUI_Usuario.Text;
             actualizar.nit = txtNIT_Usuario.Text;
-         
-            
+
+
 
             MemoryStream ms = new MemoryStream();
             pbFoto_Usuario.Image.Save(ms, ImageFormat.Jpeg);
@@ -128,13 +128,18 @@ namespace NovaInventory.Vista
             int posision;
             posision = this.dgvMostrar_Usuarios.CurrentRow.Index;
             txtid_Usuario.Text = this.dgvMostrar_Usuarios[0, posision].Value.ToString();
-            txtNombres_Usuario.Text = this.dgvMostrar_Usuarios[1, posision].Value.ToString();
-            txtApellidos_Usuario.Text = this.dgvMostrar_Usuarios[2, posision].Value.ToString();
-            txtUsuario.Text = this.dgvMostrar_Usuarios[3, posision].Value.ToString();
+            txtUsuario.Text = this.dgvMostrar_Usuarios[1, posision].Value.ToString();
+            txtNombres_Usuario.Text = this.dgvMostrar_Usuarios[2, posision].Value.ToString();
+            txtApellidos_Usuario.Text = this.dgvMostrar_Usuarios[3, posision].Value.ToString();
             txtTelefono_Usuario.Text = this.dgvMostrar_Usuarios[4, posision].Value.ToString();
-            txtCorreo_Usuario.Text = this.dgvMostrar_Usuarios[5, posision].Value.ToString();
-            txtDUI_Usuario.Text = this.dgvMostrar_Usuarios[6, posision].Value.ToString();
-            txtNIT_Usuario.Text = this.dgvMostrar_Usuarios[7, posision].Value.ToString();
+            pbFoto_Usuario.ImageLocation = this.dgvMostrar_Usuarios[6, posision].ValueType.ToString();
+            txtCorreo_Usuario.Text = this.dgvMostrar_Usuarios[7, posision].Value.ToString();
+            txtDUI_Usuario.Text = this.dgvMostrar_Usuarios[8, posision].Value.ToString();
+            txtNIT_Usuario.Text = this.dgvMostrar_Usuarios[9, posision].Value.ToString();
+            cbEstado_Usuario.Text = this.dgvMostrar_Usuarios[11, posision].Value.ToString();
+            cbTipo_Usuario.Text = this.dgvMostrar_Usuarios[12, posision].Value.ToString();
+            cmb_emp.Text = this.dgvMostrar_Usuarios[14, posision].Value.ToString();
+
         }
 
         private void button2_Click(object sender, EventArgs e)

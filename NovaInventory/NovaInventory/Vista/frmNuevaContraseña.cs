@@ -35,7 +35,7 @@ namespace NovaInventory.Vista
                 cmd.Connection = cn;
                 try
                 {
-                    cmd.CommandText = "select count(*) from tbusuarios where nickname = '" + txtUsuario.Text + "'and contraseña_usuario = '" + txtContraseña.Text + "'";
+                    cmd.CommandText = "select count(*) from tbusuarios where nickname = '" + txtUsuario.Text + "'";
                     int valor = int.Parse(cmd.ExecuteScalar().ToString());
                     //MessageBox.Show("Registro actualizado para el usuario " + valor, "Contraseña actualizada exitosamente ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Comparamos si el valor recibido es 1 entonces existe si no NO

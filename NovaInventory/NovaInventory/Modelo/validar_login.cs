@@ -68,7 +68,7 @@ namespace NovaInventory.Modelo
                             }
                             else
                             {
-                                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tbusuarios SET intentos = '{0}' WHERE nickname = '{1}'", intentos, Constructor_login.usuario), Conexion.obtenerconexion());
+                                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE tbusuarios (SET intentos = '{0}' WHERE nickname = '{1}'", intentos, Constructor_login.usuario), Conexion.obtenerconexion());
                                 int verificacion = Convert.ToInt32(cmdupdate.ExecuteNonQuery());
                                 if (verificacion >= 1)
                                 {

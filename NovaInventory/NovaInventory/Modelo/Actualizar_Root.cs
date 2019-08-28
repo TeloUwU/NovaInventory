@@ -38,6 +38,57 @@ namespace NovaInventory.Modelo
                 return retorno;
             }
         }
-      }
+        public static DataTable CargarEnmpresa()
+        {
+            DataTable data;
+
+            try
+            {
+                string query = "SELECT * FROM Datos_empresa";
+                MySqlCommand cargar_2 = new MySqlCommand(query, Conexion.obtenerconexion());//MysqlCommand hacer consulta a la base de datos
+                MySqlDataAdapter again2 = new MySqlDataAdapter(cargar_2);
+                data = new DataTable();
+                again2.Fill(data);
+
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
+
+                return data = new DataTable();
+            }
+        }
+
+        public static DataTable CargarEstado()
+        {
+            DataTable data = new DataTable();
+
+            try
+            {
+                string query = "SELECT id_estado_usuario, CONCAT(Estado_usuario) AS Estado_usuario FROM Estado_usuario";
+                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+
+                cmd.Fill(data);
+
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
+
+                return data = new DataTable();
+            }
+        }
+
+
+
+    }
+
 }
+
+
+      
+
 
