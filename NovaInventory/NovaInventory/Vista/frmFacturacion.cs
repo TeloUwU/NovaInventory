@@ -119,7 +119,7 @@ namespace NovaInventory.Vista
             Ticket1.AgregaTotales("Total", double.Parse(lblCostoAPagar.Text)); // imprime linea con total
             Ticket1.TextoIzquierda(" ");
             Ticket1.AgregaTotales("Efectivo Entregado:", double.Parse(txtEfectivo.Text));
-            Ticket1.AgregaTotales("Efectivo Devuelto:", double.Parse(lblDevolucion.Text));
+            
 
 
             // Ticket1.LineasTotales(); // imprime linea 
@@ -140,7 +140,7 @@ namespace NovaInventory.Vista
             { dgvLista.Rows.Remove(dgvLista.CurrentRow); }
             //LBLIDnuevaFACTURA.Text = ClaseFunciones.ClsFunciones.IDNUEVAFACTURA().ToString();
             txtIdArticulo.Text = txtNombre.Text = txtPrecio.Text = txtCantidad.Text = txtEfectivo.Text = "";
-            lblCostoAPagar.Text = lblDevolucion.Text = "0.00";
+            
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

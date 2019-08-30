@@ -193,9 +193,9 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap full_screen_exit {
+        internal static System.Drawing.Bitmap framed_portrait {
             get {
-                object obj = ResourceManager.GetObject("full-screen-exit", resourceCulture);
+                object obj = ResourceManager.GetObject("framed-portrait", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap https_symbol {
+        internal static System.Drawing.Bitmap full_screen_exit {
             get {
-                object obj = ResourceManager.GetObject("https-symbol", resourceCulture);
+                object obj = ResourceManager.GetObject("full-screen-exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

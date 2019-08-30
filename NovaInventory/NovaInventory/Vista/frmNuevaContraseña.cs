@@ -20,7 +20,7 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
-        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = novainventorybase");
+        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = DB_NOVAINVENTORY_25");
         MySqlCommand cmd = new MySqlCommand();
 
         private void frmNuevaContraseña_Load(object sender, EventArgs e)
@@ -37,6 +37,7 @@ namespace NovaInventory.Vista
                 {
                     cmd.CommandText = "select count(*) from tbusuarios where nickname = '" + txtUsuario.Text + "'";
                     int valor = int.Parse(cmd.ExecuteScalar().ToString());
+                    //MessageBox.Show("Registro actualizado para el usuario " + valor, "Contraseña actualizada exitosamente ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Comparamos si el valor recibido es 1 entonces existe si no NO
                     if (valor == 1)
                     {
@@ -52,13 +53,15 @@ namespace NovaInventory.Vista
                         MessageBox.Show("Registro actualizado para el usuario " + usuario,"Contraseña actualizada exitosamente " , MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
                     }
+
                     else { labelMensaje.Text = "El usuario no existe"; }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error en encontrar usuario" + ex, "Error de encontrame al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Error en encontrar usuario" + ex, "Error al encontrar al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 cn.Close();
+                
             }
         }
 

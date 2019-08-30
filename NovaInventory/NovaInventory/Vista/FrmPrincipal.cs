@@ -20,7 +20,30 @@ namespace NovaInventory.Vista
         Form currentForm;
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            
+            PanelSidebar.Visible = false;
+
+            lblNombres_Usuario.Text = Constructor_login.nombre;
+            lblApellidos_Usuario.Text = Constructor_login.apellido;
+            if (Constructor_login.nivel == 1) 
+            {
+                lblNivel.Text = ("Root");
+            }
+            else if (Constructor_login.nivel==2)
+            {
+                lblNivel.Text = ("Administrador");
+            }
+            else if (Constructor_login.nivel == 3)
+            {
+                lblNivel.Text = ("Bodeguero");
+            }
+            else if (Constructor_login.nivel == 4)
+            {
+                lblNivel.Text = ("Cajero");
+            }
+            else if (Constructor_login.nivel == 5)
+            {
+                lblNivel.Text = ("Gerente de inventario");
+            }
         }
 
         private void panelDeNavegaciónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,14 +161,49 @@ namespace NovaInventory.Vista
             
         }
 
-        private void lblApellidos_Usuario_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmConfig_Root>();
+            root();
+            button6.BackColor = Color.FromArgb(192, 0, 192);
+        }
+
+        public void root ()
+        {
+            string nombre = "Maria";
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmConfig_Root>();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmFacturacion>();
 
         }
 
-        private void lblNivel_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmAdministracion_Empresa>();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCompra>();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmLogin frm = new frmLogin();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void controlDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmUsuarios>();
         }
     }
 }

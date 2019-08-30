@@ -187,9 +187,11 @@
             this.dtNacimiento.CustomFormat = "yyyy/MM/dd";
             this.dtNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNacimiento.Location = new System.Drawing.Point(424, 126);
+            this.dtNacimiento.MaxDate = new System.DateTime(2005, 12, 30, 0, 0, 0, 0);
             this.dtNacimiento.Name = "dtNacimiento";
             this.dtNacimiento.Size = new System.Drawing.Size(312, 24);
             this.dtNacimiento.TabIndex = 4;
+            this.dtNacimiento.Value = new System.DateTime(2005, 12, 30, 0, 0, 0, 0);
             // 
             // maskDui
             // 
@@ -205,8 +207,10 @@
             this.txtConfClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtConfClave.Location = new System.Drawing.Point(424, 319);
             this.txtConfClave.Name = "txtConfClave";
+            this.txtConfClave.ShortcutsEnabled = false;
             this.txtConfClave.Size = new System.Drawing.Size(312, 24);
             this.txtConfClave.TabIndex = 12;
+            this.txtConfClave.UseSystemPasswordChar = true;
             // 
             // txtApellidos
             // 
@@ -245,6 +249,7 @@
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsuario.Location = new System.Drawing.Point(424, 269);
             this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(312, 24);
             this.txtUsuario.TabIndex = 10;
             // 
@@ -254,8 +259,10 @@
             this.txtClave.Location = new System.Drawing.Point(78, 319);
             this.txtClave.MaxLength = 45;
             this.txtClave.Name = "txtClave";
+            this.txtClave.ShortcutsEnabled = false;
             this.txtClave.Size = new System.Drawing.Size(311, 24);
             this.txtClave.TabIndex = 11;
+            this.txtClave.UseSystemPasswordChar = true;
             // 
             // txtCarne
             // 
@@ -475,7 +482,7 @@
             // txt_cel
             // 
             this.txt_cel.Location = new System.Drawing.Point(424, 175);
-            this.txt_cel.Mask = "(000) 0000-0000";
+            this.txt_cel.Mask = "0000-0000";
             this.txt_cel.Name = "txt_cel";
             this.txt_cel.Size = new System.Drawing.Size(312, 24);
             this.txt_cel.TabIndex = 6;
@@ -486,7 +493,7 @@
             this.textBox1.Location = new System.Drawing.Point(225, 533);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(629, 24);
-            this.textBox1.TabIndex = 15;
+            this.textBox1.TabIndex = 16;
             // 
             // textBox2
             // 
@@ -494,7 +501,7 @@
             this.textBox2.Location = new System.Drawing.Point(225, 600);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(629, 24);
-            this.textBox2.TabIndex = 15;
+            this.textBox2.TabIndex = 17;
             // 
             // pbFoto
             // 
@@ -559,6 +566,7 @@
             this.Name = "FrmPrimerUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrimerUsuario";
+            this.Load += new System.EventHandler(this.FrmPrimerUsuario_Load_1);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();

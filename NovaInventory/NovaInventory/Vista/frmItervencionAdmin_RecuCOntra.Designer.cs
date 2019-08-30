@@ -39,15 +39,11 @@
             this.labelMensaje = new System.Windows.Forms.Label();
             this.txtIdRoot = new System.Windows.Forms.TextBox();
             this.btnEnviar_Contra = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panelUsuario_Root.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +79,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(102, 118);
+            this.label1.Location = new System.Drawing.Point(107, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 18);
             this.label1.TabIndex = 1;
@@ -92,8 +88,9 @@
             // txtUsuario_Root
             // 
             this.txtUsuario_Root.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtUsuario_Root.Location = new System.Drawing.Point(118, 139);
+            this.txtUsuario_Root.Location = new System.Drawing.Point(126, 129);
             this.txtUsuario_Root.Name = "txtUsuario_Root";
+            this.txtUsuario_Root.ShortcutsEnabled = false;
             this.txtUsuario_Root.Size = new System.Drawing.Size(123, 20);
             this.txtUsuario_Root.TabIndex = 1;
             // 
@@ -102,7 +99,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(92, 171);
+            this.label2.Location = new System.Drawing.Point(97, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(195, 18);
             this.label2.TabIndex = 3;
@@ -111,8 +108,9 @@
             // txtContraseña_Root
             // 
             this.txtContraseña_Root.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtContraseña_Root.Location = new System.Drawing.Point(118, 194);
+            this.txtContraseña_Root.Location = new System.Drawing.Point(126, 184);
             this.txtContraseña_Root.Name = "txtContraseña_Root";
+            this.txtContraseña_Root.ShortcutsEnabled = false;
             this.txtContraseña_Root.Size = new System.Drawing.Size(123, 20);
             this.txtContraseña_Root.TabIndex = 2;
             // 
@@ -126,8 +124,6 @@
             this.panelUsuario_Root.Controls.Add(this.txtContraseña_Root);
             this.panelUsuario_Root.Controls.Add(this.txtUsuario_Root);
             this.panelUsuario_Root.Controls.Add(this.label2);
-            this.panelUsuario_Root.Controls.Add(this.pictureBox2);
-            this.panelUsuario_Root.Controls.Add(this.pictureBox1);
             this.panelUsuario_Root.Location = new System.Drawing.Point(12, 39);
             this.panelUsuario_Root.Name = "panelUsuario_Root";
             this.panelUsuario_Root.Size = new System.Drawing.Size(389, 332);
@@ -160,33 +156,13 @@
             this.btnEnviar_Contra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEnviar_Contra.BackColor = System.Drawing.Color.Green;
             this.btnEnviar_Contra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar_Contra.Location = new System.Drawing.Point(105, 245);
+            this.btnEnviar_Contra.Location = new System.Drawing.Point(110, 231);
             this.btnEnviar_Contra.Name = "btnEnviar_Contra";
             this.btnEnviar_Contra.Size = new System.Drawing.Size(171, 42);
             this.btnEnviar_Contra.TabIndex = 3;
             this.btnEnviar_Contra.Text = "Comprobar";
             this.btnEnviar_Contra.UseVisualStyleBackColor = false;
             this.btnEnviar_Contra.Click += new System.EventHandler(this.btnEnviar_Contra_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::NovaInventory.Properties.Resources.https_symbol;
-            this.pictureBox2.Location = new System.Drawing.Point(230, 189);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(73, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::NovaInventory.Properties.Resources.round_account_button_with_user_inside1;
-            this.pictureBox1.Location = new System.Drawing.Point(235, 139);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // label
             // 
@@ -233,8 +209,6 @@
             this.toolStrip1.PerformLayout();
             this.panelUsuario_Root.ResumeLayout(false);
             this.panelUsuario_Root.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -258,7 +232,5 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelMensaje;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

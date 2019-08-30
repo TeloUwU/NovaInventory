@@ -18,7 +18,7 @@ namespace NovaInventory.Vista
     public partial class FrmPrimerUso : Form
     {
         constructor_para_celulares agregar = new constructor_para_celulares();
-    
+
         public FrmPrimerUso()
         {
             InitializeComponent();
@@ -89,7 +89,7 @@ namespace NovaInventory.Vista
             /*Hay que validar boton para que cuando se registre la empresa
              se pueda activar el groupbox de telefono, donde inicialmente el groupbox
              de telefono estará inhabilitado.*/
-            
+
         }
 
         private void FrmPrimerUso_Load(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace NovaInventory.Vista
                 mostrarCEL();
                 txt_cel.Clear();
             }
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -137,12 +137,12 @@ namespace NovaInventory.Vista
             int position;
             position = this.dgvContactos.CurrentRow.Index;
             txt_id.Text = this.dgvContactos[0, position].Value.ToString();
-            txt_cel.Text= this.dgvContactos[1, position].Value.ToString();
+            txt_cel.Text = this.dgvContactos[1, position].Value.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Ya has terminado re registrar tu empresa?","CONFIRMACION",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            if (MessageBox.Show("¿Ya has terminado re registrar tu empresa?", "CONFIRMACION", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 FrmPrimerUsuario primer_usuario = new FrmPrimerUsuario();
                 primer_usuario.Show();

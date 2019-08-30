@@ -161,7 +161,7 @@
             this.btnCerrar_AdminUsuarios.Image = global::NovaInventory.Properties.Resources.close_window_80px;
             this.btnCerrar_AdminUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCerrar_AdminUsuarios.Name = "btnCerrar_AdminUsuarios";
-            this.btnCerrar_AdminUsuarios.Size = new System.Drawing.Size(136, 24);
+            this.btnCerrar_AdminUsuarios.Size = new System.Drawing.Size(124, 24);
             this.btnCerrar_AdminUsuarios.Text = "Cerrar Formulario";
             this.btnCerrar_AdminUsuarios.Click += new System.EventHandler(this.btnCerrar_AdminUsuarios_Click);
             // 
@@ -203,6 +203,7 @@
             this.txtNombres_Usuario.Location = new System.Drawing.Point(20, 86);
             this.txtNombres_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombres_Usuario.Name = "txtNombres_Usuario";
+            this.txtNombres_Usuario.ShortcutsEnabled = false;
             this.txtNombres_Usuario.Size = new System.Drawing.Size(157, 20);
             this.txtNombres_Usuario.TabIndex = 1;
             // 
@@ -211,6 +212,7 @@
             this.txtApellidos_Usuario.Location = new System.Drawing.Point(20, 138);
             this.txtApellidos_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos_Usuario.Name = "txtApellidos_Usuario";
+            this.txtApellidos_Usuario.ShortcutsEnabled = false;
             this.txtApellidos_Usuario.Size = new System.Drawing.Size(156, 20);
             this.txtApellidos_Usuario.TabIndex = 2;
             this.txtApellidos_Usuario.TextChanged += new System.EventHandler(this.txtApellidos_Usuario_TextChanged);
@@ -220,6 +222,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(19, 192);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(157, 20);
             this.txtUsuario.TabIndex = 3;
             // 
@@ -228,6 +231,7 @@
             this.txtCorreo_Usuario.Location = new System.Drawing.Point(214, 86);
             this.txtCorreo_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo_Usuario.Name = "txtCorreo_Usuario";
+            this.txtCorreo_Usuario.ShortcutsEnabled = false;
             this.txtCorreo_Usuario.Size = new System.Drawing.Size(142, 20);
             this.txtCorreo_Usuario.TabIndex = 5;
             // 
@@ -246,6 +250,7 @@
             this.txtNIT_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtNIT_Usuario.Mask = "0000-000000-000-0";
             this.txtNIT_Usuario.Name = "txtNIT_Usuario";
+            this.txtNIT_Usuario.ShortcutsEnabled = false;
             this.txtNIT_Usuario.Size = new System.Drawing.Size(134, 20);
             this.txtNIT_Usuario.TabIndex = 7;
             // 
@@ -265,6 +270,7 @@
             this.txtDUI_Usuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtDUI_Usuario.Mask = "00000000-0";
             this.txtDUI_Usuario.Name = "txtDUI_Usuario";
+            this.txtDUI_Usuario.ShortcutsEnabled = false;
             this.txtDUI_Usuario.Size = new System.Drawing.Size(134, 20);
             this.txtDUI_Usuario.TabIndex = 6;
             // 

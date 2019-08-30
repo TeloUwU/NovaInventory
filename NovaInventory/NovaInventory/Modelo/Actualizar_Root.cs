@@ -13,13 +13,13 @@ namespace NovaInventory.Modelo
 {
     class Actualizar_Root
     {
-        public static bool Actualizar_usuario_root(constructor_primer_usuario upd)
+        public static bool Actualizar_usuario_root(Constructor_Root upd)
         {
             bool retorno = false;
 
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE SET nickname = '{0}', nombre_usuario = '{1}', apellido_usuario = '{2}', contraseña_usuario = '{3}', telefono = '{4}', Foto_usuario = '{5}', Correo = '{6}', nit = '{7}', id_estados = '{8}', intentos = '{9}', empresa = '{10}', dui = '{11}' WHERE id_usuarios = '{12}'", upd.usuario, upd.nombre_usuario, upd.apellido_usuario, upd.contraseña_usuario, upd.telefono, upd.Foto_usuario, upd.Correo, upd.nit, upd.id_estados, upd.intentos, upd.empresa, upd.nit, upd.id_usuarios), Conexion.obtenerconexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE SET nickname = '{0}', nombre_usuario = '{1}', apellido_usuario = '{2}', contraseña_usuario = '{3}', telefono = '{4}', Foto_usuario = '{5}', Correo = '{6}', nit = '{7}', id_estados = '{8}', intentos = '{9}', empresa = '{10}', dui = '{11}' WHERE id_usuarios = '{12}'", upd.usuario, upd.nombre_usuario, upd.apellido_usuario, upd.contraseña_usuario, upd.telefono, upd.Foto_usuario, upd.Correo, upd.nit, upd.id_estados, upd.intentos, upd.empresa, upd.nit, upd.id_usuario), Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -38,6 +38,57 @@ namespace NovaInventory.Modelo
                 return retorno;
             }
         }
-      }
+        public static DataTable CargarEnmpresa()
+        {
+            DataTable data;
+
+            try
+            {
+                string query = "SELECT * FROM Datos_empresa";
+                MySqlCommand cargar_2 = new MySqlCommand(query, Conexion.obtenerconexion());//MysqlCommand hacer consulta a la base de datos
+                MySqlDataAdapter again2 = new MySqlDataAdapter(cargar_2);
+                data = new DataTable();
+                again2.Fill(data);
+
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
+
+                return data = new DataTable();
+            }
+        }
+
+        public static DataTable CargarEstado()
+        {
+            DataTable data = new DataTable();
+
+            try
+            {
+                string query = "SELECT id_estado_usuario, CONCAT(Estado_usuario) AS Estado_usuario FROM Estado_usuario";
+                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+
+                cmd.Fill(data);
+
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
+
+                return data = new DataTable();
+            }
+        }
+
+
+
+    }
+
 }
+
+
+      
+
 

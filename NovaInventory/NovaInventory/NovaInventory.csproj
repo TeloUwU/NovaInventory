@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\Conexion.cs" />
+    <Compile Include="Config\Validaciones.cs" />
+    <Compile Include="Controlador\AgregarNuevaContraseña.cs" />
     <Compile Include="Controlador\clsFunciones.cs" />
     <Compile Include="Controlador\constructor de respuestas.cs" />
     <Compile Include="Controlador\constructor preguntas.cs" />
@@ -311,6 +313,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round-account-button-with-user-inside2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\framed-portrait.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

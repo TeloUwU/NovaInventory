@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using NovaInventory.Controlador;
 using NovaInventory.Config;
 
 namespace NovaInventory.Modelo
@@ -29,5 +30,25 @@ namespace NovaInventory.Modelo
                 return datos;
             }
         }
+        public static int agregar_re(constructor_de_respuestas add)
+        {
+            int retorno = 0;
+            try
+            {
+                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbusuarios(preguntas, Respuesta, usuarioss) VALUES ('{0}','{1}','{2}')", add.preguntas, add.Respuesta, add.usuarioss), Conexion.obtenerconexion());
+                retorno = Convert.ToInt16(cmdagregar.ExecuteNonQuery());
+                if (retorno > 0)
+                {
+                    MessageBox.Show("Caracteres correctos", "preguntas y respuestas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error en la base de datos" + ex, "Error en Preguntas y respuestas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return retorno;
+            }
+        }
     }
+
 }

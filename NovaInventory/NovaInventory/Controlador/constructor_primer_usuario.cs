@@ -22,9 +22,10 @@ namespace NovaInventory.Controlador
         public int id_estados { get; set; }
         public int id_tipo_usuarios { get; set; }
         public string intentos { get; set; }
+        public string nickname { get; set; }
         public int empresa { get; set; }
 
-        public constructor_primer_usuario() { }
+        
 
 
     }

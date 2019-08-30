@@ -31,7 +31,6 @@
             this.btnCambiar_clave = new System.Windows.Forms.Button();
             this.txt_cel_Root = new System.Windows.Forms.MaskedTextBox();
             this.BtnCargarImagen_Root = new System.Windows.Forms.Button();
-            this.cmbTipoUsuario_Root = new System.Windows.Forms.ComboBox();
             this.cmbEstado_Root = new System.Windows.Forms.ComboBox();
             this.cmbEmpresa_Root = new System.Windows.Forms.ComboBox();
             this.dtNacimiento_Root = new System.Windows.Forms.DateTimePicker();
@@ -44,7 +43,6 @@
             this.txtCarne = new System.Windows.Forms.TextBox();
             this.txtNombre_Root = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,24 +56,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtid_Root = new System.Windows.Forms.TextBox();
             this.openCargarImagen = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtclave_anterior_root = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.button_actualizar = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolStripButton_regresar = new System.Windows.Forms.ToolStripButton();
             this.pbFoto_Root = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Root)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCambiar_clave
             // 
+            this.btnCambiar_clave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCambiar_clave.BackColor = System.Drawing.Color.Green;
             this.btnCambiar_clave.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiar_clave.ForeColor = System.Drawing.Color.White;
-            this.btnCambiar_clave.Location = new System.Drawing.Point(325, 344);
+            this.btnCambiar_clave.Location = new System.Drawing.Point(318, 334);
             this.btnCambiar_clave.Margin = new System.Windows.Forms.Padding(2);
             this.btnCambiar_clave.Name = "btnCambiar_clave";
             this.btnCambiar_clave.Size = new System.Drawing.Size(242, 50);
@@ -86,9 +83,10 @@
             // 
             // txt_cel_Root
             // 
+            this.txt_cel_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_cel_Root.Location = new System.Drawing.Point(324, 179);
             this.txt_cel_Root.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_cel_Root.Mask = "(000) 0000-0000";
+            this.txt_cel_Root.Mask = " 0000-0000";
             this.txt_cel_Root.Name = "txt_cel_Root";
             this.txt_cel_Root.ShortcutsEnabled = false;
             this.txt_cel_Root.Size = new System.Drawing.Size(235, 20);
@@ -101,26 +99,14 @@
             this.BtnCargarImagen_Root.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.BtnCargarImagen_Root.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCargarImagen_Root.ForeColor = System.Drawing.Color.White;
-            this.BtnCargarImagen_Root.Location = new System.Drawing.Point(608, 287);
+            this.BtnCargarImagen_Root.Location = new System.Drawing.Point(612, 287);
             this.BtnCargarImagen_Root.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCargarImagen_Root.Name = "BtnCargarImagen_Root";
             this.BtnCargarImagen_Root.Size = new System.Drawing.Size(141, 32);
-            this.BtnCargarImagen_Root.TabIndex = 13;
+            this.BtnCargarImagen_Root.TabIndex = 10;
             this.BtnCargarImagen_Root.Text = "Cargar Imagen";
             this.BtnCargarImagen_Root.UseVisualStyleBackColor = false;
             this.BtnCargarImagen_Root.Click += new System.EventHandler(this.BtnCargarImagen_Root_Click);
-            // 
-            // cmbTipoUsuario_Root
-            // 
-            this.cmbTipoUsuario_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmbTipoUsuario_Root.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoUsuario_Root.FormattingEnabled = true;
-            this.cmbTipoUsuario_Root.Location = new System.Drawing.Point(325, 236);
-            this.cmbTipoUsuario_Root.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbTipoUsuario_Root.Name = "cmbTipoUsuario_Root";
-            this.cmbTipoUsuario_Root.Size = new System.Drawing.Size(235, 21);
-            this.cmbTipoUsuario_Root.TabIndex = 8;
-            this.cmbTipoUsuario_Root.SelectedIndexChanged += new System.EventHandler(this.cmbTipoUsuario_Root_SelectedIndexChanged);
             // 
             // cmbEstado_Root
             // 
@@ -171,13 +157,14 @@
             // txtConfClave_Root
             // 
             this.txtConfClave_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtConfClave_Root.Location = new System.Drawing.Point(324, 478);
+            this.txtConfClave_Root.Location = new System.Drawing.Point(325, 439);
             this.txtConfClave_Root.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfClave_Root.MaxLength = 8;
             this.txtConfClave_Root.Name = "txtConfClave_Root";
             this.txtConfClave_Root.PasswordChar = '*';
+            this.txtConfClave_Root.ShortcutsEnabled = false;
             this.txtConfClave_Root.Size = new System.Drawing.Size(235, 20);
-            this.txtConfClave_Root.TabIndex = 12;
+            this.txtConfClave_Root.TabIndex = 13;
             // 
             // txtApellidos_Root
             // 
@@ -203,23 +190,25 @@
             // txtUsuario_Root
             // 
             this.txtUsuario_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtUsuario_Root.Location = new System.Drawing.Point(325, 287);
+            this.txtUsuario_Root.Location = new System.Drawing.Point(324, 237);
             this.txtUsuario_Root.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario_Root.MaxLength = 25;
             this.txtUsuario_Root.Name = "txtUsuario_Root";
+            this.txtUsuario_Root.ShortcutsEnabled = false;
             this.txtUsuario_Root.Size = new System.Drawing.Size(235, 20);
-            this.txtUsuario_Root.TabIndex = 10;
+            this.txtUsuario_Root.TabIndex = 8;
             // 
             // txtClave_Root
             // 
             this.txtClave_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtClave_Root.Location = new System.Drawing.Point(42, 478);
+            this.txtClave_Root.Location = new System.Drawing.Point(43, 439);
             this.txtClave_Root.Margin = new System.Windows.Forms.Padding(2);
             this.txtClave_Root.MaxLength = 8;
             this.txtClave_Root.Name = "txtClave_Root";
             this.txtClave_Root.PasswordChar = '*';
+            this.txtClave_Root.ShortcutsEnabled = false;
             this.txtClave_Root.Size = new System.Drawing.Size(234, 20);
-            this.txtClave_Root.TabIndex = 11;
+            this.txtClave_Root.TabIndex = 12;
             this.txtClave_Root.TextChanged += new System.EventHandler(this.txtClave_Root_TextChanged_1);
             // 
             // txtCarne
@@ -248,31 +237,19 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(321, 459);
+            this.label9.Location = new System.Drawing.Point(322, 420);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(108, 18);
             this.label9.TabIndex = 104;
             this.label9.Text = "Confirmar clave:";
             // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(322, 219);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 18);
-            this.label8.TabIndex = 96;
-            this.label8.Text = "Tipo Usuario:";
-            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(42, 459);
+            this.label11.Location = new System.Drawing.Point(43, 420);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(46, 18);
@@ -320,7 +297,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(322, 270);
+            this.label3.Location = new System.Drawing.Point(321, 220);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 18);
@@ -368,7 +345,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(638, 72);
+            this.label12.Location = new System.Drawing.Point(628, 72);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 18);
@@ -412,42 +389,20 @@
             // 
             this.openCargarImagen.FileName = "openCargarImagen";
             // 
-            // button1
+            // button_actualizar
             // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(45, 344);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 50);
-            this.button1.TabIndex = 111;
-            this.button1.Text = "Actualizar Datos";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtclave_anterior_root
-            // 
-            this.txtclave_anterior_root.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtclave_anterior_root.Location = new System.Drawing.Point(42, 430);
-            this.txtclave_anterior_root.Margin = new System.Windows.Forms.Padding(2);
-            this.txtclave_anterior_root.MaxLength = 45;
-            this.txtclave_anterior_root.Name = "txtclave_anterior_root";
-            this.txtclave_anterior_root.PasswordChar = '*';
-            this.txtclave_anterior_root.Size = new System.Drawing.Size(234, 20);
-            this.txtclave_anterior_root.TabIndex = 112;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(42, 411);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 18);
-            this.label10.TabIndex = 113;
-            this.label10.Text = "Clave anterior:";
+            this.button_actualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button_actualizar.BackColor = System.Drawing.Color.Green;
+            this.button_actualizar.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_actualizar.ForeColor = System.Drawing.Color.White;
+            this.button_actualizar.Location = new System.Drawing.Point(36, 334);
+            this.button_actualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.button_actualizar.Name = "button_actualizar";
+            this.button_actualizar.Size = new System.Drawing.Size(242, 50);
+            this.button_actualizar.TabIndex = 11;
+            this.button_actualizar.Text = "Actualizar Datos";
+            this.button_actualizar.UseVisualStyleBackColor = false;
+            this.button_actualizar.Click += new System.EventHandler(this.button1_Click);
             // 
             // toolStrip1
             // 
@@ -465,16 +420,6 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(127, 22);
             this.toolStripLabel1.Text = "Configuracion de Root";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(475, 518);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(274, 13);
-            this.linkLabel1.TabIndex = 115;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "La contraseña debe de tener un maximo de 8 caracteres";
             // 
             // toolStripButton_regresar
             // 
@@ -499,6 +444,16 @@
             this.pbFoto_Root.TabIndex = 109;
             this.pbFoto_Root.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(479, 503);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(274, 13);
+            this.linkLabel1.TabIndex = 115;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "La contraseña debe de tener un maximo de 8 caracteres";
+            // 
             // frmConfig_Root
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,14 +461,11 @@
             this.ClientSize = new System.Drawing.Size(783, 540);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.txtclave_anterior_root);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_actualizar);
             this.Controls.Add(this.txtid_Root);
             this.Controls.Add(this.btnCambiar_clave);
             this.Controls.Add(this.txt_cel_Root);
             this.Controls.Add(this.BtnCargarImagen_Root);
-            this.Controls.Add(this.cmbTipoUsuario_Root);
             this.Controls.Add(this.cmbEstado_Root);
             this.Controls.Add(this.cmbEmpresa_Root);
             this.Controls.Add(this.dtNacimiento_Root);
@@ -527,7 +479,6 @@
             this.Controls.Add(this.txtCarne);
             this.Controls.Add(this.txtNombre_Root);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label7);
@@ -543,6 +494,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmConfig_Root";
             this.Text = "frmConfig_Root";
+            this.Load += new System.EventHandler(this.frmConfig_Root_Load_2);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Root)).EndInit();
@@ -555,7 +507,6 @@
         private System.Windows.Forms.Button btnCambiar_clave;
         private System.Windows.Forms.MaskedTextBox txt_cel_Root;
         private System.Windows.Forms.Button BtnCargarImagen_Root;
-        private System.Windows.Forms.ComboBox cmbTipoUsuario_Root;
         private System.Windows.Forms.ComboBox cmbEstado_Root;
         private System.Windows.Forms.ComboBox cmbEmpresa_Root;
         private System.Windows.Forms.DateTimePicker dtNacimiento_Root;
@@ -569,7 +520,6 @@
         private System.Windows.Forms.TextBox txtCarne;
         private System.Windows.Forms.TextBox txtNombre_Root;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label7;
@@ -583,13 +533,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtid_Root;
         private System.Windows.Forms.OpenFileDialog openCargarImagen;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtclave_anterior_root;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button_actualizar;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.ToolStripButton toolStripButton_regresar;
+        private System.Windows.Forms.LinkLabel linkLabel1;
         //private Bunifu.Framework.UI.BunifuFlatButton Guardar;
     }
 }

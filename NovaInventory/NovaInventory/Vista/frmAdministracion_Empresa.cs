@@ -103,6 +103,9 @@ namespace NovaInventory.Vista
             }
         }
 
+        private void TxtNit_Gestor_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
