@@ -2,6 +2,7 @@
 using NovaInventory.Config;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,42 @@ namespace NovaInventory.Controlador
             {
                 MessageBox.Show("Err, ha ocurrido un error en la realización de la Compra, consulte al administrador y considere los posibles errores \n -No hay Internet \n -El servidor no posee los servicios activos \n -sin acceso al servidor" + ex, "Proceso fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
+            }
+        }
+
+        public static DataTable CargarProveedores()
+        {
+            DataTable datos = new DataTable();
+            string query = "SELECT nombre FROM tbproveedor";
+            MySqlCommand cmdquery = new MySqlCommand(query,Conexion.obtenerconexion());
+            try
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdquery);
+                adapter.Fill(datos);
+                return datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Err, ha ocurrido un error a la hora de mostrar los Proveedores"+ ex,"Error Insolito",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return datos;
+            }
+        }
+
+        public static DataTable Cargarcategoria()
+        {
+            DataTable datos = new DataTable();
+            string query = "SELECT categoria_producto FROM categoria_articulo";
+            MySqlCommand cmdquery = new MySqlCommand(query,Conexion.obtenerconexion());
+            try
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdquery);
+                adapter.Fill(datos);
+                return datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("La carga de las categorías del producto ha fallado" + ex,"Falla de descarga de datos",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return datos;
             }
         }
     }
