@@ -50,15 +50,20 @@
   <ItemGroup>
     <Compile Include="Config\Conexion.cs" />
     <Compile Include="Config\Validaciones.cs" />
+    <Compile Include="Controlador\AgregarNuevaContraseña.cs" />
     <Compile Include="Controlador\clsFunciones.cs" />
     <Compile Include="Controlador\constructor de respuestas.cs" />
     <Compile Include="Controlador\constructor preguntas.cs" />
+    <Compile Include="Controlador\constructorecuperacion.cs" />
+    <Compile Include="Controlador\constructorFacturacion.cs" />
     <Compile Include="Controlador\Constructor_empresa.cs" />
     <Compile Include="Controlador\Constructor_login.cs" />
     <Compile Include="Controlador\constructor_para_celulares.cs" />
     <Compile Include="Controlador\constructor_primer_usuario.cs" />
+    <Compile Include="Controlador\Constructor_Root.cs" />
     <Compile Include="Controlador\cosntructor_Compra.cs" />
     <Compile Include="Controlador\crudCompra.cs" />
+    <Compile Include="Modelo\Actualizar_Root.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
     <Compile Include="Modelo\Funciones_usuarios.cs" />
@@ -109,6 +114,12 @@
     <Compile Include="Vista\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmNuevaContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmNuevaContraseña.Designer.cs">
+      <DependentUpon>frmNuevaContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmPreguntasSeguridad_RecuperarContra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +143,18 @@
     </Compile>
     <Compile Include="Vista\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmRecuperar_Contraseña.cs">
       <SubType>Form</SubType>
@@ -176,6 +199,9 @@
     <EmbeddedResource Include="Vista\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmNuevaContraseña.resx">
+      <DependentUpon>frmNuevaContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmPreguntasSeguridad_RecuperarContra.resx">
       <DependentUpon>frmPreguntasSeguridad_RecuperarContra.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +213,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRecuperar_Contraseña.resx">
       <DependentUpon>frmRecuperar_Contraseña.cs</DependentUpon>
@@ -278,6 +310,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel-button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round-account-button-with-user-inside2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\framed-portrait.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,12 +13,12 @@ namespace NovaInventory.Modelo
 {
     class Funciones_usuarios
     {
-        public static int  agregar_usu(constructor_primer_usuario add)
+        public static int agregar_usu(constructor_primer_usuario add)
         {
             int retorno = 0;
             try
             {
-                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbusuarios(nickname, nombre_usuario, apellido_usuario, contraseña_usuario, telefono, Foto_usuario, Correo, dui, nit, id_estados, id_tipo_usuarios, intentos, empresa) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", add.usuario, add.nombre_usuario, add.apellido_usuario, add.contraseña_usuario, add.telefono, add.Foto_usuario,add.Correo, add.dui, add.nit, add.id_estados, add.id_tipo_usuarios, add.intentos, add.empresa), Conexion.obtenerconexion());
+                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbusuarios(nickname, nombre_usuario, apellido_usuario, contraseña_usuario, telefono, Foto_usuario, Correo, dui, nit, id_estados, id_tipo_usuarios, intentos, empresa) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", add.usuario, add.nombre_usuario, add.apellido_usuario, add.contraseña_usuario, add.telefono, add.Foto_usuario, add.Correo, add.dui, add.nit, add.id_estados, add.id_tipo_usuarios, add.intentos, add.empresa), Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(cmdagregar.ExecuteNonQuery());
                 if (retorno > 0)
                 {
@@ -31,7 +31,7 @@ namespace NovaInventory.Modelo
                 MessageBox.Show("Se a dectectado un problema en la base de datos, puede que este en reparaciones. Si el error perciste porfavor comuniquese con el  programador" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return retorno;
             }
-           
+
         }
         public static DataTable mostrar_usu()
         {
@@ -56,7 +56,7 @@ namespace NovaInventory.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbusuarios SET = nickname '{0}', nombre_usuario '{1}', apellido_usuario'{2}', contraseña_usuario'{3}', telefono '{4}', Foto_usuario'{5}', Correo'{6}', dui'{7}', nit'{8}'",upt.usuario,upt.nombre_usuario,upt.apellido_usuario,upt.contraseña_usuario,upt.telefono,upt.Foto_usuario,upt.Correo,upt.dui,upt.nit),Conexion.obtenerconexion());
+                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbusuarios SET =id_usuarios'{0}', nickname '{1}', nombre_usuario '{2}', apellido_usuario'{3}', contraseña_usuario'{4}', telefono '{5}', Foto_usuario'{6}', Correo'{7}', dui'{8}', nit'{9}'", upt.id_usuarios, upt.usuario, upt.nombre_usuario, upt.apellido_usuario, upt.contraseña_usuario, upt.telefono, upt.Foto_usuario, upt.Correo, upt.dui, upt.nit), Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
                 if (true)
                 {
@@ -105,7 +105,7 @@ namespace NovaInventory.Modelo
         public static DataTable cargarUSU()
         {
             DataTable datos = new DataTable();
-           
+
             try
             {
                 string query = "SELECT id_tipo_usuario, CONCAT(tipo_usuario) AS tipo_usuario FROM Tipo_usuario";
@@ -141,6 +141,7 @@ namespace NovaInventory.Modelo
         public static DataTable cargar1()
         {
             DataTable datos = new DataTable();
+
             try
             {
                 string query = "SELECT id_datos_empresa, CONCAT(nombre) AS nombre FROM Datos_empresa";

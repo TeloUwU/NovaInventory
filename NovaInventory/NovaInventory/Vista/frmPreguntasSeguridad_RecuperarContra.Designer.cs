@@ -52,6 +52,7 @@
             this.txtRespuesta_1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtRespuesta_1.Location = new System.Drawing.Point(455, 124);
             this.txtRespuesta_1.Name = "txtRespuesta_1";
+            this.txtRespuesta_1.ShortcutsEnabled = false;
             this.txtRespuesta_1.Size = new System.Drawing.Size(279, 20);
             this.txtRespuesta_1.TabIndex = 2;
             // 
@@ -60,6 +61,7 @@
             this.txtRespuesta_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtRespuesta_2.Location = new System.Drawing.Point(455, 162);
             this.txtRespuesta_2.Name = "txtRespuesta_2";
+            this.txtRespuesta_2.ShortcutsEnabled = false;
             this.txtRespuesta_2.Size = new System.Drawing.Size(279, 20);
             this.txtRespuesta_2.TabIndex = 4;
             // 
@@ -68,6 +70,7 @@
             this.txtRespuesta_3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtRespuesta_3.Location = new System.Drawing.Point(455, 198);
             this.txtRespuesta_3.Name = "txtRespuesta_3";
+            this.txtRespuesta_3.ShortcutsEnabled = false;
             this.txtRespuesta_3.Size = new System.Drawing.Size(279, 20);
             this.txtRespuesta_3.TabIndex = 6;
             // 
@@ -76,6 +79,7 @@
             this.txtRepuesta_4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtRepuesta_4.Location = new System.Drawing.Point(455, 239);
             this.txtRepuesta_4.Name = "txtRepuesta_4";
+            this.txtRepuesta_4.ShortcutsEnabled = false;
             this.txtRepuesta_4.Size = new System.Drawing.Size(279, 20);
             this.txtRepuesta_4.TabIndex = 8;
             // 
@@ -175,6 +179,7 @@
             this.btnSelect_Preguntas.TabIndex = 9;
             this.btnSelect_Preguntas.Text = "Enviar Pregunta";
             this.btnSelect_Preguntas.UseVisualStyleBackColor = false;
+            this.btnSelect_Preguntas.Click += new System.EventHandler(this.btnSelect_Preguntas_Click);
             // 
             // label4
             // 

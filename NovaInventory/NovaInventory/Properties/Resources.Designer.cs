@@ -73,6 +73,16 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_arrow {
+            get {
+                object obj = ResourceManager.GetObject("back-arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap book_104px {
             get {
                 object obj = ResourceManager.GetObject("book_104px", resourceCulture);
@@ -183,6 +193,16 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap framed_portrait {
+            get {
+                object obj = ResourceManager.GetObject("framed-portrait", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap full_screen_exit {
             get {
                 object obj = ResourceManager.GetObject("full-screen-exit", resourceCulture);
@@ -246,6 +266,16 @@ namespace NovaInventory.Properties {
         internal static System.Drawing.Bitmap round_account_button_with_user_inside {
             get {
                 object obj = ResourceManager.GetObject("round-account-button-with-user-inside", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap round_account_button_with_user_inside1 {
+            get {
+                object obj = ResourceManager.GetObject("round-account-button-with-user-inside1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

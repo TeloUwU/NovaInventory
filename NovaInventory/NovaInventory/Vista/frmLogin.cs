@@ -43,6 +43,7 @@ namespace NovaInventory.Vista
                         FrmPrincipal main = new FrmPrincipal();
                         main.Show();
                         this.Hide();
+                    
                     //}
                   
                 }
@@ -61,8 +62,10 @@ namespace NovaInventory.Vista
                 {
                     pbLogo_Login.Enabled = false;
                     txtUsuario.Enabled = false;
+                    btnIniciar_Sesion.Enabled = false;
                     txtContraseña.Enabled = false;
                     btnPrimer_Uso.Visible = true;
+                    lklRecuperar_Contraseña.Enabled = false;
                     btnPrimer_Uso.Text = "Primer Usuario";
                 }
             }
@@ -139,6 +142,35 @@ namespace NovaInventory.Vista
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmLogin_Load_1(object sender, EventArgs e)
+        {
+
+            if (Validar_primer_uso.verificar_emo() == true)
+            {
+                if (Validar_primer_uso.verificar_usu() == true)
+                {
+                    btnPrimer_Uso.Visible = false;
+                }
+                else
+                {
+                    pbLogo_Login.Enabled = false;
+                    txtUsuario.Enabled = false;
+                    btnIniciar_Sesion.Enabled = false;
+                    txtContraseña.Enabled = false;
+                    btnPrimer_Uso.Visible = true;
+                    lklRecuperar_Contraseña.Enabled = false;
+                    btnPrimer_Uso.Text = "Primer Usuario";
+                }
+            }
+            else
+            {
+                pbLogo_Login.Enabled = false;
+                txtUsuario.Enabled = false;
+                txtContraseña.Enabled = false;
+                btnPrimer_Uso.Visible = true;
+            }
         }
     }
 }

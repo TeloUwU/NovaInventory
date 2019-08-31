@@ -47,6 +47,11 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // btnCambiar_Recu
+            // 
+            this.btnCambiar_Recu.Name = "btnCambiar_Recu";
+            this.btnCambiar_Recu.Size = new System.Drawing.Size(23, 22);
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -74,6 +79,7 @@
             this.txtCorreo_Recu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCorreo_Recu.Location = new System.Drawing.Point(84, 169);
             this.txtCorreo_Recu.Name = "txtCorreo_Recu";
+            this.txtCorreo_Recu.ShortcutsEnabled = false;
             this.txtCorreo_Recu.Size = new System.Drawing.Size(173, 20);
             this.txtCorreo_Recu.TabIndex = 1;
             // 
@@ -87,6 +93,7 @@
             this.btenviar_Correo.TabIndex = 2;
             this.btenviar_Correo.Text = "Enviar Correo Electronico";
             this.btenviar_Correo.UseVisualStyleBackColor = true;
+            this.btenviar_Correo.Click += new System.EventHandler(this.btenviar_Correo_Click);
             // 
             // frmCorreo_RecuContra
             // 
