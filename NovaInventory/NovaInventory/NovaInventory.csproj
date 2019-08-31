@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -61,11 +61,13 @@
     <Compile Include="Controlador\constructor_para_celulares.cs" />
     <Compile Include="Controlador\constructor_primer_usuario.cs" />
     <Compile Include="Controlador\Constructor_Root.cs" />
+    <Compile Include="Controlador\Constructor_producto.cs" />
     <Compile Include="Controlador\cosntructor_Compra.cs" />
     <Compile Include="Controlador\crudCompra.cs" />
     <Compile Include="Modelo\Actualizar_Root.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
+    <Compile Include="Modelo\Funciones_producto.cs" />
     <Compile Include="Modelo\Funciones_usuarios.cs" />
     <Compile Include="Modelo\preguntas y respuestas.cs" />
     <Compile Include="Modelo\validar_login.cs" />

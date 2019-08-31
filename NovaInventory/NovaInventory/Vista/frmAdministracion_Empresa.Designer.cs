@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministracion_Empresa));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -37,6 +39,7 @@
             this.txtid_Empresa_Modificacion = new System.Windows.Forms.TextBox();
             this.BtnGuardar_Gestor = new System.Windows.Forms.Button();
             this.BtnExaminar_Gestor = new System.Windows.Forms.Button();
+            this.pbLogo_Gestor = new System.Windows.Forms.PictureBox();
             this.TxtDireccion_Gestor = new System.Windows.Forms.TextBox();
             this.TxtLegal_Gestor = new System.Windows.Forms.TextBox();
             this.TxtNit_Gestor = new System.Windows.Forms.TextBox();
@@ -56,14 +59,11 @@
             this.txt_cel_Gestor = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cargar_imagen = new System.Windows.Forms.OpenFileDialog();
-            this.pbLogo_Gestor = new System.Windows.Forms.PictureBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Gestor)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Gestor)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -77,6 +77,26 @@
             this.toolStrip1.Size = new System.Drawing.Size(783, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(140, 24);
+            this.toolStripButton1.Text = "Gestion de Empresas";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton2.Image = global::NovaInventory.Properties.Resources.undo_26px;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(141, 24);
+            this.toolStripButton2.Text = "Cerrar Formulario";
             // 
             // panel2
             // 
@@ -100,7 +120,7 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(9, 34);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(552, 466);
             this.panel2.TabIndex = 2;
@@ -111,7 +131,7 @@
             this.button3.BackColor = System.Drawing.Color.Red;
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(408, 393);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 38);
             this.button3.TabIndex = 10;
@@ -123,7 +143,7 @@
             this.button2.BackColor = System.Drawing.Color.DarkCyan;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(278, 393);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 38);
             this.button2.TabIndex = 9;
@@ -135,7 +155,7 @@
             this.button1.BackColor = System.Drawing.Color.Goldenrod;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(148, 393);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 38);
             this.button1.TabIndex = 8;
@@ -145,7 +165,7 @@
             // txtid_Empresa_Modificacion
             // 
             this.txtid_Empresa_Modificacion.Location = new System.Drawing.Point(512, 13);
-            this.txtid_Empresa_Modificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtid_Empresa_Modificacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtid_Empresa_Modificacion.Name = "txtid_Empresa_Modificacion";
             this.txtid_Empresa_Modificacion.Size = new System.Drawing.Size(30, 20);
             this.txtid_Empresa_Modificacion.TabIndex = 70;
@@ -159,8 +179,8 @@
             this.BtnGuardar_Gestor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar_Gestor.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar_Gestor.Location = new System.Drawing.Point(10, 392);
-            this.BtnGuardar_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGuardar_Gestor.Location = new System.Drawing.Point(10, 393);
+            this.BtnGuardar_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuardar_Gestor.Name = "BtnGuardar_Gestor";
             this.BtnGuardar_Gestor.Size = new System.Drawing.Size(116, 38);
             this.BtnGuardar_Gestor.TabIndex = 7;
@@ -177,7 +197,7 @@
             this.BtnExaminar_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExaminar_Gestor.ForeColor = System.Drawing.Color.White;
             this.BtnExaminar_Gestor.Location = new System.Drawing.Point(408, 314);
-            this.BtnExaminar_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnExaminar_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.BtnExaminar_Gestor.Name = "BtnExaminar_Gestor";
             this.BtnExaminar_Gestor.Size = new System.Drawing.Size(123, 38);
             this.BtnExaminar_Gestor.TabIndex = 6;
@@ -185,12 +205,24 @@
             this.BtnExaminar_Gestor.UseVisualStyleBackColor = false;
             this.BtnExaminar_Gestor.Click += new System.EventHandler(this.BtnExaminar_Gestor_Click);
             // 
+            // pbLogo_Gestor
+            // 
+            this.pbLogo_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbLogo_Gestor.BackColor = System.Drawing.Color.White;
+            this.pbLogo_Gestor.Location = new System.Drawing.Point(405, 99);
+            this.pbLogo_Gestor.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogo_Gestor.Name = "pbLogo_Gestor";
+            this.pbLogo_Gestor.Size = new System.Drawing.Size(126, 183);
+            this.pbLogo_Gestor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo_Gestor.TabIndex = 65;
+            this.pbLogo_Gestor.TabStop = false;
+            // 
             // TxtDireccion_Gestor
             // 
             this.TxtDireccion_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtDireccion_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDireccion_Gestor.Location = new System.Drawing.Point(10, 229);
-            this.TxtDireccion_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtDireccion_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.TxtDireccion_Gestor.MaxLength = 3;
             this.TxtDireccion_Gestor.Multiline = true;
             this.TxtDireccion_Gestor.Name = "TxtDireccion_Gestor";
@@ -202,7 +234,7 @@
             this.TxtLegal_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtLegal_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLegal_Gestor.Location = new System.Drawing.Point(10, 331);
-            this.TxtLegal_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtLegal_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.TxtLegal_Gestor.MaxLength = 4;
             this.TxtLegal_Gestor.Name = "TxtLegal_Gestor";
             this.TxtLegal_Gestor.Size = new System.Drawing.Size(368, 22);
@@ -213,7 +245,7 @@
             this.TxtNit_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtNit_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNit_Gestor.Location = new System.Drawing.Point(10, 165);
-            this.TxtNit_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNit_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.TxtNit_Gestor.MaxLength = 2;
             this.TxtNit_Gestor.Name = "TxtNit_Gestor";
             this.TxtNit_Gestor.Size = new System.Drawing.Size(372, 22);
@@ -225,7 +257,7 @@
             this.txtCorreo_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCorreo_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo_Gestor.Location = new System.Drawing.Point(10, 99);
-            this.txtCorreo_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo_Gestor.MaxLength = 1;
             this.txtCorreo_Gestor.Name = "txtCorreo_Gestor";
             this.txtCorreo_Gestor.ShortcutsEnabled = false;
@@ -237,7 +269,7 @@
             this.TxtEmpresa_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtEmpresa_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmpresa_Gestor.Location = new System.Drawing.Point(10, 30);
-            this.TxtEmpresa_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEmpresa_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEmpresa_Gestor.MaxLength = 45;
             this.TxtEmpresa_Gestor.Name = "TxtEmpresa_Gestor";
             this.TxtEmpresa_Gestor.ShortcutsEnabled = false;
@@ -326,7 +358,7 @@
             this.panel1.Controls.Add(this.txt_cel_Gestor);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Location = new System.Drawing.Point(586, 34);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 466);
             this.panel1.TabIndex = 3;
@@ -339,7 +371,7 @@
             this.btnFinalizar_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar_Gestor.ForeColor = System.Drawing.Color.White;
             this.btnFinalizar_Gestor.Location = new System.Drawing.Point(14, 408);
-            this.btnFinalizar_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFinalizar_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.btnFinalizar_Gestor.Name = "btnFinalizar_Gestor";
             this.btnFinalizar_Gestor.Size = new System.Drawing.Size(160, 38);
             this.btnFinalizar_Gestor.TabIndex = 16;
@@ -354,7 +386,7 @@
             this.btnEliminarTelefono_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarTelefono_Gestor.ForeColor = System.Drawing.Color.White;
             this.btnEliminarTelefono_Gestor.Location = new System.Drawing.Point(106, 81);
-            this.btnEliminarTelefono_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarTelefono_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarTelefono_Gestor.Name = "btnEliminarTelefono_Gestor";
             this.btnEliminarTelefono_Gestor.Size = new System.Drawing.Size(68, 38);
             this.btnEliminarTelefono_Gestor.TabIndex = 13;
@@ -369,7 +401,7 @@
             this.btnAgregarTelefono_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarTelefono_Gestor.ForeColor = System.Drawing.Color.White;
             this.btnAgregarTelefono_Gestor.Location = new System.Drawing.Point(14, 82);
-            this.btnAgregarTelefono_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarTelefono_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarTelefono_Gestor.Name = "btnAgregarTelefono_Gestor";
             this.btnAgregarTelefono_Gestor.Size = new System.Drawing.Size(68, 38);
             this.btnAgregarTelefono_Gestor.TabIndex = 12;
@@ -404,38 +436,6 @@
             this.label11.TabIndex = 63;
             this.label11.Text = "Numeros Telefonicos:";
             // 
-            // pbLogo_Gestor
-            // 
-            this.pbLogo_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbLogo_Gestor.BackColor = System.Drawing.Color.White;
-            this.pbLogo_Gestor.Location = new System.Drawing.Point(405, 99);
-            this.pbLogo_Gestor.Margin = new System.Windows.Forms.Padding(4);
-            this.pbLogo_Gestor.Name = "pbLogo_Gestor";
-            this.pbLogo_Gestor.Size = new System.Drawing.Size(126, 183);
-            this.pbLogo_Gestor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo_Gestor.TabIndex = 65;
-            this.pbLogo_Gestor.TabStop = false;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(140, 24);
-            this.toolStripButton1.Text = "Gestion de Empresas";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.Image = global::NovaInventory.Properties.Resources.undo_26px;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(141, 24);
-            this.toolStripButton2.Text = "Cerrar Formulario";
-            // 
             // frmAdministracion_Empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,7 +445,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdministracion_Empresa";
             this.Text = "frmAdministracion_Empresa";
             this.Load += new System.EventHandler(this.frmAdministracion_Empresa_Load);
@@ -453,10 +453,10 @@
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Gestor)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Gestor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
