@@ -223,6 +223,16 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap laptop_outline {
+            get {
+                object obj = ResourceManager.GetObject("laptop-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maximize_window_26px {
             get {
                 object obj = ResourceManager.GetObject("maximize_window_26px", resourceCulture);
@@ -283,6 +293,16 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shopping_cart {
+            get {
+                object obj = ResourceManager.GetObject("shopping-cart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sistema {
             get {
                 object obj = ResourceManager.GetObject("sistema", resourceCulture);
@@ -296,6 +316,16 @@ namespace NovaInventory.Properties {
         internal static System.Drawing.Bitmap undo_26px {
             get {
                 object obj = ResourceManager.GetObject("undo_26px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap users_social_symbol {
+            get {
+                object obj = ResourceManager.GetObject("users-social-symbol", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

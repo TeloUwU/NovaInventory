@@ -27,6 +27,10 @@ namespace NovaInventory.Vista
 
             btnactualizar_producto.Enabled = false;
             btneliminar_producto.Enabled = false;
+
+            Cargar_producto();
+            Cargar_marca_producto();
+            forma_pago();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -160,16 +164,45 @@ namespace NovaInventory.Vista
         }
         void Cargar_marca_producto()
         {
-            combxmarca.DataSource = Funciones_producto.Cargar_marca_producto();
-            combxmarca.DisplayMember = "Estado_usuario";
-            combxmarca.ValueMember = "id_estado_usuario";
+            //combxmarca.DataSource = Funciones_producto.Cargar_marca_producto();
+            //combxmarca.DisplayMember = "Estado_usuario";
+            //combxmarca.ValueMember = "id_estado_usuario";
         }
         void forma_pago()
         {
-            combx_producto.DataSource = Funciones_producto.forma_pago();
-            combx_producto.DisplayMember = "tipo_pago";
-            combx_producto.ValueMember = "id_tipo_pago";
+            //combx_producto.DataSource = Funciones_producto.forma_pago();
+            //combx_producto.DisplayMember = "tipo_pago";
+           // combx_producto.ValueMember = "id_tipo_pago";
         }
 
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblproducto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker_fecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblfecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_precio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblprecio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

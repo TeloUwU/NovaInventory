@@ -123,48 +123,48 @@ namespace NovaInventory.Modelo
             }
         }
 
-        public static DataTable Cargar_marca_producto()
-        {
-            DataTable data = new DataTable();
+        //public static DataTable Cargar_marca_producto()
+        //{
+        //    DataTable data = new DataTable();
 
-            try
-            {
-                string query = "SELECT id_estado_usuario, CONCAT(Estado_usuario) AS Estado_usuario FROM Estado_usuario";
-                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
-                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+        //    try
+        //    {
+        //        string query = "SELECT id_estado_usuario, CONCAT(Estado_usuario) AS Estado_usuario FROM Estado_usuario";
+        //        MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+        //        MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
 
-                cmd.Fill(data);
+        //        cmd.Fill(data);
 
-                return data;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(" " + e);
+        //        return data;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MessageBox.Show(" " + e);
 
-                return data = new DataTable();
-            }
-        }
-            public static DataTable forma_pago()
-        {
-            DataTable data = new DataTable();
+        //        return data = new DataTable();
+        //    }
+        //}
+    //        public static DataTable forma_pago()
+    //    {
+    //        DataTable data = new DataTable();
 
-            try
-            {
-                string query = "SELECT id_tipo_pago, CONCAT(tipo_pago) AS tipo_pago FROM tipo_pago";
-                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
-                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+    //        try
+    //        {
+    //            string query = "SELECT id_tipo_pago, CONCAT(tipo_pago) AS tipo_pago FROM tipo_pago";
+    //            MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+    //            MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
 
-                cmd.Fill(data);
+    //            cmd.Fill(data);
 
-                return data;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(" " + e);
+    //            return data;
+    //        }
+    //        catch (Exception e)
+    //        {
+    //            MessageBox.Show(" " + e);
 
-                return data = new DataTable();
-            }
+    //            return data = new DataTable();
+    //        }
             
-        }
+    //    }
     }
 }

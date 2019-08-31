@@ -33,10 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>D:\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -170,6 +175,12 @@
     <Compile Include="Vista\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Kardex_Saraí.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Kardex_Saraí.Designer.cs">
+      <DependentUpon>Kardex_Saraí.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -227,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Kardex_Saraí.resx">
+      <DependentUpon>Kardex_Saraí.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -321,6 +335,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\framed-portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users-social-symbol.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
