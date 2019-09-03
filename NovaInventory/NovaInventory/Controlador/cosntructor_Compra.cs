@@ -10,7 +10,8 @@ namespace NovaInventory.Controlador
     {
         public int id_compra { get; set; }
         public int id_proveedor { get; set; }
-        public int id_articulos { get; set; }
+        public int id_producto { get; set; }
+        public int id_modelos { get; set; }
         public string descripcion { get; set; }
         public int Preciounitario { get; set; }
         public int Precio_Total { get; set; }

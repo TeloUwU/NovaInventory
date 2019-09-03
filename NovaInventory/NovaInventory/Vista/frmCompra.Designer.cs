@@ -154,6 +154,7 @@
             this.txtPrecio_Unitario.Name = "txtPrecio_Unitario";
             this.txtPrecio_Unitario.Size = new System.Drawing.Size(121, 22);
             this.txtPrecio_Unitario.TabIndex = 6;
+            this.txtPrecio_Unitario.TextChanged += new System.EventHandler(this.txtPrecio_Unitario_TextChanged);
             // 
             // txtTotal
             // 
@@ -162,9 +163,11 @@
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(121, 22);
             this.txtTotal.TabIndex = 7;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
             // cbProveedor_Compra
             // 
+            this.cbProveedor_Compra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProveedor_Compra.FormattingEnabled = true;
             this.cbProveedor_Compra.Location = new System.Drawing.Point(22, 77);
             this.cbProveedor_Compra.Name = "cbProveedor_Compra";
@@ -173,6 +176,7 @@
             // 
             // cbProducto_Compra
             // 
+            this.cbProducto_Compra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProducto_Compra.FormattingEnabled = true;
             this.cbProducto_Compra.Location = new System.Drawing.Point(174, 77);
             this.cbProducto_Compra.Name = "cbProducto_Compra";
@@ -182,6 +186,7 @@
             // 
             // cbModelo_Compra
             // 
+            this.cbModelo_Compra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbModelo_Compra.FormattingEnabled = true;
             this.cbModelo_Compra.Location = new System.Drawing.Point(334, 77);
             this.cbModelo_Compra.Name = "cbModelo_Compra";
@@ -194,6 +199,7 @@
             this.nUDCantidad.Name = "nUDCantidad";
             this.nUDCantidad.Size = new System.Drawing.Size(121, 22);
             this.nUDCantidad.TabIndex = 5;
+            this.nUDCantidad.ValueChanged += new System.EventHandler(this.nUDCantidad_ValueChanged);
             // 
             // monthCalendar1
             // 
@@ -318,6 +324,7 @@
             // 
             // cbTipo_Pago
             // 
+            this.cbTipo_Pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipo_Pago.FormattingEnabled = true;
             this.cbTipo_Pago.Location = new System.Drawing.Point(490, 77);
             this.cbTipo_Pago.Name = "cbTipo_Pago";

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NovaInventory.Vista;
 
 namespace NovaInventory.Controlador
 {
@@ -18,7 +19,7 @@ namespace NovaInventory.Controlador
             MySqlCommand comandoAgregar;
             try
             {
-                comandoAgregar = new MySqlCommand(string.Format("INSERT INTO tbCompras (id_compra,id_proveedor,id_articulos,descripción,Preciounitario,Precio_total,Cantidad,fecha_compra,id_usuario,tipo_de_pago,num_factura) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7}','{8}','{9}','{10}')", agregar.id_compra, agregar.id_proveedor, agregar.id_articulos, agregar.descripcion, agregar.Preciounitario, agregar.Precio_Total, agregar.Cantidad, agregar.fecha_compra, agregar.id_usuario, agregar.tipo_pago, agregar.num_factura), Conexion.obtenerconexion());
+                comandoAgregar = new MySqlCommand(string.Format("INSERT INTO tbCompras (id_compra,id_proveedor,id_articulos,descripción,Preciounitario,Precio_total,Cantidad,fecha_compra,id_usuario,tipo_de_pago,num_factura) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7}','{8}','{9}','{10}')", agregar.id_compra, agregar.id_proveedor, agregar.id_producto, agregar.descripcion, agregar.Preciounitario, agregar.Precio_Total, agregar.Cantidad, agregar.fecha_compra, agregar.id_usuario, agregar.tipo_pago, agregar.num_factura), Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(comandoAgregar.ExecuteNonQuery());
                 if (retorno >= 0)
                 {
@@ -76,7 +77,24 @@ namespace NovaInventory.Controlador
         public static DataTable CargarModelo()
         {
             DataTable datos = new DataTable();
-            string query = "SELECT modelo_articulo FROM modelo";
+            string query = "SELECT modelo AS modelo FROM modelos";
+            MySqlCommand cmdquery = new MySqlCommand(query, Conexion.obtenerconexion());
+            try
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdquery);
+                adapter.Fill(datos);
+                return datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("La carga de modelos de los productos ha fallado" + ex, "Falla de descarga de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return datos;
+            }
+        }
+        public static DataTable tipoPago()
+        {
+            DataTable datos = new DataTable();
+            string query = "SELECT tipo_pago AS pago FROM tbtipo_pago";
             MySqlCommand cmdquery = new MySqlCommand(query, Conexion.obtenerconexion());
             try
             {
@@ -92,3 +110,4 @@ namespace NovaInventory.Controlador
         }
     }
 }
+ 

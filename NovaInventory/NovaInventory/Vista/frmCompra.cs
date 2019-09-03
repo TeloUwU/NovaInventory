@@ -29,27 +29,43 @@ namespace NovaInventory.Vista
         {
             CargarProveedor();
             CargarProducto();
+            CargarModelo();
+            CargartipoPago();
+        }
+
+        private void CargartipoPago()
+        {
+            cbTipo_Pago.DataSource = crudCompra.tipoPago();
+            cbTipo_Pago.ValueMember = "pago";
+            cbTipo_Pago.DisplayMember = "tipo_pago";
         }
 
         private void CargarProveedor()
         {
             cbProveedor_Compra.DataSource = crudCompra.CargarProveedores();
-            cbProveedor_Compra.ValueMember = "id_proveedor";
-            cbProveedor_Compra.DisplayMember = "nombre_proveedor";
+            cbProveedor_Compra.ValueMember = "nombre_proveedor"; 
+            cbProveedor_Compra.DisplayMember = "id_proveedor";
         }
 
         private void CargarProducto()
         {
             cbProducto_Compra.DataSource = crudCompra.CargarProducto();
-            cbProducto_Compra.DisplayMember = "producto";
-            cbProducto_Compra.ValueMember = "id_articulos";
+            cbProducto_Compra.DisplayMember = "id_producto"; 
+            cbProducto_Compra.ValueMember = "producto";
         }
 
-        private void AgregarCompra()
+        private void CargarModelo()
+        {
+            cbModelo_Compra.DataSource = crudCompra.CargarModelo();
+            cbModelo_Compra.DisplayMember = "id_modelos";
+            cbModelo_Compra.ValueMember = "modelo";
+        }
+
+        public void AgregarCompra()
         {
             agregar.id_compra = Convert.ToInt16(txtid_Compra.Text);
             agregar.id_proveedor = Convert.ToInt16(cbProveedor_Compra.Text);
-            agregar.id_articulos = Convert.ToInt16(cbProducto_Compra.Text);
+            agregar.id_producto = Convert.ToInt16(cbProducto_Compra.Text);
             agregar.Preciounitario = Convert.ToInt16(txtPrecio_Unitario.Text);
             agregar.Precio_Total = Convert.ToInt16(txtTotal.Text);
             agregar.Cantidad = Convert.ToInt16(nUDCantidad.Text);
@@ -70,6 +86,29 @@ namespace NovaInventory.Vista
         private void cbProducto_Compra_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void nUDCantidad_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void txtPrecio_Unitario_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+            Total();
+        }
+
+        public void Total()
+        {
+            int Precio_Unitario = Convert.ToInt16(txtPrecio_Unitario.Text);
+            int Cantidad_Producto = Convert.ToInt16(nUDCantidad.Value);
+            string Total = Convert.ToString(Precio_Unitario * Cantidad_Producto);
+            txtTotal.Text = Total;
         }
     }
 }
