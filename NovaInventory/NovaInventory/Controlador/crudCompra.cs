@@ -40,7 +40,7 @@ namespace NovaInventory.Controlador
         public static DataTable CargarProveedores()
         {
             DataTable datos = new DataTable();
-            string query = "SELECT nombre FROM tbproveedor";
+            string query = "SELECT nombre AS nombre_proveedor FROM tbproveedor";
             MySqlCommand cmdquery = new MySqlCommand(query,Conexion.obtenerconexion());
             try
             {
@@ -55,10 +55,10 @@ namespace NovaInventory.Controlador
             }
         }
 
-        public static DataTable Cargarcategoria()
+        public static DataTable CargarProducto()
         {
             DataTable datos = new DataTable();
-            string query = "SELECT categoria_producto FROM categoria_articulo";
+            string query = "SELECT producto AS producto FROM productos";
             MySqlCommand cmdquery = new MySqlCommand(query,Conexion.obtenerconexion());
             try
             {
@@ -68,7 +68,25 @@ namespace NovaInventory.Controlador
             }
             catch (Exception ex)
             {
-                MessageBox.Show("La carga de las categorías del producto ha fallado" + ex,"Falla de descarga de datos",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("La carga de los productos ha fallado" + ex,"Falla de descarga de datos",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return datos;
+            }
+        }
+
+        public static DataTable CargarModelo()
+        {
+            DataTable datos = new DataTable();
+            string query = "SELECT modelo_articulo FROM modelo";
+            MySqlCommand cmdquery = new MySqlCommand(query, Conexion.obtenerconexion());
+            try
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdquery);
+                adapter.Fill(datos);
+                return datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("La carga de modelos de los productos ha fallado" + ex, "Falla de descarga de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return datos;
             }
         }

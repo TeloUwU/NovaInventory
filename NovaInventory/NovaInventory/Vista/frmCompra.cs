@@ -27,13 +27,22 @@ namespace NovaInventory.Vista
 
         private void frmCompra_Load(object sender, EventArgs e)
         {
-            cbProveedor_Compra.DataSource = crudCompra.CargarProveedores();
-            cbCategoría_Compra.DataSource = crudCompra.Cargarcategoria();
+            CargarProveedor();
+            CargarProducto();
+        }
 
-            cbProveedor_Compra.DisplayMember = "NombreProveedor";
+        private void CargarProveedor()
+        {
+            cbProveedor_Compra.DataSource = crudCompra.CargarProveedores();
             cbProveedor_Compra.ValueMember = "id_proveedor";
-            cbCategoría_Compra.DisplayMember = "NombreCategorias";
-            cbCategoría_Compra.ValueMember = "";
+            cbProveedor_Compra.DisplayMember = "nombre_proveedor";
+        }
+
+        private void CargarProducto()
+        {
+            cbProducto_Compra.DataSource = crudCompra.CargarProducto();
+            cbProducto_Compra.DisplayMember = "producto";
+            cbProducto_Compra.ValueMember = "id_articulos";
         }
 
         private void AgregarCompra()
@@ -56,6 +65,11 @@ namespace NovaInventory.Vista
         private void btnAgregarCompra_Click(object sender, EventArgs e)
         {
             AgregarCompra();
+        }
+
+        private void cbProducto_Compra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

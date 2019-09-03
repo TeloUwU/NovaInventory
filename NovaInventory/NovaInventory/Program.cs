@@ -14,7 +14,7 @@ namespace NovaInventory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Kardex_Saraí());
+            Application.Run(new frmCompra());
         }
     }
 }
