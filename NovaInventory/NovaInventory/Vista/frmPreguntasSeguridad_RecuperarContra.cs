@@ -81,8 +81,8 @@ namespace NovaInventory.Vista
                     cmd.CommandText = "select id_respuesta,preguntas, pregunta,Respuesta,nickname, usuarioss " +
                                       "from tbrespuesta  r inner join tbpreguntas p  on  r.preguntas = p.id_pregunta " +
                                       " inner join tbusuarios u on r.usuarioss = u.id_usuarios " +
-                                      " where u.nickname = ' " + lblusuario.Text + " ' and r.preguntas = " + 1 + "";
-                    Console.WriteLine(lblusuario.Text);
+                                      " where u.nickname = ' " + lblUsuario.Text + " ' and r.preguntas = " + 1 + "";
+                    Console.WriteLine(lblUsuario.Text);
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {

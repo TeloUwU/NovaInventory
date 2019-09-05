@@ -44,6 +44,7 @@
             this.btnSelect_Preguntas = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,11 +206,21 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Las Repuestas No Deben Estar Repetidas*";
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(524, 25);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lblUsuario.TabIndex = 14;
+            this.lblUsuario.Text = "label6";
+            // 
             // frmPreguntasSeguridad_RecuperarContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 370);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSelect_Preguntas);
@@ -254,5 +265,6 @@
         private System.Windows.Forms.Button btnSelect_Preguntas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label lblUsuario;
     }
 }
