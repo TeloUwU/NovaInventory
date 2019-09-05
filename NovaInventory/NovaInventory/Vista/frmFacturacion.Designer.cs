@@ -234,7 +234,7 @@
             // 
             this.txtEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEfectivo.Location = new System.Drawing.Point(650, 168);
+            this.txtEfectivo.Location = new System.Drawing.Point(650, 159);
             this.txtEfectivo.Name = "txtEfectivo";
             this.txtEfectivo.ShortcutsEnabled = false;
             this.txtEfectivo.Size = new System.Drawing.Size(178, 20);
