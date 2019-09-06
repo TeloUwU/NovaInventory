@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -76,11 +76,11 @@
     <Compile Include="Modelo\Validar_primer_uso.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\ComprobUsuario.cs">
+    <Compile Include="Vista\frmComprobUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\ComprobUsuario.Designer.cs">
-      <DependentUpon>ComprobUsuario.cs</DependentUpon>
+    <Compile Include="Vista\frmComprobUsuario.Designer.cs">
+      <DependentUpon>frmComprobUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmAdministracion_Empresa.cs">
       <SubType>Form</SubType>
@@ -194,8 +194,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vista\ComprobUsuario.resx">
-      <DependentUpon>ComprobUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\frmComprobUsuario.resx">
+      <DependentUpon>frmComprobUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmAdministracion_Empresa.resx">
       <DependentUpon>frmAdministracion_Empresa.cs</DependentUpon>

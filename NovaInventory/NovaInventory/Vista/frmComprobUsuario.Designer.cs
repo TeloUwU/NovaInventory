@@ -1,6 +1,6 @@
 ﻿namespace NovaInventory.Vista
 {
-    partial class ComprobUsuario
+    partial class frmComprobUsuario
     {
         /// <summary>
         /// Required designer variable.
