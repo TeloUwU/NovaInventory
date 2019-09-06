@@ -95,12 +95,12 @@ namespace NovaInventory.Vista
 
         public void txtPrecio_Unitario_TextChanged(object sender, EventArgs e)
         {
-            
+            Total();
         }
 
         public void txtTotal_TextChanged(object sender, EventArgs e)
         {
-            Total();
+            
         }
 
         public void Total()
@@ -109,6 +109,7 @@ namespace NovaInventory.Vista
             int Cantidad_Producto = Convert.ToInt16(nUDCantidad.Value);
             string Total = Convert.ToString(Precio_Unitario * Cantidad_Producto);
             txtTotal.Text = Total;
+
         }
     }
 }

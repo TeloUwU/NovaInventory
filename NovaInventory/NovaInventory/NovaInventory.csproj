@@ -82,6 +82,12 @@
     <Compile Include="Vista\frmAdministracion_Empresa.Designer.cs">
       <DependentUpon>frmAdministracion_Empresa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmBodegas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmBodegas.Designer.cs">
+      <DependentUpon>frmBodegas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\frmAdministracion_Empresa.resx">
       <DependentUpon>frmAdministracion_Empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmBodegas.resx">
+      <DependentUpon>frmBodegas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmCompra.resx">
       <DependentUpon>frmCompra.cs</DependentUpon>
