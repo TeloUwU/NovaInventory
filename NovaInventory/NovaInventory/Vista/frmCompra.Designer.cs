@@ -302,6 +302,7 @@
             this.txtid_Compra.Name = "txtid_Compra";
             this.txtid_Compra.Size = new System.Drawing.Size(27, 22);
             this.txtid_Compra.TabIndex = 0;
+            this.txtid_Compra.Text = " ";
             this.txtid_Compra.Visible = false;
             // 
             // dtpRealización_Compra

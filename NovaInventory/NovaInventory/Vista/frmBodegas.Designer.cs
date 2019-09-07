@@ -33,15 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtId_Bodega = new System.Windows.Forms.TextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtId_Bodega = new System.Windows.Forms.TextBox();
             this.txtNombre_Bodega = new System.Windows.Forms.TextBox();
             this.txtCodigo_Bodega = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtDirección = new System.Windows.Forms.TextBox();
+            this.dtpAltaBaja = new System.Windows.Forms.DateTimePicker();
+            this.dtpBodegaCreación = new System.Windows.Forms.DateTimePicker();
             this.cbEstado_Bodega = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,9 +52,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvBodegas = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBodegas)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -68,24 +68,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1044, 30);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(708, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Dirección";
-            // 
-            // txtId_Bodega
-            // 
-            this.txtId_Bodega.Location = new System.Drawing.Point(1011, 33);
-            this.txtId_Bodega.Name = "txtId_Bodega";
-            this.txtId_Bodega.Size = new System.Drawing.Size(26, 22);
-            this.txtId_Bodega.TabIndex = 0;
-            this.txtId_Bodega.Visible = false;
             // 
             // toolStripButton1
             // 
@@ -107,6 +89,24 @@
             this.toolStripButton2.Size = new System.Drawing.Size(172, 27);
             this.toolStripButton2.Text = "Cerrar Formulario";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(708, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Dirección";
+            // 
+            // txtId_Bodega
+            // 
+            this.txtId_Bodega.Location = new System.Drawing.Point(1011, 33);
+            this.txtId_Bodega.Name = "txtId_Bodega";
+            this.txtId_Bodega.Size = new System.Drawing.Size(26, 22);
+            this.txtId_Bodega.TabIndex = 0;
+            this.txtId_Bodega.Visible = false;
+            // 
             // txtNombre_Bodega
             // 
             this.txtNombre_Bodega.Location = new System.Drawing.Point(73, 172);
@@ -121,27 +121,29 @@
             this.txtCodigo_Bodega.Size = new System.Drawing.Size(233, 22);
             this.txtCodigo_Bodega.TabIndex = 1;
             // 
-            // textBox3
+            // txtDirección
             // 
-            this.textBox3.Location = new System.Drawing.Point(712, 86);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 110);
-            this.textBox3.TabIndex = 4;
+            this.txtDirección.Location = new System.Drawing.Point(712, 86);
+            this.txtDirección.Multiline = true;
+            this.txtDirección.Name = "txtDirección";
+            this.txtDirección.Size = new System.Drawing.Size(233, 110);
+            this.txtDirección.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // dtpAltaBaja
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(952, 33);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(53, 22);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpAltaBaja.Location = new System.Drawing.Point(952, 33);
+            this.dtpAltaBaja.Name = "dtpAltaBaja";
+            this.dtpAltaBaja.Size = new System.Drawing.Size(53, 22);
+            this.dtpAltaBaja.TabIndex = 0;
+            this.dtpAltaBaja.Visible = false;
             // 
-            // dateTimePicker2
+            // dtpBodegaCreación
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(893, 33);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(53, 22);
-            this.dateTimePicker2.TabIndex = 6;
+            this.dtpBodegaCreación.Location = new System.Drawing.Point(893, 33);
+            this.dtpBodegaCreación.Name = "dtpBodegaCreación";
+            this.dtpBodegaCreación.Size = new System.Drawing.Size(53, 22);
+            this.dtpBodegaCreación.TabIndex = 0;
+            this.dtpBodegaCreación.Visible = false;
             // 
             // cbEstado_Bodega
             // 
@@ -204,8 +206,8 @@
             this.button1.Location = new System.Drawing.Point(57, 224);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(216, 65);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Agregar Bodega";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -213,8 +215,8 @@
             this.button2.Location = new System.Drawing.Point(288, 224);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(216, 65);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "button2";
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Ver Bodega";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -222,8 +224,8 @@
             this.button3.Location = new System.Drawing.Point(521, 224);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(216, 65);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "button3";
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Actualizar Bodega";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -231,11 +233,11 @@
             this.button4.Location = new System.Drawing.Point(758, 224);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(216, 65);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "button4";
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Eliminar Bodega";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvBodegas
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -244,8 +246,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBodegas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBodegas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -253,9 +255,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 310);
-            this.dataGridView1.Name = "dataGridView1";
+            this.dgvBodegas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBodegas.Location = new System.Drawing.Point(27, 310);
+            this.dgvBodegas.Name = "dgvBodegas";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -263,17 +265,17 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(991, 328);
-            this.dataGridView1.TabIndex = 17;
+            this.dgvBodegas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvBodegas.RowTemplate.Height = 24;
+            this.dgvBodegas.Size = new System.Drawing.Size(991, 328);
+            this.dgvBodegas.TabIndex = 6;
             // 
             // frmBodegas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 665);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvBodegas);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -284,9 +286,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbEstado_Bodega);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.dtpBodegaCreación);
+            this.Controls.Add(this.dtpAltaBaja);
+            this.Controls.Add(this.txtDirección);
             this.Controls.Add(this.txtCodigo_Bodega);
             this.Controls.Add(this.txtNombre_Bodega);
             this.Controls.Add(this.txtId_Bodega);
@@ -298,7 +300,7 @@
             this.Load += new System.EventHandler(this.frmBodegas_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBodegas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,9 +315,9 @@
         private System.Windows.Forms.TextBox txtId_Bodega;
         private System.Windows.Forms.TextBox txtNombre_Bodega;
         private System.Windows.Forms.TextBox txtCodigo_Bodega;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox txtDirección;
+        private System.Windows.Forms.DateTimePicker dtpAltaBaja;
+        private System.Windows.Forms.DateTimePicker dtpBodegaCreación;
         private System.Windows.Forms.ComboBox cbEstado_Bodega;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -326,6 +328,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvBodegas;
     }
 }
