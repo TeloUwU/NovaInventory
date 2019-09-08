@@ -36,14 +36,33 @@ namespace NovaInventory.Vista
             {
                 if (txtClave.Text == txtConfClave.Text)
                 {
+                    txtConfClave.Text = Validaciones.md5(txtConfClave.Text);
+                    txtClave.Text = Validaciones.md5(txtClave.Text);
+
                     int usu = 1;
                     constructor_de_respuestas res = new constructor_de_respuestas();
+                    constructor_de_respuestas res2 = new constructor_de_respuestas();
+                    constructor_de_respuestas res3 = new constructor_de_respuestas();
+                    constructor_de_respuestas res4 = new constructor_de_respuestas();
+                    res.Respuesta = txtRespuesta1.Text;
+                    res.preguntas = Convert.ToInt32(cmbPregunta1.SelectedIndex.ToString());
+                    res.usuarioss = usu;
+                    res2.Respuesta = txtRespuesta2.Text;
+                    res2.preguntas = Convert.ToInt32(cmbPregunta2.SelectedIndex.ToString());
+                    res2.usuarioss = usu;
+                    res3.Respuesta = textBox1.Text;
+                    res3.preguntas = Convert.ToInt32(cmbPregunta3.SelectedIndex.ToString());
+                    res3.usuarioss = usu;
+                    res4.Respuesta = textBox2.Text;
+                    res4.preguntas = Convert.ToInt32(cmbPregunta4.SelectedIndex.ToString());
+                    res4.usuarioss = usu;
                     constructor_primer_usuario usuario = new constructor_primer_usuario();
                     usuario.usuario = txtUsuario.Text;
-                    usuario.nombre_usuario = txtUsuario.Text;
+                    usuario.nombre_usuario = txtNombres.Text;
                     usuario.apellido_usuario = txtApellidos.Text;
+                    usuario.contraseña_usuario = txtClave.Text;
                     usuario.Correo = txtEmail.Text;
-                    usuario.nit = txtCarne.Text;
+                    usuario.nit = maskDui.Text;
                     usuario.telefono = txt_cel.Text;
                     usuario.fecha_de_nacimiento = dtNacimiento.Text;
                     string intentos = "0";
@@ -51,26 +70,19 @@ namespace NovaInventory.Vista
                     usuario.id_estados = Convert.ToInt32(cmbEstado.SelectedValue.ToString());
                     usuario.id_tipo_usuarios = Convert.ToInt32(cmbTipoUsuario.SelectedValue.ToString());
                     usuario.empresa = Convert.ToInt32(cmbEmpresa.SelectedValue.ToString());
-                    res.Respuesta = txtRespuesta1.Text;
-                    res.preguntas = Convert.ToInt32(cmbPregunta1.SelectedIndex.ToString());
-                    res.usuarioss = usu;
-                    res.Respuesta = txtRespuesta2.Text;
-                    res.preguntas = Convert.ToInt32(cmbPregunta2.SelectedIndex.ToString());
-                    res.usuarioss = usu;
-                    res.Respuesta = textBox1.Text;
-                    res.preguntas = Convert.ToInt32(cmbPregunta3.SelectedIndex.ToString());
-                    res.usuarioss = usu;
-                    res.Respuesta = textBox2.Text;
-                    res.preguntas = Convert.ToInt32(cmbPregunta4.SelectedIndex.ToString());
-                    res.usuarioss = usu;
                     MemoryStream ms = new MemoryStream();
                     pbFoto.Image.Save(ms, ImageFormat.Jpeg);
                     byte[] aByte = ms.ToArray();
                     string imagen = Convert.ToBase64String(aByte);
                     usuario.Foto_usuario = imagen;
                     int retorno = control_usuario.registro_usuario(usuario);
-
-                    usuario.contraseña_usuario = Validaciones.md5(txtClave.Text);
+                    int retornar = preguntas_y_respuestas.agregar_re(res);
+                    int retorna = preguntas_y_respuestas.agregar_re(res2);
+                    int retornara = preguntas_y_respuestas.agregar_re(res3);
+                    int retornas = preguntas_y_respuestas.agregar_re(res4);
+                    BtnGuardar.Visible = false;
+                    button1.Visible = true;
+                  
                 }
                 else
                 {
@@ -109,13 +121,15 @@ namespace NovaInventory.Vista
 
         private void FrmPrimerUsuario_Load_1(object sender, EventArgs e)
         {
+            
+
             cmbTipoUsuario.DataSource = Funciones_usuarios.cargarUSU();
             cmbTipoUsuario.DisplayMember = "tipo_usuario";
             cmbTipoUsuario.ValueMember = "id_tipo_usuario";
 
             cmbEstado.DataSource = Funciones_usuarios.cargar();
-            cmbEstado.DisplayMember = "Estado_usuario";
-            cmbEstado.ValueMember = "id_estado_usuario";
+            cmbEstado.DisplayMember = "Estado";
+            cmbEstado.ValueMember = "id_estado";
 
             cmbEmpresa.DataSource = Funciones_usuarios.cargar1();
             cmbEmpresa.DisplayMember = "nombre";
@@ -125,18 +139,25 @@ namespace NovaInventory.Vista
             cmbPregunta1.DisplayMember = "pregunta";
             cmbPregunta1.ValueMember = "id_pregunta";
 
+
             cmbPregunta2.DataSource = preguntas_y_respuestas.cargar();
             cmbPregunta2.DisplayMember = "pregunta";
             cmbPregunta2.ValueMember = "id_pregunta";
+         
 
             cmbPregunta3.DataSource = preguntas_y_respuestas.cargar();
             cmbPregunta3.DisplayMember = "pregunta";
             cmbPregunta3.ValueMember = "id_pregunta";
+         
 
             cmbPregunta4.DataSource = preguntas_y_respuestas.cargar();
             cmbPregunta4.DisplayMember = "pregunta";
             cmbPregunta4.ValueMember = "id_pregunta";
+           
 
+            cmbEstado.Enabled = false;
+            cmbTipoUsuario.Enabled = false;
+            button1.Visible = false;
         }
     }
 }
