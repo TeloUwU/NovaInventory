@@ -50,33 +50,33 @@ namespace NovaInventory.Modelo
             }
 
         }
-        //public static bool act (constructor_de_respuestas ac)
-        //{
-        //    bool retorno = false;
-        //    try
-        //    {
-        //        MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbrespuesta  SET  usuarioss ='{0}' ", ac.usuarioss), Conexion.obtenerconexion());
-        //        retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
-        //        if (true)
-        //        {
-        //            if (retorno == true)
-        //            {
-        //                MessageBox.Show("Los datos fueron actualizados correctamente.", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            }
-        //            else
-        //            {
-        //                MessageBox.Show("Los Datos no pudieron ser actualizados.", "Proceso no completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //            }
-        //            return retorno;
-        //        }
+        public static bool act(constructor_de_respuestas ac)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbrespuesta  SET  usuarioss ='{0}' ", ac.usuarioss), Conexion.obtenerconexion());
+                retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
+                if (true)
+                {
+                    if (retorno == true)
+                    {
+                        MessageBox.Show("Los datos fueron actualizados correctamente.", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los Datos no pudieron ser actualizados.", "Proceso no completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    return retorno;
+                }
 
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        MessageBox.Show("Ha ocurrido un problema, revise su internet o los servicios del servidor, Consulte al programador " + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return retorno;
-        //    }
-        //}
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ha ocurrido un problema, revise su internet o los servicios del servidor, Consulte al programador " + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return retorno;
+            }
+        }
     }
 
 }

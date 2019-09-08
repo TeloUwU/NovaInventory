@@ -68,7 +68,7 @@ namespace NovaInventory.Vista
 
 
             preguntas_y_respuestas.act(ac);
-            Funciones_usuarios.actualizarusu(actualizar);
+            Funciones_usuarios.actualizar(actualizar);
         }
         public void eliminarusu()
         {
