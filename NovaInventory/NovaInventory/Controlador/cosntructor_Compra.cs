@@ -24,5 +24,7 @@ namespace NovaInventory.Controlador
         public int total_mod { get; set; }
         public int cantidad_mod { get; set; }
         public int num_factura { get; set; }
+
+        public constructor_Compra() { }
     }
 }

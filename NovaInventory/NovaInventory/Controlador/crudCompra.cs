@@ -8,18 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Vista;
+using NovaInventory.Modelo;
 
 namespace NovaInventory.Controlador
 {
     class crudCompra
     {
+
+
+
         public static int insertarCompra(constructor_Compra agregar)
         {
             int retorno = 0;
-            MySqlCommand comandoAgregar;
             try
             {
-                comandoAgregar = new MySqlCommand(string.Format("INSERT INTO tbCompras (id_compra,id_proveedor,id_articulos,descripción,Preciounitario,Precio_total,Cantidad,fecha_compra,id_usuario,tipo_de_pago,num_factura) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}',{7}','{8}','{9}','{10}')", agregar.id_compra, agregar.id_proveedor, agregar.id_producto, agregar.descripcion, agregar.Preciounitario, agregar.Precio_Total, agregar.Cantidad, agregar.fecha_compra, agregar.id_usuario, agregar.tipo_pago, agregar.num_factura), Conexion.obtenerconexion());
+                MySqlCommand comandoAgregar = new MySqlCommand(string.Format("INSERT INTO tbCompras (id_compra, id_proveedor, id_articulos, descripcion, Preciounitario, Precio_total, Cantidad, fecha_compra, id_usuario, tipo_de_pago, num_factura) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}',)", agregar.id_compra, agregar.id_proveedor, agregar.id_producto, agregar.descripcion, agregar.Preciounitario, agregar.Precio_Total, agregar.Cantidad, agregar.fecha_compra, agregar.id_usuario, agregar.tipo_pago, agregar.num_factura), Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(comandoAgregar.ExecuteNonQuery());
                 if (retorno >= 0)
                 {
@@ -42,7 +45,7 @@ namespace NovaInventory.Controlador
         {
             DataTable datos = new DataTable();
             string query = "SELECT nombre AS nombre_proveedor FROM tbproveedor";
-            MySqlCommand cmdquery = new MySqlCommand(query,Conexion.obtenerconexion());
+            MySqlCommand cmdquery = new MySqlCommand(query, Conexion.obtenerconexion());
             try
             {
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdquery);
@@ -51,7 +54,7 @@ namespace NovaInventory.Controlador
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Err, ha ocurrido un error a la hora de mostrar los Proveedores"+ ex,"Error Insolito",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Err, ha ocurrido un error a la hora de mostrar los Proveedores" + ex, "Error Insolito", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return datos;
             }
         }
@@ -60,7 +63,7 @@ namespace NovaInventory.Controlador
         {
             DataTable datos = new DataTable();
             string query = "SELECT producto AS producto FROM productos";
-            MySqlCommand cmdquery = new MySqlCommand(query,Conexion.obtenerconexion());
+            MySqlCommand cmdquery = new MySqlCommand(query, Conexion.obtenerconexion());
             try
             {
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdquery);
@@ -69,7 +72,7 @@ namespace NovaInventory.Controlador
             }
             catch (Exception ex)
             {
-                MessageBox.Show("La carga de los productos ha fallado" + ex,"Falla de descarga de datos",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("La carga de los productos ha fallado" + ex, "Falla de descarga de datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return datos;
             }
         }
@@ -108,6 +111,9 @@ namespace NovaInventory.Controlador
                 return datos;
             }
         }
+
+
+        
     }
 }
  
