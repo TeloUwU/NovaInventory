@@ -189,7 +189,7 @@
             // 
             this.lblNombres_Usuario.AutoSize = true;
             this.lblNombres_Usuario.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres_Usuario.Location = new System.Drawing.Point(431, 204);
+            this.lblNombres_Usuario.Location = new System.Drawing.Point(318, 211);
             this.lblNombres_Usuario.Name = "lblNombres_Usuario";
             this.lblNombres_Usuario.Size = new System.Drawing.Size(87, 32);
             this.lblNombres_Usuario.TabIndex = 1;
@@ -200,7 +200,7 @@
             // 
             this.lblApellidos_Usuario.AutoSize = true;
             this.lblApellidos_Usuario.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidos_Usuario.Location = new System.Drawing.Point(431, 248);
+            this.lblApellidos_Usuario.Location = new System.Drawing.Point(318, 255);
             this.lblApellidos_Usuario.Name = "lblApellidos_Usuario";
             this.lblApellidos_Usuario.Size = new System.Drawing.Size(87, 32);
             this.lblApellidos_Usuario.TabIndex = 2;
@@ -382,6 +382,7 @@
             this.agregarProveedorToolStripMenuItem.Name = "agregarProveedorToolStripMenuItem";
             this.agregarProveedorToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.agregarProveedorToolStripMenuItem.Text = "Agregar Proveedor";
+            this.agregarProveedorToolStripMenuItem.Click += new System.EventHandler(this.agregarProveedorToolStripMenuItem_Click);
             // 
             // inventarioToolStripMenuItem
             // 

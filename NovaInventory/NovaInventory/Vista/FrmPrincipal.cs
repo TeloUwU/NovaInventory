@@ -205,5 +205,10 @@ namespace NovaInventory.Vista
         {
             AbrirFormulario<frmUsuarios>();
         }
+
+        private void agregarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmProveedores>();
+        }
     }
 }
