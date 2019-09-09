@@ -38,29 +38,69 @@ namespace NovaInventory.Vista
 
         public int Usuario_Comprador()
         {
-            
             string nombreVIS = Constructor_login.nombre;
             string apellidoVIS = Constructor_login.apellido;
-
-            //MySql.Data.MySqlClient.MySqlCommand
             int retorno = 0;
             try
             {
                 MySqlCommand usuario = new MySqlCommand(string.Format("SELECT id_usuarios FROM tbusuarios WHERE nombre_usuario = '" + nombreVIS + "' AND apellido_usuario = '" + apellidoVIS + "';"), Conexion.obtenerconexion());
-                 //retorno = Convert.ToInt16(usuario);
-                    txtid_usuario.Text = Convert.ToString(usuario.ExecuteScalar());
-                    return retorno;
-
-
-
-
-                //MessageBox.Show("El usuario que ha ingresado al sistema no ha sido encontrado en la base de datos, por favor llame a un tecnico", "Error de Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                //return retorno;
-
+                txtid_usuario.Text = Convert.ToString(usuario.ExecuteScalar());
+                return retorno;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("EL usuario que ha accedido no ha sido cargado correctamente por el programa, consulte con el tecnico" + ex, "Error de carga de usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return retorno;
+            }
+        }
+
+        public int Proveedor()
+        {
+            string nombre = cbProveedor_Compra.Text;
+            int retorno = 0;
+            try
+            {
+                MySqlCommand proveedor = new MySqlCommand(string.Format("SELECT id_proveedor FROM tbproveedor WHERE nombre = " + nombre + ";"), Conexion.obtenerconexion());
+                string Envio_Proveedor = Convert.ToString(proveedor.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El proveedor seleccionado no se ha ingresado junto al producto, llame a un tecnico" + ex, "Carga Proveedor Fallida", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                return retorno;
+            }
+        }
+
+        public int Producto()
+        {
+            string nombre = cbProducto_Compra.Text;
+            int retorno = 0;
+            try
+            {
+                MySqlCommand producto = new MySqlCommand(string.Format("SELECT id_producto FROM productos WHERE producto = " + nombre + ";"), Conexion.obtenerconexion());
+                string Envio_Producto = Convert.ToString(producto.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El proveedor seleccionado no se ha ingresado junto al producto, llame a un tecnico" + ex, "Carga Proveedor Fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return retorno;
+            }
+        }
+
+        public int Tipo_pago()
+        {
+            string nombre = cbTipo_Pago.Text;
+            int retorno = 0;
+            try
+            {
+                MySqlCommand tipopago = new MySqlCommand(string.Format("SELECT id_tipo_pago FROM tbtipo_pago WHERE tipo_pago = " + nombre + ";"), Conexion.obtenerconexion());
+                string Envio_Tipo = Convert.ToString(tipopago.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El proveedor seleccionado no se ha ingresado junto al producto, llame a un tecnico" + ex, "Carga Proveedor Fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return retorno;
             }
         }
@@ -102,13 +142,13 @@ namespace NovaInventory.Vista
             }
             else
             {
-                //agregar.id_proveedor = Convert.ToInt16(cbProveedor_Compra.Text);
-                //agregar.id_producto = Convert.ToInt16(cbProducto_Compra.Text);
+                agregar.id_proveedor = Convert.ToInt16(Proveedor());
+                agregar.id_producto = Convert.ToInt16(Producto());
                 agregar.Preciounitario = Convert.ToInt16(txtPrecio_Unitario.Text);
                 agregar.Precio_Total = Convert.ToInt16(txtTotal.Text);
                 agregar.Cantidad = Convert.ToInt16(nUDCantidad.Text);
                 agregar.id_usuario = Convert.ToInt16(txtid_usuario.Text);
-                //agregar.tipo_pago = Convert.ToInt16(cbTipo_Pago.Text);
+                agregar.tipo_pago = Convert.ToInt16(Tipo_pago());
                 agregar.num_factura = Convert.ToInt16(txtNum_factura.Text);
                 agregar.descripcion = txtDescripción.Text;
                 agregar.fecha_compra = dtpRealización_Compra.Text;
