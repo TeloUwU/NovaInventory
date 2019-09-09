@@ -45,7 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbAltaOBaja = new System.Windows.Forms.ComboBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -184,13 +184,12 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Nombre";
             // 
-            // cbAltaOBaja
+            // cbEstado
             // 
             this.cbAltaOBaja.FormattingEnabled = true;
-            this.cbAltaOBaja.Location = new System.Drawing.Point(298, 140);
-            this.cbAltaOBaja.Margin = new System.Windows.Forms.Padding(2);
+            this.cbAltaOBaja.Location = new System.Drawing.Point(397, 172);
             this.cbAltaOBaja.Name = "cbAltaOBaja";
-            this.cbAltaOBaja.Size = new System.Drawing.Size(176, 21);
+            this.cbAltaOBaja.Size = new System.Drawing.Size(233, 24);
             this.cbAltaOBaja.TabIndex = 4;
             // 
             // label5
@@ -200,9 +199,9 @@
             this.label5.Location = new System.Drawing.Point(295, 110);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 19);
+            this.label5.Size = new System.Drawing.Size(42, 24);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Uso";
+            this.label5.Text = "Estado";
             // 
             // button1
             // 
@@ -303,12 +302,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbAltaOBaja);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbEstado_Bodega);
-            this.Controls.Add(this.dtpBodegaCreación);
             this.Controls.Add(this.dtpAltaBaja);
             this.Controls.Add(this.txtDirección);
             this.Controls.Add(this.txtCodigo_Bodega);
@@ -344,7 +342,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbAltaOBaja;
+        private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
