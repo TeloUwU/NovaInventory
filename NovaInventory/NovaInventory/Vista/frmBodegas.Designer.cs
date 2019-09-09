@@ -41,12 +41,11 @@
             this.txtCodigo_Bodega = new System.Windows.Forms.TextBox();
             this.txtDirección = new System.Windows.Forms.TextBox();
             this.dtpAltaBaja = new System.Windows.Forms.DateTimePicker();
-            this.dtpBodegaCreación = new System.Windows.Forms.DateTimePicker();
             this.cbEstado_Bodega = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbAltaOBaja = new System.Windows.Forms.ComboBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -137,14 +136,6 @@
             this.dtpAltaBaja.TabIndex = 0;
             this.dtpAltaBaja.Visible = false;
             // 
-            // dtpBodegaCreación
-            // 
-            this.dtpBodegaCreación.Location = new System.Drawing.Point(893, 33);
-            this.dtpBodegaCreación.Name = "dtpBodegaCreación";
-            this.dtpBodegaCreación.Size = new System.Drawing.Size(53, 22);
-            this.dtpBodegaCreación.TabIndex = 0;
-            this.dtpBodegaCreación.Visible = false;
-            // 
             // cbEstado_Bodega
             // 
             this.cbEstado_Bodega.FormattingEnabled = true;
@@ -183,13 +174,13 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Nombre";
             // 
-            // cbAltaOBaja
+            // cbEstado
             // 
-            this.cbAltaOBaja.FormattingEnabled = true;
-            this.cbAltaOBaja.Location = new System.Drawing.Point(397, 172);
-            this.cbAltaOBaja.Name = "cbAltaOBaja";
-            this.cbAltaOBaja.Size = new System.Drawing.Size(233, 24);
-            this.cbAltaOBaja.TabIndex = 4;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(397, 172);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(233, 24);
+            this.cbEstado.TabIndex = 4;
             // 
             // label5
             // 
@@ -197,9 +188,9 @@
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(393, 136);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 24);
+            this.label5.Size = new System.Drawing.Size(67, 24);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Uso";
+            this.label5.Text = "Estado";
             // 
             // button1
             // 
@@ -281,12 +272,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbAltaOBaja);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbEstado_Bodega);
-            this.Controls.Add(this.dtpBodegaCreación);
             this.Controls.Add(this.dtpAltaBaja);
             this.Controls.Add(this.txtDirección);
             this.Controls.Add(this.txtCodigo_Bodega);
@@ -317,12 +307,11 @@
         private System.Windows.Forms.TextBox txtCodigo_Bodega;
         private System.Windows.Forms.TextBox txtDirección;
         private System.Windows.Forms.DateTimePicker dtpAltaBaja;
-        private System.Windows.Forms.DateTimePicker dtpBodegaCreación;
         private System.Windows.Forms.ComboBox cbEstado_Bodega;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbAltaOBaja;
+        private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
