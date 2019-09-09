@@ -17,12 +17,10 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
-
         Form currentForm;
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             PanelSidebar.Visible = false;
-
 
             lblNombres_Usuario.Text = Constructor_login.nombre;
             lblApellidos_Usuario.Text = Constructor_login.apellido;
@@ -208,14 +206,9 @@ namespace NovaInventory.Vista
             AbrirFormulario<frmUsuarios>();
         }
 
-        private void administraciónToolStripMenuItem_Click(object sender, EventArgs e)
+        private void agregarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void ingresarNuevoProductoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<frmCompra>();
+            AbrirFormulario<frmProveedores>();
         }
     }
 }
