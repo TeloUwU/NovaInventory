@@ -30,7 +30,6 @@ namespace NovaInventory.Vista
                Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
                Constructor_login.usuario = txtUsuario.Text;
                 login.clave = txtContraseña.Text;
-                   txtContraseña.Text= Validaciones.md5( txtContraseña.Text);
                 bool datos = validar_login.acceso(login);
                 if (datos == true)
                 {
@@ -38,12 +37,13 @@ namespace NovaInventory.Vista
                     int year = hoy.Year;
                     if (txtContraseña.Text == txtUsuario.Text + year)
                     {
-                        FrmPrincipal main = new FrmPrincipal();
+                        frm_nuevo main = new frm_nuevo();
                         main.Show();
                         this.Hide();
                     }
                     else
                     {
+                        txtContraseña.Text = Validaciones.md5(txtContraseña.Text);
                         FrmPrincipal main = new FrmPrincipal();
                         main.Show();
                         this.Hide();

@@ -58,6 +58,7 @@
     <Compile Include="Controlador\constructor preguntas.cs" />
     <Compile Include="Controlador\constructorecuperacion.cs" />
     <Compile Include="Controlador\constructorFacturacion.cs" />
+    <Compile Include="Controlador\Constructor_bodega.cs" />
     <Compile Include="Controlador\Constructor_empresa.cs" />
     <Compile Include="Controlador\Constructor_login.cs" />
     <Compile Include="Controlador\constructor_para_celulares.cs" />
@@ -68,7 +69,9 @@
     <Compile Include="Controlador\cosntructor_Compra.cs" />
     <Compile Include="Controlador\crudCompra.cs" />
     <Compile Include="Modelo\Actualizar_Root.cs" />
+    <Compile Include="Modelo\contraypreguntas.cs" />
     <Compile Include="Modelo\Control de proveedores.cs" />
+    <Compile Include="Modelo\control_de_bodega.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
     <Compile Include="Modelo\Funciones_producto.cs" />

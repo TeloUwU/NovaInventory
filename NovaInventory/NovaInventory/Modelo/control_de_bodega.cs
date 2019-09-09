@@ -3,27 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
+using NovaInventory.Controlador;
+using NovaInventory.Config;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-using NovaInventory.Config;
-using NovaInventory.Controlador;
+using System.Data;
 
 namespace NovaInventory.Modelo
 {
-    class Control_de_proveedores
+    class control_de_bodega
     {
-
-        public static int agregar_usu(Constructor_proveedor add)
+        public static int agregar_usu(Constructor_bodega add)
         {
             int retorno = 0;
             try
             {
-                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbproveedor(nombre, direccion, telefono, nit, rubro, id_estados) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", add.nombre, add.direccion, add.telefono, add.nit, add.rubro, add.id_estados),Conexion.obtenerconexion());
+                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbbodega(codigo_bodega, nombre_bodega, direccion, fecha_alta, id_estado) VALUES ('{0}','{1}','{2}','{3}','{4}')", add.codigo_bodega, add.nombre_bodega, add.direccion, add.fecha_alta, add.id_estado), Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(cmdagregar.ExecuteNonQuery());
                 if (retorno > 0)
                 {
-                    MessageBox.Show("El Proveedor se ingreso correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("La bodega se ingreso correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
@@ -39,7 +38,7 @@ namespace NovaInventory.Modelo
             DataTable datos;
             try
             {
-                string query = "SELECT * FROM tbproveedor";
+                string query = "SELECT * FROM tbbodega";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 datos = new DataTable();
@@ -52,13 +51,13 @@ namespace NovaInventory.Modelo
                 return datos = new DataTable();
             }
         }
-        public static bool actualizarusu(Constructor_proveedor upt)
+        public static bool actualizarusu(Constructor_bodega upt)
         {
             bool retorno = false;
             try
             {
-                
-                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbproveedor SET  nombre='{0}', direccion='{1}', telefono ='{2}', nit='{3}', rubro='{4}', id_estados='{5}' WHERE id_proveedor='{6}' ", upt.nombre,upt.direccion,upt.telefono,upt.nit,upt.rubro,upt.id_estados, upt.id_proveedor), Conexion.obtenerconexion());
+
+                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbbodega SET  codigo_bodega='{0}', nombre_bodega='{1}', direccion ='{2}', fecha_alta='{3}', id_estado='{4}' WHERE id_bodega='{5}' ",upt.codigo_bodega, upt.nombre_bodega, upt.direccion, upt.fecha_alta,upt.id_estado, upt.id_bodega), Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
                 if (true)
                 {
@@ -85,15 +84,15 @@ namespace NovaInventory.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmddel = new MySqlCommand(string.Format("DELETE FROM tbproveedor WHERE id_proveedor = '{0}'", id), Conexion.obtenerconexion());
+                MySqlCommand cmddel = new MySqlCommand(string.Format("DELETE FROM tbbodega WHERE id_bodega = '{0}'", id), Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmddel.ExecuteNonQuery());
                 if (retorno == true)
                 {
-                    MessageBox.Show("El proveedor a sido eliminado correctamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("La bodega a sido eliminado correctamente", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("El proveedor no pudo ser eliminado correctamente", "Proceso no completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("La bodega no pudo ser eliminado correctamente", "Proceso no completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 return retorno;
             }

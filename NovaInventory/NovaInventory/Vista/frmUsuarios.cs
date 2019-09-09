@@ -32,6 +32,7 @@ namespace NovaInventory.Vista
             agregar.nombre_usuario = txtNombres_Usuario.Text;
             agregar.apellido_usuario = txtApellidos_Usuario.Text;
             agregar.contraseña_usuario = clave;
+            agregar.telefono = txtTelefono_Usuario.Text;
             agregar.Correo = txtCorreo_Usuario.Text;
             agregar.dui = txtDUI_Usuario.Text;
             agregar.nit = txtNIT_Usuario.Text;

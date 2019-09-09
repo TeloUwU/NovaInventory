@@ -18,6 +18,13 @@ namespace NovaInventory.Vista
             InitializeComponent();
         }
         Form currentForm;
+        void admin()
+        {
+            button2.Enabled = true;
+            button5.Enabled = false;
+            button6.Enabled = false;
+            button7.Enabled = true;
+        }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             PanelSidebar.Visible = false;
@@ -28,12 +35,14 @@ namespace NovaInventory.Vista
             {
                 lblNivel.Text = ("Root");
             }
-            else if (Constructor_login.nivel==2)
+            else if (Constructor_login.nivel== 2)
             {
+                admin();
                 lblNivel.Text = ("Administrador");
             }
             else if (Constructor_login.nivel == 3)
             {
+
                 lblNivel.Text = ("Bodeguero");
             }
             else if (Constructor_login.nivel == 4)
@@ -164,15 +173,11 @@ namespace NovaInventory.Vista
         private void button6_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmConfig_Root>();
-            root();
+            
             button6.BackColor = Color.FromArgb(192, 0, 192);
         }
 
-        public void root ()
-        {
-            string nombre = "Maria";
-        }
-
+      
         private void button6_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario<frmConfig_Root>();

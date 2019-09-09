@@ -269,9 +269,9 @@
             this.lblNivel.AutoSize = true;
             this.lblNivel.Location = new System.Drawing.Point(146, 41);
             this.lblNivel.Name = "lblNivel";
-            this.lblNivel.Size = new System.Drawing.Size(42, 17);
+            this.lblNivel.Size = new System.Drawing.Size(11, 17);
             this.lblNivel.TabIndex = 14;
-            this.lblNivel.Text = "label2";
+            this.lblNivel.Text = " ";
             // 
             // lblEstado
             // 

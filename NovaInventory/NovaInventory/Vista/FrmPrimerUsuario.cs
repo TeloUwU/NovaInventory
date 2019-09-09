@@ -39,30 +39,16 @@ namespace NovaInventory.Vista
                     txtConfClave.Text = Validaciones.md5(txtConfClave.Text);
                     txtClave.Text = Validaciones.md5(txtClave.Text);
 
-                    int usu = 1;
-                    constructor_de_respuestas res = new constructor_de_respuestas();
-                    constructor_de_respuestas res2 = new constructor_de_respuestas();
-                    constructor_de_respuestas res3 = new constructor_de_respuestas();
-                    constructor_de_respuestas res4 = new constructor_de_respuestas();
-                    res.Respuesta = txtRespuesta1.Text;
-                    res.preguntas = Convert.ToInt32(cmbPregunta1.SelectedIndex.ToString());
-                    res.usuarioss = usu;
-                    res2.Respuesta = txtRespuesta2.Text;
-                    res2.preguntas = Convert.ToInt32(cmbPregunta2.SelectedIndex.ToString());
-                    res2.usuarioss = usu;
-                    res3.Respuesta = textBox1.Text;
-                    res3.preguntas = Convert.ToInt32(cmbPregunta3.SelectedIndex.ToString());
-                    res3.usuarioss = usu;
-                    res4.Respuesta = textBox2.Text;
-                    res4.preguntas = Convert.ToInt32(cmbPregunta4.SelectedIndex.ToString());
-                    res4.usuarioss = usu;
+                   
+            
+
                     constructor_primer_usuario usuario = new constructor_primer_usuario();
                     usuario.usuario = txtUsuario.Text;
                     usuario.nombre_usuario = txtNombres.Text;
                     usuario.apellido_usuario = txtApellidos.Text;
                     usuario.contraseña_usuario = txtClave.Text;
                     usuario.Correo = txtEmail.Text;
-                    usuario.nit = maskDui.Text;
+                    usuario.dui = maskDui.Text;
                     usuario.telefono = txt_cel.Text;
                     usuario.fecha_de_nacimiento = dtNacimiento.Text;
                     string intentos = "0";
@@ -76,6 +62,25 @@ namespace NovaInventory.Vista
                     string imagen = Convert.ToBase64String(aByte);
                     usuario.Foto_usuario = imagen;
                     int retorno = control_usuario.registro_usuario(usuario);
+                    int usu = 1;
+
+                    constructor_de_respuestas res = new constructor_de_respuestas();
+                    constructor_de_respuestas res2 = new constructor_de_respuestas();
+                    constructor_de_respuestas res3 = new constructor_de_respuestas();
+                    constructor_de_respuestas res4 = new constructor_de_respuestas();
+
+                    res.Respuesta = txtRespuesta1.Text;
+                    res.preguntas = Convert.ToInt32(cmbPregunta1.SelectedIndex.ToString());
+                    res.usuarioss = usu;
+                    res2.Respuesta = txtRespuesta2.Text;
+                    res2.preguntas = Convert.ToInt32(cmbPregunta2.SelectedIndex.ToString());
+                    res2.usuarioss = usu;
+                    res3.Respuesta = textBox1.Text;
+                    res3.preguntas = Convert.ToInt32(cmbPregunta3.SelectedIndex.ToString());
+                    res3.usuarioss = usu;
+                    res4.Respuesta = textBox2.Text;
+                    res4.preguntas = Convert.ToInt32(cmbPregunta4.SelectedIndex.ToString());
+                    res4.usuarioss = usu;
                     int retornar = preguntas_y_respuestas.agregar_re(res);
                     int retorna = preguntas_y_respuestas.agregar_re(res2);
                     int retornara = preguntas_y_respuestas.agregar_re(res3);
