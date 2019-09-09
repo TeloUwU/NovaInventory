@@ -90,7 +90,7 @@
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(34, 196);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(162, 53);
             this.btnAgregar.TabIndex = 8;
@@ -102,18 +102,19 @@
             // 
             this.btnVer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVer.Location = new System.Drawing.Point(218, 196);
-            this.btnVer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVer.Margin = new System.Windows.Forms.Padding(2);
             this.btnVer.Name = "btnVer";
             this.btnVer.Size = new System.Drawing.Size(162, 53);
             this.btnVer.TabIndex = 9;
             this.btnVer.Text = "Ver Proveedor";
             this.btnVer.UseVisualStyleBackColor = true;
+            this.btnVer.Click += new System.EventHandler(this.btnVer_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(404, 196);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(162, 53);
             this.btnModificar.TabIndex = 10;
@@ -125,17 +126,18 @@
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(588, 196);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(162, 53);
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar Proveedor";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtdireccion
             // 
             this.txtdireccion.Location = new System.Drawing.Point(545, 61);
-            this.txtdireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtdireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtdireccion.Multiline = true;
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(216, 111);
@@ -144,7 +146,7 @@
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(21, 61);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(216, 20);
             this.txtnombre.TabIndex = 1;
@@ -152,7 +154,7 @@
             // txtid_proveedor
             // 
             this.txtid_proveedor.Location = new System.Drawing.Point(749, 24);
-            this.txtid_proveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtid_proveedor.Margin = new System.Windows.Forms.Padding(2);
             this.txtid_proveedor.Name = "txtid_proveedor";
             this.txtid_proveedor.Size = new System.Drawing.Size(26, 20);
             this.txtid_proveedor.TabIndex = 8;
@@ -161,7 +163,7 @@
             // txtRubro
             // 
             this.txtRubro.Location = new System.Drawing.Point(21, 107);
-            this.txtRubro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRubro.Margin = new System.Windows.Forms.Padding(2);
             this.txtRubro.Name = "txtRubro";
             this.txtRubro.Size = new System.Drawing.Size(216, 20);
             this.txtRubro.TabIndex = 2;
@@ -171,7 +173,7 @@
             this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Location = new System.Drawing.Point(289, 107);
-            this.cbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEstado.Margin = new System.Windows.Forms.Padding(2);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(216, 21);
             this.cbEstado.TabIndex = 5;
@@ -179,7 +181,7 @@
             // txtNIt
             // 
             this.txtNIt.Location = new System.Drawing.Point(289, 61);
-            this.txtNIt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNIt.Margin = new System.Windows.Forms.Padding(2);
             this.txtNIt.Mask = "0000-000000-000-0";
             this.txtNIt.Name = "txtNIt";
             this.txtNIt.Size = new System.Drawing.Size(216, 20);
@@ -188,7 +190,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(21, 154);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Mask = "0000-0000";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(216, 20);
@@ -264,11 +266,12 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(23, 266);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(740, 254);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // frmProveedores
             // 
@@ -295,7 +298,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmProveedores";
             this.Text = "frmProveedores";
             this.Load += new System.EventHandler(this.frmProveedores_Load);
