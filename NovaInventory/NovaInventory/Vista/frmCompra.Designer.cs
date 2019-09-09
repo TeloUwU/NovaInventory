@@ -277,6 +277,7 @@
             this.txtNum_factura.Name = "txtNum_factura";
             this.txtNum_factura.Size = new System.Drawing.Size(121, 22);
             this.txtNum_factura.TabIndex = 0;
+            this.txtNum_factura.Text = "000001";
             // 
             // label9
             // 

@@ -25,7 +25,7 @@ namespace NovaInventory.Modelo
                 if (retorno == true)
                 {
                     int estado = 1;
-                    string query2 = "SELECT * FROM tbusuarios WHERE nickname = ?user AND contraseña_usuario = ?pass AND id_estados = ?state";
+                    string query2 = "SELECT * FROM tbusuarios WHERE nickname = ?user AND contraseña_usuario = ?pass AND id_estaado = ?state";
                     MySqlCommand cmdselect2 = new MySqlCommand(query2, Conexion.obtenerconexion());
                     cmdselect2.Parameters.Add(new MySqlParameter("user", Constructor_login.usuario));
                     cmdselect2.Parameters.Add(new MySqlParameter("pass", log.clave));
