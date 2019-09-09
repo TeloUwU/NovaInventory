@@ -30,21 +30,25 @@ namespace NovaInventory.Vista
                Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
                Constructor_login.usuario = txtUsuario.Text;
                 login.clave = txtContraseña.Text;
-                    /* Validaciones.md5( txtContraseña.Text);*/
+                   txtContraseña.Text= Validaciones.md5( txtContraseña.Text);
                 bool datos = validar_login.acceso(login);
                 if (datos == true)
                 {
-                    //if (txtContraseña.Text== "123456")
-                    //{
-
-                    //}
-                    //else
-                    //{
+                    DateTime hoy = DateTime.Today;
+                    int year = hoy.Year;
+                    if (txtContraseña.Text == txtUsuario.Text + year)
+                    {
+                        FrmPrincipal main = new FrmPrincipal();
+                        main.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
                         FrmPrincipal main = new FrmPrincipal();
                         main.Show();
                         this.Hide();
                     
-                    //}
+                    }
                   
                 }
 
@@ -73,8 +77,10 @@ namespace NovaInventory.Vista
             {
                 pbLogo_Login.Enabled = false;
                 txtUsuario.Enabled = false;
+                btnIniciar_Sesion.Enabled = false;
                 txtContraseña.Enabled = false;
                 btnPrimer_Uso.Visible = true;
+                lklRecuperar_Contraseña.Enabled = false;
             }
         }
 
@@ -168,8 +174,10 @@ namespace NovaInventory.Vista
             {
                 pbLogo_Login.Enabled = false;
                 txtUsuario.Enabled = false;
+                btnIniciar_Sesion.Enabled = false;
                 txtContraseña.Enabled = false;
                 btnPrimer_Uso.Visible = true;
+                lklRecuperar_Contraseña.Enabled = false;
             }
         }
     }

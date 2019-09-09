@@ -29,7 +29,7 @@ namespace NovaInventory.Modelo
                 }
                 else
                 {
-                    MySqlCommand comandoAgregar = new MySqlCommand(string.Format("INSERT INTO tbusuarios(nickname, nombre_usuario, apellido_usuario, contraseña_usuario, telefono, Foto_usuario, Correo, nit, fecha_de_nacimiento, id_estados, id_tipo_usuarios, intentos, empresa)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", usu.usuario, usu.nombre_usuario, usu.apellido_usuario, usu.contraseña_usuario, usu.telefono, usu.Foto_usuario, usu.Correo, usu.nit, usu.fecha_de_nacimiento, usu.id_estados, usu.id_tipo_usuarios, usu.intentos, usu.empresa), Conexion.obtenerconexion());
+                    MySqlCommand comandoAgregar = new MySqlCommand(string.Format("INSERT INTO tbusuarios(nickname, nombre_usuario, apellido_usuario, contraseña_usuario, telefono, Foto_usuario, Correo, nit, fecha_de_nacimiento, id_estaado, id_tipo_usuarios, intentos, empresa)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')", usu.usuario, usu.nombre_usuario, usu.apellido_usuario, usu.contraseña_usuario, usu.telefono, usu.Foto_usuario, usu.Correo, usu.nit, usu.fecha_de_nacimiento, usu.id_estados, usu.id_tipo_usuarios, usu.intentos, usu.empresa), Conexion.obtenerconexion());
                     retorno = Convert.ToInt32(comandoAgregar.ExecuteNonQuery());
                     if (retorno >= 1)
                     {
@@ -68,7 +68,7 @@ namespace NovaInventory.Modelo
 
             try
             {
-                string query = "SELECT id_estado_usuario, CONCAT(Estado_usuario) AS Estado_usuario FROM estado_usuario";
+                string query = "SELECT id_estado, CONCAT(Estado) AS Estado FROM estado";
                 MySqlCommand mcdquery = new MySqlCommand(query, Conexion.obtenerconexion());
                 MySqlDataAdapter adaptar = new MySqlDataAdapter(mcdquery);
                 adaptar.Fill(datos);

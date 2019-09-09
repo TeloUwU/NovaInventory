@@ -14,6 +14,7 @@ namespace NovaInventory.Modelo
     {
         public static bool acceso(Constructor_login log)
         {
+            log.clave = Validaciones.md5(log.clave);
             bool retorno = false;
             string query = "SELECT * FROM tbusuarios WHERE nickname = ?user AND contraseña_usuario = ?pass";
             try
