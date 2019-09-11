@@ -22,7 +22,7 @@ namespace NovaInventory.Controlador
             int retorno = 0;
             try
             {
-                MySqlCommand comandoAgregar = new MySqlCommand(string.Format("INSERT INTO tbCompras (id_compra, id_proveedor, id_articulos, descripcion, Preciounitario, Precio_total, Cantidad, fecha_compra, id_usuario, tipo_de_pago, num_factura) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}',)", agregar.id_compra, agregar.id_proveedor, agregar.id_producto, agregar.descripcion, agregar.Preciounitario, agregar.Precio_Total, agregar.Cantidad, agregar.fecha_compra, agregar.id_usuario, agregar.tipo_pago, agregar.num_factura), Conexion.obtenerconexion());
+                MySqlCommand comandoAgregar = new MySqlCommand(string.Format("INSERT INTO tbCompras (id_compra, id_proveedor, id_articulos, descripcion, Preciounitario, Precio_total, Cantidad, fecha_compra, id_usuario, tipo_de_pago, num_factura) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')", agregar.id_compra, agregar.id_proveedor, agregar.id_producto, agregar.descripcion, agregar.Preciounitario, agregar.Precio_Total, agregar.Cantidad, agregar.fecha_compra, agregar.id_usuario, agregar.tipo_pago, agregar.num_factura), Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(comandoAgregar.ExecuteNonQuery());
                 if (retorno >= 0)
                 {
@@ -112,8 +112,28 @@ namespace NovaInventory.Controlador
             }
         }
 
+        public static DataTable Compras()
+        {
+            DataTable datos = new DataTable();
+            string query = "SELECT * FROM tbcompras;";
+            MySqlCommand cmdselect = new MySqlCommand(query, Conexion.obtenerconexion());
+            try
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(datos);
+                return datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Err los datos no pudieron ser obtenidos, consulte con el Tecnico" + ex, "Error Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datos;
+            }
+            finally
+            {
+                Conexion.obtenerconexion().Close();
+            }
+        }
 
-        
     }
 }
  

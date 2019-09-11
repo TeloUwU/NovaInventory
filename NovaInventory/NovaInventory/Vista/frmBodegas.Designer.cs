@@ -186,11 +186,11 @@
             // 
             // cbEstado
             // 
-            this.cbAltaOBaja.FormattingEnabled = true;
-            this.cbAltaOBaja.Location = new System.Drawing.Point(397, 172);
-            this.cbAltaOBaja.Name = "cbAltaOBaja";
-            this.cbAltaOBaja.Size = new System.Drawing.Size(233, 24);
-            this.cbAltaOBaja.TabIndex = 4;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(397, 172);
+            this.cbEstado.Name = "cbAltaOBaja";
+            this.cbEstado.Size = new System.Drawing.Size(233, 24);
+            this.cbEstado.TabIndex = 4;
             // 
             // label5
             // 

@@ -215,5 +215,10 @@ namespace NovaInventory.Vista
         {
             AbrirFormulario<frmProveedores>();
         }
+
+        private void ingresarNuevoProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCompra>();
+        }
     }
 }

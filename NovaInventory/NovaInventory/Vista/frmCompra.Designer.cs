@@ -59,6 +59,11 @@
             this.dtpRealización_Compra = new System.Windows.Forms.DateTimePicker();
             this.txtid_usuario = new System.Windows.Forms.TextBox();
             this.cbTipo_Pago = new System.Windows.Forms.ComboBox();
+            this.txtid_proveedor = new System.Windows.Forms.TextBox();
+            this.txtid_producto = new System.Windows.Forms.TextBox();
+            this.txtid_tipopago = new System.Windows.Forms.TextBox();
+            this.txtid_modelo = new System.Windows.Forms.TextBox();
+            this.txtid_articulo = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
@@ -215,6 +220,7 @@
             this.dgvCompras.RowTemplate.Height = 24;
             this.dgvCompras.Size = new System.Drawing.Size(980, 299);
             this.dgvCompras.TabIndex = 10;
+            this.dgvCompras.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCompras_CellClick);
             // 
             // btnMostrar
             // 
@@ -224,6 +230,7 @@
             this.btnMostrar.TabIndex = 12;
             this.btnMostrar.Text = "Mostrar Compras";
             this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // btnActualizar_Compra
             // 
@@ -304,7 +311,6 @@
             this.txtid_Compra.Size = new System.Drawing.Size(27, 22);
             this.txtid_Compra.TabIndex = 0;
             this.txtid_Compra.Text = " ";
-            this.txtid_Compra.Visible = false;
             // 
             // dtpRealización_Compra
             // 
@@ -314,7 +320,6 @@
             this.dtpRealización_Compra.Name = "dtpRealización_Compra";
             this.dtpRealización_Compra.Size = new System.Drawing.Size(117, 22);
             this.dtpRealización_Compra.TabIndex = 0;
-            this.dtpRealización_Compra.Visible = false;
             // 
             // txtid_usuario
             // 
@@ -322,7 +327,6 @@
             this.txtid_usuario.Name = "txtid_usuario";
             this.txtid_usuario.Size = new System.Drawing.Size(26, 22);
             this.txtid_usuario.TabIndex = 0;
-            this.txtid_usuario.Visible = false;
             // 
             // cbTipo_Pago
             // 
@@ -333,11 +337,51 @@
             this.cbTipo_Pago.Size = new System.Drawing.Size(121, 24);
             this.cbTipo_Pago.TabIndex = 4;
             // 
+            // txtid_proveedor
+            // 
+            this.txtid_proveedor.Location = new System.Drawing.Point(22, 35);
+            this.txtid_proveedor.Name = "txtid_proveedor";
+            this.txtid_proveedor.Size = new System.Drawing.Size(24, 22);
+            this.txtid_proveedor.TabIndex = 19;
+            // 
+            // txtid_producto
+            // 
+            this.txtid_producto.Location = new System.Drawing.Point(174, 32);
+            this.txtid_producto.Name = "txtid_producto";
+            this.txtid_producto.Size = new System.Drawing.Size(28, 22);
+            this.txtid_producto.TabIndex = 20;
+            // 
+            // txtid_tipopago
+            // 
+            this.txtid_tipopago.Location = new System.Drawing.Point(490, 30);
+            this.txtid_tipopago.Name = "txtid_tipopago";
+            this.txtid_tipopago.Size = new System.Drawing.Size(28, 22);
+            this.txtid_tipopago.TabIndex = 21;
+            // 
+            // txtid_modelo
+            // 
+            this.txtid_modelo.Location = new System.Drawing.Point(330, 30);
+            this.txtid_modelo.Name = "txtid_modelo";
+            this.txtid_modelo.Size = new System.Drawing.Size(31, 22);
+            this.txtid_modelo.TabIndex = 22;
+            // 
+            // txtid_articulo
+            // 
+            this.txtid_articulo.Location = new System.Drawing.Point(764, 35);
+            this.txtid_articulo.Name = "txtid_articulo";
+            this.txtid_articulo.Size = new System.Drawing.Size(20, 22);
+            this.txtid_articulo.TabIndex = 23;
+            // 
             // frmCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 665);
+            this.Controls.Add(this.txtid_articulo);
+            this.Controls.Add(this.txtid_modelo);
+            this.Controls.Add(this.txtid_tipopago);
+            this.Controls.Add(this.txtid_producto);
+            this.Controls.Add(this.txtid_proveedor);
             this.Controls.Add(this.cbTipo_Pago);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtid_usuario);
@@ -411,5 +455,10 @@
         private System.Windows.Forms.DateTimePicker dtpRealización_Compra;
         private System.Windows.Forms.TextBox txtid_usuario;
         private System.Windows.Forms.ComboBox cbTipo_Pago;
+        private System.Windows.Forms.TextBox txtid_proveedor;
+        private System.Windows.Forms.TextBox txtid_producto;
+        private System.Windows.Forms.TextBox txtid_tipopago;
+        private System.Windows.Forms.TextBox txtid_modelo;
+        private System.Windows.Forms.TextBox txtid_articulo;
     }
 }
