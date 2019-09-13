@@ -42,6 +42,12 @@ namespace NovaInventory.Vista
         {
             dgvCompras.DataSource = crudCompra.Compras();
             dgvCompras.Columns[0].Visible = false;
+            dgvCompras.Columns[5].HeaderText = "Precio Unitario";
+            dgvCompras.Columns[6].HeaderText = "Precio Total";
+            dgvCompras.Columns[8].HeaderText = "Fecha de Compra";
+            dgvCompras.Columns[9].HeaderText = "Usuario Comprador";
+            dgvCompras.Columns[10].HeaderText = "Tipo de Pago";
+            dgvCompras.Columns[11].HeaderText = "Numero de Factura";
             if (dgvCompras.DataSource == null)
             {
                 MessageBox.Show("No hay datos para mostrar :/", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);

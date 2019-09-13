@@ -101,8 +101,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 57);
+            this.label1.Location = new System.Drawing.Point(34, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 1;
@@ -110,8 +111,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(331, 57);
+            this.label2.Location = new System.Drawing.Point(346, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 2;
@@ -119,8 +121,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(171, 57);
+            this.label4.Location = new System.Drawing.Point(186, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 4;
@@ -128,8 +131,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 120);
+            this.label5.Location = new System.Drawing.Point(34, 128);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 17);
             this.label5.TabIndex = 5;
@@ -137,8 +141,9 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(171, 120);
+            this.label6.Location = new System.Drawing.Point(186, 128);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 17);
             this.label6.TabIndex = 6;
@@ -146,8 +151,9 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(327, 120);
+            this.label7.Location = new System.Drawing.Point(342, 128);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 17);
             this.label7.TabIndex = 7;
@@ -155,7 +161,8 @@
             // 
             // txtPrecio_Unitario
             // 
-            this.txtPrecio_Unitario.Location = new System.Drawing.Point(174, 140);
+            this.txtPrecio_Unitario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtPrecio_Unitario.Location = new System.Drawing.Point(189, 148);
             this.txtPrecio_Unitario.Name = "txtPrecio_Unitario";
             this.txtPrecio_Unitario.Size = new System.Drawing.Size(121, 22);
             this.txtPrecio_Unitario.TabIndex = 6;
@@ -163,8 +170,9 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(330, 140);
+            this.txtTotal.Location = new System.Drawing.Point(345, 148);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(121, 22);
             this.txtTotal.TabIndex = 7;
@@ -172,18 +180,20 @@
             // 
             // cbProveedor_Compra
             // 
+            this.cbProveedor_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbProveedor_Compra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProveedor_Compra.FormattingEnabled = true;
-            this.cbProveedor_Compra.Location = new System.Drawing.Point(22, 77);
+            this.cbProveedor_Compra.Location = new System.Drawing.Point(37, 85);
             this.cbProveedor_Compra.Name = "cbProveedor_Compra";
             this.cbProveedor_Compra.Size = new System.Drawing.Size(121, 24);
             this.cbProveedor_Compra.TabIndex = 1;
             // 
             // cbProducto_Compra
             // 
+            this.cbProducto_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbProducto_Compra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProducto_Compra.FormattingEnabled = true;
-            this.cbProducto_Compra.Location = new System.Drawing.Point(174, 77);
+            this.cbProducto_Compra.Location = new System.Drawing.Point(189, 85);
             this.cbProducto_Compra.Name = "cbProducto_Compra";
             this.cbProducto_Compra.Size = new System.Drawing.Size(121, 24);
             this.cbProducto_Compra.TabIndex = 2;
@@ -191,16 +201,18 @@
             // 
             // cbModelo_Compra
             // 
+            this.cbModelo_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbModelo_Compra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbModelo_Compra.FormattingEnabled = true;
-            this.cbModelo_Compra.Location = new System.Drawing.Point(334, 77);
+            this.cbModelo_Compra.Location = new System.Drawing.Point(349, 85);
             this.cbModelo_Compra.Name = "cbModelo_Compra";
             this.cbModelo_Compra.Size = new System.Drawing.Size(121, 24);
             this.cbModelo_Compra.TabIndex = 3;
             // 
             // nUDCantidad
             // 
-            this.nUDCantidad.Location = new System.Drawing.Point(22, 140);
+            this.nUDCantidad.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.nUDCantidad.Location = new System.Drawing.Point(37, 148);
             this.nUDCantidad.Name = "nUDCantidad";
             this.nUDCantidad.Size = new System.Drawing.Size(121, 22);
             this.nUDCantidad.TabIndex = 5;
@@ -208,12 +220,14 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(721, 77);
+            this.monthCalendar1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.monthCalendar1.Location = new System.Drawing.Point(736, 77);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
             // 
             // dgvCompras
             // 
+            this.dgvCompras.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompras.Location = new System.Drawing.Point(31, 333);
             this.dgvCompras.Name = "dgvCompras";
@@ -224,7 +238,8 @@
             // 
             // btnMostrar
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(211, 239);
+            this.btnMostrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnMostrar.Location = new System.Drawing.Point(226, 247);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(130, 45);
             this.btnMostrar.TabIndex = 12;
@@ -234,7 +249,8 @@
             // 
             // btnActualizar_Compra
             // 
-            this.btnActualizar_Compra.Location = new System.Drawing.Point(367, 239);
+            this.btnActualizar_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnActualizar_Compra.Location = new System.Drawing.Point(382, 247);
             this.btnActualizar_Compra.Name = "btnActualizar_Compra";
             this.btnActualizar_Compra.Size = new System.Drawing.Size(141, 45);
             this.btnActualizar_Compra.TabIndex = 13;
@@ -243,7 +259,8 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(539, 239);
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button4.Location = new System.Drawing.Point(554, 247);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(130, 45);
             this.button4.TabIndex = 14;
@@ -252,7 +269,8 @@
             // 
             // btnAgregarCompra
             // 
-            this.btnAgregarCompra.Location = new System.Drawing.Point(45, 239);
+            this.btnAgregarCompra.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAgregarCompra.Location = new System.Drawing.Point(60, 247);
             this.btnAgregarCompra.Name = "btnAgregarCompra";
             this.btnAgregarCompra.Size = new System.Drawing.Size(130, 45);
             this.btnAgregarCompra.TabIndex = 11;
@@ -262,7 +280,8 @@
             // 
             // txtDescripción
             // 
-            this.txtDescripción.Location = new System.Drawing.Point(490, 140);
+            this.txtDescripción.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDescripción.Location = new System.Drawing.Point(505, 148);
             this.txtDescripción.Multiline = true;
             this.txtDescripción.Name = "txtDescripción";
             this.txtDescripción.Size = new System.Drawing.Size(205, 78);
@@ -270,8 +289,9 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(487, 120);
+            this.label8.Location = new System.Drawing.Point(502, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 17);
             this.label8.TabIndex = 15;
@@ -279,8 +299,9 @@
             // 
             // txtNum_factura
             // 
+            this.txtNum_factura.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNum_factura.Enabled = false;
-            this.txtNum_factura.Location = new System.Drawing.Point(22, 198);
+            this.txtNum_factura.Location = new System.Drawing.Point(37, 206);
             this.txtNum_factura.Name = "txtNum_factura";
             this.txtNum_factura.Size = new System.Drawing.Size(121, 22);
             this.txtNum_factura.TabIndex = 0;
@@ -288,8 +309,9 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(19, 178);
+            this.label9.Location = new System.Drawing.Point(34, 186);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(130, 17);
             this.label9.TabIndex = 17;
@@ -297,8 +319,9 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(487, 57);
+            this.label10.Location = new System.Drawing.Point(502, 65);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(93, 17);
             this.label10.TabIndex = 18;
@@ -306,71 +329,88 @@
             // 
             // txtid_Compra
             // 
+            this.txtid_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtid_Compra.Location = new System.Drawing.Point(963, 33);
             this.txtid_Compra.Name = "txtid_Compra";
             this.txtid_Compra.Size = new System.Drawing.Size(27, 22);
             this.txtid_Compra.TabIndex = 0;
             this.txtid_Compra.Text = " ";
+            this.txtid_Compra.Visible = false;
             // 
             // dtpRealización_Compra
             // 
+            this.dtpRealización_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpRealización_Compra.CustomFormat = "yyyy-MM-dd";
             this.dtpRealización_Compra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpRealización_Compra.Location = new System.Drawing.Point(808, 33);
             this.dtpRealización_Compra.Name = "dtpRealización_Compra";
             this.dtpRealización_Compra.Size = new System.Drawing.Size(117, 22);
             this.dtpRealización_Compra.TabIndex = 0;
+            this.dtpRealización_Compra.Visible = false;
             // 
             // txtid_usuario
             // 
+            this.txtid_usuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtid_usuario.Location = new System.Drawing.Point(931, 33);
             this.txtid_usuario.Name = "txtid_usuario";
             this.txtid_usuario.Size = new System.Drawing.Size(26, 22);
             this.txtid_usuario.TabIndex = 0;
+            this.txtid_usuario.Visible = false;
             // 
             // cbTipo_Pago
             // 
+            this.cbTipo_Pago.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbTipo_Pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipo_Pago.FormattingEnabled = true;
-            this.cbTipo_Pago.Location = new System.Drawing.Point(490, 77);
+            this.cbTipo_Pago.Location = new System.Drawing.Point(505, 85);
             this.cbTipo_Pago.Name = "cbTipo_Pago";
             this.cbTipo_Pago.Size = new System.Drawing.Size(121, 24);
             this.cbTipo_Pago.TabIndex = 4;
             // 
             // txtid_proveedor
             // 
+            this.txtid_proveedor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtid_proveedor.Location = new System.Drawing.Point(22, 35);
             this.txtid_proveedor.Name = "txtid_proveedor";
             this.txtid_proveedor.Size = new System.Drawing.Size(24, 22);
             this.txtid_proveedor.TabIndex = 19;
+            this.txtid_proveedor.Visible = false;
             // 
             // txtid_producto
             // 
+            this.txtid_producto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtid_producto.Location = new System.Drawing.Point(174, 32);
             this.txtid_producto.Name = "txtid_producto";
             this.txtid_producto.Size = new System.Drawing.Size(28, 22);
             this.txtid_producto.TabIndex = 20;
+            this.txtid_producto.Visible = false;
             // 
             // txtid_tipopago
             // 
+            this.txtid_tipopago.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtid_tipopago.Location = new System.Drawing.Point(490, 30);
             this.txtid_tipopago.Name = "txtid_tipopago";
             this.txtid_tipopago.Size = new System.Drawing.Size(28, 22);
             this.txtid_tipopago.TabIndex = 21;
+            this.txtid_tipopago.Visible = false;
             // 
             // txtid_modelo
             // 
+            this.txtid_modelo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtid_modelo.Location = new System.Drawing.Point(330, 30);
             this.txtid_modelo.Name = "txtid_modelo";
             this.txtid_modelo.Size = new System.Drawing.Size(31, 22);
             this.txtid_modelo.TabIndex = 22;
+            this.txtid_modelo.Visible = false;
             // 
             // txtid_articulo
             // 
+            this.txtid_articulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtid_articulo.Location = new System.Drawing.Point(764, 35);
             this.txtid_articulo.Name = "txtid_articulo";
             this.txtid_articulo.Size = new System.Drawing.Size(20, 22);
             this.txtid_articulo.TabIndex = 23;
+            this.txtid_articulo.Visible = false;
             // 
             // frmCompra
             // 
