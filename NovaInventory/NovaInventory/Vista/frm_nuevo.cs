@@ -24,7 +24,7 @@ namespace NovaInventory.Vista
         constructor_primer_usuario act = new constructor_primer_usuario();
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro que de la contraseña ingresada?","Pregunta",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            if (MessageBox.Show("¿Estas seguro de la contraseña ingresada?","Pregunta",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
             {
                 if (string.IsNullOrWhiteSpace(txt_cont.Text)||string.IsNullOrWhiteSpace(txt_contf.Text))
                 {

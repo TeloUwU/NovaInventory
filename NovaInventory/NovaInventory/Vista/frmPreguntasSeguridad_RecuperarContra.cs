@@ -23,7 +23,7 @@ namespace NovaInventory.Vista
             InitializeComponent();
         }
 
-        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = db_novainventory_25");
+        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root;    = ; Database = db_novainventory_25");
         MySqlCommand cmd = new MySqlCommand();
 
         private void toolStripButton1_Click(object sender, EventArgs e)

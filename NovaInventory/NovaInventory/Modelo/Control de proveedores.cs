@@ -19,7 +19,7 @@ namespace NovaInventory.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbproveedor(nombre, direccion, telefono, nit, rubro, id_estados) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", add.nombre, add.direccion, add.telefono, add.nit, add.rubro, add.id_estados),Conexion.obtenerconexion());
+                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbproveedor(nombre, direccion, telefono, nit, rubro, id_estados, Creado_por) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", add.nombre, add.direccion, add.telefono, add.nit, add.rubro, add.id_estados, add.Creado_por),Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(cmdagregar.ExecuteNonQuery());
                 if (retorno > 0)
                 {

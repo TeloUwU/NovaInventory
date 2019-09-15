@@ -24,6 +24,7 @@ namespace NovaInventory.Vista
             button5.Enabled = false;
             button6.Enabled = false;
             button7.Enabled = true;
+            administraciónToolStripMenuItem.Enabled = true;
         }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
@@ -196,7 +197,7 @@ namespace NovaInventory.Vista
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmCompra>();
+             AbrirFormulario<frmCompra>();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -214,6 +215,16 @@ namespace NovaInventory.Vista
         private void agregarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmProveedores>();
+        }
+
+        private void agregarBodegaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmBodegas>();
+        }
+
+        private void btn_usuarios_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

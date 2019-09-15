@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBodegas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -40,19 +40,19 @@
             this.txtNombre_Bodega = new System.Windows.Forms.TextBox();
             this.txtCodigo_Bodega = new System.Windows.Forms.TextBox();
             this.txtDirección = new System.Windows.Forms.TextBox();
-            this.dtpAltaBaja = new System.Windows.Forms.DateTimePicker();
             this.cbEstado_Bodega = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dgvBodegas = new System.Windows.Forms.DataGridView();
             this.dtpBodegaCreación = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fecha = new System.Windows.Forms.Label();
+            this.txt_creado_por = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBodegas)).BeginInit();
             this.SuspendLayout();
@@ -88,12 +88,13 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(141, 24);
             this.toolStripButton2.Text = "Cerrar Formulario";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(531, 38);
+            this.label1.Location = new System.Drawing.Point(554, 57);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 19);
@@ -127,25 +128,17 @@
             // 
             // txtDirección
             // 
-            this.txtDirección.Location = new System.Drawing.Point(534, 70);
+            this.txtDirección.Location = new System.Drawing.Point(546, 84);
             this.txtDirección.Margin = new System.Windows.Forms.Padding(2);
             this.txtDirección.Multiline = true;
             this.txtDirección.Name = "txtDirección";
-            this.txtDirección.Size = new System.Drawing.Size(176, 90);
+            this.txtDirección.Size = new System.Drawing.Size(200, 76);
             this.txtDirección.TabIndex = 5;
-            // 
-            // dtpAltaBaja
-            // 
-            this.dtpAltaBaja.Location = new System.Drawing.Point(715, 27);
-            this.dtpAltaBaja.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpAltaBaja.Name = "dtpAltaBaja";
-            this.dtpAltaBaja.Size = new System.Drawing.Size(40, 20);
-            this.dtpAltaBaja.TabIndex = 0;
             // 
             // cbEstado_Bodega
             // 
             this.cbEstado_Bodega.FormattingEnabled = true;
-            this.cbEstado_Bodega.Location = new System.Drawing.Point(298, 70);
+            this.cbEstado_Bodega.Location = new System.Drawing.Point(287, 70);
             this.cbEstado_Bodega.Margin = new System.Windows.Forms.Padding(2);
             this.cbEstado_Bodega.Name = "cbEstado_Bodega";
             this.cbEstado_Bodega.Size = new System.Drawing.Size(176, 21);
@@ -166,7 +159,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(295, 38);
+            this.label3.Location = new System.Drawing.Point(284, 38);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 19);
@@ -184,28 +177,9 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Nombre";
             // 
-            // cbEstado
-            // 
-            this.cbAltaOBaja.FormattingEnabled = true;
-            this.cbAltaOBaja.Location = new System.Drawing.Point(397, 172);
-            this.cbAltaOBaja.Name = "cbAltaOBaja";
-            this.cbAltaOBaja.Size = new System.Drawing.Size(233, 24);
-            this.cbAltaOBaja.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(295, 110);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 24);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Estado";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(43, 182);
+            this.button1.Location = new System.Drawing.Point(59, 181);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 53);
@@ -216,7 +190,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(216, 182);
+            this.button2.Location = new System.Drawing.Point(232, 181);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(162, 53);
@@ -227,7 +201,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(391, 182);
+            this.button3.Location = new System.Drawing.Point(407, 181);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(162, 53);
@@ -238,7 +212,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(568, 182);
+            this.button4.Location = new System.Drawing.Point(584, 181);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(162, 53);
@@ -249,34 +223,34 @@
             // 
             // dgvBodegas
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBodegas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBodegas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvBodegas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBodegas.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBodegas.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvBodegas.Location = new System.Drawing.Point(20, 252);
             this.dgvBodegas.Margin = new System.Windows.Forms.Padding(2);
             this.dgvBodegas.Name = "dgvBodegas";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBodegas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBodegas.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvBodegas.RowTemplate.Height = 24;
             this.dgvBodegas.Size = new System.Drawing.Size(743, 266);
             this.dgvBodegas.TabIndex = 6;
@@ -291,23 +265,52 @@
             this.dtpBodegaCreación.TabIndex = 0;
             this.dtpBodegaCreación.Visible = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(614, 27);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(139, 20);
+            this.dateTimePicker1.TabIndex = 11;
+            // 
+            // fecha
+            // 
+            this.fecha.AutoSize = true;
+            this.fecha.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fecha.Location = new System.Drawing.Point(293, 110);
+            this.fecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(78, 19);
+            this.fecha.TabIndex = 12;
+            this.fecha.Text = "creado por";
+            // 
+            // txt_creado_por
+            // 
+            this.txt_creado_por.Enabled = false;
+            this.txt_creado_por.Location = new System.Drawing.Point(287, 140);
+            this.txt_creado_por.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_creado_por.Name = "txt_creado_por";
+            this.txt_creado_por.Size = new System.Drawing.Size(176, 20);
+            this.txt_creado_por.TabIndex = 13;
+            // 
             // frmBodegas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 540);
+            this.Controls.Add(this.txt_creado_por);
+            this.Controls.Add(this.fecha);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dgvBodegas);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbEstado_Bodega);
-            this.Controls.Add(this.dtpAltaBaja);
             this.Controls.Add(this.txtDirección);
             this.Controls.Add(this.txtCodigo_Bodega);
             this.Controls.Add(this.txtNombre_Bodega);
@@ -337,18 +340,18 @@
         private System.Windows.Forms.TextBox txtNombre_Bodega;
         private System.Windows.Forms.TextBox txtCodigo_Bodega;
         private System.Windows.Forms.TextBox txtDirección;
-        private System.Windows.Forms.DateTimePicker dtpAltaBaja;
         private System.Windows.Forms.ComboBox cbEstado_Bodega;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbEstado;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dgvBodegas;
         private System.Windows.Forms.DateTimePicker dtpBodegaCreación;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label fecha;
+        private System.Windows.Forms.TextBox txt_creado_por;
     }
 }

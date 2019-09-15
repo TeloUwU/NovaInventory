@@ -18,14 +18,17 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
-        Constructor_bodega agrega = new Constructor_bodega();
+       
+        string jj = Constructor_login.usuario;
         Constructor_bodega actu = new Constructor_bodega();
         void agre()
         {
+            Constructor_bodega agrega = new Constructor_bodega();
             agrega.codigo_bodega = txtCodigo_Bodega.Text;
             agrega.nombre_bodega = txtNombre_Bodega.Text;
             agrega.direccion = txtDirección.Text;
-            agrega.fecha_alta = dtpAltaBaja.Text;
+            agrega.fecha_alta = dateTimePicker1.Text;
+            agrega.creado_por = jj;
             agrega.id_estado = Convert.ToInt16(cbEstado_Bodega.SelectedValue.ToString());
             int retorno = control_de_bodega.agregar_usu(agrega);
         }
@@ -39,7 +42,7 @@ namespace NovaInventory.Vista
             actu.codigo_bodega = txtCodigo_Bodega.Text;
             actu.nombre_bodega = txtNombre_Bodega.Text;
             actu.direccion = txtDirección.Text;
-            actu.fecha_alta = dtpAltaBaja.Text;
+            actu.fecha_alta = dateTimePicker1.Text;
             actu.id_estado = Convert.ToInt16(cbEstado_Bodega.SelectedValue.ToString());
             control_de_bodega.actualizarusu(actu);
         }
@@ -67,7 +70,9 @@ namespace NovaInventory.Vista
         }
         private void frmBodegas_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Enabled = false;
             mostra();
+            txt_creado_por.Text = jj;
             cbEstado_Bodega.DataSource = control_de_bodega.cargar();
             cbEstado_Bodega.DisplayMember = "Estado";
             cbEstado_Bodega.ValueMember = "id_estado";
@@ -104,6 +109,13 @@ namespace NovaInventory.Vista
         private void dgvBodegas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             toca();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            FrmPrincipal no = new FrmPrincipal();
+            no.Show();
+            this.Hide();
         }
     }
 }

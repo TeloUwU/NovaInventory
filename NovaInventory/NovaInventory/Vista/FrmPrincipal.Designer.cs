@@ -41,7 +41,6 @@
             this.lblApellidos_Usuario = new System.Windows.Forms.Label();
             this.PanelSidebar = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.lblNivel = new System.Windows.Forms.Label();
@@ -58,13 +57,12 @@
             this.proveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarBodegaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioGeneralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.controlDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarNuevoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mostrarTodosLosProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelDeNavegaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficosYReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,6 +76,7 @@
             this.verCatalogoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button7 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
@@ -209,10 +208,10 @@
             // PanelSidebar
             // 
             this.PanelSidebar.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.PanelSidebar.Controls.Add(this.button1);
             this.PanelSidebar.Controls.Add(this.button7);
-            this.PanelSidebar.Controls.Add(this.button6);
             this.PanelSidebar.Controls.Add(this.button5);
+            this.PanelSidebar.Controls.Add(this.button6);
+            this.PanelSidebar.Controls.Add(this.button1);
             this.PanelSidebar.Controls.Add(this.lblNivel);
             this.PanelSidebar.Controls.Add(this.lblEstado);
             this.PanelSidebar.Controls.Add(this.pictureBox1);
@@ -234,19 +233,9 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(0, 378);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(236, 36);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "Generar Factura";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(0, 325);
+            this.button6.Location = new System.Drawing.Point(0, 308);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(236, 36);
             this.button6.TabIndex = 9;
@@ -256,7 +245,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(0, 273);
+            this.button5.Location = new System.Drawing.Point(0, 266);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(236, 36);
             this.button5.TabIndex = 8;
@@ -338,7 +327,9 @@
             this.buscarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buscarToolStripMenuItem1,
             this.agregarProductoToolStripMenuItem,
-            this.agregarProveedorToolStripMenuItem});
+            this.agregarProveedorToolStripMenuItem,
+            this.agregarBodegaToolStripMenuItem,
+            this.agregarProductosToolStripMenuItem});
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
             this.buscarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.buscarToolStripMenuItem.Text = "Editar";
@@ -384,6 +375,19 @@
             this.agregarProveedorToolStripMenuItem.Text = "Agregar Proveedor";
             this.agregarProveedorToolStripMenuItem.Click += new System.EventHandler(this.agregarProveedorToolStripMenuItem_Click);
             // 
+            // agregarBodegaToolStripMenuItem
+            // 
+            this.agregarBodegaToolStripMenuItem.Name = "agregarBodegaToolStripMenuItem";
+            this.agregarBodegaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.agregarBodegaToolStripMenuItem.Text = "Agregar Bodega";
+            this.agregarBodegaToolStripMenuItem.Click += new System.EventHandler(this.agregarBodegaToolStripMenuItem_Click);
+            // 
+            // agregarProductosToolStripMenuItem
+            // 
+            this.agregarProductosToolStripMenuItem.Name = "agregarProductosToolStripMenuItem";
+            this.agregarProductosToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.agregarProductosToolStripMenuItem.Text = "agregar productos";
+            // 
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -401,8 +405,7 @@
             // administraciónToolStripMenuItem
             // 
             this.administraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.controlDeUsuariosToolStripMenuItem,
-            this.controlDeProductosToolStripMenuItem});
+            this.controlDeUsuariosToolStripMenuItem});
             this.administraciónToolStripMenuItem.Name = "administraciónToolStripMenuItem";
             this.administraciónToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.administraciónToolStripMenuItem.Text = "Administración";
@@ -413,27 +416,6 @@
             this.controlDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.controlDeUsuariosToolStripMenuItem.Text = "Control de usuarios";
             this.controlDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.controlDeUsuariosToolStripMenuItem_Click);
-            // 
-            // controlDeProductosToolStripMenuItem
-            // 
-            this.controlDeProductosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarNuevoProductoToolStripMenuItem,
-            this.mostrarTodosLosProductosToolStripMenuItem});
-            this.controlDeProductosToolStripMenuItem.Name = "controlDeProductosToolStripMenuItem";
-            this.controlDeProductosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.controlDeProductosToolStripMenuItem.Text = "Productos";
-            // 
-            // ingresarNuevoProductoToolStripMenuItem
-            // 
-            this.ingresarNuevoProductoToolStripMenuItem.Name = "ingresarNuevoProductoToolStripMenuItem";
-            this.ingresarNuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.ingresarNuevoProductoToolStripMenuItem.Text = "Ingresar nuevo producto";
-            // 
-            // mostrarTodosLosProductosToolStripMenuItem
-            // 
-            this.mostrarTodosLosProductosToolStripMenuItem.Name = "mostrarTodosLosProductosToolStripMenuItem";
-            this.mostrarTodosLosProductosToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.mostrarTodosLosProductosToolStripMenuItem.Text = "Mostrar Inventario";
             // 
             // verToolStripMenuItem
             // 
@@ -531,6 +513,15 @@
             this.nuevaCompraToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.nuevaCompraToolStripMenuItem.Text = "Nueva Compra";
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(0, 350);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(236, 36);
+            this.button7.TabIndex = 18;
+            this.button7.Text = "Generar Factura";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -580,7 +571,6 @@
         private System.Windows.Forms.ToolStripMenuItem inventarioGeneralToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administraciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controlDeUsuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem controlDeProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem panelDeNavegaciónToolStripMenuItem;
         private System.Windows.Forms.Panel PanelContenedor;
@@ -595,8 +585,6 @@
         private System.Windows.Forms.ToolStripMenuItem gráficosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem ingresarNuevoProductoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mostrarTodosLosProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verCatalogoDeFacturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaVentaToolStripMenuItem;
@@ -612,7 +600,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblNivel;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem agregarBodegaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarProductosToolStripMenuItem;
+        private System.Windows.Forms.Button button7;
     }
 }

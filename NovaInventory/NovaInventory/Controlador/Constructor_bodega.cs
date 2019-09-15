@@ -14,5 +14,6 @@ namespace NovaInventory.Controlador
         public string direccion { get; set; }
         public string fecha_alta { get; set; }
         public int id_estado { get; set; }
+        public string creado_por { get; set; }
     }
 }

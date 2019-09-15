@@ -15,6 +15,7 @@ namespace NovaInventory.Vista
     public partial class frmProveedores : Form
 
     {
+        string uno = Constructor_login.nombre;
         Constructor_proveedor agre = new Constructor_proveedor();
         Constructor_proveedor act = new Constructor_proveedor();
         public frmProveedores()
@@ -29,6 +30,7 @@ namespace NovaInventory.Vista
             agre.id_estados = Convert.ToInt16(cbEstado.SelectedValue.ToString());
             agre.telefono = txtTelefono.Text;
             agre.direccion = txtdireccion.Text;
+            agre.Creado_por = uno;
             int retorno = Control_de_proveedores.agregar_usu(agre);
         }
         void limpro()
@@ -77,6 +79,8 @@ namespace NovaInventory.Vista
         }
         private void frmProveedores_Load(object sender, EventArgs e)
         {
+            
+            cbEstado.Enabled = false;
             mostrar();
             cbEstado.DataSource = Control_de_proveedores.cargar();
             cbEstado.DisplayMember = "Estado";

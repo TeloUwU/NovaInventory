@@ -18,7 +18,7 @@ namespace NovaInventory.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbbodega(codigo_bodega, nombre_bodega, direccion, fecha_alta, id_estado) VALUES ('{0}','{1}','{2}','{3}','{4}')", add.codigo_bodega, add.nombre_bodega, add.direccion, add.fecha_alta, add.id_estado), Conexion.obtenerconexion());
+                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbbodega(codigo_bodega, nombre_bodega, direccion, fecha_alta, id_estado, creado_por) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", add.codigo_bodega, add.nombre_bodega, add.direccion, add.fecha_alta, add.id_estado, add.creado_por), Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(cmdagregar.ExecuteNonQuery());
                 if (retorno > 0)
                 {
@@ -31,8 +31,8 @@ namespace NovaInventory.Modelo
                 MessageBox.Show("Se a dectectado un problema en la base de datos, puede que este en reparaciones. Si el error perciste porfavor comuniquese con el  programador" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return retorno;
             }
-
         }
+
         public static DataTable mostrar_pro()
         {
             DataTable datos;
@@ -51,6 +51,7 @@ namespace NovaInventory.Modelo
                 return datos = new DataTable();
             }
         }
+
         public static bool actualizarusu(Constructor_bodega upt)
         {
             bool retorno = false;
@@ -120,7 +121,8 @@ namespace NovaInventory.Modelo
             {
                 MessageBox.Show("oops, no se pudieron cargar los datos de la base de datos porfavor comunicarse con el programador" + ex, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return datos;
-            }
-        }
+            }     
+    }
+
     }
 }
