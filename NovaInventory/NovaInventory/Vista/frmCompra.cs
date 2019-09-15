@@ -17,6 +17,8 @@ namespace NovaInventory.Vista
     {
 
         constructor_Compra agregar = new constructor_Compra();
+
+        constructor_Compra actualizar = new constructor_Compra();
         public frmCompra()
         {
             InitializeComponent();
@@ -34,6 +36,9 @@ namespace NovaInventory.Vista
             CargarModelo();
             CargartipoPago();
             Usuario_Comprador();
+
+            btnActualizar_Compra.Enabled = false;
+            
             
             VerCompras();
         }
@@ -269,6 +274,51 @@ namespace NovaInventory.Vista
             int posición;
             posición = this.dgvCompras.CurrentRow.Index;
             
+        }
+
+        private void dgvCompras_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posicion;
+            posicion = this.dgvCompras.CurrentRow.Index;
+            txtid_Compra.Text = dgvCompras[0, posicion].Value.ToString();
+            txtid_proveedor.Text = dgvCompras[1, posicion].Value.ToString();
+            txtid_producto.Text = dgvCompras[2, posicion].Value.ToString();
+            txtid_modelo.Text = dgvCompras[3, posicion].Value.ToString();
+            txtDescripción.Text = dgvCompras[4, posicion].Value.ToString();
+            txtPrecio_Unitario.Text = dgvCompras[5, posicion].Value.ToString();
+            txtTotal.Text = dgvCompras[6, posicion].Value.ToString();
+            nUDCantidad.Text = dgvCompras[7, posicion].Value.ToString();
+            dtpRealización_Compra.Text = dgvCompras[8, posicion].Value.ToString();
+            txtid_usuario.Text = dgvCompras[9, posicion].Value.ToString();
+            txtid_tipopago.Text = dgvCompras[10, posicion].Value.ToString();
+            txtNum_factura.Text = dgvCompras[11, posicion].Value.ToString();
+
+            btnActualizar_Compra.Enabled = true;
+            btnAgregarCompra.Enabled = false;
+            cbModelo_Compra.Enabled = false;
+            cbProducto_Compra.Enabled = false;
+            cbProveedor_Compra.Enabled = false;
+            cbModelo_Compra.Enabled = false;
+            cbTipo_Pago.Enabled = false;
+            txtDescripción.Enabled = false;
+            txtNum_factura.Enabled = false;
+
+            Total();
+        }
+
+        private void btnActualizar_Compra_Click(object sender, EventArgs e)
+        {
+            actualizar.id_compra = Convert.ToInt16(txtid_Compra.Text);
+            agregar.id_usuario_mod = Convert.ToInt16(txtid_usuario.Text);
+            agregar.precio_unitario_mod = Convert.ToInt16(txtPrecio_Unitario.Text);
+            agregar.total_mod = Convert.ToInt16(txtTotal.Text);
+            agregar.cantidad_mod = Convert.ToInt16(nUDCantidad.Text); 
+
+        }
+
+        private void txtNum_factura_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

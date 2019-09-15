@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -58,20 +58,15 @@
     <Compile Include="Controlador\constructor preguntas.cs" />
     <Compile Include="Controlador\constructorecuperacion.cs" />
     <Compile Include="Controlador\constructorFacturacion.cs" />
-    <Compile Include="Controlador\Constructor_bodega.cs" />
     <Compile Include="Controlador\Constructor_empresa.cs" />
     <Compile Include="Controlador\Constructor_login.cs" />
     <Compile Include="Controlador\constructor_para_celulares.cs" />
     <Compile Include="Controlador\constructor_primer_usuario.cs" />
-    <Compile Include="Controlador\Constructor_proveedor.cs" />
     <Compile Include="Controlador\Constructor_Root.cs" />
     <Compile Include="Controlador\Constructor_producto.cs" />
     <Compile Include="Controlador\cosntructor_Compra.cs" />
     <Compile Include="Controlador\crudCompra.cs" />
     <Compile Include="Modelo\Actualizar_Root.cs" />
-    <Compile Include="Modelo\contraypreguntas.cs" />
-    <Compile Include="Modelo\Control de proveedores.cs" />
-    <Compile Include="Modelo\control_de_bodega.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
     <Compile Include="Modelo\Funciones_producto.cs" />
@@ -81,35 +76,28 @@
     <Compile Include="Modelo\Validar_primer_uso.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\agregar_preguntas.cs">
+    <Compile Include="Reportes\DataSetUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\formulario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\agregar_preguntas.Designer.cs">
-      <DependentUpon>agregar_preguntas.cs</DependentUpon>
+    <Compile Include="Reportes\formulario.Designer.cs">
+      <DependentUpon>formulario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmPreguntaSeguridad_RecuContra.cs">
+    <Compile Include="Reportes\report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmPreguntaSeguridad_RecuContra.Designer.cs">
-      <DependentUpon>frmPreguntaSeguridad_RecuContra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\frmComprobUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmComprobUsuario.Designer.cs">
-      <DependentUpon>frmComprobUsuario.cs</DependentUpon>
+    <Compile Include="Reportes\report.Designer.cs">
+      <DependentUpon>report.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmAdministracion_Empresa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\frmAdministracion_Empresa.Designer.cs">
       <DependentUpon>frmAdministracion_Empresa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\frmBodegas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmBodegas.Designer.cs">
-      <DependentUpon>frmBodegas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmCompra.cs">
       <SubType>Form</SubType>
@@ -201,29 +189,11 @@
     <Compile Include="Vista\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frm_Actualizar_empresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frm_Actualizar_empresa.Designer.cs">
-      <DependentUpon>frm_Actualizar_empresa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\frm_nuevo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frm_nuevo.Designer.cs">
-      <DependentUpon>frm_nuevo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\Kardex_Saraí.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Kardex_Saraí.Designer.cs">
       <DependentUpon>Kardex_Saraí.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\RecuCorreo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\RecuCorreo.Designer.cs">
-      <DependentUpon>RecuCorreo.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -235,17 +205,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Vista\agregar_preguntas.resx">
-      <DependentUpon>agregar_preguntas.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\formulario.resx">
+      <DependentUpon>formulario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmComprobUsuario.resx">
-      <DependentUpon>frmComprobUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\report.resx">
+      <DependentUpon>report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmAdministracion_Empresa.resx">
       <DependentUpon>frmAdministracion_Empresa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmBodegas.resx">
-      <DependentUpon>frmBodegas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmCompra.resx">
       <DependentUpon>frmCompra.cs</DependentUpon>
@@ -267,9 +234,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmNuevaContraseña.resx">
       <DependentUpon>frmNuevaContraseña.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmPreguntaSeguridad_RecuContra.resx">
-      <DependentUpon>frmPreguntaSeguridad_RecuContra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmPreguntasSeguridad_RecuperarContra.resx">
       <DependentUpon>frmPreguntasSeguridad_RecuperarContra.cs</DependentUpon>
@@ -295,17 +259,8 @@
     <EmbeddedResource Include="Vista\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frm_Actualizar_empresa.resx">
-      <DependentUpon>frm_Actualizar_empresa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frm_nuevo.resx">
-      <DependentUpon>frm_nuevo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Kardex_Saraí.resx">
       <DependentUpon>Kardex_Saraí.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\RecuCorreo.resx">
-      <DependentUpon>RecuCorreo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -320,10 +275,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Reportes\" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Reportes\DataSetUsuario.xsc">
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSetUsuario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetUsuario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSetUsuario.xss">
+      <DependentUpon>DataSetUsuario.xsd</DependentUpon>
+    </None>
     <None Include="Resources\delete_sign_48px.png" />
   </ItemGroup>
   <ItemGroup>

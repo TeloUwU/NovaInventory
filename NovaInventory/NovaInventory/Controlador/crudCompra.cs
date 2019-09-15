@@ -134,6 +134,29 @@ namespace NovaInventory.Controlador
             }
         }
 
+        public static bool ActualizarCompra(constructor_Compra upd)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE tbcompras SET id_usuario_mod = '{0}', precio_unitario_mod = '{1}', total_mod = '{2}', Cantidad_mod = '{3}' WHERE id_compra = '{4}'", upd.id_usuario_mod,upd.precio_unitario_mod,upd.total_mod,upd.cantidad_mod,upd.id_usuario_mod),Conexion.obtenerconexion());
+                retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
+                if (retorno == true)
+                {
+                    MessageBox.Show("La compra se ha modificado de manera exitosa","Compra Corregida",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("La compra no fue actualizada","Actualización fallida",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                }
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Err, ocurrio un problema al intentar actualizar la compra , revise que los servicios esten activos y su conección a internet" + ex,"Puro Crítico",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return retorno;
+            }
+        }
     }
 }
  
