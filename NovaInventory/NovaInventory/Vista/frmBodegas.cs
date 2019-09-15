@@ -73,6 +73,7 @@ namespace NovaInventory.Vista
             dateTimePicker1.Enabled = false;
             mostra();
             txt_creado_por.Text = jj;
+            txt_creado_por.Enabled = false;
             cbEstado_Bodega.DataSource = control_de_bodega.cargar();
             cbEstado_Bodega.DisplayMember = "Estado";
             cbEstado_Bodega.ValueMember = "id_estado";

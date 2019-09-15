@@ -51,6 +51,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_creado_por = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -282,11 +284,32 @@
             this.id.Size = new System.Drawing.Size(26, 20);
             this.id.TabIndex = 20;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(285, 130);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 23);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Creado por";
+            // 
+            // txt_creado_por
+            // 
+            this.txt_creado_por.Location = new System.Drawing.Point(289, 156);
+            this.txt_creado_por.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_creado_por.Name = "txt_creado_por";
+            this.txt_creado_por.Size = new System.Drawing.Size(216, 20);
+            this.txt_creado_por.TabIndex = 21;
+            // 
             // frmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 540);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txt_creado_por);
             this.Controls.Add(this.id);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
@@ -344,5 +367,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox id;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_creado_por;
     }
 }

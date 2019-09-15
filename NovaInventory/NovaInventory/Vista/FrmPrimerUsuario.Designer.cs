@@ -67,6 +67,7 @@
             this.BtnSalir = new System.Windows.Forms.ToolStripButton();
             this.txtId = new System.Windows.Forms.ToolStripTextBox();
             this.lblIdusuario = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txt_cel = new System.Windows.Forms.MaskedTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -129,7 +130,7 @@
             this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(813, 650);
+            this.BtnGuardar.Location = new System.Drawing.Point(801, 650);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(188, 44);
             this.BtnGuardar.TabIndex = 18;
@@ -426,7 +427,8 @@
             this.toolStripLabel1,
             this.BtnSalir,
             this.txtId,
-            this.lblIdusuario});
+            this.lblIdusuario,
+            this.toolStripTextBox1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1041, 25);
@@ -469,6 +471,11 @@
             this.lblIdusuario.Size = new System.Drawing.Size(69, 22);
             this.lblIdusuario.Text = "ID Usuario";
             this.lblIdusuario.Visible = false;
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(116, 25);
             // 
             // label15
             // 
@@ -533,6 +540,7 @@
             this.button1.TabIndex = 63;
             this.button1.Text = "Volver al login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmPrimerUsuario
             // 
@@ -640,5 +648,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.OpenFileDialog CargarImagen;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }
 }

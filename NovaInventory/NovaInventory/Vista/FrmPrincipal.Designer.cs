@@ -380,7 +380,7 @@
             this.agregarBodegaToolStripMenuItem.Name = "agregarBodegaToolStripMenuItem";
             this.agregarBodegaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.agregarBodegaToolStripMenuItem.Text = "Agregar Bodega";
-            this.agregarBodegaToolStripMenuItem.Click += new System.EventHandler(this.agregarBodegaToolStripMenuItem_Click);
+            //this.agregarBodegaToolStripMenuItem.Click += new System.EventHandler(this.agregarBodegaToolStripMenuItem_Click);
             // 
             // agregarProductosToolStripMenuItem
             // 
@@ -419,25 +419,25 @@
             // 
             // controlDeProductosToolStripMenuItem
             // 
-            this.controlDeProductosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarNuevoProductoToolStripMenuItem,
-            this.mostrarTodosLosProductosToolStripMenuItem});
-            this.controlDeProductosToolStripMenuItem.Name = "controlDeProductosToolStripMenuItem";
-            this.controlDeProductosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.controlDeProductosToolStripMenuItem.Text = "Productos";
-            // 
-            // ingresarNuevoProductoToolStripMenuItem
-            // 
-            this.ingresarNuevoProductoToolStripMenuItem.Name = "ingresarNuevoProductoToolStripMenuItem";
-            this.ingresarNuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.ingresarNuevoProductoToolStripMenuItem.Text = "Ingresar nuevo producto";
-            // 
-            // mostrarTodosLosProductosToolStripMenuItem
-            // 
-            this.mostrarTodosLosProductosToolStripMenuItem.Name = "mostrarTodosLosProductosToolStripMenuItem";
-            this.mostrarTodosLosProductosToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.mostrarTodosLosProductosToolStripMenuItem.Text = "Mostrar Inventario";
-            // 
+            //this.controlDeProductosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            //this.ingresarNuevoProductoToolStripMenuItem,
+            //this.mostrarTodosLosProductosToolStripMenuItem});
+            //this.controlDeProductosToolStripMenuItem.Name = "controlDeProductosToolStripMenuItem";
+            //this.controlDeProductosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            //this.controlDeProductosToolStripMenuItem.Text = "Productos";
+            //// 
+            //// ingresarNuevoProductoToolStripMenuItem
+            //// 
+            //this.ingresarNuevoProductoToolStripMenuItem.Name = "ingresarNuevoProductoToolStripMenuItem";
+            //this.ingresarNuevoProductoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            //this.ingresarNuevoProductoToolStripMenuItem.Text = "Ingresar nuevo producto";
+            //// 
+            //// mostrarTodosLosProductosToolStripMenuItem
+            //// 
+            //this.mostrarTodosLosProductosToolStripMenuItem.Name = "mostrarTodosLosProductosToolStripMenuItem";
+            //this.mostrarTodosLosProductosToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            //this.mostrarTodosLosProductosToolStripMenuItem.Text = "Mostrar Inventario";
+            //// 
             // verToolStripMenuItem
             // 
             this.verToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {

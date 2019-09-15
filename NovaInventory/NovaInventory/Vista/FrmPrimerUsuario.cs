@@ -62,8 +62,10 @@ namespace NovaInventory.Vista
                     string imagen = Convert.ToBase64String(aByte);
                     usuario.Foto_usuario = imagen;
                     int retorno = control_usuario.registro_usuario(usuario);
-                    int usu = 1;
 
+                    //constructor_primer_usuario ne= new constructor_primer_usuario ();
+                    //ne.id_usuarios= Convert.ToInt16( toolStripTextBox1.Text);
+                    int usu = 10;
                     constructor_de_respuestas res = new constructor_de_respuestas();
                     constructor_de_respuestas res2 = new constructor_de_respuestas();
                     constructor_de_respuestas res3 = new constructor_de_respuestas();
@@ -163,6 +165,13 @@ namespace NovaInventory.Vista
             cmbEstado.Enabled = false;
             cmbTipoUsuario.Enabled = false;
             button1.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmLogin primer_uso = new frmLogin();
+            primer_uso.Show();
+            this.Hide();
         }
     }
 }

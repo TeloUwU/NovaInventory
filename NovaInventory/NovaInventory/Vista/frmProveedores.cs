@@ -79,7 +79,8 @@ namespace NovaInventory.Vista
         }
         private void frmProveedores_Load(object sender, EventArgs e)
         {
-            
+            txt_creado_por.Text = uno;
+            txt_creado_por.Enabled = false;
             cbEstado.Enabled = false;
             mostrar();
             cbEstado.DataSource = Control_de_proveedores.cargar();
