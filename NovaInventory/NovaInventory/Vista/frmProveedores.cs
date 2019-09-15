@@ -32,6 +32,8 @@ namespace NovaInventory.Vista
             agre.direccion = txtdireccion.Text;
             agre.Creado_por = uno;
             int retorno = Control_de_proveedores.agregar_usu(agre);
+            cbEstado.Enabled = false;
+
         }
         void limpro()
         {
@@ -44,6 +46,8 @@ namespace NovaInventory.Vista
         void mostrar()
         {
             dataGridView1.DataSource = Control_de_proveedores.mostrar_pro();
+            cbEstado.Enabled = false;
+
         }
 
         void actuali()
@@ -56,6 +60,8 @@ namespace NovaInventory.Vista
             act.rubro = txtRubro.Text;
             act.id_estados =Convert.ToInt16(cbEstado.SelectedValue.ToString());
             Control_de_proveedores.actualizarusu(act);
+            cbEstado.Enabled = false;
+
         }
         void tocar()
         {
@@ -68,6 +74,8 @@ namespace NovaInventory.Vista
             txtNIt.Text = this.dataGridView1[4, posision].Value.ToString();
             txtRubro.Text = this.dataGridView1[5, posision].Value.ToString();
 
+            cbEstado.Enabled = true;
+
 
         }
         void eliminar()
@@ -76,6 +84,8 @@ namespace NovaInventory.Vista
             {
                 Control_de_proveedores.eliminar(Convert.ToInt32(txtid_proveedor.Text));
             }
+            cbEstado.Enabled = false;
+
         }
         private void frmProveedores_Load(object sender, EventArgs e)
         {

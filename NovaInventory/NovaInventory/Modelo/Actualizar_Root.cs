@@ -66,7 +66,7 @@ namespace NovaInventory.Modelo
 
             try
             {
-                string query = "SELECT id_estado_usuario, CONCAT(Estado_usuario) AS Estado_usuario FROM Estado_usuario";
+                string query = "SELECT id_estado, CONCAT(Estado) AS Estado FROM Estado";
                 MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
                 MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
 

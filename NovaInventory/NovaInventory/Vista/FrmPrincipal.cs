@@ -220,5 +220,10 @@ namespace NovaInventory.Vista
         {
             AbrirFormulario<frmCompra>();
         }
+
+        private void agregarBodegaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmBodegas>();
+        }
     }
 }
