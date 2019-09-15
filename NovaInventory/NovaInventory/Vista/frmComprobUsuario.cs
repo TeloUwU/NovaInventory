@@ -18,40 +18,45 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
-        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = DB_NOVAINVENTORY_25");
-        MySqlCommand cmd = new MySqlCommand();
+        
 
         private void ComprobUsuarioPreguntas_Load(object sender, EventArgs e)
         {
 
         }
+        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = db_novainventory_25");
+        MySqlCommand cmd = new MySqlCommand();
+
 
         private void btnComprobar_Click(object sender, EventArgs e)
         {
+            cn.Open();
+            cmd.Connection = cn;
 
             try
             {
-                cn.Open();
-                cmd.Connection = cn;
                 cmd.CommandText = "select count(*) from tbusuarios where nickname = '" + txtUsuarios.Text + "'";
                 int valor = int.Parse(cmd.ExecuteScalar().ToString());
-                cn.Close();
+                //Comparamos si el valor recibido es 1 entonces existe si no NO
                 if (valor == 1)
                 {
                     frmPreguntasSeguridad_RecuperarContra frm = new frmPreguntasSeguridad_RecuperarContra();
-                    frm.lblUsuario.Text = txtUsuarios.Text;
                     frm.Show();
                     this.Hide();
                 }
-
                 else { labelMensaje.Text = "El usuario no existe"; }
-            }//Fin del try 
+            }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en encontrar usuario" + ex, "Error al encontrar al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Error en encontrar usuario" + ex, "Error de encontrame al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            cn.Close();
+
+
+
         }
     }
-}
+    }
+
 
 
