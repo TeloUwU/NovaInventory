@@ -22,9 +22,7 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
-
-        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root;    = ; Database = db_novainventory_25");
-        MySqlCommand cmd = new MySqlCommand();
+        
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -34,7 +32,8 @@ namespace NovaInventory.Vista
         }
 
 
-
+        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = db_novainventory_25");
+        MySqlCommand cmd = new MySqlCommand();
         private void frmPreguntasSeguridad_RecuperarContra_Load(object sender, EventArgs e)
         {
             cbPregunta_1.DataSource = preguntas_y_respuestas.cargar();
@@ -72,14 +71,14 @@ namespace NovaInventory.Vista
                     && cbPregunta_2.Text != cbPregunta_3.Text && cbPregunta_2.Text != cbPregunta_4.Text &&
                     cbPregunta_3.Text != cbPregunta_4.Text)
                 {
-                    //Console.WriteLine("asdfa"+ cbPregunta_1.SelectedValue);
+                    Console.WriteLine("asdfa"+ cbPregunta_1.SelectedValue);
                     int idpregunta1 = (int)cbPregunta_1.SelectedValue;
                     int idpregunta2 = (int)cbPregunta_2.SelectedValue;
                     int idpregunta3 = (int)cbPregunta_3.SelectedValue;
                     int idpregunta4 = (int)cbPregunta_4.SelectedValue;
                     constructor_de_respuestas respt1 = new constructor_de_respuestas(usuario, idpregunta1);
                     respt1.asignarRespuesta();
-                    //Console.WriteLine(respt1.Respuesta);
+                    Console.WriteLine(respt1.Respuesta);
                     constructor_de_respuestas respt2 = new constructor_de_respuestas(usuario, idpregunta2);
                     respt2.asignarRespuesta();
                     constructor_de_respuestas respt3 = new constructor_de_respuestas(usuario, idpregunta3);
@@ -89,17 +88,17 @@ namespace NovaInventory.Vista
 
                     string pgta1 = txtRespuesta_1.Text;
                     Boolean comparacion1 = pgta1.ToUpper().Equals(respt1.Respuesta.ToUpper());
-                    // Console.WriteLine(comparacion1);
+                    Console.WriteLine(comparacion1);
                     string pgta2 = txtRespuesta_2.Text;
                     Boolean comparacion2 = pgta2.ToUpper().Equals(respt2.Respuesta.ToUpper());
-                    //Console.WriteLine(comparacion2);
+                    Console.WriteLine(comparacion2);
                     string pgta3 = txtRespuesta_3.Text;
                     Boolean comparacion3 = pgta3.ToUpper().Equals(respt3.Respuesta.ToUpper());
-                    //Console.WriteLine(comparacion3);
+                    Console.WriteLine(comparacion3);
                     string pgta4 = txtRepuesta_4.Text;
                     Boolean comparacion4 = pgta4.ToUpper().Equals(respt4.Respuesta.ToUpper());
-                    //Console.WriteLine(comparacion4);
-                    //Console.WriteLine(pgta1.ToUpper().CompareTo(respt1.Respuesta.ToUpper()));
+                    Console.WriteLine(comparacion4);
+                    Console.WriteLine(pgta1.ToUpper().CompareTo(respt1.Respuesta.ToUpper()));
                     if (comparacion1 && comparacion2 && comparacion3 && comparacion4)
                     {
                         Console.WriteLine("Son iguales");
@@ -124,6 +123,29 @@ namespace NovaInventory.Vista
             {
                 Console.WriteLine(ex);
             }
+            cn.Open();
+            cmd.Connection = cn;
+
+            try
+            {
+                cmd.CommandText = "select count(*) from tbrespuesta where respuesta = '" + txtRespuesta_1.Text +"'";
+                int valor = int.Parse(cmd.ExecuteScalar().ToString());
+                //Comparamos si el valor recibido es 1 entonces existe si no NO
+
+                if (valor == 1)
+                {
+                    frmPreguntasSeguridad_RecuperarContra frm = new frmPreguntasSeguridad_RecuperarContra();
+                    frm.Show();
+                    this.Hide();
+                }
+                else { labelMensaje.Text = "La respuesta es incorrecta o no existe"; }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en encontrar usuario" + ex, "Error de encontrame al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            cn.Close();
+
         }
     }
 }
