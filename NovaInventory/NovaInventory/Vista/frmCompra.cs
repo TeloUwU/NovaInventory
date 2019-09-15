@@ -203,7 +203,7 @@ namespace NovaInventory.Vista
             else
             {
                 agregar.id_proveedor = Convert.ToInt16(txtid_proveedor.Text);
-                agregar.id_producto = Convert.ToInt16(txtid_articulo.Text);
+                agregar.id_producto = Convert.ToInt16(txtid_producto.Text);
                 agregar.Preciounitario = Convert.ToInt16(txtPrecio_Unitario.Text);
                 agregar.Precio_Total = Convert.ToInt16(txtTotal.Text);
                 agregar.Cantidad = Convert.ToInt16(nUDCantidad.Text);

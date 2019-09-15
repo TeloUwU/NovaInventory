@@ -134,7 +134,7 @@ namespace NovaInventory.Vista
 
                 if (valor == 1)
                 {
-                    frmPreguntasSeguridad_RecuperarContra frm = new frmPreguntasSeguridad_RecuperarContra();
+                    frmNuevaContraseña frm = new frmNuevaContraseña();
                     frm.Show();
                     this.Hide();
                 }

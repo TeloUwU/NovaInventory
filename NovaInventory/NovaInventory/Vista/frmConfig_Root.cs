@@ -15,6 +15,7 @@ using NovaInventory.Config;
 using System.IO;
 using MySql.Data;
 
+
 namespace NovaInventory.Vista
 {
     public partial class frmConfig_Root : Form
@@ -194,10 +195,7 @@ namespace NovaInventory.Vista
             {
                 MessageBox.Show("No pueden quedar campos vacios", "Complete toda la información", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (pbFoto_Root.Image == null)
-            {
-                MessageBox.Show("La foto no puede quedar vacia", "Agrege la foto", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+          
             else
             {
                 if (txtClave_Root.Text != txtConfClave_Root.Text)
@@ -205,7 +203,7 @@ namespace NovaInventory.Vista
                     MessageBox.Show("Las contraseñas que se ingresaron no coinciden", "Verificar que la contraseña coincida", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-
+            txtClave_Root.Text = Validaciones.md5(txtClave_Root.Text);
             ModificarRegistro();
             LimpiarCampos();
             button_actualizar.Enabled = false;
@@ -245,8 +243,8 @@ namespace NovaInventory.Vista
         void CargarEstado()
         {
             cmbEstado_Root.DataSource = Actualizar_Root.CargarEstado();
-            cmbEstado_Root.DisplayMember = "Estado_usuario";
-            cmbEstado_Root.ValueMember = "id_estado_usuario";
+            cmbEstado_Root.DisplayMember = "Estado";
+            cmbEstado_Root.ValueMember = "id_estado";
         }
 
         private void txtClave_Root_TextChanged_1(object sender, EventArgs e)

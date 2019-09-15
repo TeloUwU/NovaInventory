@@ -163,7 +163,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(452, 66);
+            this.label3.Location = new System.Drawing.Point(464, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 18);
             this.label3.TabIndex = 11;
@@ -222,11 +222,11 @@
             this.labelMensaje.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelMensaje.AutoSize = true;
             this.labelMensaje.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMensaje.Location = new System.Drawing.Point(257, 66);
+            this.labelMensaje.Location = new System.Drawing.Point(344, 66);
             this.labelMensaje.Name = "labelMensaje";
-            this.labelMensaje.Size = new System.Drawing.Size(147, 18);
+            this.labelMensaje.Size = new System.Drawing.Size(16, 18);
             this.labelMensaje.TabIndex = 15;
-            this.labelMensaje.Text = "Ingresa tu respuesta**";
+            this.labelMensaje.Text = "ll";
             // 
             // frmPreguntasSeguridad_RecuperarContra
             // 

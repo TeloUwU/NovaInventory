@@ -41,7 +41,7 @@ namespace NovaInventory.Vista
                     //Comparamos si el valor recibido es 1 entonces existe si no NO
                     if (valor == 1)
                     {
-
+                        txtContraseña.Text = Validaciones.md5(txtContraseña.Text);
                         string contraseña = this.txtContraseña.Text;
                         string usuario = this.txtUsuario.Text;
                         //MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbusuarios SET = nickname '{0}', nombre_usuario '{1}', apellido_usuario'{2}', contraseña_usuario'{3}', telefono '{4}', Foto_usuario'{5}', Correo'{6}', dui'{7}', nit'{8}'", upt.usuario, upt.nombre_usuario, upt.apellido_usuario, upt.contraseña_usuario, upt.telefono, upt.Foto_usuario, upt.Correo, upt.dui, upt.nit), Conexion.obtenerconexion());
