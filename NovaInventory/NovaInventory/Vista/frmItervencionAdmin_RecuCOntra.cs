@@ -48,7 +48,7 @@ namespace NovaInventory.Vista
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en encontrar usuario" + ex, "Error de encontrame al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Error en encontrar usuario" + ex, "Error al encontrar al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             cn.Close();
             
