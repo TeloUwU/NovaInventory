@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Controlador;
 using NovaInventory.Modelo;
+using NovaInventory.Config;
 
 namespace NovaInventory.Vista
 {
@@ -18,17 +19,20 @@ namespace NovaInventory.Vista
     {
         constructor_primer_usuario agregar = new constructor_primer_usuario();
         constructor_primer_usuario actualizar = new constructor_primer_usuario();
+        constructor_de_respuestas ac = new constructor_de_respuestas();
         public frmUsuarios()
         {
             InitializeComponent();
         }
         public void agregarusu()
         {
+            string clave = txtUsuario.Text + 2019;
+            clave = Validaciones.md5(clave);
             agregar.usuario = txtUsuario.Text;
             agregar.nombre_usuario = txtNombres_Usuario.Text;
             agregar.apellido_usuario = txtApellidos_Usuario.Text;
-            string clave = txtCorreo_Usuario.Text + 2019;
             agregar.contraseña_usuario = clave;
+            agregar.telefono = txtTelefono_Usuario.Text;
             agregar.Correo = txtCorreo_Usuario.Text;
             agregar.dui = txtDUI_Usuario.Text;
             agregar.nit = txtNIT_Usuario.Text;
@@ -60,22 +64,19 @@ namespace NovaInventory.Vista
             actualizar.Correo = txtCorreo_Usuario.Text;
             actualizar.dui = txtDUI_Usuario.Text;
             actualizar.nit = txtNIT_Usuario.Text;
+            ac.usuarioss = Convert.ToInt16( txtid_Usuario.Text);
 
 
 
-            MemoryStream ms = new MemoryStream();
-            pbFoto_Usuario.Image.Save(ms, ImageFormat.Jpeg);
-            byte[] aByte = ms.ToArray();
-            string imagen = Convert.ToBase64String(aByte);
-            actualizar.Foto_usuario = imagen;
-            Funciones_usuarios.actualizarusu(actualizar);
+            preguntas_y_respuestas.act(ac);
+            Funciones_usuarios.actualizar(actualizar);
         }
         public void eliminarusu()
         {
 
             if (MessageBox.Show("¿Esta seguro que desea eliminar el usuario?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                control_empresa.Eliminar_num(Convert.ToInt32(txtid_Usuario.Text));
+                Funciones_usuarios.eliminarusu(Convert.ToInt32(txtid_Usuario.Text));
             }
         }
         public void limpiar()
@@ -132,13 +133,10 @@ namespace NovaInventory.Vista
             txtNombres_Usuario.Text = this.dgvMostrar_Usuarios[2, posision].Value.ToString();
             txtApellidos_Usuario.Text = this.dgvMostrar_Usuarios[3, posision].Value.ToString();
             txtTelefono_Usuario.Text = this.dgvMostrar_Usuarios[4, posision].Value.ToString();
-            pbFoto_Usuario.ImageLocation = this.dgvMostrar_Usuarios[6, posision].ValueType.ToString();
             txtCorreo_Usuario.Text = this.dgvMostrar_Usuarios[7, posision].Value.ToString();
             txtDUI_Usuario.Text = this.dgvMostrar_Usuarios[8, posision].Value.ToString();
             txtNIT_Usuario.Text = this.dgvMostrar_Usuarios[9, posision].Value.ToString();
-            cbEstado_Usuario.Text = this.dgvMostrar_Usuarios[11, posision].Value.ToString();
-            cbTipo_Usuario.Text = this.dgvMostrar_Usuarios[12, posision].Value.ToString();
-            cmb_emp.Text = this.dgvMostrar_Usuarios[14, posision].Value.ToString();
+
 
         }
 
@@ -167,8 +165,8 @@ namespace NovaInventory.Vista
             cbTipo_Usuario.ValueMember = "id_tipo_usuario";
 
             cbEstado_Usuario.DataSource = Funciones_usuarios.cargar();
-            cbEstado_Usuario.DisplayMember = "Estado_usuario";
-            cbEstado_Usuario.ValueMember = "id_estado_usuario";
+            cbEstado_Usuario.DisplayMember = "Estado";
+            cbEstado_Usuario.ValueMember = "id_estado";
 
             cmb_emp.DataSource = Funciones_usuarios.cargar1();
             cmb_emp.DisplayMember = "nombre";

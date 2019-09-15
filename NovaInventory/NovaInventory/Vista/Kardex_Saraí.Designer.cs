@@ -31,15 +31,15 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.tbKardex = new System.Windows.Forms.Button();
+            this.cbProductos = new System.Windows.Forms.ComboBox();
+            this.dgvComprasProducto = new System.Windows.Forms.DataGridView();
+            this.dgvVentasProducto = new System.Windows.Forms.DataGridView();
+            this.dgvExistenciasProducto = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComprasProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentasProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExistenciasProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -71,49 +71,49 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(55, 24);
             this.toolStripLabel1.Text = "Kardex";
             // 
-            // button1
+            // tbKardex
             // 
-            this.button1.Location = new System.Drawing.Point(616, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tbKardex.Location = new System.Drawing.Point(602, 83);
+            this.tbKardex.Name = "tbKardex";
+            this.tbKardex.Size = new System.Drawing.Size(221, 50);
+            this.tbKardex.TabIndex = 1;
+            this.tbKardex.Text = "Buscar Kardex de Producto";
+            this.tbKardex.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbProductos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(219, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(310, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cbProductos.FormattingEnabled = true;
+            this.cbProductos.Location = new System.Drawing.Point(236, 97);
+            this.cbProductos.Name = "cbProductos";
+            this.cbProductos.Size = new System.Drawing.Size(310, 24);
+            this.cbProductos.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvComprasProducto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(56, 167);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(297, 374);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvComprasProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComprasProducto.Location = new System.Drawing.Point(56, 167);
+            this.dgvComprasProducto.Name = "dgvComprasProducto";
+            this.dgvComprasProducto.RowTemplate.Height = 24;
+            this.dgvComprasProducto.Size = new System.Drawing.Size(297, 374);
+            this.dgvComprasProducto.TabIndex = 3;
             // 
-            // dataGridView2
+            // dgvVentasProducto
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(357, 167);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(297, 374);
-            this.dataGridView2.TabIndex = 4;
+            this.dgvVentasProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVentasProducto.Location = new System.Drawing.Point(357, 167);
+            this.dgvVentasProducto.Name = "dgvVentasProducto";
+            this.dgvVentasProducto.RowTemplate.Height = 24;
+            this.dgvVentasProducto.Size = new System.Drawing.Size(297, 374);
+            this.dgvVentasProducto.TabIndex = 4;
             // 
-            // dataGridView3
+            // dgvExistenciasProducto
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(660, 167);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(297, 374);
-            this.dataGridView3.TabIndex = 5;
+            this.dgvExistenciasProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExistenciasProducto.Location = new System.Drawing.Point(660, 167);
+            this.dgvExistenciasProducto.Name = "dgvExistenciasProducto";
+            this.dgvExistenciasProducto.RowTemplate.Height = 24;
+            this.dgvExistenciasProducto.Size = new System.Drawing.Size(297, 374);
+            this.dgvExistenciasProducto.TabIndex = 5;
             // 
             // Kardex_Saraí
             // 
@@ -121,22 +121,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1044, 665);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgvExistenciasProducto);
+            this.Controls.Add(this.dgvVentasProducto);
+            this.Controls.Add(this.dgvComprasProducto);
+            this.Controls.Add(this.cbProductos);
+            this.Controls.Add(this.tbKardex);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Kardex_Saraí";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Kardex";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComprasProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentasProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExistenciasProducto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,10 +147,10 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button tbKardex;
+        private System.Windows.Forms.ComboBox cbProductos;
+        private System.Windows.Forms.DataGridView dgvComprasProducto;
+        private System.Windows.Forms.DataGridView dgvVentasProducto;
+        private System.Windows.Forms.DataGridView dgvExistenciasProducto;
     }
 }

@@ -53,7 +53,7 @@ namespace NovaInventory.Controlador
                 retorno = Convert.ToInt32(comandoagregar.ExecuteNonQuery());
                 if (retorno > 0)
                 {
-                    MessageBox.Show("Se a ingresado el numero de telefono", "GUARDADO EXITOSAMENTE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Se a ingresado el numero de telefono", "GUARDADO EXITOSAMENTE", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }

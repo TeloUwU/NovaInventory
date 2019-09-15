@@ -73,6 +73,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.CargarImagen = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
@@ -187,11 +188,12 @@
             this.dtNacimiento.CustomFormat = "yyyy/MM/dd";
             this.dtNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNacimiento.Location = new System.Drawing.Point(424, 126);
-            this.dtNacimiento.MaxDate = new System.DateTime(2005, 12, 30, 0, 0, 0, 0);
+            this.dtNacimiento.MaxDate = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
+            this.dtNacimiento.MinDate = new System.DateTime(1899, 12, 31, 0, 0, 0, 0);
             this.dtNacimiento.Name = "dtNacimiento";
             this.dtNacimiento.Size = new System.Drawing.Size(312, 24);
             this.dtNacimiento.TabIndex = 4;
-            this.dtNacimiento.Value = new System.DateTime(2005, 12, 30, 0, 0, 0, 0);
+            this.dtNacimiento.Value = new System.DateTime(2000, 12, 31, 0, 0, 0, 0);
             // 
             // maskDui
             // 
@@ -518,6 +520,20 @@
             // 
             this.CargarImagen.FileName = "openFileDialog1";
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(813, 650);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 44);
+            this.button1.TabIndex = 63;
+            this.button1.Text = "Volver al login";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FrmPrimerUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -561,6 +577,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPrimerUsuario";
@@ -622,5 +639,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.OpenFileDialog CargarImagen;
+        private System.Windows.Forms.Button button1;
     }
 }

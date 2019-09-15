@@ -124,12 +124,12 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(287, 25);
+            this.label1.Font = new System.Drawing.Font("Calibri", 16F);
+            this.label1.Location = new System.Drawing.Point(151, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 26);
+            this.label1.Size = new System.Drawing.Size(269, 27);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Preguntas de Seguridad";
+            this.label1.Text = "PREGUNTAS DE SEGURIDAD:";
             // 
             // toolStrip1
             // 
@@ -151,11 +151,11 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(116, 66);
+            this.label2.Location = new System.Drawing.Point(56, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 18);
+            this.label2.Size = new System.Drawing.Size(156, 18);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Selecciona tu Pregunta";
+            this.label2.Text = "Selecciona tu Pregunta*";
             // 
             // label3
             // 
@@ -164,9 +164,9 @@
             this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(452, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(333, 36);
+            this.label3.Size = new System.Drawing.Size(147, 18);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Ingresa tu resuesta \r\n(Personal, no necesariamente responde la pregunta)";
+            this.label3.Text = "Ingresa tu respuesta**";
             // 
             // btnSelect_Preguntas
             // 
@@ -202,18 +202,19 @@
             this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(505, 292);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(263, 18);
+            this.label5.Size = new System.Drawing.Size(138, 18);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Las Repuestas No Deben Estar Repetidas*";
+            this.label5.Text = "Campo Obligatorio**";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(524, 25);
+            this.lblUsuario.Font = new System.Drawing.Font("Calibri", 16F);
+            this.lblUsuario.Location = new System.Drawing.Point(450, 25);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(83, 27);
             this.lblUsuario.TabIndex = 14;
-            this.lblUsuario.Text = "label6";
+            this.lblUsuario.Text = "Usuario";
             // 
             // frmPreguntasSeguridad_RecuperarContra
             // 

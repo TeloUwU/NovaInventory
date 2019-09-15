@@ -12,13 +12,13 @@ using NovaInventory.Vista;
 
 namespace NovaInventory.Vista
 {
-    public partial class ComprobUsuario : Form
+    public partial class frmComprobUsuario : Form
     {
-        public ComprobUsuario()
+        public frmComprobUsuario()
         {
             InitializeComponent();
         }
-        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = DB_NOVAINVENTORY_26");
+        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = DB_NOVAINVENTORY_25");
         MySqlCommand cmd = new MySqlCommand();
 
         private void ComprobUsuarioPreguntas_Load(object sender, EventArgs e)

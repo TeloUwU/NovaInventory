@@ -1,4 +1,6 @@
-﻿using NovaInventory.Controlador;
+﻿using MySql.Data.MySqlClient;
+using NovaInventory.Config;
+using NovaInventory.Controlador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,8 +33,132 @@ namespace NovaInventory.Vista
             CargarProducto();
             CargarModelo();
             CargartipoPago();
+            Usuario_Comprador();
+            
+            VerCompras();
         }
 
+        private void VerCompras()
+        {
+            dgvCompras.DataSource = crudCompra.Compras();
+            dgvCompras.Columns[0].Visible = false;
+            dgvCompras.Columns[5].HeaderText = "Precio Unitario";
+            dgvCompras.Columns[6].HeaderText = "Precio Total";
+            dgvCompras.Columns[8].HeaderText = "Fecha de Compra";
+            dgvCompras.Columns[9].HeaderText = "Usuario Comprador";
+            dgvCompras.Columns[10].HeaderText = "Tipo de Pago";
+            dgvCompras.Columns[11].HeaderText = "Numero de Factura";
+            if (dgvCompras.DataSource == null)
+            {
+                MessageBox.Show("No hay datos para mostrar :/", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+
+        public int Usuario_Comprador()
+        {
+            string nombreVIS = Constructor_login.nombre;
+            string apellidoVIS = Constructor_login.apellido;
+            int retorno = 0;
+            try
+            {
+                MySqlCommand usuario = new MySqlCommand(string.Format("SELECT id_usuarios FROM tbusuarios WHERE nombre_usuario = '" + nombreVIS + "' AND apellido_usuario = '" + apellidoVIS + "';"), Conexion.obtenerconexion());
+                txtid_usuario.Text = Convert.ToString(usuario.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("EL usuario que ha accedido no ha sido cargado correctamente por el programa, consulte con el tecnico" + ex, "Error de carga de usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return retorno;
+            }
+        }
+
+        public int Proveedor()
+        {
+            string nombre = cbProveedor_Compra.Text;
+            int retorno = 0;
+            try
+            {
+                MySqlCommand proveedor = new MySqlCommand(string.Format("SELECT id_proveedor FROM tbproveedor WHERE nombre = '" + nombre + "';"), Conexion.obtenerconexion());
+                txtid_proveedor.Text = Convert.ToString(proveedor.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El proveedor seleccionado no se ha ingresado junto al producto, llame a un tecnico" + ex, "Carga Proveedor Fallida", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                return retorno;
+            }
+        }
+
+        public int Producto()
+        {
+            string nombre = cbProducto_Compra.Text;
+            int retorno = 0;
+            try
+            {
+                MySqlCommand producto = new MySqlCommand(string.Format("SELECT id_producto FROM productos WHERE producto = '" + nombre + "';"), Conexion.obtenerconexion());
+                txtid_producto.Text = Convert.ToString(producto.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("la compra no se ha realizado por la selección de producto, llame a un tecnico" + ex, "Carga Proveedor Fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return retorno;
+            }
+        }
+
+        public int Tipo_pago()
+        {
+            string nombre = cbTipo_Pago.Text;
+            int retorno = 0;
+            try
+            {
+                MySqlCommand tipopago = new MySqlCommand(string.Format("SELECT id_tipo_pago FROM tbtipo_pago WHERE tipo_pago = '" + nombre + "';"), Conexion.obtenerconexion());
+                txtid_tipopago.Text = Convert.ToString(tipopago.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El Tipo de pago seleccionado no se ha ingresado junto a la compra, llame a un tecnico" + ex, "Carga Proveedor Fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return retorno;
+            }
+        }
+
+        public int Modelo_Seleccionado()
+        {
+            string nombre = cbModelo_Compra.Text;
+            int retorno = 0;
+            try
+            {
+                MySqlCommand Modelo = new MySqlCommand(string.Format("SELECT id_modelo FROM modelos WHERE modelo = '" + nombre + "';"), Conexion.obtenerconexion());
+                txtid_modelo.Text = Convert.ToString(Modelo.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El Modelo del producto seleccionado ha tenido problemas a la hora de ingresarse y en consecuencia no se ha realizado la compra, llame a un tecnico" + ex, "Carga Proveedor Fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return retorno;
+            }
+        }
+
+        public int ingresar_articulo()
+        {
+            string producto = txtid_producto.Text;
+            string modelo = txtid_modelo.Text;
+            int retorno = 0;
+            try
+            {
+                MySqlCommand Modelo = new MySqlCommand(string.Format("SELECT id_articulo FROM articulos WHERE id_productos = '" + producto + "' AND id_modelos = '" + modelo + "';"), Conexion.obtenerconexion());
+                txtid_articulo.Text = Convert.ToString(Modelo.ExecuteScalar());
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El Modelo del producto seleccionado ha tenido problemas a la hora de ingresarse y en consecuencia no se ha realizado la compra, llame a un tecnico" + ex, "Carga Proveedor Fallida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return retorno;
+            }
+        }
         private void CargartipoPago()
         {
             cbTipo_Pago.DataSource = crudCompra.tipoPago();
@@ -63,24 +189,38 @@ namespace NovaInventory.Vista
 
         public void AgregarCompra()
         {
-            agregar.id_compra = Convert.ToInt16(txtid_Compra.Text);
-            agregar.id_proveedor = Convert.ToInt16(cbProveedor_Compra.Text);
-            agregar.id_producto = Convert.ToInt16(cbProducto_Compra.Text);
-            agregar.Preciounitario = Convert.ToInt16(txtPrecio_Unitario.Text);
-            agregar.Precio_Total = Convert.ToInt16(txtTotal.Text);
-            agregar.Cantidad = Convert.ToInt16(nUDCantidad.Text);
-            agregar.id_usuario = Convert.ToInt16(txtid_usuario.Text);
-            agregar.tipo_pago = Convert.ToInt16(cbTipo_Pago.Text);
-            agregar.num_factura = Convert.ToInt16(txtNum_factura.Text);
-            agregar.descripcion = txtDescripción.Text;
-            agregar.fecha_compra = dtpRealización_Compra.Text;
+            if ( cbProveedor_Compra.Text.Trim() == "" || cbProducto_Compra.Text.Trim() == "" || txtPrecio_Unitario.Text.Trim() == "" ||
+                txtTotal.Text.Trim() == "" || nUDCantidad.Text.Trim() == "" || txtid_usuario.Text.Trim() == "" || cbTipo_Pago.Text.Trim() == "" ||
+                txtNum_factura.Text.Trim() == "" || txtDescripción.Text.Trim() == "")
+            {
+                MessageBox.Show("Algúnos campos estan vacíos, por favor llenelos todos", "Campos Vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                agregar.id_proveedor = Convert.ToInt16(txtid_proveedor.Text);
+                agregar.id_producto = Convert.ToInt16(txtid_articulo.Text);
+                agregar.Preciounitario = Convert.ToInt16(txtPrecio_Unitario.Text);
+                agregar.Precio_Total = Convert.ToInt16(txtTotal.Text);
+                agregar.Cantidad = Convert.ToInt16(nUDCantidad.Text);
+                agregar.id_usuario = Convert.ToInt16(txtid_usuario.Text);
+                agregar.tipo_pago = Convert.ToInt16(txtid_tipopago.Text);
+                agregar.num_factura = Convert.ToInt16(txtNum_factura.Text);
+                agregar.descripcion = txtDescripción.Text;
+                agregar.fecha_compra = dtpRealización_Compra.Text;
 
-            crudCompra.insertarCompra(agregar);
+                int datos = crudCompra.insertarCompra(agregar);
+            }
         }
 
         private void btnAgregarCompra_Click(object sender, EventArgs e)
         {
+            Proveedor();
+            Producto();
+            Tipo_pago();
+            Modelo_Seleccionado();
+            ingresar_articulo();
             AgregarCompra();
+            VerCompras();
         }
 
         private void cbProducto_Compra_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,20 +235,40 @@ namespace NovaInventory.Vista
 
         public void txtPrecio_Unitario_TextChanged(object sender, EventArgs e)
         {
-            
+            Total();
         }
+        
+        
 
         public void txtTotal_TextChanged(object sender, EventArgs e)
         {
-            Total();
+            
         }
-
+            
         public void Total()
         {
+            if (txtPrecio_Unitario.Text.Trim() == "")
+            {
+                txtPrecio_Unitario.Text = "1.00";
+            }
+
             int Precio_Unitario = Convert.ToInt16(txtPrecio_Unitario.Text);
             int Cantidad_Producto = Convert.ToInt16(nUDCantidad.Value);
             string Total = Convert.ToString(Precio_Unitario * Cantidad_Producto);
             txtTotal.Text = Total;
+
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            VerCompras();
+        }
+
+        private void dgvCompras_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int posición;
+            posición = this.dgvCompras.CurrentRow.Index;
+            
         }
     }
 }
