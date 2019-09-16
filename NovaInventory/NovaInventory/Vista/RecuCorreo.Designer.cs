@@ -36,7 +36,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 66);
+            this.label1.Location = new System.Drawing.Point(37, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 4;
@@ -44,14 +44,14 @@
             // 
             // txtCorreoElectronico
             // 
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(165, 66);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(137, 56);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(291, 20);
             this.txtCorreoElectronico.TabIndex = 3;
             // 
             // btnRecuperar
             // 
-            this.btnRecuperar.Location = new System.Drawing.Point(253, 102);
+            this.btnRecuperar.Location = new System.Drawing.Point(225, 92);
             this.btnRecuperar.Name = "btnRecuperar";
             this.btnRecuperar.Size = new System.Drawing.Size(75, 23);
             this.btnRecuperar.TabIndex = 5;
@@ -63,7 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 163);
+            this.ClientSize = new System.Drawing.Size(470, 163);
             this.Controls.Add(this.btnRecuperar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCorreoElectronico);
