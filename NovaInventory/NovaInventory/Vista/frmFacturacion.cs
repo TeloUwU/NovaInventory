@@ -197,6 +197,11 @@ namespace NovaInventory.Vista
             lblCostoAPagar.Text = CostoTotal.ToString();
 
         }
+
+        private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     }
 
