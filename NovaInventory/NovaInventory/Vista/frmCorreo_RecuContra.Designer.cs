@@ -71,7 +71,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 178);
+            this.label2.Location = new System.Drawing.Point(84, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 18);
             this.label2.TabIndex = 2;
@@ -81,7 +81,7 @@
             // txtCorreo_Recu
             // 
             this.txtCorreo_Recu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCorreo_Recu.Location = new System.Drawing.Point(84, 204);
+            this.txtCorreo_Recu.Location = new System.Drawing.Point(93, 190);
             this.txtCorreo_Recu.Name = "txtCorreo_Recu";
             this.txtCorreo_Recu.ShortcutsEnabled = false;
             this.txtCorreo_Recu.Size = new System.Drawing.Size(173, 20);
@@ -91,7 +91,7 @@
             // 
             this.btenviar_Correo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btenviar_Correo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btenviar_Correo.Location = new System.Drawing.Point(82, 247);
+            this.btenviar_Correo.Location = new System.Drawing.Point(91, 233);
             this.btenviar_Correo.Name = "btenviar_Correo";
             this.btenviar_Correo.Size = new System.Drawing.Size(184, 44);
             this.btenviar_Correo.TabIndex = 2;
@@ -102,7 +102,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtUsuario.Location = new System.Drawing.Point(84, 142);
+            this.txtUsuario.Location = new System.Drawing.Point(93, 128);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(173, 20);
@@ -113,7 +113,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(143, 121);
+            this.label3.Location = new System.Drawing.Point(152, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 18);
             this.label3.TabIndex = 4;
@@ -122,7 +122,7 @@
             // emisotr
             // 
             this.emisotr.AutoSize = true;
-            this.emisotr.Location = new System.Drawing.Point(246, 12);
+            this.emisotr.Location = new System.Drawing.Point(21, 12);
             this.emisotr.Name = "emisotr";
             this.emisotr.Size = new System.Drawing.Size(95, 13);
             this.emisotr.TabIndex = 5;
