@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NovaInventory.Modelo;
+using NovaInventory.Controlador;
+using NovaInventory.Vista;
 
 namespace NovaInventory.Vista
 {
@@ -15,6 +18,20 @@ namespace NovaInventory.Vista
         public recuContra_ReinicioAdmin()
         {
             InitializeComponent();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void mostrar()
+        {
+            dgvMostrar_Usuarios.DataSource = Funciones_usuarios.mostrar_usu();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mostrar();
         }
     }
 }
