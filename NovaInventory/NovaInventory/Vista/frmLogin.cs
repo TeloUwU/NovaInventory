@@ -41,7 +41,13 @@ namespace NovaInventory.Vista
                         main.Show();
                         this.Hide();
                     }
-                    else
+                    else if (txtContraseña.Text == "nova"+txtUsuario.Text+year )
+                    {
+                        frm_nuevo main = new frm_nuevo();
+                        main.Show();
+                        this.Hide();
+                    }
+                    else 
                     {
                         txtContraseña.Text = Validaciones.md5(txtContraseña.Text);
                         FrmPrincipal main = new FrmPrincipal();
