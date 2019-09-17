@@ -71,6 +71,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -126,6 +129,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtPrecio);
@@ -244,7 +250,11 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(443, 20);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2019, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(189, 20);
             this.dateTimePicker1.TabIndex = 0;
@@ -518,6 +528,33 @@
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(389, 119);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 13);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Impuesto CESC";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(389, 144);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "label13";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(504, 119);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 13);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Credito Fiscal";
+            // 
             // frmFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -594,5 +631,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
     }
 }

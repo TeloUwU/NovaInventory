@@ -34,6 +34,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCorreo_Recu = new System.Windows.Forms.TextBox();
             this.btenviar_Correo = new System.Windows.Forms.Button();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.emisotr = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,16 +71,17 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(81, 133);
+            this.label2.Location = new System.Drawing.Point(75, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ingresa tu Coreo Electronico:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtCorreo_Recu
             // 
             this.txtCorreo_Recu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCorreo_Recu.Location = new System.Drawing.Point(84, 169);
+            this.txtCorreo_Recu.Location = new System.Drawing.Point(84, 204);
             this.txtCorreo_Recu.Name = "txtCorreo_Recu";
             this.txtCorreo_Recu.ShortcutsEnabled = false;
             this.txtCorreo_Recu.Size = new System.Drawing.Size(173, 20);
@@ -95,11 +99,44 @@
             this.btenviar_Correo.UseVisualStyleBackColor = true;
             this.btenviar_Correo.Click += new System.EventHandler(this.btenviar_Correo_Click);
             // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtUsuario.Location = new System.Drawing.Point(84, 142);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.ShortcutsEnabled = false;
+            this.txtUsuario.Size = new System.Drawing.Size(173, 20);
+            this.txtUsuario.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(143, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 18);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Usuario:";
+            // 
+            // emisotr
+            // 
+            this.emisotr.AutoSize = true;
+            this.emisotr.Location = new System.Drawing.Point(239, 0);
+            this.emisotr.Name = "emisotr";
+            this.emisotr.Size = new System.Drawing.Size(95, 13);
+            this.emisotr.TabIndex = 5;
+            this.emisotr.Text = "Nueva contraseña";
+            this.emisotr.Visible = false;
+            // 
             // frmCorreo_RecuContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 354);
+            this.Controls.Add(this.emisotr);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btenviar_Correo);
             this.Controls.Add(this.txtCorreo_Recu);
             this.Controls.Add(this.label2);
@@ -123,5 +160,8 @@
         private System.Windows.Forms.TextBox txtCorreo_Recu;
         private System.Windows.Forms.Button btenviar_Correo;
         private System.Windows.Forms.ToolStripButton btnCambiar_Recu;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label emisotr;
     }
 }
