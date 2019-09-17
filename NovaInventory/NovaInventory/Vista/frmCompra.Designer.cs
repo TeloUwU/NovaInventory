@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompra));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,6 +62,8 @@
             this.txtid_tipopago = new System.Windows.Forms.TextBox();
             this.txtid_modelo = new System.Windows.Forms.TextBox();
             this.txtid_articulo = new System.Windows.Forms.TextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
@@ -80,24 +80,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1044, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(148, 24);
-            this.toolStripButton1.Text = "Formulario Compras";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton2.Image = global::NovaInventory.Properties.Resources.undo_26px;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(149, 24);
-            this.toolStripButton2.Text = "Cerrar Formulario";
             // 
             // label1
             // 
@@ -221,7 +203,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.monthCalendar1.Location = new System.Drawing.Point(742, 77);
+            this.monthCalendar1.Location = new System.Drawing.Point(742, 45);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
             // 
@@ -333,7 +315,7 @@
             // txtid_Compra
             // 
             this.txtid_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtid_Compra.Location = new System.Drawing.Point(963, 33);
+            this.txtid_Compra.Location = new System.Drawing.Point(671, 45);
             this.txtid_Compra.Name = "txtid_Compra";
             this.txtid_Compra.Size = new System.Drawing.Size(27, 22);
             this.txtid_Compra.TabIndex = 0;
@@ -345,7 +327,7 @@
             this.dtpRealización_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpRealización_Compra.CustomFormat = "yyyy-MM-dd";
             this.dtpRealización_Compra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpRealización_Compra.Location = new System.Drawing.Point(808, 33);
+            this.dtpRealización_Compra.Location = new System.Drawing.Point(830, 282);
             this.dtpRealización_Compra.Name = "dtpRealización_Compra";
             this.dtpRealización_Compra.Size = new System.Drawing.Size(117, 22);
             this.dtpRealización_Compra.TabIndex = 0;
@@ -354,7 +336,7 @@
             // txtid_usuario
             // 
             this.txtid_usuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtid_usuario.Location = new System.Drawing.Point(931, 33);
+            this.txtid_usuario.Location = new System.Drawing.Point(639, 45);
             this.txtid_usuario.Name = "txtid_usuario";
             this.txtid_usuario.Size = new System.Drawing.Size(26, 22);
             this.txtid_usuario.TabIndex = 0;
@@ -409,11 +391,29 @@
             // txtid_articulo
             // 
             this.txtid_articulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtid_articulo.Location = new System.Drawing.Point(764, 35);
+            this.txtid_articulo.Location = new System.Drawing.Point(613, 45);
             this.txtid_articulo.Name = "txtid_articulo";
             this.txtid_articulo.Size = new System.Drawing.Size(20, 22);
             this.txtid_articulo.TabIndex = 23;
             this.txtid_articulo.Visible = false;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(148, 24);
+            this.toolStripButton1.Text = "Formulario Compras";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton2.Image = global::NovaInventory.Properties.Resources.undo_26px;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(149, 24);
+            this.toolStripButton2.Text = "Cerrar Formulario";
             // 
             // frmCompra
             // 
