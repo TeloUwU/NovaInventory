@@ -26,14 +26,14 @@ namespace NovaInventory.Vista
 
         private void btnCambiar_Recu_Click(object sender, EventArgs e)
         {
-            frmRecuperar_Contraseña Recuperar = new frmRecuperar_Contraseña();
-            Recuperar.Show();
-            this.Hide();
         }
-        public void recuperarporEmail(string email, string nick)
+       // public void recuperarporEmail(string email, string nick)
+        public void recuperarporEmail()
         {
             try
             {
+                string nick = txtUsuario.Text;
+                string email = txtCorreo_Recu.Text;
                 MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbusuarios WHERE nickname = BINARY @nickname AND  correo = BINARY @correo", Conexion.obtenerconexion());
                 cmd.Parameters.AddWithValue("nickname", nick);
                 cmd.Parameters.AddWithValue("correo", email);
@@ -44,33 +44,46 @@ namespace NovaInventory.Vista
                     int year = hoy.Year;
                     if (nick == txtUsuario.Text && email == txtCorreo_Recu.Text)
                     {
-                        MessageBox.Show("El usuario y el email han sido encontrados.", "VERIFICACION COMPLETADA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("El usuario y el email han sido encontrados.", "VERIFICACION COMPLETADA", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         MailMessage mail = new MailMessage();
-                        mail.To.Add(new MailAddress("herlyvalles@gmail.com"));
-                        mail.From = new MailAddress(txtCorreo_Recu.Text);
+                        
+                        mail.To.Add(new MailAddress(txtCorreo_Recu.Text)); 
+                        mail.From = new MailAddress("herlyvalles@gmail.com");
                         mail.Subject = "Asunto (" + emisotr.Text + ")";
-                        mail.Body = "<h1>Su contraseña fue restablesida a " + "nova" + txtUsuario.Text + year + "ingresala en el sistema. </h1>";
+                        string contra = "nova" + txtUsuario.Text + year;
+                        mail.Body = "<h1>Su contraseña fue restablecida a " +  contra + " ingresela en el sistema. </h1>";
                         mail.IsBodyHtml = true;
                         mail.Priority = MailPriority.Normal;
 
-                        SmtpClient smpt = new SmtpClient();
-                        smpt.Host = "herlyvalles@gmail.com";
-                        smpt.Port = 2525;
-                        smpt.EnableSsl = false;
-                        smpt.UseDefaultCredentials = false;
-                        smpt.Credentials = new NetworkCredential("herlyvalles@gmail.com", "wearegiantslove:3");
 
+                        bool retorno = false;
                         string output = null;
                         try
                         {
+                            SmtpClient smpt = new SmtpClient();
+                            smpt.Host = "smtp.gmail.com";
+
+                            //smpt.UseDefaultCredentials = true;
+                            smpt.Credentials = new NetworkCredential("herlyvalles@gmail.com", "ffqtjqwsvjouuxyo");
+
+                            smpt.Port = 587;
+                            smpt.EnableSsl = true;
+
                             smpt.Send(mail);
                             mail.Dispose();
                             output = "Correo electronico enviado";
-                        }
+                            String encriptada = Validaciones.md5(contra);
+                            //Actualiza contrasena en la base busca el codigo porque eos hace falta , no impora si l emantas la contra por correo si no actualizas en la base de datos no servira 
+                            MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbusuarios SET  contraseña_usuario='{0}'  WHERE Correo='{1}' and nickname ='{2}'", encriptada, email,nick  ), Conexion.obtenerconexion());
+                            retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
+                            Console.WriteLine("Fin estado " + retorno);
+                            Console.WriteLine("Fin estado " + encriptada);
+                            Console.WriteLine("Ingres *" + contra+"* Sin los asteriscos" );
+                        }       
                         catch (Exception ex)
                         {
                             output = "Error enviando Correo:" + ex.Message;
-                            
+
                         }
                         Console.WriteLine(output);
                     }
@@ -92,8 +105,8 @@ namespace NovaInventory.Vista
         }
         private void btenviar_Correo_Click(object sender, EventArgs e)
         {
-            
-
+            //public void recuperarporEmail(string email, string nick)
+            recuperarporEmail();
         }
 
         private void label2_Click(object sender, EventArgs e)

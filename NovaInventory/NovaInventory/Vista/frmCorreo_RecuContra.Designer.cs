@@ -122,7 +122,7 @@
             // emisotr
             // 
             this.emisotr.AutoSize = true;
-            this.emisotr.Location = new System.Drawing.Point(239, 0);
+            this.emisotr.Location = new System.Drawing.Point(246, 12);
             this.emisotr.Name = "emisotr";
             this.emisotr.Size = new System.Drawing.Size(95, 13);
             this.emisotr.TabIndex = 5;

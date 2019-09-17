@@ -43,7 +43,7 @@ namespace NovaInventory.Vista
                     }
                     else if (txtContraseña.Text == "nova"+txtUsuario.Text + year)
                     {
-                        frmItervencionAdmin_RecuContra frm = new frmItervencionAdmin_RecuContra();
+                        frm_nuevo frm = new frm_nuevo();
                         frm.Show();
                         this.Hide();
                     }
