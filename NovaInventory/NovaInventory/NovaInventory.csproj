@@ -226,6 +226,12 @@
     <Compile Include="Vista\Kardex_Saraí.Designer.cs">
       <DependentUpon>Kardex_Saraí.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\recuContra_ReinicioAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\recuContra_ReinicioAdmin.Designer.cs">
+      <DependentUpon>recuContra_ReinicioAdmin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Kardex_Saraí.resx">
       <DependentUpon>Kardex_Saraí.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\recuContra_ReinicioAdmin.resx">
+      <DependentUpon>recuContra_ReinicioAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
