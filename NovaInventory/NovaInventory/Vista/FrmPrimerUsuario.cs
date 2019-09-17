@@ -53,9 +53,9 @@ namespace NovaInventory.Vista
                     usuario.fecha_de_nacimiento = dtNacimiento.Text;
                     string intentos = "0";
                     usuario.intentos = intentos;
-                    usuario.id_estados = Convert.ToInt32(cmbEstado.SelectedValue.ToString());
-                    usuario.id_tipo_usuarios = Convert.ToInt32(cmbTipoUsuario.SelectedValue.ToString());
-                    usuario.empresa = Convert.ToInt32(cmbEmpresa.SelectedValue.ToString());
+                    usuario.id_estados = Convert.ToInt32(cmbEstado.SelectedValue);
+                    usuario.id_tipo_usuarios = Convert.ToInt32(cmbTipoUsuario.SelectedValue);
+                    usuario.empresa = Convert.ToInt32(cmbEmpresa.SelectedValue);
                     MemoryStream ms = new MemoryStream();
                     pbFoto.Image.Save(ms, ImageFormat.Jpeg);
                     byte[] aByte = ms.ToArray();
@@ -65,23 +65,23 @@ namespace NovaInventory.Vista
 
                     //constructor_primer_usuario ne= new constructor_primer_usuario ();
                     //ne.id_usuarios= Convert.ToInt16( toolStripTextBox1.Text);
-                    int usu = 10;
+                    int usu = 1;
                     constructor_de_respuestas res = new constructor_de_respuestas();
                     constructor_de_respuestas res2 = new constructor_de_respuestas();
                     constructor_de_respuestas res3 = new constructor_de_respuestas();
                     constructor_de_respuestas res4 = new constructor_de_respuestas();
 
                     res.Respuesta = txtRespuesta1.Text;
-                    res.preguntas = Convert.ToInt32(cmbPregunta1.SelectedIndex.ToString());
+                    res.preguntas = Convert.ToInt32(cmbPregunta1.SelectedIndex);
                     res.usuarioss = usu;
                     res2.Respuesta = txtRespuesta2.Text;
-                    res2.preguntas = Convert.ToInt32(cmbPregunta2.SelectedIndex.ToString());
+                    res2.preguntas = Convert.ToInt32(cmbPregunta2.SelectedIndex);
                     res2.usuarioss = usu;
                     res3.Respuesta = textBox1.Text;
-                    res3.preguntas = Convert.ToInt32(cmbPregunta3.SelectedIndex.ToString());
+                    res3.preguntas = Convert.ToInt32(cmbPregunta3.SelectedIndex);
                     res3.usuarioss = usu;
                     res4.Respuesta = textBox2.Text;
-                    res4.preguntas = Convert.ToInt32(cmbPregunta4.SelectedIndex.ToString());
+                    res4.preguntas = Convert.ToInt32(cmbPregunta4.SelectedIndex);
                     res4.usuarioss = usu;
                     int retornar = preguntas_y_respuestas.agregar_re(res);
                     int retorna = preguntas_y_respuestas.agregar_re(res2);
