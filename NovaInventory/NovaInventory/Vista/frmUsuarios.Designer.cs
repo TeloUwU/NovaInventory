@@ -202,6 +202,7 @@
             // 
             this.txtNombres_Usuario.Location = new System.Drawing.Point(20, 86);
             this.txtNombres_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombres_Usuario.MaxLength = 50;
             this.txtNombres_Usuario.Name = "txtNombres_Usuario";
             this.txtNombres_Usuario.ShortcutsEnabled = false;
             this.txtNombres_Usuario.Size = new System.Drawing.Size(157, 20);
@@ -211,6 +212,7 @@
             // 
             this.txtApellidos_Usuario.Location = new System.Drawing.Point(20, 138);
             this.txtApellidos_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidos_Usuario.MaxLength = 50;
             this.txtApellidos_Usuario.Name = "txtApellidos_Usuario";
             this.txtApellidos_Usuario.ShortcutsEnabled = false;
             this.txtApellidos_Usuario.Size = new System.Drawing.Size(156, 20);
@@ -221,6 +223,7 @@
             // 
             this.txtUsuario.Location = new System.Drawing.Point(19, 192);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(157, 20);
@@ -230,6 +233,7 @@
             // 
             this.txtCorreo_Usuario.Location = new System.Drawing.Point(214, 86);
             this.txtCorreo_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo_Usuario.MaxLength = 150;
             this.txtCorreo_Usuario.Name = "txtCorreo_Usuario";
             this.txtCorreo_Usuario.ShortcutsEnabled = false;
             this.txtCorreo_Usuario.Size = new System.Drawing.Size(142, 20);

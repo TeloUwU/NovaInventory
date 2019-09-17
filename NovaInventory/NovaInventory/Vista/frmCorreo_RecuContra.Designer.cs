@@ -82,6 +82,7 @@
             // 
             this.txtCorreo_Recu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCorreo_Recu.Location = new System.Drawing.Point(93, 190);
+            this.txtCorreo_Recu.MaxLength = 150;
             this.txtCorreo_Recu.Name = "txtCorreo_Recu";
             this.txtCorreo_Recu.ShortcutsEnabled = false;
             this.txtCorreo_Recu.Size = new System.Drawing.Size(173, 20);
@@ -103,6 +104,7 @@
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsuario.Location = new System.Drawing.Point(93, 128);
+            this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(173, 20);
