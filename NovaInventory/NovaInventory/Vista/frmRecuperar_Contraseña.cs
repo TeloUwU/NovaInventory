@@ -19,7 +19,7 @@ namespace NovaInventory.Vista
 
         private void pbCorreo_Recu_Click(object sender, EventArgs e)
         {
-            RecuCorreo frm = new RecuCorreo();
+            frmCorreo_RecuContra frm = new frmCorreo_RecuContra();
             frm.Show();
             this.Hide();
         }

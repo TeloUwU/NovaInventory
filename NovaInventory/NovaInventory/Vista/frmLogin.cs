@@ -41,6 +41,12 @@ namespace NovaInventory.Vista
                         main.Show();
                         this.Hide();
                     }
+                    else if (txtContraseña.Text == "nova"+txtUsuario.Text + year)
+                    {
+                        frmNuevaContraseña frm = new frmNuevaContraseña();
+                        frm.Show();
+                        this.Hide();
+                    }
                     else
                     {
                         txtContraseña.Text = Validaciones.md5(txtContraseña.Text);
@@ -84,10 +90,12 @@ namespace NovaInventory.Vista
             }
         }
 
-    
 
-    private void btnIniciar_Sesion_Click(object sender, EventArgs e)
+
+        private void btnIniciar_Sesion_Click(object sender, EventArgs e)
         {
+            
+         
             Validar_Campos();
         }
 

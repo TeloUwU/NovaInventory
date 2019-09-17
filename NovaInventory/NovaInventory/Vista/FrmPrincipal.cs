@@ -240,5 +240,10 @@ namespace NovaInventory.Vista
         {
             AbrirFormulario<frmCompra>();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<recuContra_ReinicioAdmin>();
+        }
     }
 }
