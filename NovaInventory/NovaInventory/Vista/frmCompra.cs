@@ -302,6 +302,7 @@ namespace NovaInventory.Vista
             cbTipo_Pago.Enabled = false;
             txtDescripción.Enabled = false;
             txtNum_factura.Enabled = false;
+            dtpRealización_Compra.Visible = true;
 
             Total();
         }
@@ -314,6 +315,15 @@ namespace NovaInventory.Vista
             agregar.total_mod = Convert.ToInt16(txtTotal.Text);
             agregar.cantidad_mod = Convert.ToInt16(nUDCantidad.Text); 
 
+        }
+
+        public void LimpiarTodo()
+        {
+            txtTotal.Clear();
+            nUDCantidad.Text = "0";
+            txtPrecio_Unitario.Clear();
+            txtDescripción.Clear();
+            
         }
 
         private void txtNum_factura_TextChanged(object sender, EventArgs e)

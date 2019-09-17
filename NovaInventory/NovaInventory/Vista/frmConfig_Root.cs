@@ -14,7 +14,7 @@ using NovaInventory.Modelo;
 using NovaInventory.Config;
 using System.IO;
 using MySql.Data;
-
+using System.Drawing.Imaging;
 
 namespace NovaInventory.Vista
 {
@@ -22,7 +22,6 @@ namespace NovaInventory.Vista
     {
         Constructor_Root actualizar = new Constructor_Root();
 
-        private string nombre = "Maria";
 
         public frmConfig_Root()
         {
@@ -50,22 +49,19 @@ namespace NovaInventory.Vista
             if (reader.Read())
             {
                 //asignas dependienteo de la posicion del campo en la tabla de la ba
+                txtUsuario_Root.Text = reader[1].ToString();
                 txtNombre_Root.Text = reader[2].ToString();
                 txtApellidos_Root.Text = reader[3].ToString();
-                maskDui_Root.Text = reader[8].ToString();
-                txtUsuario_Root.Text = reader[1].ToString();
-                // dtNacimiento_Root.Text = reader[10].ToString();
-                cmbEmpresa_Root.Text = reader[14].ToString();
                 txt_cel_Root.Text = reader[5].ToString();
+                byte[] image = Convert.FromBase64String(reader[6].ToString());
+                MemoryStream ms = new MemoryStream(image);
+                pbFoto_Root.Image = Image.FromStream(ms);
                 txtEmail_Root.Text = reader[7].ToString();
+                maskDui_Root.Text = reader[8].ToString();
+                // dtNacimiento_Root.Text = reader[10].ToString();
                 cmbEstado_Root.Text = reader[11].ToString();
-                // pbFoto_Root.Image = reader[6].ToString();
-
-
-
+                cmbEmpresa_Root.Text = reader[14].ToString();            
             }
-
-
         }
 
 
@@ -155,19 +151,25 @@ namespace NovaInventory.Vista
 
         public void ModificarRegistro()
         {
-           // actualizar.id_usuario = Convert.ToInt32(txtid_Root.Text);
+            
             actualizar.nombre_usuario = txtNombre_Root.Text;
             actualizar.apellido_usuario = txtApellidos_Root.Text;
             actualizar.dui = maskDui_Root.Text;
             actualizar.fecha_de_nacimiento = dtNacimiento_Root.Text;
-            //actualizar. empresa= cmbEmpresa_Root.Text;
+            actualizar.empresa= Convert.ToInt16(cmbEmpresa_Root.SelectedValue);
             actualizar.telefono = txt_cel_Root.Text;
             actualizar.Correo = txtEmail_Root.Text;
-            //actualizar.id_tipo_usuarios = cmbTipoUsuario_Root.Text;
-            //actualizar.id_estados = cmbEstado_Root.text;
+            
+            actualizar.id_estados = Convert.ToInt16(cmbEstado_Root.SelectedValue);
             actualizar.usuario = txtUsuario_Root.Text;
-            //actualizar.Foto_usuario = pbFoto_Root.Image;
-            actualizar.contraseña_usuario = txtClave_Root.Text;
+
+            MemoryStream ms = new MemoryStream();
+            pbFoto_Root.Image.Save(ms, ImageFormat.Jpeg);
+            byte[] aByte = ms.ToArray();
+            string decoded = Convert.ToBase64String(aByte);
+            actualizar.Foto_usuario = decoded;
+
+            actualizar.contraseña_usuario = Validaciones.md5(txtClave_Root.Text);
             actualizar.fecha_de_nacimiento = dtNacimiento_Root.Text;
             actualizar.nickname = txtUsuario_Root.Text;
             Actualizar_Root.Actualizar_usuario_root(actualizar);
@@ -185,7 +187,7 @@ namespace NovaInventory.Vista
             txtEmail_Root.Clear();
             cmbEstado_Root.SelectedValue = "1";
             txtUsuario_Root.Clear();
-            //pbFoto_Root.Image.Clone();
+            pbFoto_Root.Image = null;
             cmbEmpresa_Root.SelectedValue = "1";
             txtClave_Root.Clear();
         }
@@ -194,19 +196,18 @@ namespace NovaInventory.Vista
             if (txtNombre_Root.Text == "" || txtApellidos_Root.Text == "" || maskDui_Root.Text == "" || dtNacimiento_Root.Text == "" || cmbEmpresa_Root.Text == "" || txt_cel_Root.Text == "" || txtEmail_Root.Text == "" || cmbEstado_Root.Text == "" || txtUsuario_Root.Text == "")
             {
                 MessageBox.Show("No pueden quedar campos vacios", "Complete toda la información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }          
+            else if (txtClave_Root.Text != txtConfClave_Root.Text)
+            {
+                MessageBox.Show("Las contraseñas que se ingresaron no coinciden", "Verificar que la contraseña coincida", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-          
             else
             {
-                if (txtClave_Root.Text != txtConfClave_Root.Text)
-                {
-                    MessageBox.Show("Las contraseñas que se ingresaron no coinciden", "Verificar que la contraseña coincida", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                ModificarRegistro();
+                LimpiarCampos();
+                button_actualizar.Enabled = false;
             }
-            txtClave_Root.Text = Validaciones.md5(txtClave_Root.Text);
-            ModificarRegistro();
-            LimpiarCampos();
-            button_actualizar.Enabled = false;
+            
 
 
 
