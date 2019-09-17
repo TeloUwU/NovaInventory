@@ -22,7 +22,7 @@ namespace NovaInventory.Controlador
             int retorno = 0;
             try
             {
-                MySqlCommand comandoAgregar = new MySqlCommand(string.Format("INSERT INTO tbCompras (id_compra, id_proveedor, id_articulos, descripcion, Preciounitario, Precio_total, Cantidad, fecha_compra, id_usuario, tipo_de_pago, num_factura) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')", agregar.id_compra, agregar.id_proveedor, agregar.id_producto, agregar.descripcion, agregar.Preciounitario, agregar.Precio_Total, agregar.Cantidad, agregar.fecha_compra, agregar.id_usuario, agregar.tipo_pago, agregar.num_factura), Conexion.obtenerconexion());
+                MySqlCommand comandoAgregar = new MySqlCommand(string.Format("INSERT INTO tbcompras (id_compra, id_proveedor, id_articulos, descripcion, Preciounitario, Precio_total, Cantidad, fecha_compra, id_usuario, tipo_de_pago, num_factura) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')", agregar.id_compra, agregar.id_proveedor, agregar.id_producto, agregar.descripcion, agregar.Preciounitario, agregar.Precio_Total, agregar.Cantidad, agregar.fecha_compra, agregar.id_usuario, agregar.tipo_pago, agregar.num_factura), Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(comandoAgregar.ExecuteNonQuery());
                 if (retorno >= 0)
                 {
@@ -139,7 +139,7 @@ namespace NovaInventory.Controlador
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE tbcompras SET id_usuario_mod = '{0}', precio_unitario_mod = '{1}', total_mod = '{2}', Cantidad_mod = '{3}' WHERE id_compra = '{4}'", upd.id_usuario_mod,upd.precio_unitario_mod,upd.total_mod,upd.cantidad_mod,upd.id_usuario_mod),Conexion.obtenerconexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE tbcompras SET "),Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
