@@ -29,7 +29,7 @@ namespace NovaInventory.Vista
             agrega.direccion = txtDirección.Text;
             agrega.fecha_alta = dateTimePicker1.Text;
             agrega.creado_por = jj;
-            agrega.id_estado = Convert.ToInt16(cbEstado_Bodega.SelectedValue.ToString());
+            agrega.id_estado = Convert.ToInt16(cbEstado_Bodega.SelectedValue);
             int retorno = control_de_bodega.agregar_usu(agrega);
         }
         void mostra()
@@ -43,7 +43,7 @@ namespace NovaInventory.Vista
             actu.nombre_bodega = txtNombre_Bodega.Text;
             actu.direccion = txtDirección.Text;
             actu.fecha_alta = dateTimePicker1.Text;
-            actu.id_estado = Convert.ToInt16(cbEstado_Bodega.SelectedValue.ToString());
+            actu.id_estado = Convert.ToInt16(cbEstado_Bodega.SelectedValue);
             control_de_bodega.actualizarusu(actu);
         }
         void eli()

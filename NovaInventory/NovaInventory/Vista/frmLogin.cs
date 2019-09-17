@@ -27,7 +27,7 @@ namespace NovaInventory.Vista
             }
             else
             {
-               Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
+                Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
                Constructor_login.usuario = txtUsuario.Text;
                 login.clave = txtContraseña.Text;
                 bool datos = validar_login.acceso(login);

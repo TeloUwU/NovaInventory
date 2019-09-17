@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using NovaInventory.Config;
 
 namespace NovaInventory.Controlador
 {
@@ -17,7 +18,7 @@ namespace NovaInventory.Controlador
 
         public string usuario { get; set; }
 
-        MySqlConnection cn = new MySqlConnection("Server = localhost; Uid = root; password = ; Database = db_novainventory_25");
+        
         MySqlCommand cmd = new MySqlCommand();
 
         public constructor_de_respuestas()
@@ -30,8 +31,8 @@ namespace NovaInventory.Controlador
 
             //string sql = "SELECT * FROM tbrespuesta;";
             string sql = "SELECT * FROM tbrespuesta where preguntas =1;";
-            cmd = new MySqlCommand(sql, cn);
-            cn.Open();
+            cmd = new MySqlCommand(sql,Conexion.obtenerconexion() );
+            Conexion.obtenerconexion().Open();
             MySqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
@@ -42,7 +43,7 @@ namespace NovaInventory.Controlador
                 Console.WriteLine(reader.GetString(2));
                 //reader.NextResult();
             }
-            cn.Close();
+            Conexion.obtenerconexion().Close();
             Console.WriteLine("Fin de constructor");
         }
         public constructor_de_respuestas(string usuario, int pregunta)
@@ -58,8 +59,8 @@ namespace NovaInventory.Controlador
                 string sql = "select tr.id_respuesta , tr.preguntas , tr.Respuesta, tr.usuarioss " +
                              " from tbrespuesta tr inner join tbusuarios tu on tr.usuarioss = tu.id_usuarios " +
                              "where tu.nickname = '"+this.usuario + "' and tr.preguntas = "+this.preguntas+";";
-                cmd = new MySqlCommand(sql, cn);
-                cn.Open();
+                cmd = new MySqlCommand(sql, Conexion.obtenerconexion());
+                Conexion.obtenerconexion().Open();
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read()) { 
                 this.id_respuesta = reader.GetInt32(0);
