@@ -90,7 +90,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(26, 449);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(208, 38);
             this.button3.TabIndex = 10;
@@ -106,7 +106,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(132, 122);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 38);
             this.button2.TabIndex = 3;
@@ -122,7 +122,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(26, 122);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 38);
             this.button1.TabIndex = 2;
@@ -189,7 +189,7 @@
             // TxtNit
             // 
             this.TxtNit.Location = new System.Drawing.Point(26, 205);
-            this.TxtNit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtNit.Margin = new System.Windows.Forms.Padding(2);
             this.TxtNit.Mask = "0000-000000-000-0";
             this.TxtNit.Name = "TxtNit";
             this.TxtNit.Size = new System.Drawing.Size(532, 20);
@@ -211,7 +211,7 @@
             this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
             this.BtnGuardar.Location = new System.Drawing.Point(581, 449);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(187, 38);
             this.BtnGuardar.TabIndex = 7;
@@ -227,7 +227,7 @@
             this.BtnExaminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExaminar.ForeColor = System.Drawing.Color.White;
             this.BtnExaminar.Location = new System.Drawing.Point(581, 267);
-            this.BtnExaminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnExaminar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnExaminar.Name = "BtnExaminar";
             this.BtnExaminar.Size = new System.Drawing.Size(188, 38);
             this.BtnExaminar.TabIndex = 6;
@@ -239,7 +239,7 @@
             // 
             this.pbLogo.BackColor = System.Drawing.Color.White;
             this.pbLogo.Location = new System.Drawing.Point(616, 76);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(126, 183);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -250,8 +250,8 @@
             // 
             this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDireccion.Location = new System.Drawing.Point(27, 256);
-            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TxtDireccion.MaxLength = 150;
+            this.TxtDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtDireccion.MaxLength = 25;
             this.TxtDireccion.Multiline = true;
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(531, 65);
@@ -261,8 +261,8 @@
             // 
             this.TxtLegal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLegal.Location = new System.Drawing.Point(27, 345);
-            this.TxtLegal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TxtLegal.MaxLength = 75;
+            this.TxtLegal.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtLegal.MaxLength = 25;
             this.TxtLegal.Name = "TxtLegal";
             this.TxtLegal.Size = new System.Drawing.Size(531, 22);
             this.TxtLegal.TabIndex = 5;
@@ -271,8 +271,8 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(28, 151);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCorreo.MaxLength = 45;
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.MaxLength = 30;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(531, 22);
             this.txtCorreo.TabIndex = 2;
@@ -281,8 +281,8 @@
             // 
             this.TxtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmpresa.Location = new System.Drawing.Point(28, 95);
-            this.TxtEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TxtEmpresa.MaxLength = 45;
+            this.TxtEmpresa.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtEmpresa.MaxLength = 15;
             this.TxtEmpresa.Name = "TxtEmpresa";
             this.TxtEmpresa.Size = new System.Drawing.Size(531, 22);
             this.TxtEmpresa.TabIndex = 1;

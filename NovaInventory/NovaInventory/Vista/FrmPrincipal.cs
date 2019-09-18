@@ -20,10 +20,85 @@ namespace NovaInventory.Vista
         Form currentForm;
         void admin()
         {
-            button2.Enabled = true;
-            button5.Enabled = false;
-            button6.Enabled = false;
-            button7.Enabled = true;
+            archivoToolStripMenuItem.Visible = false;
+            buscarToolStripMenuItem.Visible = false;
+            inventarioToolStripMenuItem.Visible = false;
+            facturaciónToolStripMenuItem.Visible = false;
+            gráficosYReportesToolStripMenuItem.Visible = false;
+            button2.Visible = false;
+            button4.Visible = true;
+            button4.Location = new Point(0, 135);
+
+            button8.Visible = false;
+            button7.Visible = false;
+            button9.Visible = false;
+            button10.Visible = false;
+            button5.Visible = false;
+            button6.Visible = false;
+            button3.Visible = true;
+            button3.Location = new Point(0, 177);
+            ;
+        }
+        void bodeguero()
+        {
+            archivoToolStripMenuItem.Visible = false;
+            buscarToolStripMenuItem.Visible = true;
+            inventarioToolStripMenuItem.Visible = true;
+            facturaciónToolStripMenuItem.Visible = false;
+            gráficosYReportesToolStripMenuItem.Visible = false;
+            button2.Visible = true;
+            button2.Location = new Point(0, 135);
+            button4.Visible = false;
+            button8.Visible = true;
+            button8.Location = new Point(0,177);
+            button7.Visible = false;
+            button9.Visible = true;
+            button9.Location = new Point(0, 219);
+            button10.Visible = true;
+            button10.Location = new Point(0, 261);
+            button5.Visible = false;
+            button6.Visible = false;
+            button3.Visible = false;
+        }
+        void caja()
+        {
+            archivoToolStripMenuItem.Visible = false;
+            buscarToolStripMenuItem.Visible = true;
+            buscarToolStripMenuItem1.Visible = false;
+            agregarProveedorToolStripMenuItem.Visible = false;
+            agregarBodegaToolStripMenuItem.Visible = false;
+            inventarioToolStripMenuItem.Visible = false;
+            facturaciónToolStripMenuItem.Visible = false;
+            gráficosYReportesToolStripMenuItem.Visible = false;
+            button2.Visible = true;
+            button2.Location = new Point(0, 135);
+            button4.Visible = false;
+            button8.Visible = false;
+            button7.Visible = false;
+            button9.Visible = false;
+            button10.Visible = false;
+            button5.Visible = false;
+            button6.Visible = false;
+            button3.Visible = false;
+        }
+        void inve()
+        {
+            archivoToolStripMenuItem.Visible = false;
+            buscarToolStripMenuItem.Visible = false;
+            inventarioToolStripMenuItem.Visible = true;
+            facturaciónToolStripMenuItem.Visible = false;
+            gráficosYReportesToolStripMenuItem.Visible = false;
+            button2.Visible = true;
+            button2.Location = new Point(0, 135);
+            button4.Visible = false;
+            button8.Visible = false;
+            button7.Visible = false;
+            button9.Visible = false;
+            button10.Visible = true;
+            button10.Location = new Point(0, 177);
+            button5.Visible = false;
+            button6.Visible = false;
+            button3.Visible = false;
         }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
@@ -33,25 +108,27 @@ namespace NovaInventory.Vista
             lblApellidos_Usuario.Text = Constructor_login.apellido;
             if (Constructor_login.nivel == 1) 
             {
-                lblNivel.Text = ("Root");
+                label1.Text = ("Root");
             }
             else if (Constructor_login.nivel== 2)
             {
                 admin();
-                lblNivel.Text = ("Administrador");
+                label1.Text = ("Administrador");
             }
             else if (Constructor_login.nivel == 3)
             {
-
-                lblNivel.Text = ("Bodeguero");
+                bodeguero();
+                label1.Text = ("Bodeguero");
             }
             else if (Constructor_login.nivel == 4)
             {
-                lblNivel.Text = ("Cajero");
+                caja();
+                label1.Text = ("Cajero");
             }
             else if (Constructor_login.nivel == 5)
             {
-                lblNivel.Text = ("Gerente de inventario");
+
+                label1.Text = ("Gerente de inventario");
             }
         }
 
@@ -244,6 +321,31 @@ namespace NovaInventory.Vista
         private void button3_Click(object sender, EventArgs e)
         {
             AbrirFormulario<recuContra_ReinicioAdmin>();
+        }
+
+        private void PanelSidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void agregarCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCompra>();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmUsuarios>();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmProveedores>();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmInventarioExistencias>();
         }
     }
 }

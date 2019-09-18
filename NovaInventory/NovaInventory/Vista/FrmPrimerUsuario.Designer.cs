@@ -209,6 +209,7 @@
             // 
             this.txtConfClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtConfClave.Location = new System.Drawing.Point(424, 319);
+            this.txtConfClave.MaxLength = 50;
             this.txtConfClave.Name = "txtConfClave";
             this.txtConfClave.ShortcutsEnabled = false;
             this.txtConfClave.Size = new System.Drawing.Size(312, 24);
@@ -219,6 +220,7 @@
             // 
             this.txtApellidos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtApellidos.Location = new System.Drawing.Point(424, 75);
+            this.txtApellidos.MaxLength = 50;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(312, 24);
             this.txtApellidos.TabIndex = 2;
@@ -227,6 +229,7 @@
             // 
             this.txtRespuesta2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRespuesta2.Location = new System.Drawing.Point(225, 472);
+            this.txtRespuesta2.MaxLength = 50;
             this.txtRespuesta2.Name = "txtRespuesta2";
             this.txtRespuesta2.Size = new System.Drawing.Size(629, 24);
             this.txtRespuesta2.TabIndex = 15;
@@ -235,6 +238,7 @@
             // 
             this.txtRespuesta1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRespuesta1.Location = new System.Drawing.Point(225, 409);
+            this.txtRespuesta1.MaxLength = 50;
             this.txtRespuesta1.Name = "txtRespuesta1";
             this.txtRespuesta1.Size = new System.Drawing.Size(629, 24);
             this.txtRespuesta1.TabIndex = 14;
@@ -243,6 +247,7 @@
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEmail.Location = new System.Drawing.Point(80, 222);
+            this.txtEmail.MaxLength = 150;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(312, 24);
             this.txtEmail.TabIndex = 7;
@@ -251,6 +256,7 @@
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsuario.Location = new System.Drawing.Point(424, 269);
+            this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(312, 24);
@@ -260,7 +266,7 @@
             // 
             this.txtClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtClave.Location = new System.Drawing.Point(78, 319);
-            this.txtClave.MaxLength = 45;
+            this.txtClave.MaxLength = 50;
             this.txtClave.Name = "txtClave";
             this.txtClave.ShortcutsEnabled = false;
             this.txtClave.Size = new System.Drawing.Size(311, 24);
@@ -280,7 +286,7 @@
             // 
             this.txtNombres.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombres.Location = new System.Drawing.Point(78, 75);
-            this.txtNombres.MaxLength = 45;
+            this.txtNombres.MaxLength = 50;
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(311, 24);
             this.txtNombres.TabIndex = 1;
@@ -500,6 +506,7 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(225, 533);
+            this.textBox1.MaxLength = 50;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(629, 24);
             this.textBox1.TabIndex = 16;
@@ -508,6 +515,7 @@
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(225, 600);
+            this.textBox2.MaxLength = 50;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(629, 24);
             this.textBox2.TabIndex = 17;

@@ -65,7 +65,7 @@ namespace NovaInventory.Vista
 
                     //constructor_primer_usuario ne= new constructor_primer_usuario ();
                     //ne.id_usuarios= Convert.ToInt16( toolStripTextBox1.Text);
-                    int usu = 1 ;
+                    int usu = 6 ;
                     constructor_de_respuestas res = new constructor_de_respuestas();
                     constructor_de_respuestas res2 = new constructor_de_respuestas();
                     constructor_de_respuestas res3 = new constructor_de_respuestas();

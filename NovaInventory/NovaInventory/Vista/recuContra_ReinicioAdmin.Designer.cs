@@ -35,19 +35,25 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar_Usuarios)).BeginInit();
             this.panel1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvMostrar_Usuarios
             // 
             this.dgvMostrar_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrar_Usuarios.Location = new System.Drawing.Point(22, 57);
+            this.dgvMostrar_Usuarios.Location = new System.Drawing.Point(22, 89);
             this.dgvMostrar_Usuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMostrar_Usuarios.Name = "dgvMostrar_Usuarios";
             this.dgvMostrar_Usuarios.RowTemplate.Height = 24;
-            this.dgvMostrar_Usuarios.Size = new System.Drawing.Size(459, 332);
+            this.dgvMostrar_Usuarios.Size = new System.Drawing.Size(459, 300);
             this.dgvMostrar_Usuarios.TabIndex = 23;
+            this.dgvMostrar_Usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrar_Usuarios_CellClick);
             // 
             // label1
             // 
@@ -64,8 +70,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(22, 13);
+            this.panel1.Location = new System.Drawing.Point(22, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(685, 39);
             this.panel1.TabIndex = 24;
@@ -75,7 +82,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(485, 166);
+            this.button4.Location = new System.Drawing.Point(486, 185);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 41);
@@ -89,7 +96,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(485, 114);
+            this.button1.Location = new System.Drawing.Point(486, 133);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 41);
@@ -100,7 +107,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(486, 89);
+            this.txtUsuario.Location = new System.Drawing.Point(487, 108);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(127, 20);
             this.txtUsuario.TabIndex = 27;
@@ -108,28 +115,69 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(485, 70);
+            this.label2.Location = new System.Drawing.Point(486, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 13);
+            this.label2.Size = new System.Drawing.Size(101, 13);
             this.label2.TabIndex = 28;
-            this.label2.Text = "Nombre del root y/u administrador:";
+            this.label2.Text = "Nombre del usuario:";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(738, 27);
+            this.toolStrip1.TabIndex = 29;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::NovaInventory.Properties.Resources.cancel_button;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(61, 24);
+            this.toolStripLabel1.Text = "Productos";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(668, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(17, 20);
+            this.textBox1.TabIndex = 30;
+            this.textBox1.Visible = false;
             // 
             // recuContra_ReinicioAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 410);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dgvMostrar_Usuarios);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "recuContra_ReinicioAdmin";
             this.Text = "recuContra_ReinicioAdmin";
+            this.Load += new System.EventHandler(this.recuContra_ReinicioAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar_Usuarios)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +192,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
