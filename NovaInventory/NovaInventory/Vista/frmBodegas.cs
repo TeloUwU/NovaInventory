@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Controlador;
 using NovaInventory.Modelo;
+using NovaInventory.Reportes;
 
 namespace NovaInventory.Vista
 {
@@ -134,6 +135,13 @@ namespace NovaInventory.Vista
             {
                 e.Handled = true;
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Reporte_Bodega ny = new Reporte_Bodega();
+            ny.Show();
+            this.Hide();
         }
     }
 }

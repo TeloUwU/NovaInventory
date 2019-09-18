@@ -100,6 +100,16 @@
     <Compile Include="Modelo\Validar_primer_uso.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\DataSet_proveedor.cs">
       <DependentUpon>DataSet_proveedor.xsd</DependentUpon>
     </Compile>
@@ -113,6 +123,18 @@
     </Compile>
     <Compile Include="Reportes\reportes_prov.Designer.cs">
       <DependentUpon>reportes_prov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Bodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Bodega.Designer.cs">
+      <DependentUpon>Reporte_Bodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporte_usu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporte_usu.Designer.cs">
+      <DependentUpon>reporte_usu.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\agregar_preguntas.cs">
       <SubType>Form</SubType>
@@ -275,8 +297,16 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\Report2.rdlc" />
+    <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\reportes_prov.resx">
       <DependentUpon>reportes_prov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Bodega.resx">
+      <DependentUpon>Reporte_Bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte_usu.resx">
+      <DependentUpon>reporte_usu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\agregar_preguntas.resx">
       <DependentUpon>agregar_preguntas.cs</DependentUpon>
@@ -367,6 +397,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSet4.xsc">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSet4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSet4.xss">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\DataSet_proveedor.xsc">
       <DependentUpon>DataSet_proveedor.xsd</DependentUpon>
     </None>

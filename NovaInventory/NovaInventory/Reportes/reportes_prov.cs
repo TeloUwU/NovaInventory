@@ -24,6 +24,7 @@ namespace NovaInventory.Reportes
 
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
+        
         }
     }
 }

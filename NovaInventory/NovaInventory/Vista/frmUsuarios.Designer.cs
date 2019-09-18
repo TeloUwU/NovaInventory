@@ -62,6 +62,7 @@
             this.CargarImagen = new System.Windows.Forms.OpenFileDialog();
             this.label12 = new System.Windows.Forms.Label();
             this.cmb_emp = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.tsAdmin_Usuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar_Usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Usuario)).BeginInit();
@@ -430,11 +431,24 @@
             this.cmb_emp.Size = new System.Drawing.Size(126, 21);
             this.cmb_emp.TabIndex = 30;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button5.Location = new System.Drawing.Point(343, 401);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(96, 41);
+            this.button5.TabIndex = 32;
+            this.button5.Text = "prueba";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 540);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cmb_emp);
             this.Controls.Add(this.btnSeleccionarFoto_Usuario);
@@ -517,5 +531,6 @@
         private System.Windows.Forms.OpenFileDialog CargarImagen;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmb_emp;
+        private System.Windows.Forms.Button button5;
     }
 }

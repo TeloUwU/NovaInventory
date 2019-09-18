@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using NovaInventory.Controlador;
 using NovaInventory.Modelo;
 using NovaInventory.Config;
+using NovaInventory.Reportes;
 
 namespace NovaInventory.Vista
 {
@@ -176,6 +177,13 @@ namespace NovaInventory.Vista
         private void cbEstado_Usuario_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            reporte_usu mm = new reporte_usu();
+            mm.Show();
+            this.Hide();
         }
     }
 }

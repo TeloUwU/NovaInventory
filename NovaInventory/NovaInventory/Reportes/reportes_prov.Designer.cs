@@ -30,26 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tbproveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet_proveedor = new NovaInventory.Reportes.DataSet_proveedor();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dataSet_proveedor1 = new NovaInventory.Reportes.DataSet_proveedor();
             this.tbproveedorTableAdapter = new NovaInventory.Reportes.DataSet_proveedorTableAdapters.tbproveedorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tbproveedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_proveedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_proveedor1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.tbproveedorBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "NovaInventory.Reportes.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(-1, 1);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(862, 475);
-            this.reportViewer1.TabIndex = 0;
             // 
             // tbproveedorBindingSource
             // 
@@ -60,6 +49,18 @@
             // 
             this.DataSet_proveedor.DataSetName = "DataSet_proveedor";
             this.DataSet_proveedor.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.tbproveedorBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "NovaInventory.Reportes.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(861, 475);
+            this.reportViewer1.TabIndex = 0;
             // 
             // dataSet_proveedor1
             // 
