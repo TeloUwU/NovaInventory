@@ -101,12 +101,79 @@ namespace NovaInventory.Vista
         }
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-
+            insertar_categoria();      
         }
 
         private void btn_agregar_pr_Click(object sender, EventArgs e)
         {
+            instertar_procuctos();
+        }
 
+        private void btn_mostrar_Click(object sender, EventArgs e)
+        {
+            mostrar_categorias();
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            actualizar_categoria();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            eliminar_categoria();
+        }
+
+        private void btn_mostrar_pr_Click(object sender, EventArgs e)
+        {
+            mostrar_productos();
+        }
+
+        private void btn_actualizar_pr_Click(object sender, EventArgs e)
+        {
+            actualizar_productos();
+        }
+
+        private void btn_eliminar_prr_Click(object sender, EventArgs e)
+        {
+            eliminar_productos();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            insertar_modelo();
+        
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            mostrar_modelos();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            actualizar_modelo();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            eliminar_modelo();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void frmCategoria_Load(object sender, EventArgs e)
+        {
+            cmbCategoria.DataSource = Validar_prodictos.cargar();
+            cmbCategoria.DisplayMember = "categoria";
+            cmbCategoria.ValueMember = "id_categoria";
+
+            cmbproductos.DataSource = Validar_prodictos.cargar1();
+            cmbproductos.DisplayMember = "productos";
+            cmbproductos.ValueMember = "id_producto";
         }
     }
 }

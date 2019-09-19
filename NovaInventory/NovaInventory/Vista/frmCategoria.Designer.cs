@@ -30,6 +30,7 @@
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.id_categoria = new System.Windows.Forms.TextBox();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_mostrar = new System.Windows.Forms.Button();
@@ -38,15 +39,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.id_productos = new System.Windows.Forms.TextBox();
+            this.dgb_productos = new System.Windows.Forms.DataGridView();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.btn_eliminar_prr = new System.Windows.Forms.Button();
             this.btn_actualizar_pr = new System.Windows.Forms.Button();
             this.btn_mostrar_pr = new System.Windows.Forms.Button();
             this.btn_agregar_pr = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_productos = new System.Windows.Forms.TextBox();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.dgb_productos = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.id_modelos = new System.Windows.Forms.TextBox();
             this.dgb_modelo = new System.Windows.Forms.DataGridView();
             this.cmbproductos = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -55,14 +58,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txt = new System.Windows.Forms.TextBox();
-            this.id_categoria = new System.Windows.Forms.TextBox();
-            this.id_modelos = new System.Windows.Forms.TextBox();
-            this.id_productos = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_categoria)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_productos)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_modelo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +73,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(807, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // groupBox1
             // 
@@ -90,6 +91,15 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
+            // id_categoria
+            // 
+            this.id_categoria.Location = new System.Drawing.Point(5, 14);
+            this.id_categoria.Margin = new System.Windows.Forms.Padding(2);
+            this.id_categoria.MaxLength = 15;
+            this.id_categoria.Name = "id_categoria";
+            this.id_categoria.Size = new System.Drawing.Size(23, 20);
+            this.id_categoria.TabIndex = 33;
+            // 
             // btn_eliminar
             // 
             this.btn_eliminar.Location = new System.Drawing.Point(131, 96);
@@ -98,6 +108,7 @@
             this.btn_eliminar.TabIndex = 32;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_actualizar
             // 
@@ -107,6 +118,7 @@
             this.btn_actualizar.TabIndex = 31;
             this.btn_actualizar.Text = "Actualizar";
             this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // btn_mostrar
             // 
@@ -116,6 +128,7 @@
             this.btn_mostrar.TabIndex = 30;
             this.btn_mostrar.Text = "Mostrar";
             this.btn_mostrar.UseVisualStyleBackColor = true;
+            this.btn_mostrar.Click += new System.EventHandler(this.btn_mostrar_Click);
             // 
             // btn_agregar
             // 
@@ -172,22 +185,30 @@
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             // 
-            // groupBox3
+            // id_productos
             // 
-            this.groupBox3.Controls.Add(this.id_modelos);
-            this.groupBox3.Controls.Add(this.dgb_modelo);
-            this.groupBox3.Controls.Add(this.cmbproductos);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.txt);
-            this.groupBox3.Location = new System.Drawing.Point(535, 28);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(254, 461);
-            this.groupBox3.TabIndex = 28;
-            this.groupBox3.TabStop = false;
+            this.id_productos.Location = new System.Drawing.Point(221, 13);
+            this.id_productos.Margin = new System.Windows.Forms.Padding(2);
+            this.id_productos.MaxLength = 15;
+            this.id_productos.Name = "id_productos";
+            this.id_productos.Size = new System.Drawing.Size(23, 20);
+            this.id_productos.TabIndex = 35;
+            // 
+            // dgb_productos
+            // 
+            this.dgb_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgb_productos.Location = new System.Drawing.Point(6, 162);
+            this.dgb_productos.Name = "dgb_productos";
+            this.dgb_productos.Size = new System.Drawing.Size(238, 286);
+            this.dgb_productos.TabIndex = 40;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(19, 68);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(207, 21);
+            this.cmbCategoria.TabIndex = 39;
             // 
             // btn_eliminar_prr
             // 
@@ -197,6 +218,7 @@
             this.btn_eliminar_prr.TabIndex = 38;
             this.btn_eliminar_prr.Text = "Eliminar";
             this.btn_eliminar_prr.UseVisualStyleBackColor = true;
+            this.btn_eliminar_prr.Click += new System.EventHandler(this.btn_eliminar_prr_Click);
             // 
             // btn_actualizar_pr
             // 
@@ -206,6 +228,7 @@
             this.btn_actualizar_pr.TabIndex = 37;
             this.btn_actualizar_pr.Text = "Actualizar";
             this.btn_actualizar_pr.UseVisualStyleBackColor = true;
+            this.btn_actualizar_pr.Click += new System.EventHandler(this.btn_actualizar_pr_Click);
             // 
             // btn_mostrar_pr
             // 
@@ -215,6 +238,7 @@
             this.btn_mostrar_pr.TabIndex = 36;
             this.btn_mostrar_pr.Text = "Mostrar";
             this.btn_mostrar_pr.UseVisualStyleBackColor = true;
+            this.btn_mostrar_pr.Click += new System.EventHandler(this.btn_mostrar_pr_Click);
             // 
             // btn_agregar_pr
             // 
@@ -247,21 +271,31 @@
             this.txt_productos.Size = new System.Drawing.Size(207, 20);
             this.txt_productos.TabIndex = 33;
             // 
-            // cmbCategoria
+            // groupBox3
             // 
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(19, 68);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(207, 21);
-            this.cmbCategoria.TabIndex = 39;
+            this.groupBox3.Controls.Add(this.id_modelos);
+            this.groupBox3.Controls.Add(this.dgb_modelo);
+            this.groupBox3.Controls.Add(this.cmbproductos);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.txt);
+            this.groupBox3.Location = new System.Drawing.Point(535, 28);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(254, 461);
+            this.groupBox3.TabIndex = 28;
+            this.groupBox3.TabStop = false;
             // 
-            // dgb_productos
+            // id_modelos
             // 
-            this.dgb_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgb_productos.Location = new System.Drawing.Point(6, 162);
-            this.dgb_productos.Name = "dgb_productos";
-            this.dgb_productos.Size = new System.Drawing.Size(238, 286);
-            this.dgb_productos.TabIndex = 40;
+            this.id_modelos.Location = new System.Drawing.Point(221, 13);
+            this.id_modelos.Margin = new System.Windows.Forms.Padding(2);
+            this.id_modelos.MaxLength = 15;
+            this.id_modelos.Name = "id_modelos";
+            this.id_modelos.Size = new System.Drawing.Size(23, 20);
+            this.id_modelos.TabIndex = 34;
             // 
             // dgb_modelo
             // 
@@ -287,6 +321,7 @@
             this.button1.TabIndex = 46;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -296,6 +331,7 @@
             this.button2.TabIndex = 45;
             this.button2.Text = "Actualizar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -305,6 +341,7 @@
             this.button3.TabIndex = 44;
             this.button3.Text = "Mostrar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -314,6 +351,7 @@
             this.button4.TabIndex = 43;
             this.button4.Text = "Agregar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label3
             // 
@@ -335,33 +373,6 @@
             this.txt.Size = new System.Drawing.Size(207, 20);
             this.txt.TabIndex = 41;
             // 
-            // id_categoria
-            // 
-            this.id_categoria.Location = new System.Drawing.Point(5, 14);
-            this.id_categoria.Margin = new System.Windows.Forms.Padding(2);
-            this.id_categoria.MaxLength = 15;
-            this.id_categoria.Name = "id_categoria";
-            this.id_categoria.Size = new System.Drawing.Size(23, 20);
-            this.id_categoria.TabIndex = 33;
-            // 
-            // id_modelos
-            // 
-            this.id_modelos.Location = new System.Drawing.Point(221, 13);
-            this.id_modelos.Margin = new System.Windows.Forms.Padding(2);
-            this.id_modelos.MaxLength = 15;
-            this.id_modelos.Name = "id_modelos";
-            this.id_modelos.Size = new System.Drawing.Size(23, 20);
-            this.id_modelos.TabIndex = 34;
-            // 
-            // id_productos
-            // 
-            this.id_productos.Location = new System.Drawing.Point(221, 13);
-            this.id_productos.Margin = new System.Windows.Forms.Padding(2);
-            this.id_productos.MaxLength = 15;
-            this.id_productos.Name = "id_productos";
-            this.id_productos.Size = new System.Drawing.Size(23, 20);
-            this.id_productos.TabIndex = 35;
-            // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,14 +385,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCategoria";
             this.Text = "frmCategoria";
+            this.Load += new System.EventHandler(this.frmCategoria_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_categoria)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgb_productos)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgb_productos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgb_modelo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
