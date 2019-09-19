@@ -81,10 +81,13 @@
     <Compile Include="Controlador\Constructor_login.cs" />
     <Compile Include="Controlador\constructor_para_celulares.cs" />
     <Compile Include="Controlador\constructor_primer_usuario.cs" />
+    <Compile Include="Controlador\constructor_productos.cs" />
     <Compile Include="Controlador\Constructor_proveedor.cs" />
     <Compile Include="Controlador\Constructor_Root.cs" />
     <Compile Include="Controlador\Constructor_producto.cs" />
     <Compile Include="Controlador\cosntructor_Compra.cs" />
+    <Compile Include="Controlador\costructor_categoria.cs" />
+    <Compile Include="Controlador\costructor_modelos.cs" />
     <Compile Include="Controlador\crudCompra.cs" />
     <Compile Include="Modelo\Actualizar_Root.cs" />
     <Compile Include="Modelo\contraypreguntas.cs" />
@@ -92,12 +95,14 @@
     <Compile Include="Modelo\control_de_bodega.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
+    <Compile Include="Modelo\Crud_de_tres.cs" />
     <Compile Include="Modelo\Funciones_producto.cs" />
     <Compile Include="Modelo\Funciones_usuarios.cs" />
     <Compile Include="Modelo\preguntas y respuestas.cs" />
     <Compile Include="Modelo\prueba.cs" />
     <Compile Include="Modelo\validar_login.cs" />
     <Compile Include="Modelo\Validar_primer_uso.cs" />
+    <Compile Include="Modelo\Validar_prodictos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportes\DataSet1.Designer.cs">
@@ -141,6 +146,12 @@
     </Compile>
     <Compile Include="Vista\agregar_preguntas.Designer.cs">
       <DependentUpon>agregar_preguntas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCategoria.Designer.cs">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmInventarioExistencias.cs">
       <SubType>Form</SubType>
@@ -310,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\agregar_preguntas.resx">
       <DependentUpon>agregar_preguntas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCategoria.resx">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmComprobUsuario.resx">
       <DependentUpon>frmComprobUsuario.cs</DependentUpon>
