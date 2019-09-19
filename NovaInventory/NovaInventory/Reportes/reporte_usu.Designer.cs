@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet4 = new NovaInventory.Reportes.DataSet4();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -52,9 +52,9 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.DataTableBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.DataTableBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "NovaInventory.Reportes.Report3.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -70,7 +70,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(389, 37);
+            this.label1.Location = new System.Drawing.Point(291, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 33);
             this.label1.TabIndex = 1;
