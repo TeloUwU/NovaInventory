@@ -263,6 +263,16 @@ namespace NovaInventory.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap portada {
+            get {
+                object obj = ResourceManager.GetObject("portada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap restore_window_26px {
             get {
                 object obj = ResourceManager.GetObject("restore_window_26px", resourceCulture);
