@@ -70,7 +70,7 @@ namespace NovaInventory.Controlador
             DataTable datos;
             try
             {
-                string query = "SELECT * FROM  numeros_telefonicos";
+                string query = "SELECT tb.id_num_tel, tb.numeros_tel, ad.nombre from numeros_telefonicos tb, datos_empresa ad where tb.empresas = ad.id_datos_empresa; ";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 datos = new DataTable();

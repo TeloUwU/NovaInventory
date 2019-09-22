@@ -142,11 +142,13 @@
             // 
             // dgb_categoria
             // 
+            this.dgb_categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgb_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgb_categoria.Location = new System.Drawing.Point(9, 144);
             this.dgb_categoria.Name = "dgb_categoria";
             this.dgb_categoria.Size = new System.Drawing.Size(238, 304);
             this.dgb_categoria.TabIndex = 28;
+            this.dgb_categoria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_categoria_CellClick);
             // 
             // label1
             // 
@@ -196,11 +198,13 @@
             // 
             // dgb_productos
             // 
+            this.dgb_productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgb_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgb_productos.Location = new System.Drawing.Point(6, 162);
             this.dgb_productos.Name = "dgb_productos";
             this.dgb_productos.Size = new System.Drawing.Size(238, 286);
             this.dgb_productos.TabIndex = 40;
+            this.dgb_productos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_productos_CellClick);
             // 
             // cmbCategoria
             // 
@@ -299,11 +303,13 @@
             // 
             // dgb_modelo
             // 
+            this.dgb_modelo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgb_modelo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgb_modelo.Location = new System.Drawing.Point(6, 162);
             this.dgb_modelo.Name = "dgb_modelo";
             this.dgb_modelo.Size = new System.Drawing.Size(238, 286);
             this.dgb_modelo.TabIndex = 48;
+            this.dgb_modelo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgb_modelo_CellClick);
             // 
             // cmbproductos
             // 

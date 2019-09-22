@@ -121,7 +121,7 @@ namespace NovaInventory.Modelo
             DataTable datos;
             try
             {
-                string query = "SELECT * FROM productos";
+                string query = "SELECT  tb.id_producto, tb.producto, ad.categoria from productos tb, categoria ad where tb.id_categorias = ad.id_categoria";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 datos = new DataTable();
@@ -201,7 +201,7 @@ namespace NovaInventory.Modelo
             DataTable datos;
             try
             {
-                string query = "SELECT * FROM modelos";
+                string query = "SELECT  tb.id_modelo, tb.modelo, ad.producto  from modelos tb, productos ad where tb.id_producto = ad.id_producto";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 datos = new DataTable();

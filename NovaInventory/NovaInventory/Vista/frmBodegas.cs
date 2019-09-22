@@ -78,6 +78,7 @@ namespace NovaInventory.Vista
             cbEstado_Bodega.DataSource = control_de_bodega.cargar();
             cbEstado_Bodega.DisplayMember = "Estado";
             cbEstado_Bodega.ValueMember = "id_estado";
+            cbEstado_Bodega.Enabled = false;
             
         }
 
@@ -85,18 +86,24 @@ namespace NovaInventory.Vista
         {
             agre();
             mostra();
+            cbEstado_Bodega.Enabled = false;
+
             lim();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             mostra();
+            cbEstado_Bodega.Enabled = false;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             actualizar();
             lim();
+            cbEstado_Bodega.Enabled = false;
+
             mostra();
             
         }
@@ -104,6 +111,8 @@ namespace NovaInventory.Vista
         private void button4_Click(object sender, EventArgs e)
         {
             eli();
+            cbEstado_Bodega.Enabled = false;
+
             lim();
             mostra();
             
@@ -112,6 +121,8 @@ namespace NovaInventory.Vista
         private void dgvBodegas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             toca();
+            cbEstado_Bodega.Enabled = true;
+
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)

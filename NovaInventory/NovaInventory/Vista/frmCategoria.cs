@@ -34,6 +34,14 @@ namespace NovaInventory.Vista
         {
             agre.categoria = txtnombre.Text;
             int retorno = Crud_de_tres.agregar_categoria(agre);
+            if (retorno >= 1)
+            {
+                cmbCategoria.DataSource = Validar_prodictos.cargar();
+                cmbCategoria.DisplayMember = "categoria";
+                cmbCategoria.ValueMember = "id_categoria";
+                mostrar_categorias();
+            }
+
         }
         public void mostrar_categorias()
         {
@@ -44,12 +52,20 @@ namespace NovaInventory.Vista
             actuli.id_categoria = Convert.ToInt32(id_categoria.Text);
             actuli.categoria = txtnombre.Text;
             Crud_de_tres.actualizar_cat(actuli);
+            cmbCategoria.DataSource = Validar_prodictos.cargar();
+            cmbCategoria.DisplayMember = "categoria";
+            cmbCategoria.ValueMember = "id_categoria";
+            mostrar_categorias();
         }
         public void eliminar_categoria()
         {
             if ((MessageBox.Show("¿Esta seguro que desea eliminar la categoria?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
             {
                 Crud_de_tres.eliminar_cate(Convert.ToInt16(id_categoria.Text));
+                cmbCategoria.DataSource = Validar_prodictos.cargar();
+                cmbCategoria.DisplayMember = "categoria";
+                cmbCategoria.ValueMember = "id_categoria";
+                mostrar_categorias();
             }
         }
         public void instertar_procuctos()
@@ -57,6 +73,14 @@ namespace NovaInventory.Vista
             agregar.producto = txt_productos.Text;
             agregar.id_categorias = Convert.ToInt16(cmbCategoria);
             int retorno = Crud_de_tres.agregar_productos(agregar);
+            if (retorno>=1)
+            {
+                groupBox3.Enabled = true;
+                mostrar_modelos();
+                cmbproductos.DataSource = Validar_prodictos.cargar1();
+                cmbproductos.DisplayMember = "producto";
+                cmbproductos.ValueMember = "id_producto";
+            }
         }
         public void mostrar_productos()
         {
@@ -68,19 +92,52 @@ namespace NovaInventory.Vista
             actualizar.producto = txt_productos.Text;
             actualizar.id_categorias = Convert.ToInt32(cmbCategoria.SelectedValue);
             Crud_de_tres.actualizar_productos(actualizar);
+            mostrar_modelos();
+            cmbproductos.DataSource = Validar_prodictos.cargar1();
+            cmbproductos.DisplayMember = "producto";
+            cmbproductos.ValueMember = "id_producto";
         }
         public void eliminar_productos()
         {
             if ((MessageBox.Show("¿Esta seguro que desea eliminar la categoria?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
             {
                 Crud_de_tres.eliminar_productos(Convert.ToInt16(id_productos.Text));
+                mostrar_modelos();
+                cmbproductos.DataSource = Validar_prodictos.cargar1();
+                cmbproductos.DisplayMember = "producto";
+                cmbproductos.ValueMember = "id_producto";
             }
+        }
+        public void tocar1()
+        {
+            int posision;
+            posision = this.dgb_categoria.CurrentRow.Index;
+            id_categoria.Text = this.dgb_categoria[0, posision].Value.ToString();
+            txtnombre.Text = this.dgb_categoria[1, posision].Value.ToString();
+        }
+        public void tocar2()
+        {
+            int posision;
+            posision = this.dgb_productos.CurrentRow.Index;
+            id_productos.Text = this.dgb_productos[0, posision].Value.ToString();
+            txt_productos.Text = this.dgb_productos[1, posision].Value.ToString();
+            cmbCategoria.Text = this.dgb_productos[2, posision].Value.ToString();
+        }
+        public void toca2()
+        {
+            int posision;
+            posision = this.dgb_modelo.CurrentRow.Index;
+            id_modelos.Text = this.dgb_modelo[0, posision].Value.ToString();
+            txt.Text = this.dgb_modelo[1, posision].Value.ToString();
+            cmbproductos.Text = this.dgb_modelo[2, posision].Value.ToString();
         }
         public void insertar_modelo()
         {
             agr.modelo = txt.Text;
             agr.id_producto =Convert.ToInt16( cmbproductos.SelectedValue);
-            
+            int retorno = Crud_de_tres.agregar_modelo(agr);
+            mostrar_modelos();
+
         }
         public void mostrar_modelos()
         {
@@ -91,12 +148,15 @@ namespace NovaInventory.Vista
             act.id_modelo = Convert.ToInt16(id_modelos.Text);
             act.modelo = txt.Text;
             act.id_producto = Convert.ToInt16(cmbproductos.SelectedValue);
+            Crud_de_tres.actualizar_modelo(act);
+            mostrar_modelos();
         }
         public void eliminar_modelo()
         {
             if ((MessageBox.Show("¿Esta seguro que desea eliminar el modelo?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
             {
                 Crud_de_tres.eliminar_modelo(Convert.ToInt16(id_modelos.Text));
+                mostrar_modelos();
             }
         }
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -172,8 +232,23 @@ namespace NovaInventory.Vista
             cmbCategoria.ValueMember = "id_categoria";
 
             cmbproductos.DataSource = Validar_prodictos.cargar1();
-            cmbproductos.DisplayMember = "productos";
+            cmbproductos.DisplayMember = "producto";
             cmbproductos.ValueMember = "id_producto";
+        }
+
+        private void dgb_categoria_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tocar1();
+        }
+
+        private void dgb_productos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tocar2();
+        }
+
+        private void dgb_modelo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            toca2();
         }
     }
 }

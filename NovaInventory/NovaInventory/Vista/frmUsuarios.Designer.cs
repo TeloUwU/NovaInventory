@@ -281,6 +281,7 @@
             // 
             // dgvMostrar_Usuarios
             // 
+            this.dgvMostrar_Usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMostrar_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMostrar_Usuarios.Location = new System.Drawing.Point(416, 65);
             this.dgvMostrar_Usuarios.Margin = new System.Windows.Forms.Padding(2);
@@ -434,7 +435,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button5.Location = new System.Drawing.Point(343, 401);
+            this.button5.Location = new System.Drawing.Point(668, 401);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(96, 41);

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Controlador;
+using MySql.Data.MySqlClient;
+using System.IO;
+using NovaInventory.Config;
 
 namespace NovaInventory.Vista
 {
@@ -16,6 +19,27 @@ namespace NovaInventory.Vista
         public FrmPrincipal()
         {
             InitializeComponent();
+            string query = "SELECT * FROM tbusuarios WHERE id_usuarios =" + Constructor_login.id_usuario;
+            MySqlCommand cmdselect = new MySqlCommand(query, Conexion.obtenerconexion());
+            MySqlDataReader reader;
+            reader = cmdselect.ExecuteReader();
+            if (reader.Read())
+            {
+                byte[] image = Convert.FromBase64String(reader[6].ToString());
+                MemoryStream ms = new MemoryStream(image);
+                pictureBox1.Image = Image.FromStream(ms);
+            }
+
+            //string query1 = "SELECT * FROM datos_empresa WHERE id_datos_empresa = 1 ";
+            //MySqlCommand cmdselect1 = new MySqlCommand(query1, Conexion.obtenerconexion());
+            //MySqlDataReader reader1;
+            //reader1 = cmdselect1.ExecuteReader();
+            //if (reader1.Read())
+            //{
+            //    byte[] imagse = Convert.FromBase64String(reader[4].ToString());
+            //    MemoryStream ms1 = new MemoryStream(imagse);
+            //    pictureBox3.Image = Image.FromStream(ms1);
+            //}
         }
         Form currentForm;
         void admin()
@@ -25,18 +49,12 @@ namespace NovaInventory.Vista
             inventarioToolStripMenuItem.Visible = false;
             facturaciónToolStripMenuItem.Visible = false;
             gráficosYReportesToolStripMenuItem.Visible = false;
-            button2.Visible = false;
-            button4.Visible = true;
-            button4.Location = new Point(0, 135);
-
-            button8.Visible = false;
-            button7.Visible = false;
-            button9.Visible = false;
-            button10.Visible = false;
-            button5.Visible = false;
+            button11.Visible = false;
+            button12.Visible = true;
+            button14.Visible = false;
+            button15.Visible = true;
             button6.Visible = false;
-            button3.Visible = true;
-            button3.Location = new Point(0, 177);
+            button5.Visible = false;
             ;
         }
         void bodeguero()
@@ -46,19 +64,11 @@ namespace NovaInventory.Vista
             inventarioToolStripMenuItem.Visible = true;
             facturaciónToolStripMenuItem.Visible = false;
             gráficosYReportesToolStripMenuItem.Visible = false;
-            button2.Visible = true;
-            button2.Location = new Point(0, 135);
-            button4.Visible = false;
-            button8.Visible = true;
-            button8.Location = new Point(0,177);
-            button7.Visible = false;
-            button9.Visible = true;
-            button9.Location = new Point(0, 219);
-            button10.Visible = true;
-            button10.Location = new Point(0, 261);
-            button5.Visible = false;
-            button6.Visible = false;
-            button3.Visible = false;
+            button11.Visible = false;
+            button12.Visible = true;
+            button14.Visible = false;
+            button15.Visible = false;
+
         }
         void caja()
         {
@@ -70,16 +80,11 @@ namespace NovaInventory.Vista
             inventarioToolStripMenuItem.Visible = false;
             facturaciónToolStripMenuItem.Visible = false;
             gráficosYReportesToolStripMenuItem.Visible = false;
-            button2.Visible = true;
-            button2.Location = new Point(0, 135);
-            button4.Visible = false;
-            button8.Visible = false;
-            button7.Visible = false;
-            button9.Visible = false;
-            button10.Visible = false;
-            button5.Visible = false;
-            button6.Visible = false;
-            button3.Visible = false;
+            button11.Visible = false;
+            button12.Visible = false;
+            button14.Visible = true;
+            button15.Visible = false;
+
         }
         void inve()
         {
@@ -88,17 +93,13 @@ namespace NovaInventory.Vista
             inventarioToolStripMenuItem.Visible = true;
             facturaciónToolStripMenuItem.Visible = false;
             gráficosYReportesToolStripMenuItem.Visible = false;
-            button2.Visible = true;
-            button2.Location = new Point(0, 135);
-            button4.Visible = false;
-            button8.Visible = false;
+            button11.Visible = false;
+            button12.Visible = false;
+            button14.Visible = false;
+            button15.Visible = true;
             button7.Visible = false;
-            button9.Visible = false;
-            button10.Visible = true;
-            button10.Location = new Point(0, 177);
-            button5.Visible = false;
-            button6.Visible = false;
-            button3.Visible = false;
+            btn_compras.Visible = false;
+ 
         }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
@@ -241,6 +242,36 @@ namespace NovaInventory.Vista
         {
 
         }
+        private void configuracion()
+        {
+            panel_administracion_inv.Visible = false;
+            panel_administracion.Visible = false;
+            panel_administracion.Visible = false;
+            panel_inventario.Visible = false;
+        }
+        private void hide_con()
+        {
+            if (panel_inventario.Visible == true)
+                panel_inventario.Visible = false;
+            if (panel_administracion_inv.Visible == true)
+                panel_administracion_inv.Visible = false;
+            if (panel_administracion.Visible == true)
+                panel_administracion.Visible = false;
+            if (panel_administracion.Visible == true)
+                panel_administracion.Visible = false;
+        }
+        private void show_con(Panel sub)
+        {
+            if (sub.Visible == false)
+            {
+                hide_con();
+                sub.Visible = true;
+            }
+            else
+            {
+                sub.Visible = false;
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -346,6 +377,52 @@ namespace NovaInventory.Vista
         private void button10_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmInventarioExistencias>();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            show_con(panel_administracion_inv);
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            show_con(panel_administracion);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            show_con(panel_inventario);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            show_con(panel1);
+        }
+
+        private void btn_articulos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmProducto>();
+        }
+
+        private void btn_productos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCategoria>();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmBodegas>();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmFacturacion>();
+        }
+
+        private void btn_compras_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCompra>();
         }
     }
 }

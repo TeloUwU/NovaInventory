@@ -122,6 +122,7 @@ namespace NovaInventory.Vista
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             tocar();
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

@@ -161,7 +161,7 @@ namespace NovaInventory.Vista
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
             mostrar();
-            cbTipo_Usuario.DataSource = Funciones_usuarios.cargarUSU();
+            cbTipo_Usuario.DataSource = Funciones_usuarios.cargarUSU1();
             cbTipo_Usuario.DisplayMember = "tipo_usuario";
             cbTipo_Usuario.ValueMember = "id_tipo_usuario";
 
