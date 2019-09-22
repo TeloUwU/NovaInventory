@@ -27,10 +27,13 @@ namespace NovaInventory.Vista
             }
             else
             {
+                txtContraseña.Text = Validaciones.md5(txtContraseña.Text);
+
                 Constructor_login login = new Constructor_login(txtUsuario.Text, txtContraseña.Text);
                Constructor_login.usuario = txtUsuario.Text;
                 login.clave = txtContraseña.Text;
                 bool datos = validar_login.acceso(login);
+
                 if (datos == true)
                 {
                     DateTime hoy = DateTime.Today;
@@ -49,7 +52,6 @@ namespace NovaInventory.Vista
                     }
                     else
                     {
-                        txtContraseña.Text = Validaciones.md5(txtContraseña.Text);
                         FrmPrincipal main = new FrmPrincipal();
                         main.Show();
                         this.Hide();
