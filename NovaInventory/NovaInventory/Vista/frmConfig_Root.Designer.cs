@@ -159,7 +159,7 @@
             this.txtConfClave_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtConfClave_Root.Location = new System.Drawing.Point(325, 439);
             this.txtConfClave_Root.Margin = new System.Windows.Forms.Padding(2);
-            this.txtConfClave_Root.MaxLength = 8;
+            this.txtConfClave_Root.MaxLength = 50;
             this.txtConfClave_Root.Name = "txtConfClave_Root";
             this.txtConfClave_Root.PasswordChar = '*';
             this.txtConfClave_Root.ShortcutsEnabled = false;
@@ -182,6 +182,7 @@
             this.txtEmail_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEmail_Root.Location = new System.Drawing.Point(41, 237);
             this.txtEmail_Root.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail_Root.MaxLength = 150;
             this.txtEmail_Root.Name = "txtEmail_Root";
             this.txtEmail_Root.ShortcutsEnabled = false;
             this.txtEmail_Root.Size = new System.Drawing.Size(235, 20);
@@ -203,7 +204,7 @@
             this.txtClave_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtClave_Root.Location = new System.Drawing.Point(43, 439);
             this.txtClave_Root.Margin = new System.Windows.Forms.Padding(2);
-            this.txtClave_Root.MaxLength = 8;
+            this.txtClave_Root.MaxLength = 50;
             this.txtClave_Root.Name = "txtClave_Root";
             this.txtClave_Root.PasswordChar = '*';
             this.txtClave_Root.ShortcutsEnabled = false;
@@ -226,7 +227,7 @@
             this.txtNombre_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombre_Root.Location = new System.Drawing.Point(41, 72);
             this.txtNombre_Root.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNombre_Root.MaxLength = 45;
+            this.txtNombre_Root.MaxLength = 50;
             this.txtNombre_Root.Name = "txtNombre_Root";
             this.txtNombre_Root.ShortcutsEnabled = false;
             this.txtNombre_Root.Size = new System.Drawing.Size(234, 20);

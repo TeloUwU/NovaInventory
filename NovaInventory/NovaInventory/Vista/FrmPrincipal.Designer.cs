@@ -30,17 +30,24 @@
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.btnCerrar_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnMaximizar_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnVentana_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnMinimizar_Principal = new System.Windows.Forms.ToolStripButton();
             this.panelMain = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblNombres_Usuario = new System.Windows.Forms.Label();
             this.lblApellidos_Usuario = new System.Windows.Forms.Label();
             this.PanelSidebar = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblNivel = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,20 +77,19 @@
             this.verCatalogoDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCerrar_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnMaximizar_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnVentana_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnMinimizar_Principal = new System.Windows.Forms.ToolStripButton();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.agregarCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
-            this.PanelSidebar.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.PanelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -105,6 +111,51 @@
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(0, 24);
+            // 
+            // btnCerrar_Principal
+            // 
+            this.btnCerrar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnCerrar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCerrar_Principal.Image = global::NovaInventory.Properties.Resources.close_window_80px;
+            this.btnCerrar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCerrar_Principal.Name = "btnCerrar_Principal";
+            this.btnCerrar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnCerrar_Principal.Text = "Salir";
+            this.btnCerrar_Principal.Click += new System.EventHandler(this.btnCerrar_Principal_Click);
+            // 
+            // btnMaximizar_Principal
+            // 
+            this.btnMaximizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMaximizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMaximizar_Principal.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
+            this.btnMaximizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMaximizar_Principal.Name = "btnMaximizar_Principal";
+            this.btnMaximizar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnMaximizar_Principal.Text = "Maximizar";
+            this.btnMaximizar_Principal.Click += new System.EventHandler(this.btnMaximizar_Principal_Click);
+            // 
+            // btnVentana_Principal
+            // 
+            this.btnVentana_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnVentana_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnVentana_Principal.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
+            this.btnVentana_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVentana_Principal.Name = "btnVentana_Principal";
+            this.btnVentana_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnVentana_Principal.Text = "Restaurar a tamaño normal";
+            this.btnVentana_Principal.Visible = false;
+            this.btnVentana_Principal.Click += new System.EventHandler(this.btnVentana_Principal_Click);
+            // 
+            // btnMinimizar_Principal
+            // 
+            this.btnMinimizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMinimizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMinimizar_Principal.Image = global::NovaInventory.Properties.Resources.minimize_window_26px;
+            this.btnMinimizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMinimizar_Principal.Name = "btnMinimizar_Principal";
+            this.btnMinimizar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnMinimizar_Principal.Text = "Minimizar";
+            this.btnMinimizar_Principal.Click += new System.EventHandler(this.btnMinimizar_Principal_Click);
             // 
             // panelMain
             // 
@@ -128,6 +179,16 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1044, 669);
             this.PanelContenedor.TabIndex = 2;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::NovaInventory.Properties.Resources.round_account_button_with_user_inside1;
+            this.pictureBox2.Location = new System.Drawing.Point(548, 184);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 117);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // lblNombres_Usuario
             // 
@@ -153,6 +214,11 @@
             // PanelSidebar
             // 
             this.PanelSidebar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.PanelSidebar.Controls.Add(this.label1);
+            this.PanelSidebar.Controls.Add(this.button10);
+            this.PanelSidebar.Controls.Add(this.button9);
+            this.PanelSidebar.Controls.Add(this.button8);
+            this.PanelSidebar.Controls.Add(this.button4);
             this.PanelSidebar.Controls.Add(this.button3);
             this.PanelSidebar.Controls.Add(this.button7);
             this.PanelSidebar.Controls.Add(this.button5);
@@ -167,6 +233,17 @@
             this.PanelSidebar.Name = "PanelSidebar";
             this.PanelSidebar.Size = new System.Drawing.Size(236, 669);
             this.PanelSidebar.TabIndex = 1;
+            this.PanelSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelSidebar_Paint);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(0, 591);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(236, 36);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Administración Contraseña DEFAULT";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button7
             // 
@@ -179,7 +256,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(0, 266);
+            this.button5.Location = new System.Drawing.Point(0, 507);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(236, 36);
             this.button5.TabIndex = 8;
@@ -189,7 +266,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(0, 308);
+            this.button6.Location = new System.Drawing.Point(0, 549);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(236, 36);
             this.button6.TabIndex = 9;
@@ -200,7 +277,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkRed;
-            this.button1.Location = new System.Drawing.Point(0, 604);
+            this.button1.Location = new System.Drawing.Point(0, 633);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(236, 36);
             this.button1.TabIndex = 11;
@@ -226,6 +303,16 @@
             this.lblEstado.TabIndex = 3;
             this.lblEstado.Text = "En Línea";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::NovaInventory.Properties.Resources.framed_portrait;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(107, 96);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(0, 224);
@@ -245,8 +332,8 @@
             this.inventarioToolStripMenuItem,
             this.administraciónToolStripMenuItem,
             this.verToolStripMenuItem,
-            this.gráficosYReportesToolStripMenuItem,
-            this.facturaciónToolStripMenuItem});
+            this.facturaciónToolStripMenuItem,
+            this.gráficosYReportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1280, 24);
@@ -264,7 +351,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // buscarToolStripMenuItem
@@ -273,7 +360,8 @@
             this.buscarToolStripMenuItem1,
             this.agregarProductoToolStripMenuItem,
             this.agregarProveedorToolStripMenuItem,
-            this.agregarBodegaToolStripMenuItem});
+            this.agregarBodegaToolStripMenuItem,
+            this.agregarCompraToolStripMenuItem});
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
             this.buscarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.buscarToolStripMenuItem.Text = "Editar";
@@ -388,7 +476,7 @@
             this.ventasToolStripMenuItem,
             this.ventasToolStripMenuItem1});
             this.reporesToolStripMenuItem.Name = "reporesToolStripMenuItem";
-            this.reporesToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.reporesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.reporesToolStripMenuItem.Text = "Repotres";
             // 
             // ventasToolStripMenuItem
@@ -409,7 +497,7 @@
             this.ventasToolStripMenuItem2,
             this.ventasToolStripMenuItem3});
             this.gráficosToolStripMenuItem.Name = "gráficosToolStripMenuItem";
-            this.gráficosToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.gráficosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gráficosToolStripMenuItem.Text = "Gráficos";
             // 
             // ventasToolStripMenuItem2
@@ -454,80 +542,60 @@
             this.nuevaCompraToolStripMenuItem.Text = "Nueva Compra";
             this.nuevaCompraToolStripMenuItem.Click += new System.EventHandler(this.nuevaCompraToolStripMenuItem_Click);
             // 
-            // pictureBox2
+            // button4
             // 
-            this.pictureBox2.Image = global::NovaInventory.Properties.Resources.round_account_button_with_user_inside1;
-            this.pictureBox2.Location = new System.Drawing.Point(548, 184);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(140, 117);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.button4.Location = new System.Drawing.Point(0, 266);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(236, 36);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "Administración de usuarios";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // pictureBox1
+            // button8
             // 
-            this.pictureBox1.Image = global::NovaInventory.Properties.Resources.framed_portrait;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.button8.Location = new System.Drawing.Point(0, 308);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(236, 36);
+            this.button8.TabIndex = 21;
+            this.button8.Text = "Bodega";
+            this.button8.UseVisualStyleBackColor = true;
             // 
-            // btnCerrar_Principal
+            // button9
             // 
-            this.btnCerrar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnCerrar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCerrar_Principal.Image = global::NovaInventory.Properties.Resources.close_window_80px;
-            this.btnCerrar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCerrar_Principal.Name = "btnCerrar_Principal";
-            this.btnCerrar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnCerrar_Principal.Text = "Salir";
-            this.btnCerrar_Principal.Click += new System.EventHandler(this.btnCerrar_Principal_Click);
+            this.button9.Location = new System.Drawing.Point(0, 392);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(236, 36);
+            this.button9.TabIndex = 22;
+            this.button9.Text = "Proveedor";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // btnMaximizar_Principal
+            // button10
             // 
-            this.btnMaximizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnMaximizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnMaximizar_Principal.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
-            this.btnMaximizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMaximizar_Principal.Name = "btnMaximizar_Principal";
-            this.btnMaximizar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnMaximizar_Principal.Text = "Maximizar";
-            this.btnMaximizar_Principal.Click += new System.EventHandler(this.btnMaximizar_Principal_Click);
+            this.button10.Location = new System.Drawing.Point(0, 434);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(236, 36);
+            this.button10.TabIndex = 23;
+            this.button10.Text = "inventario general";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // btnVentana_Principal
+            // label1
             // 
-            this.btnVentana_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnVentana_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnVentana_Principal.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
-            this.btnVentana_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnVentana_Principal.Name = "btnVentana_Principal";
-            this.btnVentana_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnVentana_Principal.Text = "Restaurar a tamaño normal";
-            this.btnVentana_Principal.Visible = false;
-            this.btnVentana_Principal.Click += new System.EventHandler(this.btnVentana_Principal_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(146, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 17);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "En Línea";
             // 
-            // btnMinimizar_Principal
+            // agregarCompraToolStripMenuItem
             // 
-            this.btnMinimizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnMinimizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnMinimizar_Principal.Image = global::NovaInventory.Properties.Resources.minimize_window_26px;
-            this.btnMinimizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMinimizar_Principal.Name = "btnMinimizar_Principal";
-            this.btnMinimizar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnMinimizar_Principal.Text = "Minimizar";
-            this.btnMinimizar_Principal.Click += new System.EventHandler(this.btnMinimizar_Principal_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(0, 182);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(236, 36);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Administración Contraseña DEFAULT";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.agregarCompraToolStripMenuItem.Name = "agregarCompraToolStripMenuItem";
+            this.agregarCompraToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.agregarCompraToolStripMenuItem.Text = "Agregar Compra";
+            this.agregarCompraToolStripMenuItem.Click += new System.EventHandler(this.agregarCompraToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -549,12 +617,12 @@
             this.panelMain.PerformLayout();
             this.PanelContenedor.ResumeLayout(false);
             this.PanelContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PanelSidebar.ResumeLayout(false);
             this.PanelSidebar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,5 +679,11 @@
         private System.Windows.Forms.ToolStripMenuItem agregarBodegaToolStripMenuItem;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem agregarCompraToolStripMenuItem;
     }
 }

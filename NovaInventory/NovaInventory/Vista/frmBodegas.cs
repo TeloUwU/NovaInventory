@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Controlador;
 using NovaInventory.Modelo;
+using NovaInventory.Reportes;
 
 namespace NovaInventory.Vista
 {
@@ -77,6 +78,7 @@ namespace NovaInventory.Vista
             cbEstado_Bodega.DataSource = control_de_bodega.cargar();
             cbEstado_Bodega.DisplayMember = "Estado";
             cbEstado_Bodega.ValueMember = "id_estado";
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -116,6 +118,29 @@ namespace NovaInventory.Vista
         {
             FrmPrincipal no = new FrmPrincipal();
             no.Show();
+            this.Hide();
+        }
+
+        private void txtCodigo_Bodega_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Reporte_Bodega ny = new Reporte_Bodega();
+            ny.Show();
             this.Hide();
         }
     }

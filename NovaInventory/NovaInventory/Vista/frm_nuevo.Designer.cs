@@ -88,6 +88,7 @@
             // txt_contf
             // 
             this.txt_contf.Location = new System.Drawing.Point(314, 283);
+            this.txt_contf.MaxLength = 50;
             this.txt_contf.Name = "txt_contf";
             this.txt_contf.PasswordChar = '*';
             this.txt_contf.Size = new System.Drawing.Size(160, 20);
@@ -96,6 +97,7 @@
             // txt_cont
             // 
             this.txt_cont.Location = new System.Drawing.Point(314, 137);
+            this.txt_cont.MaxLength = 50;
             this.txt_cont.Name = "txt_cont";
             this.txt_cont.PasswordChar = '*';
             this.txt_cont.Size = new System.Drawing.Size(160, 20);

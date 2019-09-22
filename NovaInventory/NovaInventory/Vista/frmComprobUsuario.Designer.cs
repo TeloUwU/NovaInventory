@@ -60,6 +60,7 @@
             // 
             this.txtUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
             this.txtUsuarios.Location = new System.Drawing.Point(308, 81);
+            this.txtUsuarios.MaxLength = 25;
             this.txtUsuarios.Name = "txtUsuarios";
             this.txtUsuarios.Size = new System.Drawing.Size(176, 38);
             this.txtUsuarios.TabIndex = 7;
