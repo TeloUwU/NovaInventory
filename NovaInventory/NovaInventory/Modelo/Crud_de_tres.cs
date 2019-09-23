@@ -24,7 +24,7 @@ namespace NovaInventory.Modelo
 
                 if (retorno > 0)
                 {
-                    MessageBox.Show("La categoria se a ingresado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La categoria se a ingresado correctamente", "Insercion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
@@ -104,7 +104,7 @@ namespace NovaInventory.Modelo
 
                 if (retorno > 0)
                 {
-                    MessageBox.Show("El producto se a ingresado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El producto se a ingresado correctamente", "Insercion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
@@ -184,7 +184,7 @@ namespace NovaInventory.Modelo
 
                 if (retorno > 0)
                 {
-                    MessageBox.Show("La categoria se a ingresado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La categoria se a ingresado correctamente", "Insercion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
