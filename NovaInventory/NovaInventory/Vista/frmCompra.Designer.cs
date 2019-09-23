@@ -98,6 +98,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(149, 24);
             this.toolStripButton2.Text = "Cerrar Formulario";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
             // 
             // label1
             // 
@@ -348,7 +349,6 @@
             // 
             this.dtpRealización_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpRealización_Compra.CustomFormat = "yyyy-mm-dd";
-            this.dtpRealización_Compra.Enabled = false;
             this.dtpRealización_Compra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpRealización_Compra.Location = new System.Drawing.Point(808, 33);
             this.dtpRealización_Compra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -429,10 +429,12 @@
             // 
             // txtPrecio_Unitario
             // 
+            this.txtPrecio_Unitario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPrecio_Unitario.Location = new System.Drawing.Point(167, 160);
             this.txtPrecio_Unitario.Name = "txtPrecio_Unitario";
             this.txtPrecio_Unitario.Size = new System.Drawing.Size(121, 22);
             this.txtPrecio_Unitario.TabIndex = 24;
+            this.txtPrecio_Unitario.TextChanged += new System.EventHandler(this.txtPrecio_Unitario_TextChanged);
             this.txtPrecio_Unitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_Unitario_KeyPress);
             // 
             // frmCompra

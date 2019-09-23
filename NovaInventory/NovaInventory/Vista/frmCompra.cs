@@ -38,8 +38,9 @@ namespace NovaInventory.Vista
             Usuario_Comprador();
 
             btnActualizar_Compra.Enabled = false;
+
             
-            
+
             VerCompras();
         }
 
@@ -53,10 +54,6 @@ namespace NovaInventory.Vista
             dgvCompras.Columns[9].HeaderText = "Usuario Comprador";
             dgvCompras.Columns[10].HeaderText = "Tipo de Pago";
             dgvCompras.Columns[11].HeaderText = "Numero de Factura";
-            if (dgvCompras.DataSource == null)
-            {
-                MessageBox.Show("No hay datos para mostrar :/", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
 
@@ -203,7 +200,7 @@ namespace NovaInventory.Vista
             else
             {
                 agregar.id_proveedor = Convert.ToInt16(txtid_proveedor.Text);
-                agregar.id_producto = Convert.ToInt16(txtid_producto.Text);
+                agregar.id_producto = Convert.ToInt16(txtid_articulo.Text);
                 agregar.Preciounitario = Convert.ToInt16(txtPrecio_Unitario.Text);
                 agregar.Precio_Total = Convert.ToInt16(txtTotal.Text);
                 agregar.Cantidad = Convert.ToInt16(nUDCantidad.Text);
@@ -235,13 +232,13 @@ namespace NovaInventory.Vista
 
         public void nUDCantidad_ValueChanged(object sender, EventArgs e)
         {
-            
+            Total();
         }
 
-        public void validar_primeracompra()
-        {
-            MySqlCommand validar = new MySqlCommand(string.Format(""), Conexion.obtenerconexion(););
-        }
+        //public void validar_primeracompra()
+        //{
+        //    MySqlCommand validar = new MySqlCommand(string.Format(""), Conexion.obtenerconexion());
+        //}
         
         
 
@@ -252,17 +249,20 @@ namespace NovaInventory.Vista
             
         public void Total()
         {
-            if (txtPrecio_Unitario.Text.Trim() == "")
+            
+
+            if (txtPrecio_Unitario.Text == "")
             {
-                txtPrecio_Unitario.Text = "1.00";
+                txtPrecio_Unitario.Text = "0";
             }
             else
             {
-                int Precio_Unitario = Convert.ToInt16(txtPrecio_Unitario.Text);
-                int Cantidad_Producto = Convert.ToInt16(nUDCantidad.Value);
-                string Total = Convert.ToString(Precio_Unitario * Cantidad_Producto);
-                txtTotal.Text = Total;
+            int Precio_Unitario = Convert.ToInt16(txtPrecio_Unitario.Text);
+            int Cantidad_Producto = Convert.ToInt16(nUDCantidad.Value);
+            string Total = Convert.ToString(Precio_Unitario * Cantidad_Producto);
+            txtTotal.Text = Total;
             }
+
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
@@ -272,12 +272,17 @@ namespace NovaInventory.Vista
 
         private void dgvCompras_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posición;
-            posición = this.dgvCompras.CurrentRow.Index;
+            mostrarcComprass();
             
         }
 
         private void dgvCompras_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Total();
+            
+        }
+
+        public void mostrarcComprass()
         {
             int posicion;
             posicion = this.dgvCompras.CurrentRow.Index;
@@ -295,18 +300,11 @@ namespace NovaInventory.Vista
             txtNum_factura.Text = dgvCompras[11, posicion].Value.ToString();
 
             btnActualizar_Compra.Enabled = true;
-            btnAgregarCompra.Enabled = false;
-            cbModelo_Compra.Enabled = false;
-            cbProducto_Compra.Enabled = false;
-            cbProveedor_Compra.Enabled = false;
-            cbModelo_Compra.Enabled = false;
-            cbTipo_Pago.Enabled = false;
-            txtDescripción.Enabled = false;
-            txtNum_factura.Enabled = false;
-            dtpRealización_Compra.Visible = true;
+            
 
-            Total();
         }
+
+        
 
         private void btnActualizar_Compra_Click(object sender, EventArgs e)
         {
@@ -345,10 +343,16 @@ namespace NovaInventory.Vista
                 e.Handled = true;
                 return;
             }
-            else
-            {
-                Total();
-            }
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtPrecio_Unitario_TextChanged(object sender, EventArgs e)
+        {
+            Total();
         }
     }
 }
