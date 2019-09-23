@@ -38,7 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPrecio_Unitario = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.cbProveedor_Compra = new System.Windows.Forms.ComboBox();
             this.cbProducto_Compra = new System.Windows.Forms.ComboBox();
@@ -64,6 +63,7 @@
             this.txtid_tipopago = new System.Windows.Forms.TextBox();
             this.txtid_modelo = new System.Windows.Forms.TextBox();
             this.txtid_articulo = new System.Windows.Forms.TextBox();
+            this.txtPrecio_Unitario = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
@@ -158,16 +158,6 @@
             this.label7.Size = new System.Drawing.Size(40, 17);
             this.label7.TabIndex = 7;
             this.label7.Text = "Total";
-            // 
-            // txtPrecio_Unitario
-            // 
-            this.txtPrecio_Unitario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPrecio_Unitario.Location = new System.Drawing.Point(167, 160);
-            this.txtPrecio_Unitario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPrecio_Unitario.Name = "txtPrecio_Unitario";
-            this.txtPrecio_Unitario.Size = new System.Drawing.Size(121, 22);
-            this.txtPrecio_Unitario.TabIndex = 6;
-            this.txtPrecio_Unitario.TextChanged += new System.EventHandler(this.txtPrecio_Unitario_TextChanged);
             // 
             // txtTotal
             // 
@@ -437,11 +427,20 @@
             this.txtid_articulo.Size = new System.Drawing.Size(20, 22);
             this.txtid_articulo.TabIndex = 23;
             // 
+            // txtPrecio_Unitario
+            // 
+            this.txtPrecio_Unitario.Location = new System.Drawing.Point(167, 160);
+            this.txtPrecio_Unitario.Name = "txtPrecio_Unitario";
+            this.txtPrecio_Unitario.Size = new System.Drawing.Size(121, 22);
+            this.txtPrecio_Unitario.TabIndex = 24;
+            this.txtPrecio_Unitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_Unitario_KeyPress);
+            // 
             // frmCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 665);
+            this.Controls.Add(this.txtPrecio_Unitario);
             this.Controls.Add(this.txtid_articulo);
             this.Controls.Add(this.txtid_modelo);
             this.Controls.Add(this.txtid_tipopago);
@@ -467,7 +466,6 @@
             this.Controls.Add(this.cbProducto_Compra);
             this.Controls.Add(this.cbProveedor_Compra);
             this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.txtPrecio_Unitario);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -498,7 +496,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPrecio_Unitario;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.ComboBox cbProveedor_Compra;
         private System.Windows.Forms.ComboBox cbProducto_Compra;
@@ -526,5 +523,6 @@
         private System.Windows.Forms.TextBox txtid_tipopago;
         private System.Windows.Forms.TextBox txtid_modelo;
         private System.Windows.Forms.TextBox txtid_articulo;
+        private System.Windows.Forms.TextBox txtPrecio_Unitario;
     }
 }
