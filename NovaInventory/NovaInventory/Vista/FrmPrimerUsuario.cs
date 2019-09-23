@@ -25,8 +25,7 @@ namespace NovaInventory.Vista
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNombres.Text) || string.IsNullOrWhiteSpace(txtApellidos.Text) || string.IsNullOrWhiteSpace(txtUsuario.Text) ||
-                string.IsNullOrWhiteSpace(txtClave.Text) || string.IsNullOrWhiteSpace(txtConfClave.Text) || string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(txtRespuesta1.Text) ||
-                string.IsNullOrWhiteSpace(txtRespuesta2.Text) || string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(txt_cel.Text) || string.IsNullOrWhiteSpace(maskDui.Text))
+                string.IsNullOrWhiteSpace(txtClave.Text) || string.IsNullOrWhiteSpace(txtConfClave.Text) || string.IsNullOrWhiteSpace(txtEmail.Text)  || string.IsNullOrWhiteSpace(txt_cel.Text) || string.IsNullOrWhiteSpace(maskDui.Text))
 
             {
                 MessageBox.Show("Llene todos los campos ", "WARNIG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -62,37 +61,26 @@ namespace NovaInventory.Vista
                     string imagen = Convert.ToBase64String(aByte);
                     usuario.Foto_usuario = imagen;
                     int retorno = control_usuario.registro_usuario(usuario);
+                    if (retorno >= 1)
+                    {
+                        groupBox1.Enabled = true;
+                        txtNombres.Enabled = false;
+                        txtApellidos.Enabled = false;
+                        txtUsuario.Enabled = false;
+                        txtConfClave.Enabled = false;
+                        txtClave.Enabled = false;
+                        maskDui.Enabled = false;
+                        txt_cel.Enabled = false;
+                        dtNacimiento.Enabled = false;
+                        cmbEstado.Enabled = false;
+                        cmbTipoUsuario.Enabled = false;
+                        cmbEmpresa.Enabled = false;
+                        pbFoto.Enabled = false;
+                        BtnExaminar.Enabled = false;
+                        button2.Enabled = true;
 
-                    //constructor_primer_usuario ne= new constructor_primer_usuario ();
-                    //ne.id_usuarios= Convert.ToInt16( toolStripTextBox1.Text);
-                    int usu = 6 ;
-                    constructor_de_respuestas res = new constructor_de_respuestas();
-                    constructor_de_respuestas res2 = new constructor_de_respuestas();
-                    constructor_de_respuestas res3 = new constructor_de_respuestas();
-                    constructor_de_respuestas res4 = new constructor_de_respuestas();
-
-                    res.Respuesta = txtRespuesta1.Text;
-                    res.preguntas = Convert.ToInt32(cmbPregunta1.SelectedValue);
-                    res.usuarioss = usu;
-                    int retornar = preguntas_y_respuestas.agregar_re(res);
-
-                    res2.Respuesta = txtRespuesta2.Text;
-                    res2.preguntas = Convert.ToInt32(cmbPregunta2.SelectedValue);
-                    res2.usuarioss = usu;
-                    int retorna = preguntas_y_respuestas.agregar_re(res2);
-
-                    res3.Respuesta = textBox1.Text;
-                    res3.preguntas = Convert.ToInt32(cmbPregunta3.SelectedValue);
-                    res3.usuarioss = usu;
-                    int retornara = preguntas_y_respuestas.agregar_re(res3);
-
-                    res4.Respuesta = textBox2.Text;
-                    res4.preguntas = Convert.ToInt32(cmbPregunta4.SelectedValue);
-                    res4.usuarioss = usu;
-                    int retornas = preguntas_y_respuestas.agregar_re(res4);
-
-                    BtnGuardar.Visible = false;
-                    button1.Visible = true;
+                    }
+                 
                   
                 }
                 else
@@ -132,7 +120,8 @@ namespace NovaInventory.Vista
 
         private void FrmPrimerUsuario_Load_1(object sender, EventArgs e)
         {
-            
+            button2.Enabled = false;
+            groupBox1.Enabled = false;   
 
             cmbTipoUsuario.DataSource = Funciones_usuarios.cargarUSU();
             cmbTipoUsuario.DisplayMember = "tipo_usuario";
@@ -176,6 +165,42 @@ namespace NovaInventory.Vista
             frmLogin primer_uso = new frmLogin();
             primer_uso.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            constructor_de_respuestas res = new constructor_de_respuestas();
+            constructor_de_respuestas res2 = new constructor_de_respuestas();
+            constructor_de_respuestas res3 = new constructor_de_respuestas();
+            constructor_de_respuestas res4 = new constructor_de_respuestas();
+            int id = preguntas_y_respuestas.id(res);
+            int id1 = preguntas_y_respuestas.id(res2);
+            int id2 = preguntas_y_respuestas.id(res3);
+            int id3 = preguntas_y_respuestas.id(res4);
+            res.Respuesta = txtRespuesta1.Text;
+            res.preguntas = Convert.ToInt32(cmbPregunta1.SelectedValue);
+            res.usuarioss = id;
+            int retornar = preguntas_y_respuestas.agregar_re(res);
+
+            res2.Respuesta = txtRespuesta2.Text;
+            res2.preguntas = Convert.ToInt32(cmbPregunta2.SelectedValue);
+            res2.usuarioss = id1;
+            int retorna = preguntas_y_respuestas.agregar_re(res2);
+
+            res3.Respuesta = textBox1.Text;
+            res3.preguntas = Convert.ToInt32(cmbPregunta3.SelectedValue);
+            res3.usuarioss = id2;
+            int retornara = preguntas_y_respuestas.agregar_re(res3);
+
+            res4.Respuesta = textBox2.Text;
+            res4.preguntas = Convert.ToInt32(cmbPregunta4.SelectedValue);
+            res4.usuarioss = id3;
+            int retornas = preguntas_y_respuestas.agregar_re(res4);
+
+            button2.Visible = false;
+            BtnGuardar.Visible = false;
+            button1.Visible = true;
         }
     }
 }

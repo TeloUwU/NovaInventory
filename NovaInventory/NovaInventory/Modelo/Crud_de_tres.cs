@@ -179,7 +179,7 @@ namespace NovaInventory.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand agrega = new MySqlCommand(string.Format("INSERT INTO modelos(modelo, id_producto)VALUES('{0}')", add.modelo, add.id_producto), Conexion.obtenerconexion());
+                MySqlCommand agrega = new MySqlCommand(string.Format("INSERT INTO modelos(modelo, id_producto)VALUES('{0}', '{1}')", add.modelo, add.id_producto), Conexion.obtenerconexion());
                 retorno = Convert.ToInt32(agrega.ExecuteNonQuery());
 
                 if (retorno > 0)

@@ -90,7 +90,7 @@
             // 
             this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraseña.Location = new System.Drawing.Point(88, 153);
-            this.txtContraseña.MaxLength = 50;
+            this.txtContraseña.MaxLength = 100;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.ShortcutsEnabled = false;
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);

@@ -75,8 +75,11 @@
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.CargarImagen = new System.Windows.Forms.OpenFileDialog();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbPregunta4
@@ -85,7 +88,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbPregunta4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta4.FormattingEnabled = true;
-            this.cmbPregunta4.Location = new System.Drawing.Point(225, 569);
+            this.cmbPregunta4.Location = new System.Drawing.Point(27, 215);
             this.cmbPregunta4.Name = "cmbPregunta4";
             this.cmbPregunta4.Size = new System.Drawing.Size(629, 23);
             this.cmbPregunta4.TabIndex = 62;
@@ -96,7 +99,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbPregunta3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta3.FormattingEnabled = true;
-            this.cmbPregunta3.Location = new System.Drawing.Point(225, 502);
+            this.cmbPregunta3.Location = new System.Drawing.Point(27, 148);
             this.cmbPregunta3.Name = "cmbPregunta3";
             this.cmbPregunta3.Size = new System.Drawing.Size(629, 23);
             this.cmbPregunta3.TabIndex = 60;
@@ -107,7 +110,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbPregunta2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta2.FormattingEnabled = true;
-            this.cmbPregunta2.Location = new System.Drawing.Point(225, 437);
+            this.cmbPregunta2.Location = new System.Drawing.Point(27, 83);
             this.cmbPregunta2.Name = "cmbPregunta2";
             this.cmbPregunta2.Size = new System.Drawing.Size(629, 23);
             this.cmbPregunta2.TabIndex = 58;
@@ -118,7 +121,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbPregunta1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta1.FormattingEnabled = true;
-            this.cmbPregunta1.Location = new System.Drawing.Point(225, 377);
+            this.cmbPregunta1.Location = new System.Drawing.Point(27, 23);
             this.cmbPregunta1.Name = "cmbPregunta1";
             this.cmbPregunta1.Size = new System.Drawing.Size(629, 23);
             this.cmbPregunta1.TabIndex = 56;
@@ -130,7 +133,7 @@
             this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(813, 650);
+            this.BtnGuardar.Location = new System.Drawing.Point(813, 319);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(188, 44);
             this.BtnGuardar.TabIndex = 18;
@@ -228,7 +231,7 @@
             // txtRespuesta2
             // 
             this.txtRespuesta2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRespuesta2.Location = new System.Drawing.Point(225, 472);
+            this.txtRespuesta2.Location = new System.Drawing.Point(27, 118);
             this.txtRespuesta2.MaxLength = 50;
             this.txtRespuesta2.Name = "txtRespuesta2";
             this.txtRespuesta2.Size = new System.Drawing.Size(629, 24);
@@ -237,7 +240,7 @@
             // txtRespuesta1
             // 
             this.txtRespuesta1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRespuesta1.Location = new System.Drawing.Point(225, 409);
+            this.txtRespuesta1.Location = new System.Drawing.Point(27, 55);
             this.txtRespuesta1.MaxLength = 50;
             this.txtRespuesta1.Name = "txtRespuesta1";
             this.txtRespuesta1.Size = new System.Drawing.Size(629, 24);
@@ -470,6 +473,7 @@
             // 
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(116, 25);
+            this.txtId.Visible = false;
             // 
             // lblIdusuario
             // 
@@ -482,6 +486,7 @@
             // 
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(116, 25);
+            this.toolStripTextBox1.Visible = false;
             // 
             // label15
             // 
@@ -505,7 +510,7 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(225, 533);
+            this.textBox1.Location = new System.Drawing.Point(27, 179);
             this.textBox1.MaxLength = 50;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(629, 24);
@@ -514,7 +519,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(225, 600);
+            this.textBox2.Location = new System.Drawing.Point(27, 246);
             this.textBox2.MaxLength = 50;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(629, 24);
@@ -542,7 +547,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(813, 650);
+            this.button1.Location = new System.Drawing.Point(813, 642);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 44);
             this.button1.TabIndex = 63;
@@ -550,16 +555,45 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cmbPregunta1);
+            this.groupBox1.Controls.Add(this.txtRespuesta1);
+            this.groupBox1.Controls.Add(this.cmbPregunta4);
+            this.groupBox1.Controls.Add(this.txtRespuesta2);
+            this.groupBox1.Controls.Add(this.cmbPregunta3);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cmbPregunta2);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Location = new System.Drawing.Point(123, 396);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(671, 285);
+            this.groupBox1.TabIndex = 64;
+            this.groupBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.BackColor = System.Drawing.Color.Green;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(813, 642);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(188, 44);
+            this.button2.TabIndex = 65;
+            this.button2.Text = "finalizar Preguntas";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FrmPrimerUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1041, 720);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txt_cel);
-            this.Controls.Add(this.cmbPregunta4);
-            this.Controls.Add(this.cmbPregunta3);
-            this.Controls.Add(this.cmbPregunta2);
-            this.Controls.Add(this.cmbPregunta1);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.BtnExaminar);
             this.Controls.Add(this.cmbTipoUsuario);
@@ -570,10 +604,6 @@
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.txtConfClave);
             this.Controls.Add(this.txtApellidos);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtRespuesta2);
-            this.Controls.Add(this.txtRespuesta1);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtClave);
@@ -603,6 +633,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,5 +689,7 @@
         private System.Windows.Forms.OpenFileDialog CargarImagen;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

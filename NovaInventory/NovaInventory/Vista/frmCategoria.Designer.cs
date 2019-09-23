@@ -99,6 +99,7 @@
             this.id_categoria.Name = "id_categoria";
             this.id_categoria.Size = new System.Drawing.Size(23, 20);
             this.id_categoria.TabIndex = 33;
+            this.id_categoria.Visible = false;
             // 
             // btn_eliminar
             // 
@@ -195,6 +196,7 @@
             this.id_productos.Name = "id_productos";
             this.id_productos.Size = new System.Drawing.Size(23, 20);
             this.id_productos.TabIndex = 35;
+            this.id_productos.Visible = false;
             // 
             // dgb_productos
             // 

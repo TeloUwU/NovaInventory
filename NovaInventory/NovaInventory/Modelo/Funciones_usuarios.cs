@@ -38,7 +38,7 @@ namespace NovaInventory.Modelo
             DataTable datos;
             try
             {
-                string query = "SELECT * FROM tbusuarios";
+                string query = "SELECT * FROM tbusuarios WHERE id_tipo_usuarios > 1";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 datos = new DataTable();
