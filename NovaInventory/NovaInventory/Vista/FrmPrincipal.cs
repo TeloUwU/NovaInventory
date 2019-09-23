@@ -104,7 +104,7 @@ namespace NovaInventory.Vista
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             PanelSidebar.Visible = false;
-
+            configuracion();
             lblNombres_Usuario.Text = Constructor_login.nombre;
             lblApellidos_Usuario.Text = Constructor_login.apellido;
             if (Constructor_login.nivel == 1) 
@@ -248,6 +248,7 @@ namespace NovaInventory.Vista
             panel_administracion.Visible = false;
             panel_administracion.Visible = false;
             panel_inventario.Visible = false;
+            panel1.Visible = false;
         }
         private void hide_con()
         {
@@ -259,6 +260,8 @@ namespace NovaInventory.Vista
                 panel_administracion.Visible = false;
             if (panel_administracion.Visible == true)
                 panel_administracion.Visible = false;
+            if (panel1.Visible == true)
+                panel1.Visible = false;
         }
         private void show_con(Panel sub)
         {
@@ -283,28 +286,33 @@ namespace NovaInventory.Vista
             AbrirFormulario<frmConfig_Root>();
             
             button6.BackColor = Color.FromArgb(192, 0, 192);
+            hide_con();
         }
 
       
         private void button6_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario<frmConfig_Root>();
+            hide_con();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmFacturacion>();
+            hide_con();
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmAdministracion_Empresa>();
+            hide_con();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmCompra>();
+            hide_con();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -367,16 +375,20 @@ namespace NovaInventory.Vista
         private void button4_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmUsuarios>();
+            hide_con();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmProveedores>();
+            hide_con();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
+
             AbrirFormulario<frmInventarioExistencias>();
+            hide_con();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -403,26 +415,31 @@ namespace NovaInventory.Vista
         private void btn_articulos_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmProducto>();
+            hide_con();
         }
 
         private void btn_productos_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmCategoria>();
+            hide_con();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmBodegas>();
+            hide_con();
         }
 
         private void button7_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario<frmFacturacion>();
+            hide_con();
         }
 
         private void btn_compras_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmCompra>();
+            hide_con();
         }
     }
 }

@@ -30,6 +30,13 @@ namespace NovaInventory.Vista
         {
 
         }
+        public void limpiar_modelo()
+        {
+            txtnombre.Clear();
+            txt_productos.Clear();
+            txt.Clear();
+        }
+     
         public void insertar_categoria()
         {
             agre.categoria = txtnombre.Text;
@@ -71,7 +78,7 @@ namespace NovaInventory.Vista
         public void instertar_procuctos()
         {
             agregar.producto = txt_productos.Text;
-            agregar.id_categorias = Convert.ToInt16(cmbCategoria);
+            agregar.id_categorias = Convert.ToInt16(cmbCategoria.SelectedValue);
             int retorno = Crud_de_tres.agregar_productos(agregar);
             if (retorno>=1)
             {
@@ -161,12 +168,24 @@ namespace NovaInventory.Vista
         }
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            insertar_categoria();      
+            insertar_categoria();
+            mostrar_categorias();
+            limpiar_modelo();
+            cmbCategoria.DataSource = Validar_prodictos.cargar();
+            cmbCategoria.DisplayMember = "categoria";
+            cmbCategoria.ValueMember = "id_categoria";
+            groupBox2.Enabled = true;
         }
 
         private void btn_agregar_pr_Click(object sender, EventArgs e)
         {
             instertar_procuctos();
+            limpiar_modelo();
+            mostrar_productos();
+            cmbproductos.DataSource = Validar_prodictos.cargar1();
+            cmbproductos.DisplayMember = "producto";
+            cmbproductos.ValueMember = "id_producto";
+            groupBox3.Enabled = true;
         }
 
         private void btn_mostrar_Click(object sender, EventArgs e)
@@ -177,31 +196,58 @@ namespace NovaInventory.Vista
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             actualizar_categoria();
+            limpiar_modelo();
+            mostrar_categorias();
+            cmbCategoria.DataSource = Validar_prodictos.cargar();
+            cmbCategoria.DisplayMember = "categoria";
+            cmbCategoria.ValueMember = "id_categoria";
+            groupBox2.Enabled = true;
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             eliminar_categoria();
+            limpiar_modelo();
+            mostrar_categorias();
+            cmbCategoria.DataSource = Validar_prodictos.cargar();
+            cmbCategoria.DisplayMember = "categoria";
+            cmbCategoria.ValueMember = "id_categoria";
+            groupBox2.Enabled = true;
         }
 
         private void btn_mostrar_pr_Click(object sender, EventArgs e)
         {
             mostrar_productos();
+
         }
 
         private void btn_actualizar_pr_Click(object sender, EventArgs e)
         {
             actualizar_productos();
+            limpiar_modelo();
+            mostrar_productos();
+            cmbproductos.DataSource = Validar_prodictos.cargar1();
+            cmbproductos.DisplayMember = "producto";
+            cmbproductos.ValueMember = "id_producto";
+            groupBox3.Enabled = true;
         }
 
         private void btn_eliminar_prr_Click(object sender, EventArgs e)
         {
             eliminar_productos();
+            limpiar_modelo();
+            mostrar_productos();
+            cmbproductos.DataSource = Validar_prodictos.cargar1();
+            cmbproductos.DisplayMember = "producto";
+            cmbproductos.ValueMember = "id_producto";
+            groupBox3.Enabled = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             insertar_modelo();
+            limpiar_modelo();
+            mostrar_modelos();
         
         }
 
@@ -213,11 +259,15 @@ namespace NovaInventory.Vista
         private void button2_Click(object sender, EventArgs e)
         {
             actualizar_modelo();
+            limpiar_modelo();
+            mostrar_modelos();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             eliminar_modelo();
+            limpiar_modelo();
+            mostrar_modelos();
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -227,10 +277,31 @@ namespace NovaInventory.Vista
 
         private void frmCategoria_Load(object sender, EventArgs e)
         {
+            if (Validar_prodictos.verificar_categoria()==true)
+            {
+                if (Validar_prodictos.verificar_productos()==true)
+                {
+                    groupBox3.Enabled = true;
+                    groupBox2.Enabled = true;
+                }
+                else
+                {
+                    groupBox3.Enabled = false;
+                }
+                groupBox3.Enabled = true;
+                groupBox2.Enabled = true;
+            }
+            else
+            {
+                groupBox3.Enabled = false;
+                groupBox2.Enabled = false;
+            }
             cmbCategoria.DataSource = Validar_prodictos.cargar();
             cmbCategoria.DisplayMember = "categoria";
             cmbCategoria.ValueMember = "id_categoria";
-
+            mostrar_modelos();
+            mostrar_productos();
+            mostrar_categorias();
             cmbproductos.DataSource = Validar_prodictos.cargar1();
             cmbproductos.DisplayMember = "producto";
             cmbproductos.ValueMember = "id_producto";

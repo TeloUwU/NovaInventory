@@ -281,7 +281,6 @@
             // 
             // dgvMostrar_Usuarios
             // 
-            this.dgvMostrar_Usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMostrar_Usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMostrar_Usuarios.Location = new System.Drawing.Point(416, 65);
             this.dgvMostrar_Usuarios.Margin = new System.Windows.Forms.Padding(2);
