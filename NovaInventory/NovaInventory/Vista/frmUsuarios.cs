@@ -13,6 +13,7 @@ using NovaInventory.Controlador;
 using NovaInventory.Modelo;
 using NovaInventory.Config;
 using NovaInventory.Reportes;
+using MySql.Data.MySqlClient;
 
 namespace NovaInventory.Vista
 {
@@ -37,12 +38,11 @@ namespace NovaInventory.Vista
             agregar.Correo = txtCorreo_Usuario.Text;
             agregar.dui = txtDUI_Usuario.Text;
             agregar.nit = txtNIT_Usuario.Text;
-            agregar.id_estados = Convert.ToInt32(cbEstado_Usuario.SelectedValue.ToString());
-            agregar.id_tipo_usuarios = Convert.ToInt32(cbTipo_Usuario.SelectedValue.ToString());
+            agregar.id_estados = Convert.ToInt32(cbEstado_Usuario.SelectedValue);
+            agregar.id_tipo_usuarios = Convert.ToInt32(cbTipo_Usuario.SelectedValue);
             int intentos = 1;
             agregar.intentos = Convert.ToString(intentos);
-            agregar.empresa = Convert.ToInt32(cmb_emp.SelectedValue.ToString());
-
+            agregar.empresa = Convert.ToInt32(cmb_emp.SelectedValue);
             MemoryStream ms = new MemoryStream();
             pbFoto_Usuario.Image.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
@@ -63,14 +63,19 @@ namespace NovaInventory.Vista
             actualizar.usuario = txtUsuario.Text;
             actualizar.apellido_usuario = txtApellidos_Usuario.Text;
             actualizar.Correo = txtCorreo_Usuario.Text;
+            actualizar.telefono = txtTelefono_Usuario.Text;
             actualizar.dui = txtDUI_Usuario.Text;
             actualizar.nit = txtNIT_Usuario.Text;
+            actualizar.id_tipo_usuarios = Convert.ToUInt16(cbTipo_Usuario.SelectedValue);
+            actualizar.id_estados = Convert.ToUInt16(cbEstado_Usuario.SelectedValue);
+            actualizar.empresa = Convert.ToUInt16(cmb_emp.SelectedValue);
+            MemoryStream ms = new MemoryStream();
+            pbFoto_Usuario.Image.Save(ms, ImageFormat.Jpeg);
+            byte[] aByte = ms.ToArray();
+            string imagen = Convert.ToBase64String(aByte);
+            actualizar.Foto_usuario = imagen;
             ac.usuarioss = Convert.ToInt16( txtid_Usuario.Text);
-
-
-
-            preguntas_y_respuestas.act(ac);
-            Funciones_usuarios.actualizar(actualizar);
+            Funciones_usuarios.actualizarusu(actualizar);
         }
         public void eliminarusu()
         {
@@ -89,6 +94,8 @@ namespace NovaInventory.Vista
             txtDUI_Usuario.Clear();
             txtNIT_Usuario.Clear();
             txtCorreo_Usuario.Clear();
+            pbFoto_Usuario.Image.Dispose();
+            pbFoto_Usuario.Image = null;
         }
 
 
@@ -127,16 +134,24 @@ namespace NovaInventory.Vista
 
         private void dgvMostrar_Usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+
             int posision;
             posision = this.dgvMostrar_Usuarios.CurrentRow.Index;
             txtid_Usuario.Text = this.dgvMostrar_Usuarios[0, posision].Value.ToString();
             txtUsuario.Text = this.dgvMostrar_Usuarios[1, posision].Value.ToString();
             txtNombres_Usuario.Text = this.dgvMostrar_Usuarios[2, posision].Value.ToString();
             txtApellidos_Usuario.Text = this.dgvMostrar_Usuarios[3, posision].Value.ToString();
-            txtTelefono_Usuario.Text = this.dgvMostrar_Usuarios[4, posision].Value.ToString();
+            txtTelefono_Usuario.Text = this.dgvMostrar_Usuarios[5, posision].Value.ToString();
+            byte[] image = Convert.FromBase64String(this.dgvMostrar_Usuarios[6, posision].Value.ToString());
+            MemoryStream ms = new MemoryStream(image);
+            pbFoto_Usuario.Image = Image.FromStream(ms);
             txtCorreo_Usuario.Text = this.dgvMostrar_Usuarios[7, posision].Value.ToString();
             txtDUI_Usuario.Text = this.dgvMostrar_Usuarios[8, posision].Value.ToString();
             txtNIT_Usuario.Text = this.dgvMostrar_Usuarios[9, posision].Value.ToString();
+            cbEstado_Usuario.Text = Convert.ToString(this.dgvMostrar_Usuarios[11, posision].Value.ToString());
+            cbTipo_Usuario.Text = Convert.ToString(this.dgvMostrar_Usuarios[12, posision].Value.ToString());
+
 
 
         }
@@ -150,12 +165,14 @@ namespace NovaInventory.Vista
         {
             actualizares();
             mostrar();
+            limpiar();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             eliminarusu();
             mostrar();
+            limpiar();
         }
 
         private void frmUsuarios_Load(object sender, EventArgs e)
