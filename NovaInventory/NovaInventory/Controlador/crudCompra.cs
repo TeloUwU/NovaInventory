@@ -115,7 +115,7 @@ namespace NovaInventory.Controlador
         public static DataTable Compras()
         {
             DataTable datos = new DataTable();
-            string query = "SELECT id_compra, nombre, producto, modelo, descripcion, Preciounitario, Precio_total, Cantidad, fecha_compra, CONCAT(nombre_usuario,' ',apellido_usuario), tipo_pago, num_factura FROM tbcompras INNER JOIN tbproveedor, articulos, productos, modelos, tbusuarios, tbtipo_pago WHERE tbcompras.id_proveedor = tbproveedor.id_proveedor AND tbcompras.id_articulos = articulos.id_articulo AND articulos.id_productos = productos.id_producto AND articulos.id_modelos = modelos.id_modelo AND tbcompras.id_usuario = tbusuarios.id_usuarios AND tbcompras.tipo_de_pago = tbtipo_pago.id_tipo_pago;";
+            string query = "SELECT id_compra, id_usuario, nombre, producto, modelo, descripcion, Preciounitario, Precio_total, Cantidad, fecha_compra, CONCAT(nombre_usuario,' ',apellido_usuario), tipo_pago, num_factura FROM tbcompras INNER JOIN tbproveedor, articulos, productos, modelos, tbusuarios, tbtipo_pago WHERE tbcompras.id_proveedor = tbproveedor.id_proveedor AND tbcompras.id_articulos = articulos.id_articulo AND articulos.id_productos = productos.id_producto AND articulos.id_modelos = modelos.id_modelo AND tbcompras.id_usuario = tbusuarios.id_usuarios AND tbcompras.tipo_de_pago = tbtipo_pago.id_tipo_pago;";
             MySqlCommand cmdselect = new MySqlCommand(query, Conexion.obtenerconexion());
             try
             {
@@ -134,12 +134,12 @@ namespace NovaInventory.Controlador
             }
         }
 
-        public static bool ActualizarCompra(constructor_Compra upd)
+        public static bool ActualizarCompra(constructor_Compra actualizar)
         {
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE tbcompras SET "),Conexion.obtenerconexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE tbcompras SET id_usuario_mod = '" + actualizar.id_usuario_mod + "', precio_unitario_mod = '" + actualizar.precio_unitario_mod + "', Cantidad_mod = '" + actualizar.cantidad_mod + "', total_mod = '" + actualizar.total_mod + "' WHERE id_compra = '" + actualizar.id_compra + "';"),Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno == true)
                 {
