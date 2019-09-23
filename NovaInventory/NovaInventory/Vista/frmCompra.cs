@@ -238,7 +238,10 @@ namespace NovaInventory.Vista
             
         }
 
-        
+        public void validar_primeracompra()
+        {
+            MySqlCommand validar = new MySqlCommand(string.Format(""), Conexion.obtenerconexion(););
+        }
         
         
 
