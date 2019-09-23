@@ -238,10 +238,7 @@ namespace NovaInventory.Vista
             
         }
 
-        public void txtPrecio_Unitario_TextChanged(object sender, EventArgs e)
-        {
-            Total();
-        }
+        
         
         
 
@@ -256,12 +253,13 @@ namespace NovaInventory.Vista
             {
                 txtPrecio_Unitario.Text = "1.00";
             }
-
-            int Precio_Unitario = Convert.ToInt16(txtPrecio_Unitario.Text);
-            int Cantidad_Producto = Convert.ToInt16(nUDCantidad.Value);
-            string Total = Convert.ToString(Precio_Unitario * Cantidad_Producto);
-            txtTotal.Text = Total;
-
+            else
+            {
+                int Precio_Unitario = Convert.ToInt16(txtPrecio_Unitario.Text);
+                int Cantidad_Producto = Convert.ToInt16(nUDCantidad.Value);
+                string Total = Convert.ToString(Precio_Unitario * Cantidad_Producto);
+                txtTotal.Text = Total;
+            }
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
@@ -334,6 +332,20 @@ namespace NovaInventory.Vista
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtPrecio_Unitario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+            else
+            {
+                Total();
+            }
         }
     }
 }
