@@ -48,6 +48,7 @@ namespace NovaInventory.Vista
         {
             dgvCompras.DataSource = crudCompra.Compras();
             dgvCompras.Columns[0].Visible = false;
+            dgvCompras.Columns[1].Visible = false;
             dgvCompras.Columns[5].HeaderText = "Precio Unitario";
             dgvCompras.Columns[6].HeaderText = "Precio Total";
             dgvCompras.Columns[8].HeaderText = "Fecha de Compra";
@@ -287,21 +288,23 @@ namespace NovaInventory.Vista
             int posicion;
             posicion = this.dgvCompras.CurrentRow.Index;
             txtid_Compra.Text = dgvCompras[0, posicion].Value.ToString();
-            txtid_proveedor.Text = dgvCompras[1, posicion].Value.ToString();
-            txtid_producto.Text = dgvCompras[2, posicion].Value.ToString();
-            txtid_modelo.Text = dgvCompras[3, posicion].Value.ToString();
-            txtDescripción.Text = dgvCompras[4, posicion].Value.ToString();
-            txtPrecio_Unitario.Text = dgvCompras[5, posicion].Value.ToString();
-            txtTotal.Text = dgvCompras[6, posicion].Value.ToString();
-            nUDCantidad.Text = dgvCompras[7, posicion].Value.ToString();
-            dtpRealización_Compra.Text = dgvCompras[8, posicion].Value.ToString();
-            txtid_usuario.Text = dgvCompras[9, posicion].Value.ToString();
-            txtid_tipopago.Text = dgvCompras[10, posicion].Value.ToString();
-            txtNum_factura.Text = dgvCompras[11, posicion].Value.ToString();
+            txtid_usuario.Text = dgvCompras[1, posicion].Value.ToString();
+            txtid_proveedor.Text = dgvCompras[2, posicion].Value.ToString();
+            txtid_producto.Text = dgvCompras[3, posicion].Value.ToString();
+            txtid_modelo.Text = dgvCompras[4, posicion].Value.ToString();
+            txtDescripción.Text = dgvCompras[5, posicion].Value.ToString();
+            txtPrecio_Unitario.Text = dgvCompras[6, posicion].Value.ToString();
+            txtTotal.Text = dgvCompras[7, posicion].Value.ToString();
+            nUDCantidad.Text = dgvCompras[8, posicion].Value.ToString();
+            dtpRealización_Compra.Text = dgvCompras[9, posicion].Value.ToString();
+            txtUsuario_queCompro.Text = dgvCompras[10, posicion].Value.ToString();
+            txtid_tipopago.Text = dgvCompras[11, posicion].Value.ToString();
+            txtNum_factura.Text = dgvCompras[12, posicion].Value.ToString();
 
             btnActualizar_Compra.Enabled = true;
-            
 
+            txtUsuario_queCompro.Visible = true;
+            lblUsuarioCOmpro.Visible = true;
         }
 
         
@@ -309,11 +312,12 @@ namespace NovaInventory.Vista
         private void btnActualizar_Compra_Click(object sender, EventArgs e)
         {
             actualizar.id_compra = Convert.ToInt16(txtid_Compra.Text);
-            agregar.id_usuario_mod = Convert.ToInt16(txtid_usuario.Text);
-            agregar.precio_unitario_mod = Convert.ToInt16(txtPrecio_Unitario.Text);
-            agregar.total_mod = Convert.ToInt16(txtTotal.Text);
-            agregar.cantidad_mod = Convert.ToInt16(nUDCantidad.Text); 
+            actualizar.id_usuario_mod = Convert.ToInt16(txtid_usuario.Text);
+            actualizar.precio_unitario_mod = Convert.ToInt16(txtPrecio_Unitario.Text);
+            actualizar.total_mod = Convert.ToInt16(txtTotal.Text);
+            actualizar.cantidad_mod = Convert.ToInt16(nUDCantidad.Value);
 
+            bool datos = crudCompra.ActualizarCompra(actualizar);
         }
 
         public void LimpiarTodo()

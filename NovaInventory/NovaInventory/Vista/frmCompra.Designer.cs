@@ -64,6 +64,8 @@
             this.txtid_modelo = new System.Windows.Forms.TextBox();
             this.txtid_articulo = new System.Windows.Forms.TextBox();
             this.txtPrecio_Unitario = new System.Windows.Forms.TextBox();
+            this.lblUsuarioCOmpro = new System.Windows.Forms.Label();
+            this.txtUsuario_queCompro = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
@@ -437,11 +439,33 @@
             this.txtPrecio_Unitario.TextChanged += new System.EventHandler(this.txtPrecio_Unitario_TextChanged);
             this.txtPrecio_Unitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_Unitario_KeyPress);
             // 
+            // lblUsuarioCOmpro
+            // 
+            this.lblUsuarioCOmpro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUsuarioCOmpro.AutoSize = true;
+            this.lblUsuarioCOmpro.Location = new System.Drawing.Point(164, 198);
+            this.lblUsuarioCOmpro.Name = "lblUsuarioCOmpro";
+            this.lblUsuarioCOmpro.Size = new System.Drawing.Size(199, 17);
+            this.lblUsuarioCOmpro.TabIndex = 25;
+            this.lblUsuarioCOmpro.Text = "Usuario que realizo la Compra";
+            this.lblUsuarioCOmpro.Visible = false;
+            // 
+            // txtUsuario_queCompro
+            // 
+            this.txtUsuario_queCompro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtUsuario_queCompro.Location = new System.Drawing.Point(167, 218);
+            this.txtUsuario_queCompro.Name = "txtUsuario_queCompro";
+            this.txtUsuario_queCompro.Size = new System.Drawing.Size(281, 22);
+            this.txtUsuario_queCompro.TabIndex = 26;
+            this.txtUsuario_queCompro.Visible = false;
+            // 
             // frmCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 665);
+            this.Controls.Add(this.txtUsuario_queCompro);
+            this.Controls.Add(this.lblUsuarioCOmpro);
             this.Controls.Add(this.txtPrecio_Unitario);
             this.Controls.Add(this.txtid_articulo);
             this.Controls.Add(this.txtid_modelo);
@@ -526,5 +550,7 @@
         private System.Windows.Forms.TextBox txtid_modelo;
         private System.Windows.Forms.TextBox txtid_articulo;
         private System.Windows.Forms.TextBox txtPrecio_Unitario;
+        private System.Windows.Forms.Label lblUsuarioCOmpro;
+        private System.Windows.Forms.TextBox txtUsuario_queCompro;
     }
 }
