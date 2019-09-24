@@ -46,6 +46,7 @@ namespace NovaInventory.Modelo
                 datos = new DataTable();
                 adapter.Fill(datos);
                 return datos;
+
             }
             catch (Exception ex)
             {
