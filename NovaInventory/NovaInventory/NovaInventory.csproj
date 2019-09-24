@@ -96,6 +96,7 @@
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
     <Compile Include="Modelo\Crud_de_tres.cs" />
+    <Compile Include="Modelo\Funciones_facturacion.cs" />
     <Compile Include="Modelo\Funciones_producto.cs" />
     <Compile Include="Modelo\Funciones_usuarios.cs" />
     <Compile Include="Modelo\preguntas y respuestas.cs" />

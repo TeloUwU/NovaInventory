@@ -40,9 +40,8 @@ namespace NovaInventory.Vista
 
         public void Agregarproducto()
         {
-            if (cmb_proveedor.Text.Trim() == "" || txt_modelos.Text.Trim() == "" ||
+            if (cmb_proveedor.Text.Trim() == "" ||
                 txt_codigo_art.Text.Trim() == "" || cmb_estados.Text.Trim() == "" ||
-                dateTimePicker_fecha.Text.Trim() == "" || txt_categoria.Text.Trim() == "" ||
                 cmb_productos.Text.Trim() == "" )
             {
                 MessageBox.Show("COMPLETE TODOS LOS DATOS", "FALTA INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -50,7 +49,7 @@ namespace NovaInventory.Vista
             else
             {
                 agregar.nombre_articulo = cmb_proveedor.Text;
-                agregar.codigo_articulo_seriado = txt_modelos.Text;
+               // agregar.codigo_articulo_seriado = txt_modelos.Text;
                 agregar.marca = cmb_estados.Text;
                 int datos = Funciones_producto.Ingresar_Producto(agregar);
             }
@@ -63,18 +62,18 @@ namespace NovaInventory.Vista
         {
             id_articulo.Clear();
             cmb_proveedor.SelectedValue = "1";
-            txt_modelos.Clear();
+           // txt_modelos.Clear();
             txt_codigo_art.Clear();
             cmb_estados.SelectedValue = "1";
             //dateTimePicker_fecha.SelectedValue = "1";
-            txt_categoria.Clear();
+           // txt_categoria.Clear();
             cmb_productos.SelectedValue = "1";
         }
         public void ModificarRegistro_de_producto()
         {
             actualizar.id_articulo = Convert.ToInt32(id_articulo.Text);
             actualizar.nombre_articulo = cmb_proveedor.Text;
-            actualizar.codigo_articulo_seriado = txt_modelos.Text;
+          //  actualizar.codigo_articulo_seriado = txt_modelos.Text;
             actualizar.marca = cmb_estados.Text;
             
             Funciones_producto.Actualizar_productos(actualizar);
@@ -111,11 +110,11 @@ namespace NovaInventory.Vista
             posicion = this.dgvproducto.CurrentRow.Index;
             id_articulo.Text = this.dgvproducto[0, posicion].Value.ToString();
             cmb_proveedor.Text = this.dgvproducto[1, posicion].Value.ToString();
-            txt_modelos.Text = this.dgvproducto[2, posicion].Value.ToString();
+           // txt_modelos.Text = this.dgvproducto[2, posicion].Value.ToString();
             txt_codigo_art.Text = this.dgvproducto[3, posicion].Value.ToString();
             cmb_estados.Text = this.dgvproducto[4, posicion].Value.ToString();
-            dateTimePicker_fecha.Text = this.dgvproducto[5, posicion].Value.ToString();
-            txt_categoria.Text = this.dgvproducto[5, posicion].Value.ToString();
+            //dateTimePicker_fecha.Text = this.dgvproducto[5, posicion].Value.ToString();
+            //txt_categoria.Text = this.dgvproducto[5, posicion].Value.ToString();
             cmb_productos.Text = this.dgvproducto[6, posicion].Value.ToString();
             btnactualizar_producto.Enabled = true;
             btneliminar_producto.Enabled = true;
