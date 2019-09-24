@@ -38,7 +38,7 @@ namespace NovaInventory.Modelo
             DataTable datos;
             try
             {
-                string query = "SELECT * FROM tbusuarios";
+                string query = "SELECT  tb.id_usuarios, tb.nickname, tb.nombre_usuario, tb.apellido_usuario, tb.contraseña_usuario, tb.telefono, tb.Foto_usuario, tb.Correo, tb.dui, tb.nit, tb.fecha_de_nacimiento, te.Estado, h.tipo_usuario,tb.intentos  , dd.nombre FROM tbusuarios tb, estado te, tipo_usuario h, datos_empresa dd WHERE tb.id_estaado = te.id_estado AND tb.id_tipo_usuarios = h.id_tipo_usuario  AND tb.empresa = dd.id_datos_empresa AND tb.id_tipo_usuarios > 1";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 datos = new DataTable();
@@ -57,10 +57,9 @@ namespace NovaInventory.Modelo
             try
             {
                 constructor_de_respuestas ni = new constructor_de_respuestas();
-                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbusuarios SET  id_usuarios='{0}', nickname ='{0}', nombre_usuario ='{1}', apellido_usuario ='{2}', telefono = '{3}', Correo ='{4}', dui = '{5}', nit = '{6}', id_estaado = '{7}', id_tipo_usuarios = '{8}', empresa  = '{9}' WHERE id_usuarios='{10}' ", upt.id_usuarios, upt.usuario, upt.nombre_usuario, upt.apellido_usuario, upt.telefono, upt.Correo, upt.dui, upt.nit, upt.id_estados, upt.id_tipo_usuarios, upt.empresa, ni.usuarioss), Conexion.obtenerconexion());
+                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbusuarios SET nickname ='{0}', nombre_usuario ='{1}', apellido_usuario ='{2}', telefono = '{3}',Foto_usuario = '{4}', Correo ='{5}', dui = '{6}', nit = '{7}', id_estaado = '{8}', id_tipo_usuarios = '{9}', empresa  = '{10}' WHERE id_usuarios='{11}' ", upt.usuario, upt.nombre_usuario, upt.apellido_usuario, upt.telefono , upt.Foto_usuario, upt.Correo, upt.dui, upt.nit, upt.id_estados, upt.id_tipo_usuarios, upt.empresa, upt.id_usuarios), Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
-                if (true)
-                {
+             
                     if (retorno == true)
                     {
                         MessageBox.Show("Los datos fueron actualizados correctamente.", "Proceso completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -70,7 +69,7 @@ namespace NovaInventory.Modelo
                         MessageBox.Show("Los Datos no pudieron ser actualizados.", "Proceso no completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     return retorno;
-                }
+                
 
             }
             catch (Exception e)

@@ -77,6 +77,26 @@ namespace NovaInventory.Modelo
                 return retorno;
             }
         }
+        public static int id(constructor_de_respuestas jj)
+        {
+            int datos = 0;
+            try
+            {
+                string query5 = "SELECT id_usuarios FROM  tbusuarios";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query5, jj.usuario), Conexion.obtenerconexion());
+                datos = Convert.ToInt16(cmdselect.ExecuteScalar());
+                if (datos >= 1)
+                {
+                    MessageBox.Show("se pudo contactar con su empresa", "FELICIDADES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                return datos;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("no se pudo contactar con su empresa", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return datos;
+            }
+        }
     }
 
 }

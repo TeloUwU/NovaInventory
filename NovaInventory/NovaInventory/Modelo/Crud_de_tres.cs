@@ -24,7 +24,7 @@ namespace NovaInventory.Modelo
 
                 if (retorno > 0)
                 {
-                    MessageBox.Show("La categoria se a ingresado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La categoria se a ingresado correctamente", "Insercion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
@@ -104,7 +104,7 @@ namespace NovaInventory.Modelo
 
                 if (retorno > 0)
                 {
-                    MessageBox.Show("El producto se a ingresado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El producto se a ingresado correctamente", "Insercion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
@@ -179,12 +179,12 @@ namespace NovaInventory.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand agrega = new MySqlCommand(string.Format("INSERT INTO modelos(modelo, id_producto)VALUES('{0}')", add.modelo, add.id_producto), Conexion.obtenerconexion());
+                MySqlCommand agrega = new MySqlCommand(string.Format("INSERT INTO modelos(modelo, id_producto)VALUES('{0}', '{1}')", add.modelo, add.id_producto), Conexion.obtenerconexion());
                 retorno = Convert.ToInt32(agrega.ExecuteNonQuery());
 
                 if (retorno > 0)
                 {
-                    MessageBox.Show("La categoria se a ingresado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("La categoria se a ingresado correctamente", "Insercion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
