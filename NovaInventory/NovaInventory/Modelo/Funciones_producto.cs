@@ -19,7 +19,7 @@ namespace NovaInventory.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO articulos(nombre_articulo, codigo_articulo, marca) VALUES'(0)', '(1)', '(2)')", add.nombre_articulo, add.codigo_articulo_seriado, add.marca), Conexion.obtenerconexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO articulos(id_proveedorehs, id_categoriass, codigo_articulo, id_productos, marca, id_modelos, seriado, id_estadoss, id_bodegas) VALUES'(0)', '(1)', '(2)','(3)','(4)','(5)','(6)','(7)','(8)')", add.id_proveedorehs, add.id_categorias, add.codigo_articulo), Conexion.obtenerconexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -123,48 +123,48 @@ namespace NovaInventory.Modelo
             }
         }
 
-        //public static DataTable Cargar_marca_producto()
-        //{
-        //    DataTable data = new DataTable();
+        public static DataTable Cargar_marca_producto()
+        {
+            DataTable data = new DataTable();
 
-        //    try
+            try
+            {
+                string query = "SELECT id_estado, CONCAT(Estado) AS Estado FROM estado";
+                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+
+                cmd.Fill(data);
+
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
+
+                return data = new DataTable();
+            }
+        }
+        //        public static DataTable forma_pago()
         //    {
-        //        string query = "SELECT id_estado_usuario, CONCAT(Estado_usuario) AS Estado_usuario FROM Estado_usuario";
-        //        MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
-        //        MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+        //        DataTable data = new DataTable();
 
-        //        cmd.Fill(data);
+        //        try
+        //        {
+        //            string query = "SELECT id_tipo_pago, CONCAT(tipo_pago) AS tipo_pago FROM tipo_pago";
+        //            MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+        //            MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
 
-        //        return data;
+        //            cmd.Fill(data);
+
+        //            return data;
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            MessageBox.Show(" " + e);
+
+        //            return data = new DataTable();
+        //        }
+
         //    }
-        //    catch (Exception e)
-        //    {
-        //        MessageBox.Show(" " + e);
-
-        //        return data = new DataTable();
-        //    }
-        //}
-    //        public static DataTable forma_pago()
-    //    {
-    //        DataTable data = new DataTable();
-
-    //        try
-    //        {
-    //            string query = "SELECT id_tipo_pago, CONCAT(tipo_pago) AS tipo_pago FROM tipo_pago";
-    //            MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
-    //            MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
-
-    //            cmd.Fill(data);
-
-    //            return data;
-    //        }
-    //        catch (Exception e)
-    //        {
-    //            MessageBox.Show(" " + e);
-
-    //            return data = new DataTable();
-    //        }
-            
-    //    }
     }
 }

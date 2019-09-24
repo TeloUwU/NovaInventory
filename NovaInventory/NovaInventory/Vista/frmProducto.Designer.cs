@@ -219,7 +219,7 @@
             // 
             // id_articulo
             // 
-            this.id_articulo.Location = new System.Drawing.Point(85, 7);
+            this.id_articulo.Location = new System.Drawing.Point(87, 7);
             this.id_articulo.Name = "id_articulo";
             this.id_articulo.Size = new System.Drawing.Size(68, 20);
             this.id_articulo.TabIndex = 21;
@@ -270,7 +270,7 @@
             // 
             // txt_serie
             // 
-            this.txt_serie.Location = new System.Drawing.Point(356, 252);
+            this.txt_serie.Location = new System.Drawing.Point(345, 252);
             this.txt_serie.Name = "txt_serie";
             this.txt_serie.Size = new System.Drawing.Size(171, 20);
             this.txt_serie.TabIndex = 23;
@@ -294,7 +294,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(333, 210);
+            this.label2.Location = new System.Drawing.Point(376, 203);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 26;

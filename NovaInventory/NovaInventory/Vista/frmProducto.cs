@@ -28,9 +28,9 @@ namespace NovaInventory.Vista
             btnactualizar_producto.Enabled = false;
             btneliminar_producto.Enabled = false;
 
-            Cargar_producto();
-            Cargar_marca_producto();
-            forma_pago();
+            //Cargar_producto();
+            //Cargar_marca_producto();
+            //forma_pago();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -40,18 +40,23 @@ namespace NovaInventory.Vista
 
         public void Agregarproducto()
         {
-            if (cmb_proveedor.Text.Trim() == "" || txt_modelos.Text.Trim() == "" ||
+            if (cmb_proveedor.Text.Trim() == "" || txt_marca.Text.Trim() == "" ||
                 txt_codigo_art.Text.Trim() == "" || cmb_estados.Text.Trim() == "" ||
-                dateTimePicker_fecha.Text.Trim() == "" || txt_categoria.Text.Trim() == "" ||
-                cmb_productos.Text.Trim() == "" )
+                Cmb_bodegas.Text.Trim() == "" || txt_serie.Text.Trim() == "" ||
+                cmb_productos.Text.Trim() == "" || cmb_estados.Text.Trim()=="" )
             {
                 MessageBox.Show("COMPLETE TODOS LOS DATOS", "FALTA INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                agregar.nombre_articulo = cmb_proveedor.Text;
-                agregar.codigo_articulo_seriado = txt_modelos.Text;
-                agregar.marca = cmb_estados.Text;
+                agregar.codigo_articulo = txt_codigo_art.Text;
+                agregar.marca = txt_marca.Text;
+                agregar.seriado = txt_serie.Text;
+                agregar.id_bodegas = Convert.ToInt16(Cmb_bodegas.SelectedValue);
+                agregar.id_categorias = Convert.ToInt16(comboBox2.SelectedValue);
+                agregar.id_modelos = Convert.ToInt16(comboBox1.SelectedValue);
+                agregar.id_productos = Convert.ToInt16(cmb_productos.SelectedValue);
+                agregar.id_proveedorehs = Convert.ToInt16(cmb_proveedor.SelectedValue);
                 int datos = Funciones_producto.Ingresar_Producto(agregar);
             }
         }
@@ -62,19 +67,22 @@ namespace NovaInventory.Vista
         public void LimpiarCampos()
         {
             id_articulo.Clear();
-            cmb_proveedor.SelectedValue = "1";
-            txt_modelos.Clear();
+           
+            txt_marca.Clear();
             txt_codigo_art.Clear();
-            cmb_estados.SelectedValue = "1";
-            //dateTimePicker_fecha.SelectedValue = "1";
-            txt_categoria.Clear();
-            cmb_productos.SelectedValue = "1";
+            txt_serie.Clear();
         }
         public void ModificarRegistro_de_producto()
         {
             actualizar.id_articulo = Convert.ToInt32(id_articulo.Text);
-            actualizar.nombre_articulo = cmb_proveedor.Text;
-            actualizar.codigo_articulo_seriado = txt_modelos.Text;
+            actualizar.codigo_articulo = txt_codigo_art.Text;
+            actualizar.marca = txt_marca.Text;
+            actualizar.seriado = txt_serie.Text;
+            actualizar.id_bodegas = Convert.ToInt16(Cmb_bodegas.SelectedValue);
+            actualizar.id_categorias = Convert.ToInt16(comboBox2.SelectedValue);
+            actualizar.id_modelos = Convert.ToInt16(comboBox1.SelectedValue);
+            actualizar.id_productos = Convert.ToInt16(cmb_productos.SelectedValue);
+            actualizar.id_proveedorehs = Convert.ToInt16(cmb_proveedor.SelectedValue);
             actualizar.marca = cmb_estados.Text;
             
             Funciones_producto.Actualizar_productos(actualizar);
@@ -110,13 +118,15 @@ namespace NovaInventory.Vista
             int posicion;
             posicion = this.dgvproducto.CurrentRow.Index;
             id_articulo.Text = this.dgvproducto[0, posicion].Value.ToString();
-            cmb_proveedor.Text = this.dgvproducto[1, posicion].Value.ToString();
-            txt_modelos.Text = this.dgvproducto[2, posicion].Value.ToString();
+            cmb_proveedor.Text = Convert.ToString(this.dgvproducto[1, posicion].Value.ToString());
+            comboBox2.Text = Convert.ToString(this.dgvproducto[2, posicion].Value.ToString());
             txt_codigo_art.Text = this.dgvproducto[3, posicion].Value.ToString();
-            cmb_estados.Text = this.dgvproducto[4, posicion].Value.ToString();
-            dateTimePicker_fecha.Text = this.dgvproducto[5, posicion].Value.ToString();
-            txt_categoria.Text = this.dgvproducto[5, posicion].Value.ToString();
-            cmb_productos.Text = this.dgvproducto[6, posicion].Value.ToString();
+            cmb_productos.Text = Convert.ToString( this.dgvproducto[4, posicion].Value.ToString());
+            txt_marca.Text = this.dgvproducto[5, posicion].Value.ToString();
+            comboBox1.Text = Convert.ToString( this.dgvproducto[6, posicion].Value.ToString());
+            txt_serie.Text = this.dgvproducto[7, posicion].Value.ToString();
+            cmb_estados.Text = Convert.ToString(this.dgvproducto[8, posicion].Value.ToString());
+            Cmb_bodegas.Text = Convert.ToString(this.dgvproducto[9, posicion].Value.ToString());
             btnactualizar_producto.Enabled = true;
             btneliminar_producto.Enabled = true;
             btnAgregar_producto.Enabled = false;
@@ -156,23 +166,24 @@ namespace NovaInventory.Vista
         {
             cmb_productos.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-        void Cargar_producto()
+        void cargar_proveedor()
         {
             cmb_proveedor.DataSource = Funciones_producto.Cargar_producto();
             cmb_proveedor.DisplayMember = "nombre_articulo";
             cmb_proveedor.ValueMember = "id_articulo";
         }
-        void Cargar_marca_producto()
+        void cargar_Estado()
         {
-            //combxmarca.DataSource = Funciones_producto.Cargar_marca_producto();
-            //combxmarca.DisplayMember = "Estado_usuario";
-            //combxmarca.ValueMember = "id_estado_usuario";
+            cmb_estados.DataSource = Funciones_usuarios.cargar();
+            cmb_estados.DisplayMember = "Estado";
+            cmb_estados.ValueMember = "id_estado";
         }
-        void forma_pago()
+        void cargar_productos()
         {
-            //combx_producto.DataSource = Funciones_producto.forma_pago();
-            //combx_producto.DisplayMember = "tipo_pago";
-           // combx_producto.ValueMember = "id_tipo_pago";
+            //cmb_estados.DataSource = Funciones_usuarios.();
+            //cmb_estados.DisplayMember = "Estado";
+            //cmb_estados.ValueMember = "id_estado";
+
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
