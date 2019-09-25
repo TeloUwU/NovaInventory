@@ -19,7 +19,7 @@ namespace NovaInventory.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO articulos(id_proveedorehs, id_categoriass, codigo_articulo, id_productos, marca, id_modelos, seriado, id_estadoss, id_bodegas) VALUES'(0)', '(1)', '(2)','(3)','(4)','(5)','(6)','(7)','(8)')", add.id_proveedorehs, add.id_categorias, add.codigo_articulo), Conexion.obtenerconexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO articulos(id_proveedorehs, id_categoriass, codigo_articulo, id_productos, marca, id_modelos, seriado, id_estadoss, id_bodegas) VALUES'(0)', '(1)', '(2)','(3)','(4)','(5)','(6)','(7)','(8)')", add.id_proveedorehs, add.id_categorias, add.codigo_articulo, add.id_productos, add.marca, add.id_modelos, add.seriado, add.id_estadoss, add.id_bodegas), Conexion.obtenerconexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -66,7 +66,7 @@ namespace NovaInventory.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE SET nombre_articulo = '{0}', codigo_articulo = '{1}',marca = '{2}' WHERE id_articulo = '{5}'", upd.nombre_articulo, upd.codigo_articulo_seriado, upd.marca), Conexion.obtenerconexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE articulos SET id_proveedorehs = '{0}', id_categoriass = '{1}',codigo_articulo = '{2}' , id_productos = '{3}', marca = '{4}', id_modelos = '{5}', seriado = '{6}', id_estadoss = '{7}', id_bodegas = '{8}' WHERE id_articulo = '{9}'", upd.id_proveedorehs, upd.id_categorias, upd.codigo_articulo, upd.id_productos, upd.marca, upd.id_modelos, upd.seriado, upd.id_estadoss, upd.id_bodegas, upd.id_articulo), Conexion.obtenerconexion());
             }
             catch (Exception e)
             {
@@ -101,37 +101,15 @@ namespace NovaInventory.Modelo
                 return retorno;
             }
         }
-        public static DataTable Cargar_producto()
-        {
-            DataTable data;
-
-            try
-            {
-                string query = "SELECT * FROM articulos";
-                MySqlCommand cargar_2 = new MySqlCommand(query, Conexion.obtenerconexion());//MysqlCommand hacer consulta a la base de datos
-                MySqlDataAdapter again2 = new MySqlDataAdapter(cargar_2);
-                data = new DataTable();
-                again2.Fill(data);
-
-                return data;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(" " + e);
-
-                return data = new DataTable();
-            }
-        }
-
-        public static DataTable Cargar_marca_producto()
+        public static DataTable Cargar_estado()
         {
             DataTable data = new DataTable();
 
             try
             {
-                string query = "SELECT id_estado, CONCAT(Estado) AS Estado FROM estado";
+                string query = "SELECT id_proveedor, CONCAT(Estado) AS Estado FROM estado";
                 MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
-                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);  
 
                 cmd.Fill(data);
 
@@ -144,27 +122,113 @@ namespace NovaInventory.Modelo
                 return data = new DataTable();
             }
         }
-        //        public static DataTable forma_pago()
-        //    {
-        //        DataTable data = new DataTable();
 
-        //        try
-        //        {
-        //            string query = "SELECT id_tipo_pago, CONCAT(tipo_pago) AS tipo_pago FROM tipo_pago";
-        //            MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
-        //            MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+        public static DataTable Cargarproveedor()
+        {
+            DataTable data = new DataTable();
 
-        //            cmd.Fill(data);
+            try
+            {
+                string query = "SELECT id_estado, CONCAT(nombre) AS nombre FROM tbproveedor";
+                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
 
-        //            return data;
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            MessageBox.Show(" " + e);
+                cmd.Fill(data);
 
-        //            return data = new DataTable();
-        //        }
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
 
-        //    }
+                return data;
+            }
+        }
+        public static DataTable productos()
+        {
+            DataTable data = new DataTable();
+
+            try
+            {
+                string query = "SELECT id_producto, CONCAT(producto) AS producto FROM productos";
+                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+
+                cmd.Fill(data);
+
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
+
+                return data;
+            }
+
+        }
+        public static DataTable bodega()
+        {
+            DataTable data = new DataTable();
+
+            try
+            {
+                string query = "SELECT id_bodega, CONCAT(nombre_bodega) AS nombre_bodega FROM tbbodega";
+                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+
+                cmd.Fill(data);
+
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
+
+                return data;
+            }
+        }
+        public static DataTable Categoria()
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                string query = "SELECT id_categoria, CONCAT(categoria) AS categoria FROM categoria";
+                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+
+                cmd.Fill(data);
+
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
+
+                return data;
+            }
+        }
+        public static DataTable modelo()
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                string query = "SELECT id_modelo, CONCAT(modelo) AS modelo FROM modelos";
+                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
+                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
+
+                cmd.Fill(data);
+
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
+
+                return data;
+            }
+        }
+      
+        
+
     }
 }

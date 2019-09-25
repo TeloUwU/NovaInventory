@@ -150,9 +150,9 @@ namespace NovaInventory.Vista
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Reporte_Bodega ny = new Reporte_Bodega();
-            ny.Show();
-            this.Hide();
+            //Reporte_Bodega ny = new Reporte_Bodega();
+            //ny.Show();
+            //this.Hide();
         }
     }
 }

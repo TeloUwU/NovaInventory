@@ -1,6 +1,7 @@
 ﻿using System;
 using NovaInventory.Vista;
 using System.Windows.Forms;
+using NovaInventory.Reportes;
 
 namespace NovaInventory
 {
@@ -15,7 +16,7 @@ namespace NovaInventory
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
+            Application.Run(new frmLogin());
         }
     }
 }

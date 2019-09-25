@@ -20,17 +20,17 @@ namespace NovaInventory.Reportes {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet_proveedor")]
+    [global::System.Xml.Serialization.XmlRootAttribute("data_usu")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet_proveedor : global::System.Data.DataSet {
+    public partial class data_usu : global::System.Data.DataSet {
         
-        private tbproveedorDataTable tabletbproveedor;
+        private DataTableDataTable tableDataTable;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DataSet_proveedor() {
+        public data_usu() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace NovaInventory.Reportes {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DataSet_proveedor(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected data_usu(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace NovaInventory.Reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["tbproveedor"] != null)) {
-                    base.Tables.Add(new tbproveedorDataTable(ds.Tables["tbproveedor"]));
+                if ((ds.Tables["DataTable"] != null)) {
+                    base.Tables.Add(new DataTableDataTable(ds.Tables["DataTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace NovaInventory.Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tbproveedorDataTable tbproveedor {
+        public DataTableDataTable DataTable {
             get {
-                return this.tabletbproveedor;
+                return this.tableDataTable;
             }
         }
         
@@ -127,7 +127,7 @@ namespace NovaInventory.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet_proveedor cln = ((DataSet_proveedor)(base.Clone()));
+            data_usu cln = ((data_usu)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace NovaInventory.Reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["tbproveedor"] != null)) {
-                    base.Tables.Add(new tbproveedorDataTable(ds.Tables["tbproveedor"]));
+                if ((ds.Tables["DataTable"] != null)) {
+                    base.Tables.Add(new DataTableDataTable(ds.Tables["DataTable"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace NovaInventory.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabletbproveedor = ((tbproveedorDataTable)(base.Tables["tbproveedor"]));
+            this.tableDataTable = ((DataTableDataTable)(base.Tables["DataTable"]));
             if ((initTable == true)) {
-                if ((this.tabletbproveedor != null)) {
-                    this.tabletbproveedor.InitVars();
+                if ((this.tableDataTable != null)) {
+                    this.tableDataTable.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace NovaInventory.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet_proveedor";
+            this.DataSetName = "data_usu";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet_proveedor.xsd";
+            this.Namespace = "http://tempuri.org/data_usu.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabletbproveedor = new tbproveedorDataTable();
-            base.Tables.Add(this.tabletbproveedor);
+            this.tableDataTable = new DataTableDataTable();
+            base.Tables.Add(this.tableDataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializetbproveedor() {
+        private bool ShouldSerializeDataTable() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace NovaInventory.Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet_proveedor ds = new DataSet_proveedor();
+            data_usu ds = new data_usu();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,29 +270,35 @@ namespace NovaInventory.Reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void tbproveedorRowChangeEventHandler(object sender, tbproveedorRowChangeEvent e);
+        public delegate void DataTableRowChangeEventHandler(object sender, DataTableRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tbproveedorDataTable : global::System.Data.TypedTableBase<tbproveedorRow> {
+        public partial class DataTableDataTable : global::System.Data.TypedTableBase<DataTableRow> {
+            
+            private global::System.Data.DataColumn columnnickname;
+            
+            private global::System.Data.DataColumn columnnombre_usuario;
+            
+            private global::System.Data.DataColumn columnapellido_usuario;
+            
+            private global::System.Data.DataColumn columnCorreo;
+            
+            private global::System.Data.DataColumn columndui;
+            
+            private global::System.Data.DataColumn columnEstado;
+            
+            private global::System.Data.DataColumn columntipo_usuario;
             
             private global::System.Data.DataColumn columnnombre;
             
-            private global::System.Data.DataColumn columntelefono;
-            
-            private global::System.Data.DataColumn columnrubro;
-            
-            private global::System.Data.DataColumn columncreado_por;
-            
-            private global::System.Data.DataColumn columnExpr1;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbproveedorDataTable() {
-                this.TableName = "tbproveedor";
+            public DataTableDataTable() {
+                this.TableName = "DataTable";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +306,7 @@ namespace NovaInventory.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tbproveedorDataTable(global::System.Data.DataTable table) {
+            internal DataTableDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,9 +323,65 @@ namespace NovaInventory.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected tbproveedorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DataTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nicknameColumn {
+                get {
+                    return this.columnnickname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nombre_usuarioColumn {
+                get {
+                    return this.columnnombre_usuario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn apellido_usuarioColumn {
+                get {
+                    return this.columnapellido_usuario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CorreoColumn {
+                get {
+                    return this.columnCorreo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn duiColumn {
+                get {
+                    return this.columndui;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EstadoColumn {
+                get {
+                    return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn tipo_usuarioColumn {
+                get {
+                    return this.columntipo_usuario;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -327,38 +389,6 @@ namespace NovaInventory.Reportes {
             public global::System.Data.DataColumn nombreColumn {
                 get {
                     return this.columnnombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn telefonoColumn {
-                get {
-                    return this.columntelefono;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn rubroColumn {
-                get {
-                    return this.columnrubro;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn creado_porColumn {
-                get {
-                    return this.columncreado_por;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
-                get {
-                    return this.columnExpr1;
                 }
             }
             
@@ -373,49 +403,52 @@ namespace NovaInventory.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbproveedorRow this[int index] {
+            public DataTableRow this[int index] {
                 get {
-                    return ((tbproveedorRow)(this.Rows[index]));
+                    return ((DataTableRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tbproveedorRowChangeEventHandler tbproveedorRowChanging;
+            public event DataTableRowChangeEventHandler DataTableRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tbproveedorRowChangeEventHandler tbproveedorRowChanged;
+            public event DataTableRowChangeEventHandler DataTableRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tbproveedorRowChangeEventHandler tbproveedorRowDeleting;
+            public event DataTableRowChangeEventHandler DataTableRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tbproveedorRowChangeEventHandler tbproveedorRowDeleted;
+            public event DataTableRowChangeEventHandler DataTableRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddtbproveedorRow(tbproveedorRow row) {
+            public void AddDataTableRow(DataTableRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbproveedorRow AddtbproveedorRow(string nombre, string telefono, string rubro, string creado_por, string Expr1) {
-                tbproveedorRow rowtbproveedorRow = ((tbproveedorRow)(this.NewRow()));
+            public DataTableRow AddDataTableRow(string nickname, string nombre_usuario, string apellido_usuario, string Correo, string dui, string Estado, string tipo_usuario, string nombre) {
+                DataTableRow rowDataTableRow = ((DataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        nombre,
-                        telefono,
-                        rubro,
-                        creado_por,
-                        Expr1};
-                rowtbproveedorRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtbproveedorRow);
-                return rowtbproveedorRow;
+                        nickname,
+                        nombre_usuario,
+                        apellido_usuario,
+                        Correo,
+                        dui,
+                        Estado,
+                        tipo_usuario,
+                        nombre};
+                rowDataTableRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDataTableRow);
+                return rowDataTableRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tbproveedorDataTable cln = ((tbproveedorDataTable)(base.Clone()));
+                DataTableDataTable cln = ((DataTableDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -423,66 +456,81 @@ namespace NovaInventory.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tbproveedorDataTable();
+                return new DataTableDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnnickname = base.Columns["nickname"];
+                this.columnnombre_usuario = base.Columns["nombre_usuario"];
+                this.columnapellido_usuario = base.Columns["apellido_usuario"];
+                this.columnCorreo = base.Columns["Correo"];
+                this.columndui = base.Columns["dui"];
+                this.columnEstado = base.Columns["Estado"];
+                this.columntipo_usuario = base.Columns["tipo_usuario"];
                 this.columnnombre = base.Columns["nombre"];
-                this.columntelefono = base.Columns["telefono"];
-                this.columnrubro = base.Columns["rubro"];
-                this.columncreado_por = base.Columns["creado_por"];
-                this.columnExpr1 = base.Columns["Expr1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnnickname = new global::System.Data.DataColumn("nickname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnickname);
+                this.columnnombre_usuario = new global::System.Data.DataColumn("nombre_usuario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_usuario);
+                this.columnapellido_usuario = new global::System.Data.DataColumn("apellido_usuario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnapellido_usuario);
+                this.columnCorreo = new global::System.Data.DataColumn("Correo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCorreo);
+                this.columndui = new global::System.Data.DataColumn("dui", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndui);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
+                this.columntipo_usuario = new global::System.Data.DataColumn("tipo_usuario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo_usuario);
                 this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre);
-                this.columntelefono = new global::System.Data.DataColumn("telefono", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntelefono);
-                this.columnrubro = new global::System.Data.DataColumn("rubro", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrubro);
-                this.columncreado_por = new global::System.Data.DataColumn("creado_por", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncreado_por);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
-                this.columnnombre.AllowDBNull = false;
+                this.columnnickname.AllowDBNull = false;
+                this.columnnickname.MaxLength = 25;
+                this.columnnombre_usuario.AllowDBNull = false;
+                this.columnnombre_usuario.MaxLength = 50;
+                this.columnapellido_usuario.AllowDBNull = false;
+                this.columnapellido_usuario.MaxLength = 50;
+                this.columnCorreo.AllowDBNull = false;
+                this.columnCorreo.MaxLength = 150;
+                this.columndui.MaxLength = 16;
+                this.columnEstado.AllowDBNull = false;
+                this.columnEstado.MaxLength = 10;
+                this.columntipo_usuario.AllowDBNull = false;
+                this.columntipo_usuario.MaxLength = 15;
                 this.columnnombre.MaxLength = 15;
-                this.columntelefono.MaxLength = 9;
-                this.columnrubro.AllowDBNull = false;
-                this.columnrubro.MaxLength = 25;
-                this.columncreado_por.MaxLength = 25;
-                this.columnExpr1.AllowDBNull = false;
-                this.columnExpr1.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbproveedorRow NewtbproveedorRow() {
-                return ((tbproveedorRow)(this.NewRow()));
+            public DataTableRow NewDataTableRow() {
+                return ((DataTableRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tbproveedorRow(builder);
+                return new DataTableRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tbproveedorRow);
+                return typeof(DataTableRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tbproveedorRowChanged != null)) {
-                    this.tbproveedorRowChanged(this, new tbproveedorRowChangeEvent(((tbproveedorRow)(e.Row)), e.Action));
+                if ((this.DataTableRowChanged != null)) {
+                    this.DataTableRowChanged(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -490,8 +538,8 @@ namespace NovaInventory.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tbproveedorRowChanging != null)) {
-                    this.tbproveedorRowChanging(this, new tbproveedorRowChangeEvent(((tbproveedorRow)(e.Row)), e.Action));
+                if ((this.DataTableRowChanging != null)) {
+                    this.DataTableRowChanging(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -499,8 +547,8 @@ namespace NovaInventory.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tbproveedorRowDeleted != null)) {
-                    this.tbproveedorRowDeleted(this, new tbproveedorRowChangeEvent(((tbproveedorRow)(e.Row)), e.Action));
+                if ((this.DataTableRowDeleted != null)) {
+                    this.DataTableRowDeleted(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
                 }
             }
             
@@ -508,14 +556,14 @@ namespace NovaInventory.Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tbproveedorRowDeleting != null)) {
-                    this.tbproveedorRowDeleting(this, new tbproveedorRowChangeEvent(((tbproveedorRow)(e.Row)), e.Action));
+                if ((this.DataTableRowDeleting != null)) {
+                    this.DataTableRowDeleting(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovetbproveedorRow(tbproveedorRow row) {
+            public void RemoveDataTableRow(DataTableRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -524,7 +572,7 @@ namespace NovaInventory.Reportes {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_proveedor ds = new DataSet_proveedor();
+                data_usu ds = new data_usu();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -542,7 +590,7 @@ namespace NovaInventory.Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tbproveedorDataTable";
+                attribute2.FixedValue = "DataTableDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -586,104 +634,137 @@ namespace NovaInventory.Reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tbproveedorRow : global::System.Data.DataRow {
+        public partial class DataTableRow : global::System.Data.DataRow {
             
-            private tbproveedorDataTable tabletbproveedor;
+            private DataTableDataTable tableDataTable;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tbproveedorRow(global::System.Data.DataRowBuilder rb) : 
+            internal DataTableRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletbproveedor = ((tbproveedorDataTable)(this.Table));
+                this.tableDataTable = ((DataTableDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nickname {
+                get {
+                    return ((string)(this[this.tableDataTable.nicknameColumn]));
+                }
+                set {
+                    this[this.tableDataTable.nicknameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nombre_usuario {
+                get {
+                    return ((string)(this[this.tableDataTable.nombre_usuarioColumn]));
+                }
+                set {
+                    this[this.tableDataTable.nombre_usuarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string apellido_usuario {
+                get {
+                    return ((string)(this[this.tableDataTable.apellido_usuarioColumn]));
+                }
+                set {
+                    this[this.tableDataTable.apellido_usuarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Correo {
+                get {
+                    return ((string)(this[this.tableDataTable.CorreoColumn]));
+                }
+                set {
+                    this[this.tableDataTable.CorreoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string dui {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable.duiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'dui\' de la tabla \'DataTable\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable.duiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Estado {
+                get {
+                    return ((string)(this[this.tableDataTable.EstadoColumn]));
+                }
+                set {
+                    this[this.tableDataTable.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string tipo_usuario {
+                get {
+                    return ((string)(this[this.tableDataTable.tipo_usuarioColumn]));
+                }
+                set {
+                    this[this.tableDataTable.tipo_usuarioColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string nombre {
                 get {
-                    return ((string)(this[this.tabletbproveedor.nombreColumn]));
-                }
-                set {
-                    this[this.tabletbproveedor.nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string telefono {
-                get {
                     try {
-                        return ((string)(this[this.tabletbproveedor.telefonoColumn]));
+                        return ((string)(this[this.tableDataTable.nombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono\' de la tabla \'tbproveedor\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'DataTable\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletbproveedor.telefonoColumn] = value;
+                    this[this.tableDataTable.nombreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string rubro {
-                get {
-                    return ((string)(this[this.tabletbproveedor.rubroColumn]));
-                }
-                set {
-                    this[this.tabletbproveedor.rubroColumn] = value;
-                }
+            public bool IsduiNull() {
+                return this.IsNull(this.tableDataTable.duiColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string creado_por {
-                get {
-                    try {
-                        return ((string)(this[this.tabletbproveedor.creado_porColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'creado_por\' de la tabla \'tbproveedor\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbproveedor.creado_porColumn] = value;
-                }
+            public void SetduiNull() {
+                this[this.tableDataTable.duiColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Expr1 {
-                get {
-                    return ((string)(this[this.tabletbproveedor.Expr1Column]));
-                }
-                set {
-                    this[this.tabletbproveedor.Expr1Column] = value;
-                }
+            public bool IsnombreNull() {
+                return this.IsNull(this.tableDataTable.nombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IstelefonoNull() {
-                return this.IsNull(this.tabletbproveedor.telefonoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SettelefonoNull() {
-                this[this.tabletbproveedor.telefonoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Iscreado_porNull() {
-                return this.IsNull(this.tabletbproveedor.creado_porColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setcreado_porNull() {
-                this[this.tabletbproveedor.creado_porColumn] = global::System.Convert.DBNull;
+            public void SetnombreNull() {
+                this[this.tableDataTable.nombreColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -691,22 +772,22 @@ namespace NovaInventory.Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class tbproveedorRowChangeEvent : global::System.EventArgs {
+        public class DataTableRowChangeEvent : global::System.EventArgs {
             
-            private tbproveedorRow eventRow;
+            private DataTableRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbproveedorRowChangeEvent(tbproveedorRow row, global::System.Data.DataRowAction action) {
+            public DataTableRowChangeEvent(DataTableRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbproveedorRow Row {
+            public DataTableRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -722,7 +803,7 @@ namespace NovaInventory.Reportes {
         }
     }
 }
-namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
+namespace NovaInventory.Reportes.data_usuTableAdapters {
     
     
     /// <summary>
@@ -734,7 +815,7 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tbproveedorTableAdapter : global::System.ComponentModel.Component {
+    public partial class DataTableTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.Odbc.OdbcDataAdapter _adapter;
         
@@ -748,7 +829,7 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public tbproveedorTableAdapter() {
+        public DataTableTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -845,12 +926,15 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
             this._adapter = new global::System.Data.Odbc.OdbcDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tbproveedor";
+            tableMapping.DataSetTable = "DataTable";
+            tableMapping.ColumnMappings.Add("nickname", "nickname");
+            tableMapping.ColumnMappings.Add("nombre_usuario", "nombre_usuario");
+            tableMapping.ColumnMappings.Add("apellido_usuario", "apellido_usuario");
+            tableMapping.ColumnMappings.Add("Correo", "Correo");
+            tableMapping.ColumnMappings.Add("dui", "dui");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
+            tableMapping.ColumnMappings.Add("tipo_usuario", "tipo_usuario");
             tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("telefono", "telefono");
-            tableMapping.ColumnMappings.Add("rubro", "rubro");
-            tableMapping.ColumnMappings.Add("creado_por", "creado_por");
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -858,7 +942,7 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.Odbc.OdbcConnection();
-            this._connection.ConnectionString = global::NovaInventory.Properties.Settings.Default.ConnectionString;
+            this._connection.ConnectionString = global::NovaInventory.Properties.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -867,9 +951,9 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        tb.nombre, tb.telefono, tb.rubro, tb.creado_por, te.Estado AS Expr1" +
-                "\r\nFROM            tbproveedor tb, estado te\r\nWHERE        tb.id_estados = te.id_" +
-                "estado";
+            this._commandCollection[0].CommandText = @"SELECT        tb.nickname, tb.nombre_usuario, tb.apellido_usuario, tb.Correo, tb.dui, te.Estado, ti.tipo_usuario, dp.nombre
+FROM            tbusuarios tb, estado te, tipo_usuario ti, datos_empresa dp
+WHERE        tb.id_estaado = te.id_estado AND tb.id_tipo_usuarios = ti.id_tipo_usuario AND tb.empresa = dp.id_datos_empresa";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -877,7 +961,7 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_proveedor.tbproveedorDataTable dataTable) {
+        public virtual int Fill(data_usu.DataTableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -890,9 +974,9 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_proveedor.tbproveedorDataTable GetData() {
+        public virtual data_usu.DataTableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_proveedor.tbproveedorDataTable dataTable = new DataSet_proveedor.tbproveedorDataTable();
+            data_usu.DataTableDataTable dataTable = new data_usu.DataTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -966,7 +1050,7 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DataSet_proveedor dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(data_usu dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -976,7 +1060,7 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DataSet_proveedor dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(data_usu dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -986,7 +1070,7 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DataSet_proveedor dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(data_usu dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1020,7 +1104,7 @@ namespace NovaInventory.Reportes.DataSet_proveedorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DataSet_proveedor dataSet) {
+        public virtual int UpdateAll(data_usu dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
