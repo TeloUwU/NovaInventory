@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using NovaInventory.Controlador;
 using NovaInventory.Modelo;
 using NovaInventory.Config;
-//using NovaInventory.Reportes;
+using NovaInventory.Reportes;
 using MySql.Data.MySqlClient;
 
 namespace NovaInventory.Vista
@@ -198,9 +198,9 @@ namespace NovaInventory.Vista
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //reporte_usu mm = new reporte_usu();
-            //mm.Show();
-            //this.Hide();
+            frm_usuarios_report mm = new frm_usuarios_report();
+            mm.Show();
+            this.Hide();
         }
     }
 }
