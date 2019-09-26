@@ -116,31 +116,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet4.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\DataSet_proveedor.cs">
-      <DependentUpon>DataSet_proveedor.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\DataSet_proveedor.Designer.cs">
+    <Compile Include="Reportes\data_usu.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet_proveedor.xsd</DependentUpon>
+      <DependentUpon>data_usu.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\reportes_prov.cs">
+    <Compile Include="Reportes\frm_bodega.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\reportes_prov.Designer.cs">
-      <DependentUpon>reportes_prov.cs</DependentUpon>
+    <Compile Include="Reportes\frm_bodega.Designer.cs">
+      <DependentUpon>frm_bodega.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Reporte_Bodega.cs">
+    <Compile Include="Reportes\frm_reporte_prov.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\Reporte_Bodega.Designer.cs">
-      <DependentUpon>Reporte_Bodega.cs</DependentUpon>
+    <Compile Include="Reportes\frm_reporte_prov.Designer.cs">
+      <DependentUpon>frm_reporte_prov.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\reporte_usu.cs">
+    <Compile Include="Reportes\frm_usuarios_report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\reporte_usu.Designer.cs">
-      <DependentUpon>reporte_usu.cs</DependentUpon>
+    <Compile Include="Reportes\frm_usuarios_report.Designer.cs">
+      <DependentUpon>frm_usuarios_report.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\agregar_preguntas.cs">
       <SubType>Form</SubType>
@@ -308,18 +305,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\frm_bodega.resx">
+      <DependentUpon>frm_bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frm_reporte_prov.resx">
+      <DependentUpon>frm_reporte_prov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frm_usuarios_report.resx">
+      <DependentUpon>frm_usuarios_report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
-    <EmbeddedResource Include="Reportes\reportes_prov.resx">
-      <DependentUpon>reportes_prov.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Reporte_Bodega.resx">
-      <DependentUpon>Reporte_Bodega.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\reporte_usu.resx">
-      <DependentUpon>reporte_usu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vista\agregar_preguntas.resx">
       <DependentUpon>agregar_preguntas.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,16 +431,16 @@
     <None Include="Reportes\DataSet4.xss">
       <DependentUpon>DataSet4.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\DataSet_proveedor.xsc">
-      <DependentUpon>DataSet_proveedor.xsd</DependentUpon>
+    <None Include="Reportes\data_usu.xsc">
+      <DependentUpon>data_usu.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\DataSet_proveedor.xsd">
+    <None Include="Reportes\data_usu.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet_proveedor.Designer.cs</LastGenOutput>
+      <LastGenOutput>data_usu.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reportes\DataSet_proveedor.xss">
-      <DependentUpon>DataSet_proveedor.xsd</DependentUpon>
+    <None Include="Reportes\data_usu.xss">
+      <DependentUpon>data_usu.xsd</DependentUpon>
     </None>
     <None Include="Resources\delete_sign_48px.png" />
   </ItemGroup>
@@ -546,6 +543,7 @@
   <ItemGroup>
     <None Include="Resources\portada.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
