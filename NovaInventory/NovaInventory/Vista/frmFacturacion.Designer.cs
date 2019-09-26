@@ -48,8 +48,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblCostoAPagar = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtEfectivo = new System.Windows.Forms.TextBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -147,9 +145,9 @@
             // cbEstado_Fac
             // 
             this.cbEstado_Fac.FormattingEnabled = true;
-            this.cbEstado_Fac.Location = new System.Drawing.Point(571, 110);
+            this.cbEstado_Fac.Location = new System.Drawing.Point(720, 19);
             this.cbEstado_Fac.Name = "cbEstado_Fac";
-            this.cbEstado_Fac.Size = new System.Drawing.Size(121, 21);
+            this.cbEstado_Fac.Size = new System.Drawing.Size(87, 21);
             this.cbEstado_Fac.TabIndex = 15;
             this.cbEstado_Fac.Visible = false;
             // 
@@ -174,6 +172,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label2.Location = new System.Drawing.Point(28, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
@@ -192,6 +191,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.textBox2.Location = new System.Drawing.Point(99, 10);
             this.textBox2.Name = "textBox2";
             this.textBox2.ShortcutsEnabled = false;
@@ -286,27 +286,6 @@
             this.lblCostoAPagar.Size = new System.Drawing.Size(87, 46);
             this.lblCostoAPagar.TabIndex = 11;
             this.lblCostoAPagar.Text = "0.00";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(101, 119);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 13);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Efectivo";
-            // 
-            // txtEfectivo
-            // 
-            this.txtEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEfectivo.Location = new System.Drawing.Point(17, 135);
-            this.txtEfectivo.Name = "txtEfectivo";
-            this.txtEfectivo.ShortcutsEnabled = false;
-            this.txtEfectivo.Size = new System.Drawing.Size(130, 20);
-            this.txtEfectivo.TabIndex = 10;
             // 
             // dgvLista
             // 
@@ -477,8 +456,6 @@
             // 
             this.groupBox4.Controls.Add(this.lblCostoAPagar);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.txtEfectivo);
-            this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.textBox1);
             this.groupBox4.Location = new System.Drawing.Point(694, 260);
@@ -543,8 +520,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblCostoAPagar;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtEfectivo;
         private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.ToolStrip toolStrip1;
