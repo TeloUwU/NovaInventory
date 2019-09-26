@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Controlador;
 using NovaInventory.Modelo;
+using NovaInventory.Vista;
 
 namespace NovaInventory.Vista
 {
     public partial class frmFacturacion : Form
     {
-        constructorFacturacion agregar = new constructorFacturacion();
-        constructorFacturacion actualizar = new constructorFacturacion();
         public frmFacturacion()
         {
             InitializeComponent();
@@ -31,25 +30,6 @@ namespace NovaInventory.Vista
 
         public void agregar_factura()
         {
-            //    agregar.Fecha = dateTimePicker1.Text;
-            //    agregar.nombre_usuario = txtNombres_Usuario.Text;
-            //    agregar.apellido_usuario = txtApellidos_Usuario.Text;
-            //    agregar.contraseña_usuario = clave;
-            //    agregar.telefono = txtTelefono_Usuario.Text;
-            //    agregar.Correo = txtCorreo_Usuario.Text;
-            //    agregar.dui = txtDUI_Usuario.Text;
-            //    agregar.nit = txtNIT_Usuario.Text;
-            //    agregar.id_estados = Convert.ToInt32(cbEstado_Usuario.SelectedValue);
-            //    agregar.id_tipo_usuarios = Convert.ToInt32(cbTipo_Usuario.SelectedValue);
-            //    int intentos = 1;
-            //    agregar.intentos = Convert.ToString(intentos);
-            //    agregar.empresa = Convert.ToInt32(cmb_emp.SelectedValue);
-            //    MemoryStream ms = new MemoryStream();
-            //    pbFoto_Usuario.Image.Save(ms, ImageFormat.Jpeg);
-            //    byte[] aByte = ms.ToArray();
-            //    string imagen = Convert.ToBase64String(aByte);
-            //    agregar.Foto_usuario = imagen;
-            //    int retorno = Funciones_usuarios.agregar_usu(agregar);
 
 
         }
@@ -59,21 +39,6 @@ namespace NovaInventory.Vista
 
         public void CostoApagar()
         {
-            float CostoTotal = 0;
-            int Conteo = 0;
-
-            Conteo = dgvLista.RowCount; // se cuenta los productos y se utilisa el conteo como limite del for
-            for (int i = 0; i < Conteo; i++)
-            {
-
-                CostoTotal += float.Parse(dgvLista.Rows[i].Cells[4].Value.ToString());
-
-
-
-            }
-
-            lblCostoAPagar.Text = CostoTotal.ToString();
-            
         }
 
 
@@ -89,6 +54,19 @@ namespace NovaInventory.Vista
             
             
         }
+        string jj = Constructor_login.usuario;
+        CONSTRUCTORDEFACTURA actu = new CONSTRUCTORDEFACTURA();
+        void agregar()
+        {
+            CONSTRUCTORDEFACTURA agrega = new CONSTRUCTORDEFACTURA();
+
+            agrega.Cantidad = txtCantidad.Text;
+            agrega.CostoDetalle = textBox6.Text;
+            agrega.Fecha = dtPick.Text;
+            agrega.Nombre = dtPick.Text;
+            agrega.creado_por = jj;
+            int retorno = control_facturacion.agregar_fac(agrega);
+        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -97,14 +75,71 @@ namespace NovaInventory.Vista
 
         private void btnCargarLista_Click_1(object sender, EventArgs e)
         {
-            //agregarusu();
-            //mostrar();
-            //mostrar();
-            //limpiar();
+            double r, n1, n2;
+
+            n1 = Convert.ToInt16(textBox6.Text);
+            n2 = Convert.ToInt16(txtCantidad.Text);
+            r = (n1 * n2);
+            lblCostoAPagar.Text = Convert.ToString(r);
+
+            agregar();
 
         }
 
         private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        
+        void actualizar()
+        {
+            actu.id_factura = Convert.ToInt16(textBox2.Text);
+            actu.Nombre = txtNombre.Text;
+            actu.CostoDetalle = textBox6.Text;
+            actu.Cantidad = txtCantidad.Text;
+            actu.Fecha = dtPick.Text;
+            actu.creado_por = textBox3.Text;
+            actu.id_estado = Convert.ToInt16(cbEstado_Fac.SelectedValue);
+            control_facturacion.actualizarfac(actu);
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            actualizar();
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmInventarioExistencias frm = new frmInventarioExistencias();
+            frm.Show();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        void eliminar()
+        {
+            if (MessageBox.Show("¿Esta seguro que desea eliminar el detalle?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                control_facturacion.eliminar(Convert.ToInt32(txtIdArticulo.Text));
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            eliminar();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }

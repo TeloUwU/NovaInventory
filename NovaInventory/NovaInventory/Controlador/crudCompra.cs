@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using NovaInventory.Vista;
 using NovaInventory.Modelo;
 
+
 namespace NovaInventory.Controlador
 {
     class crudCompra

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using NovaInventory.Controlador;
 using MySql.Data.MySqlClient;
 using NovaInventory.Config;
+using NovaInventory.Modelo;
 
 namespace NovaInventory.Vista
 {
@@ -56,7 +57,16 @@ namespace NovaInventory.Vista
 
         private void frmInventarioExistencias_Load(object sender, EventArgs e)
         {
-    
+            //comboBox1.DataSource = inventario.mostrar_producto();
+            //comboBox1.DisplayMember = "producto";
+            //comboBox1.ValueMember = "producto1";
+            //comboBox1.SelectedValue = "1";
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

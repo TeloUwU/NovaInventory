@@ -30,13 +30,8 @@
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btnCerrar_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnMaximizar_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnVentana_Principal = new System.Windows.Forms.ToolStripButton();
-            this.btnMinimizar_Principal = new System.Windows.Forms.ToolStripButton();
             this.panelMain = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelSidebar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -61,7 +56,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombres_Usuario = new System.Windows.Forms.Label();
             this.lblApellidos_Usuario = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -96,18 +90,26 @@
             this.gráficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCerrar_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnMaximizar_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnVentana_Principal = new System.Windows.Forms.ToolStripButton();
+            this.btnMinimizar_Principal = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PanelSidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_inventario.SuspendLayout();
             this.panel_administracion.SuspendLayout();
             this.panel_administracion_inv.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -130,51 +132,6 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(0, 24);
             // 
-            // btnCerrar_Principal
-            // 
-            this.btnCerrar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnCerrar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCerrar_Principal.Image = global::NovaInventory.Properties.Resources.close_window_80px;
-            this.btnCerrar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCerrar_Principal.Name = "btnCerrar_Principal";
-            this.btnCerrar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnCerrar_Principal.Text = "Salir";
-            this.btnCerrar_Principal.Click += new System.EventHandler(this.btnCerrar_Principal_Click);
-            // 
-            // btnMaximizar_Principal
-            // 
-            this.btnMaximizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnMaximizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnMaximizar_Principal.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
-            this.btnMaximizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMaximizar_Principal.Name = "btnMaximizar_Principal";
-            this.btnMaximizar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnMaximizar_Principal.Text = "Maximizar";
-            this.btnMaximizar_Principal.Click += new System.EventHandler(this.btnMaximizar_Principal_Click);
-            // 
-            // btnVentana_Principal
-            // 
-            this.btnVentana_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnVentana_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnVentana_Principal.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
-            this.btnVentana_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnVentana_Principal.Name = "btnVentana_Principal";
-            this.btnVentana_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnVentana_Principal.Text = "Restaurar a tamaño normal";
-            this.btnVentana_Principal.Visible = false;
-            this.btnVentana_Principal.Click += new System.EventHandler(this.btnVentana_Principal_Click);
-            // 
-            // btnMinimizar_Principal
-            // 
-            this.btnMinimizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnMinimizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnMinimizar_Principal.Image = global::NovaInventory.Properties.Resources.minimize_window_26px;
-            this.btnMinimizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnMinimizar_Principal.Name = "btnMinimizar_Principal";
-            this.btnMinimizar_Principal.Size = new System.Drawing.Size(24, 24);
-            this.btnMinimizar_Principal.Text = "Minimizar";
-            this.btnMinimizar_Principal.Click += new System.EventHandler(this.btnMinimizar_Principal_Click);
-            // 
             // panelMain
             // 
             this.panelMain.Controls.Add(this.PanelContenedor);
@@ -195,16 +152,6 @@
             this.PanelContenedor.Size = new System.Drawing.Size(1017, 669);
             this.PanelContenedor.TabIndex = 2;
             this.PanelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenedor_Paint_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::NovaInventory.Properties.Resources.round_account_button_with_user_inside1;
-            this.pictureBox2.Location = new System.Drawing.Point(548, 184);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(140, 117);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // PanelSidebar
             // 
@@ -491,6 +438,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.lblNombres_Usuario);
@@ -511,16 +459,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(15, 14);
             this.panel6.TabIndex = 26;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::NovaInventory.Properties.Resources.framed_portrait;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 105);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // lblNombres_Usuario
             // 
@@ -796,6 +734,82 @@
             this.ventasToolStripMenuItem3.Size = new System.Drawing.Size(122, 22);
             this.ventasToolStripMenuItem3.Text = "Ventas";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::NovaInventory.Properties.Resources.AvRicaldone;
+            this.pictureBox3.Location = new System.Drawing.Point(179, 13);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(52, 63);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::NovaInventory.Properties.Resources.round_account_button_with_user_inside1;
+            this.pictureBox2.Location = new System.Drawing.Point(548, 184);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 117);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::NovaInventory.Properties.Resources.framed_portrait;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(98, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCerrar_Principal
+            // 
+            this.btnCerrar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnCerrar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCerrar_Principal.Image = global::NovaInventory.Properties.Resources.close_window_80px;
+            this.btnCerrar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCerrar_Principal.Name = "btnCerrar_Principal";
+            this.btnCerrar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnCerrar_Principal.Text = "Salir";
+            this.btnCerrar_Principal.Click += new System.EventHandler(this.btnCerrar_Principal_Click);
+            // 
+            // btnMaximizar_Principal
+            // 
+            this.btnMaximizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMaximizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMaximizar_Principal.Image = global::NovaInventory.Properties.Resources.maximize_window_26px;
+            this.btnMaximizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMaximizar_Principal.Name = "btnMaximizar_Principal";
+            this.btnMaximizar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnMaximizar_Principal.Text = "Maximizar";
+            this.btnMaximizar_Principal.Click += new System.EventHandler(this.btnMaximizar_Principal_Click);
+            // 
+            // btnVentana_Principal
+            // 
+            this.btnVentana_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnVentana_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnVentana_Principal.Image = global::NovaInventory.Properties.Resources.restore_window_26px;
+            this.btnVentana_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVentana_Principal.Name = "btnVentana_Principal";
+            this.btnVentana_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnVentana_Principal.Text = "Restaurar a tamaño normal";
+            this.btnVentana_Principal.Visible = false;
+            this.btnVentana_Principal.Click += new System.EventHandler(this.btnVentana_Principal_Click);
+            // 
+            // btnMinimizar_Principal
+            // 
+            this.btnMinimizar_Principal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnMinimizar_Principal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnMinimizar_Principal.Image = global::NovaInventory.Properties.Resources.minimize_window_26px;
+            this.btnMinimizar_Principal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMinimizar_Principal.Name = "btnMinimizar_Principal";
+            this.btnMinimizar_Principal.Size = new System.Drawing.Size(24, 24);
+            this.btnMinimizar_Principal.Text = "Minimizar";
+            this.btnMinimizar_Principal.Click += new System.EventHandler(this.btnMinimizar_Principal_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -815,7 +829,6 @@
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.PanelContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PanelSidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel_inventario.ResumeLayout(false);
@@ -823,9 +836,11 @@
             this.panel_administracion_inv.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -901,5 +916,6 @@
         private System.Windows.Forms.Label lblNombres_Usuario;
         private System.Windows.Forms.Label lblApellidos_Usuario;
         private System.Windows.Forms.Label lblNivel;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
