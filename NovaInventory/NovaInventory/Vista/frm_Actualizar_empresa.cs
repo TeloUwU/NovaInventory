@@ -24,9 +24,45 @@ namespace NovaInventory.Vista
         {
 
         }
+        constructor_para_celulares agregar = new constructor_para_celulares();
+        public void agregarCEL()
+        {
+            if (string.IsNullOrWhiteSpace(txtEditar_cel.Text))
+            {
+                MessageBox.Show("Digite un numero de telefono para poder agregarlo", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
 
+
+                agregar.numeros_tel = txtEditar_cel.Text;
+                int id = control_empresa.Id(agregar);
+                agregar.empresas = id;
+                int datos = control_empresa.Agregar_tel(agregar);
+            }
+        }
+
+        public void mostrarCEL()
+        {
+            dgv_Contactos.DataSource = control_empresa.mostrar_cel();
+        }
+        public void limpiar()
+        {
+            txtEditar_cel.Clear();
+        }
         private void btnAgregarTelefono_Gestor_Click(object sender, EventArgs e)
         {
+            if (txtEditar_cel.Text == "    -    ")
+            {
+                MessageBox.Show("Llena los campos de telefono", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                agregarCEL();
+                mostrarCEL();
+                mostrarCEL();
+                txtEditar_cel.Clear();
+            }
 
         }
     }
