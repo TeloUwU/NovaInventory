@@ -68,7 +68,7 @@
             this.panel1.Controls.Add(this.txtEditar_cel);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Location = new System.Drawing.Point(572, 18);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 466);
             this.panel1.TabIndex = 5;
@@ -81,7 +81,7 @@
             this.btnFinalizar_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizar_Gestor.ForeColor = System.Drawing.Color.White;
             this.btnFinalizar_Gestor.Location = new System.Drawing.Point(14, 408);
-            this.btnFinalizar_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFinalizar_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.btnFinalizar_Gestor.Name = "btnFinalizar_Gestor";
             this.btnFinalizar_Gestor.Size = new System.Drawing.Size(160, 38);
             this.btnFinalizar_Gestor.TabIndex = 16;
@@ -96,7 +96,7 @@
             this.btnEliminarTelefono_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarTelefono_Gestor.ForeColor = System.Drawing.Color.White;
             this.btnEliminarTelefono_Gestor.Location = new System.Drawing.Point(106, 81);
-            this.btnEliminarTelefono_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarTelefono_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarTelefono_Gestor.Name = "btnEliminarTelefono_Gestor";
             this.btnEliminarTelefono_Gestor.Size = new System.Drawing.Size(68, 38);
             this.btnEliminarTelefono_Gestor.TabIndex = 13;
@@ -112,7 +112,7 @@
             this.btnAgregarTelefono_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarTelefono_Gestor.ForeColor = System.Drawing.Color.White;
             this.btnAgregarTelefono_Gestor.Location = new System.Drawing.Point(14, 82);
-            this.btnAgregarTelefono_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarTelefono_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregarTelefono_Gestor.Name = "btnAgregarTelefono_Gestor";
             this.btnAgregarTelefono_Gestor.Size = new System.Drawing.Size(68, 38);
             this.btnAgregarTelefono_Gestor.TabIndex = 12;
@@ -168,7 +168,7 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(9, 18);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(552, 466);
             this.panel2.TabIndex = 4;
@@ -178,19 +178,20 @@
             this.button2.BackColor = System.Drawing.Color.DarkCyan;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(278, 393);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(211, 38);
             this.button2.TabIndex = 9;
             this.button2.Text = "Modificar Empresa";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Goldenrod;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(45, 393);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(207, 38);
             this.button1.TabIndex = 8;
@@ -200,7 +201,7 @@
             // txtid_Empresa_Modificacion
             // 
             this.txtid_Empresa_Modificacion.Location = new System.Drawing.Point(512, 13);
-            this.txtid_Empresa_Modificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtid_Empresa_Modificacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtid_Empresa_Modificacion.Name = "txtid_Empresa_Modificacion";
             this.txtid_Empresa_Modificacion.Size = new System.Drawing.Size(30, 20);
             this.txtid_Empresa_Modificacion.TabIndex = 70;
@@ -215,7 +216,7 @@
             this.BtnExaminar_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExaminar_Gestor.ForeColor = System.Drawing.Color.White;
             this.BtnExaminar_Gestor.Location = new System.Drawing.Point(408, 314);
-            this.BtnExaminar_Gestor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnExaminar_Gestor.Margin = new System.Windows.Forms.Padding(4);
             this.BtnExaminar_Gestor.Name = "BtnExaminar_Gestor";
             this.BtnExaminar_Gestor.Size = new System.Drawing.Size(123, 38);
             this.BtnExaminar_Gestor.TabIndex = 6;
@@ -227,7 +228,7 @@
             this.pbEditar_Logo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbEditar_Logo.BackColor = System.Drawing.Color.White;
             this.pbEditar_Logo.Location = new System.Drawing.Point(405, 99);
-            this.pbEditar_Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbEditar_Logo.Margin = new System.Windows.Forms.Padding(4);
             this.pbEditar_Logo.Name = "pbEditar_Logo";
             this.pbEditar_Logo.Size = new System.Drawing.Size(126, 183);
             this.pbEditar_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -239,7 +240,7 @@
             this.TxtEditar_Direccion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtEditar_Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEditar_Direccion.Location = new System.Drawing.Point(10, 229);
-            this.TxtEditar_Direccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEditar_Direccion.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEditar_Direccion.MaxLength = 3;
             this.TxtEditar_Direccion.Multiline = true;
             this.TxtEditar_Direccion.Name = "TxtEditar_Direccion";
@@ -251,7 +252,7 @@
             this.TxtEditar_Legal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtEditar_Legal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEditar_Legal.Location = new System.Drawing.Point(10, 331);
-            this.TxtEditar_Legal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEditar_Legal.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEditar_Legal.MaxLength = 4;
             this.TxtEditar_Legal.Name = "TxtEditar_Legal";
             this.TxtEditar_Legal.Size = new System.Drawing.Size(368, 22);
@@ -262,7 +263,7 @@
             this.TxtEditar_Nit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtEditar_Nit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEditar_Nit.Location = new System.Drawing.Point(10, 165);
-            this.TxtEditar_Nit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEditar_Nit.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEditar_Nit.MaxLength = 2;
             this.TxtEditar_Nit.Name = "TxtEditar_Nit";
             this.TxtEditar_Nit.Size = new System.Drawing.Size(372, 22);
@@ -273,7 +274,7 @@
             this.txtEditar_Correo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEditar_Correo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEditar_Correo.Location = new System.Drawing.Point(10, 99);
-            this.txtEditar_Correo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEditar_Correo.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditar_Correo.MaxLength = 1;
             this.txtEditar_Correo.Name = "txtEditar_Correo";
             this.txtEditar_Correo.ShortcutsEnabled = false;
@@ -285,7 +286,7 @@
             this.TxtEditar_Empresa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TxtEditar_Empresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEditar_Empresa.Location = new System.Drawing.Point(10, 30);
-            this.TxtEditar_Empresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtEditar_Empresa.Margin = new System.Windows.Forms.Padding(4);
             this.TxtEditar_Empresa.MaxLength = 45;
             this.TxtEditar_Empresa.Name = "TxtEditar_Empresa";
             this.TxtEditar_Empresa.ShortcutsEnabled = false;
@@ -373,7 +374,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_Actualizar_empresa";
             this.Text = "frm_Actualizar_empresa";
             this.panel1.ResumeLayout(false);
