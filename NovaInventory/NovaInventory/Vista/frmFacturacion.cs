@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Controlador;
 using NovaInventory.Modelo;
+using NovaInventory.Vista;
 
 namespace NovaInventory.Vista
 {
@@ -90,12 +91,45 @@ namespace NovaInventory.Vista
             actu.CostoDetalle = txtPrecio.Text;
             actu.Cantidad = txtCantidad.Text;
             actu.Fecha = dtPick.Text;
+            actu.creado_por = textBox3.Text;
             actu.id_estado = Convert.ToInt16(cbEstado_Fac.SelectedValue);
             control_facturacion.actualizarfac(actu);
         }
         private void button2_Click(object sender, EventArgs e)
         {
             actualizar();
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmInventarioExistencias frm = new frmInventarioExistencias();
+            frm.Show();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        void eliminar()
+        {
+            if (MessageBox.Show("¿Esta seguro que desea eliminar el detalle?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                control_facturacion.eliminar(Convert.ToInt32(txtIdArticulo.Text));
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            eliminar();
         }
     }
     }

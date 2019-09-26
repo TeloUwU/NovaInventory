@@ -34,8 +34,7 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnCargarLista = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.cbEstado_Fac = new System.Windows.Forms.ComboBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -71,7 +70,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cbEstado_Fac = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -95,12 +93,12 @@
             this.txtIdArticulo.Name = "txtIdArticulo";
             this.txtIdArticulo.ShortcutsEnabled = false;
             this.txtIdArticulo.Size = new System.Drawing.Size(259, 20);
-            this.txtIdArticulo.TabIndex = 1;
+            this.txtIdArticulo.TabIndex = 3;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(28, 35);
+            this.lblNombre.Location = new System.Drawing.Point(30, 61);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(151, 13);
             this.lblNombre.TabIndex = 2;
@@ -120,7 +118,7 @@
             this.btnCargarLista.Location = new System.Drawing.Point(392, 79);
             this.btnCargarLista.Name = "btnCargarLista";
             this.btnCargarLista.Size = new System.Drawing.Size(300, 23);
-            this.btnCargarLista.TabIndex = 5;
+            this.btnCargarLista.TabIndex = 7;
             this.btnCargarLista.Text = "Agregar a factura";
             this.btnCargarLista.UseVisualStyleBackColor = true;
             this.btnCargarLista.Click += new System.EventHandler(this.btnCargarLista_Click_1);
@@ -128,8 +126,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbEstado_Fac);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox3);
@@ -151,22 +147,14 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // textBox7
+            // cbEstado_Fac
             // 
-            this.textBox7.Location = new System.Drawing.Point(128, 76);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ShortcutsEnabled = false;
-            this.textBox7.Size = new System.Drawing.Size(232, 20);
-            this.textBox7.TabIndex = 14;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(30, 79);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Nombre producto ";
+            this.cbEstado_Fac.FormattingEnabled = true;
+            this.cbEstado_Fac.Location = new System.Drawing.Point(571, 110);
+            this.cbEstado_Fac.Name = "cbEstado_Fac";
+            this.cbEstado_Fac.Size = new System.Drawing.Size(121, 21);
+            this.cbEstado_Fac.TabIndex = 15;
+            this.cbEstado_Fac.Visible = false;
             // 
             // txtPrecio
             // 
@@ -190,10 +178,10 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(446, 47);
             this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
             this.textBox3.ShortcutsEnabled = false;
             this.textBox3.Size = new System.Drawing.Size(246, 20);
-            this.textBox3.TabIndex = 11;
+            this.textBox3.TabIndex = 6;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label2
             // 
@@ -203,6 +191,7 @@
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "N° Factura";
+            this.label2.Visible = false;
             // 
             // textBox5
             // 
@@ -211,6 +200,7 @@
             this.textBox5.ShortcutsEnabled = false;
             this.textBox5.Size = new System.Drawing.Size(46, 20);
             this.textBox5.TabIndex = 8;
+            this.textBox5.Visible = false;
             // 
             // textBox2
             // 
@@ -219,6 +209,7 @@
             this.textBox2.ShortcutsEnabled = false;
             this.textBox2.Size = new System.Drawing.Size(46, 20);
             this.textBox2.TabIndex = 8;
+            this.textBox2.Visible = false;
             // 
             // txtCantidad
             // 
@@ -227,14 +218,15 @@
             this.txtCantidad.ShortcutsEnabled = false;
             this.txtCantidad.Size = new System.Drawing.Size(237, 20);
             this.txtCantidad.TabIndex = 4;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(31, 51);
+            this.txtNombre.Location = new System.Drawing.Point(33, 77);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(327, 20);
-            this.txtNombre.TabIndex = 2;
+            this.txtNombre.TabIndex = 1;
             // 
             // label5
             // 
@@ -254,7 +246,7 @@
             this.dtPick.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.dtPick.Name = "dtPick";
             this.dtPick.Size = new System.Drawing.Size(189, 20);
-            this.dtPick.TabIndex = 0;
+            this.dtPick.TabIndex = 5;
             // 
             // label6
             // 
@@ -464,6 +456,7 @@
             this.button1.TabIndex = 27;
             this.button1.Text = "Eliminar del detalle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -487,6 +480,7 @@
             this.button3.TabIndex = 29;
             this.button3.Text = "Consultar inventario";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -525,14 +519,6 @@
             this.groupBox4.Size = new System.Drawing.Size(160, 221);
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
-            // 
-            // cbEstado_Fac
-            // 
-            this.cbEstado_Fac.FormattingEnabled = true;
-            this.cbEstado_Fac.Location = new System.Drawing.Point(528, 129);
-            this.cbEstado_Fac.Name = "cbEstado_Fac";
-            this.cbEstado_Fac.Size = new System.Drawing.Size(121, 21);
-            this.cbEstado_Fac.TabIndex = 15;
             // 
             // frmFacturacion
             // 
@@ -606,8 +592,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cbEstado_Fac;

@@ -104,6 +104,7 @@
     <Compile Include="Modelo\Funciones_facturacion.cs" />
     <Compile Include="Modelo\Funciones_producto.cs" />
     <Compile Include="Modelo\Funciones_usuarios.cs" />
+    <Compile Include="Modelo\inventario.cs" />
     <Compile Include="Modelo\preguntas y respuestas.cs" />
     <Compile Include="Modelo\prueba.cs" />
     <Compile Include="Modelo\validar_login.cs" />

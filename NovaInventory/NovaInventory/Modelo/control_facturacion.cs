@@ -20,7 +20,7 @@ namespace NovaInventory.Modelo
             try
             {
                 MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO facturacion(id_factura, id_usuarioos, fecha_factura, Pago_total, estaadoos) VALUES ('{0}','{1}','{2}','{3}','{4}')", add.id_factura, add.creado_por,add.Fecha,add.CostoDetalle,add.id_estado), Conexion.obtenerconexion());
-                retorno = Convert.ToInt16(cmdagregar.ExecuteNonQuery());
+                retorno = Convert.ToInt32(cmdagregar.ExecuteNonQuery());
                 if (retorno > 0)
                 {
                     MessageBox.Show("El producto se ha ingresado correctamente a la factura", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
