@@ -102,6 +102,7 @@
             this.btnEliminarTelefono_Gestor.TabIndex = 13;
             this.btnEliminarTelefono_Gestor.Text = "Eliminar";
             this.btnEliminarTelefono_Gestor.UseVisualStyleBackColor = false;
+            this.btnEliminarTelefono_Gestor.Click += new System.EventHandler(this.btnEliminarTelefono_Gestor_Click);
             // 
             // btnAgregarTelefono_Gestor
             // 

@@ -33,8 +33,6 @@ namespace NovaInventory.Vista
             }
             else
             {
-
-
                 agregar.numeros_tel = txtEditar_cel.Text;
                 int id = control_empresa.Id(agregar);
                 agregar.empresas = id;
@@ -60,10 +58,28 @@ namespace NovaInventory.Vista
             {
                 agregarCEL();
                 mostrarCEL();
-                mostrarCEL();
                 txtEditar_cel.Clear();
             }
 
+        }
+        
+        public void eliminar()
+        {
+            if (MessageBox.Show("¿Esta seguro que desea eliminar el numero de telefono?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                control_empresa.Eliminar_num(Convert.ToInt32(txtEditar_cel.Text));
+            }
+        }
+
+
+        private void btnEliminarTelefono_Gestor_Click(object sender, EventArgs e)
+        {
+
+            eliminar();
+            mostrarCEL();
+            mostrarCEL();
+            txtEditar_cel.Clear();
+            txtEditar_cel.Clear();
         }
     }
 }
