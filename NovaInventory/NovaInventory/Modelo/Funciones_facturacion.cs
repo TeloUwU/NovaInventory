@@ -19,7 +19,7 @@ namespace NovaInventory.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbfactura(fecha_factura, Pago_total, estaadoos) VALUES ('{0}','{1}','{2}','{3}')", add.Fecha, add.telefono, add.nit), Conexion.obtenerconexion());
+                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbfactura(fecha_factura, Pago_total, estaadoos) VALUES ('{0}','{1}','{2}','{3}')"/*, add.Fecha, add.telefono, add.nit*/), Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(cmdagregar.ExecuteNonQuery());
                 if (retorno > 0)
                 {
@@ -60,7 +60,7 @@ namespace NovaInventory.Modelo
             try
             {
 
-                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbfactura SET  Fecha='{0}', Pago_total='{1}', estaadoos ='{2}' WHERE id_proveedor='{6}' ", upt.Fecha, upt.direccion, upt.telefono, upt.nit, upt.rubro, upt.id_estados, upt.id_proveedor), Conexion.obtenerconexion());
+                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbfactura SET  Fecha='{0}', Pago_total='{1}', estaadoos ='{2}' WHERE id_proveedor='{6}' "/*, upt.Fecha, upt.direccion, upt.telefono, upt.nit, upt.rubro, upt.id_estados, upt.id_proveedor*/), Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
                 if (true)
                 {
@@ -107,4 +107,6 @@ namespace NovaInventory.Modelo
 
         }
     }
+
+ 
 }
