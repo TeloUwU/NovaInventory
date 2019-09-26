@@ -8,6 +8,9 @@ namespace NovaInventory.Controlador
 {
     class constructorFacturacion
     {
+
+        public static float Cantidad { get; set; }
+
         public static class clsDetallesVenta
         {
             public static int idDetalleventa { get; set; }

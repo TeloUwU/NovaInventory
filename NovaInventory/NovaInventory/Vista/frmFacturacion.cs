@@ -14,8 +14,6 @@ namespace NovaInventory.Vista
 {
     public partial class frmFacturacion : Form
     {
-        constructorFacturacion agregar = new constructorFacturacion();
-        constructorFacturacion actualizar = new constructorFacturacion();
         public frmFacturacion()
         {
             InitializeComponent();
@@ -31,25 +29,6 @@ namespace NovaInventory.Vista
 
         public void agregar_factura()
         {
-            //    agregar.Fecha = dateTimePicker1.Text;
-            //    agregar.nombre_usuario = txtNombres_Usuario.Text;
-            //    agregar.apellido_usuario = txtApellidos_Usuario.Text;
-            //    agregar.contraseña_usuario = clave;
-            //    agregar.telefono = txtTelefono_Usuario.Text;
-            //    agregar.Correo = txtCorreo_Usuario.Text;
-            //    agregar.dui = txtDUI_Usuario.Text;
-            //    agregar.nit = txtNIT_Usuario.Text;
-            //    agregar.id_estados = Convert.ToInt32(cbEstado_Usuario.SelectedValue);
-            //    agregar.id_tipo_usuarios = Convert.ToInt32(cbTipo_Usuario.SelectedValue);
-            //    int intentos = 1;
-            //    agregar.intentos = Convert.ToString(intentos);
-            //    agregar.empresa = Convert.ToInt32(cmb_emp.SelectedValue);
-            //    MemoryStream ms = new MemoryStream();
-            //    pbFoto_Usuario.Image.Save(ms, ImageFormat.Jpeg);
-            //    byte[] aByte = ms.ToArray();
-            //    string imagen = Convert.ToBase64String(aByte);
-            //    agregar.Foto_usuario = imagen;
-            //    int retorno = Funciones_usuarios.agregar_usu(agregar);
 
 
         }
@@ -59,21 +38,6 @@ namespace NovaInventory.Vista
 
         public void CostoApagar()
         {
-            float CostoTotal = 0;
-            int Conteo = 0;
-
-            Conteo = dgvLista.RowCount; // se cuenta los productos y se utilisa el conteo como limite del for
-            for (int i = 0; i < Conteo; i++)
-            {
-
-                CostoTotal += float.Parse(dgvLista.Rows[i].Cells[4].Value.ToString());
-
-
-
-            }
-
-            lblCostoAPagar.Text = CostoTotal.ToString();
-            
         }
 
 
@@ -89,6 +53,19 @@ namespace NovaInventory.Vista
             
             
         }
+        string jj = constructorFacturacion.;
+        CONSTRUCTORDEFACTURA actu = new CONSTRUCTORDEFACTURA();
+        void agregar()
+        {
+            CONSTRUCTORDEFACTURA agrega = new CONSTRUCTORDEFACTURA();
+            agrega.Cantidad = txtCantidad.Text;
+            agrega.CostoDetalle = txtPrecio.Text;
+            agrega. = txtDirección.Text;
+            agrega.fecha_alta = dateTimePicker1.Text;
+            agrega.creado_por = jj;
+            agrega.id_estado = Convert.ToInt16(cbEstado_Bodega.SelectedValue);
+            int retorno = .agregar_usu(agrega);
+        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -97,10 +74,7 @@ namespace NovaInventory.Vista
 
         private void btnCargarLista_Click_1(object sender, EventArgs e)
         {
-            //agregarusu();
-            //mostrar();
-            //mostrar();
-            //limpiar();
+            agregar();
 
         }
 
