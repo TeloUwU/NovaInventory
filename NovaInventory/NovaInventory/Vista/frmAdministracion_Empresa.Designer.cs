@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministracion_Empresa));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,7 +37,6 @@
             this.txtid_Empresa_Modificacion = new System.Windows.Forms.TextBox();
             this.BtnGuardar_Gestor = new System.Windows.Forms.Button();
             this.BtnExaminar_Gestor = new System.Windows.Forms.Button();
-            this.pbLogo_Gestor = new System.Windows.Forms.PictureBox();
             this.TxtDireccion_Gestor = new System.Windows.Forms.TextBox();
             this.TxtLegal_Gestor = new System.Windows.Forms.TextBox();
             this.TxtNit_Gestor = new System.Windows.Forms.TextBox();
@@ -59,11 +56,14 @@
             this.txt_cel_Gestor = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cargar_imagen = new System.Windows.Forms.OpenFileDialog();
+            this.pbLogo_Gestor = new System.Windows.Forms.PictureBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Gestor)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Gestor)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -77,26 +77,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(783, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(140, 24);
-            this.toolStripButton1.Text = "Gestion de Empresas";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.Image = global::NovaInventory.Properties.Resources.undo_26px;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(141, 24);
-            this.toolStripButton2.Text = "Cerrar Formulario";
             // 
             // panel2
             // 
@@ -149,6 +129,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Modificar Empresa";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -204,18 +185,6 @@
             this.BtnExaminar_Gestor.Text = "Examinar";
             this.BtnExaminar_Gestor.UseVisualStyleBackColor = false;
             this.BtnExaminar_Gestor.Click += new System.EventHandler(this.BtnExaminar_Gestor_Click);
-            // 
-            // pbLogo_Gestor
-            // 
-            this.pbLogo_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pbLogo_Gestor.BackColor = System.Drawing.Color.White;
-            this.pbLogo_Gestor.Location = new System.Drawing.Point(405, 99);
-            this.pbLogo_Gestor.Margin = new System.Windows.Forms.Padding(4);
-            this.pbLogo_Gestor.Name = "pbLogo_Gestor";
-            this.pbLogo_Gestor.Size = new System.Drawing.Size(126, 183);
-            this.pbLogo_Gestor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo_Gestor.TabIndex = 65;
-            this.pbLogo_Gestor.TabStop = false;
             // 
             // TxtDireccion_Gestor
             // 
@@ -436,6 +405,40 @@
             this.label11.TabIndex = 63;
             this.label11.Text = "Numeros Telefonicos:";
             // 
+            // pbLogo_Gestor
+            // 
+            this.pbLogo_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbLogo_Gestor.BackColor = System.Drawing.Color.White;
+            this.pbLogo_Gestor.Location = new System.Drawing.Point(405, 99);
+            this.pbLogo_Gestor.Margin = new System.Windows.Forms.Padding(4);
+            this.pbLogo_Gestor.Name = "pbLogo_Gestor";
+            this.pbLogo_Gestor.Size = new System.Drawing.Size(126, 183);
+            this.pbLogo_Gestor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo_Gestor.TabIndex = 65;
+            this.pbLogo_Gestor.TabStop = false;
+            this.pbLogo_Gestor.Click += new System.EventHandler(this.pbLogo_Gestor_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(140, 24);
+            this.toolStripButton1.Text = "Gestion de Empresas";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton2.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton2.Image = global::NovaInventory.Properties.Resources.undo_26px;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(141, 24);
+            this.toolStripButton2.Text = "Cerrar Formulario";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
             // frmAdministracion_Empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,10 +456,10 @@
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Gestor)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo_Gestor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
