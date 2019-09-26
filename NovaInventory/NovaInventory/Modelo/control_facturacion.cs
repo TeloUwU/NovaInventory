@@ -60,8 +60,8 @@ namespace NovaInventory.Modelo
             try
             {
 
-                //MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE facturacion SET  id_factura='{0}', id_usuarioos='{1}', fecha_factura='{2}', Pago_total='{3}', estaadoos='{4}') VALUES ('{0}','{1}','{2}','{3}','{4}') WHERE id_bodega='{5}' ", upt.codigo_bodega, upt.nombre_bodega, upt.direccion, upt.fecha_alta, upt.id_estado, upt.id_bodega), Conexion.obtenerconexion());
-               // retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
+                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE facturacion SET  id_factura='{0}', id_usuarioos='{1}', fecha_factura='{2}', Pago_total='{3}', estaadoos='{4}') VALUES ('{0}','{1}','{2}','{3}','{4}') WHERE id_bodega='{5}' ", upt.codigo_bodega, upt.nombre_bodega, upt.direccion, upt.fecha_alta, upt.id_estado, upt.id_bodega), Conexion.obtenerconexion());
+                retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
                 if (true)
                 {
                     if (retorno == true)
@@ -87,7 +87,7 @@ namespace NovaInventory.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmddel = new MySqlCommand(string.Format("DELETE FROM tbbodega WHERE id_bodega = '{0}'", id), Conexion.obtenerconexion());
+                MySqlCommand cmddel = new MySqlCommand(string.Format("DELETE FROM facturacion WHERE id_factura = '{0}'", id), Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmddel.ExecuteNonQuery());
                 if (retorno == true)
                 {
