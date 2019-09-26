@@ -48,7 +48,7 @@
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtPick = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -147,7 +147,7 @@
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnCargarLista);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtPick);
             this.groupBox1.Controls.Add(this.txtIdArticulo);
             this.groupBox1.Location = new System.Drawing.Point(21, 21);
             this.groupBox1.Name = "groupBox1";
@@ -275,16 +275,16 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Fecha";
             // 
-            // dateTimePicker1
+            // dtPick
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(443, 20);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2019, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(189, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtPick.CustomFormat = "yyyy-MM-dd";
+            this.dtPick.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtPick.Location = new System.Drawing.Point(443, 20);
+            this.dtPick.MaxDate = new System.DateTime(2019, 12, 31, 0, 0, 0, 0);
+            this.dtPick.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.dtPick.Name = "dtPick";
+            this.dtPick.Size = new System.Drawing.Size(189, 20);
+            this.dtPick.TabIndex = 0;
             // 
             // label6
             // 
@@ -597,7 +597,7 @@
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtPick;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
