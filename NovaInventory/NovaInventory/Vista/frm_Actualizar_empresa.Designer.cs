@@ -275,7 +275,7 @@
             this.txtEditar_Correo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEditar_Correo.Location = new System.Drawing.Point(10, 99);
             this.txtEditar_Correo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEditar_Correo.MaxLength = 1;
+            this.txtEditar_Correo.MaxLength = 40;
             this.txtEditar_Correo.Name = "txtEditar_Correo";
             this.txtEditar_Correo.ShortcutsEnabled = false;
             this.txtEditar_Correo.Size = new System.Drawing.Size(372, 22);
