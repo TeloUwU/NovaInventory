@@ -145,7 +145,6 @@
             // 
             // PanelContenedor
             // 
-            this.PanelContenedor.Controls.Add(this.pictureBox3);
             this.PanelContenedor.Controls.Add(this.pictureBox2);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenedor.Location = new System.Drawing.Point(263, 24);
@@ -439,6 +438,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.lblNombres_Usuario);
@@ -737,9 +737,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::NovaInventory.Properties.Resources.AvRicaldone;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(179, 13);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(113, 105);
+            this.pictureBox3.Size = new System.Drawing.Size(52, 63);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
