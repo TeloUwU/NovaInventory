@@ -40,6 +40,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnCorreoVolver_Recu = new System.Windows.Forms.ToolStripButton();
             this.btnCerrar = new System.Windows.Forms.ToolStripButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelUsuario_Root.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -81,6 +82,7 @@
             // panelUsuario_Root
             // 
             this.panelUsuario_Root.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelUsuario_Root.Controls.Add(this.button1);
             this.panelUsuario_Root.Controls.Add(this.labelMensaje);
             this.panelUsuario_Root.Controls.Add(this.label1);
             this.panelUsuario_Root.Controls.Add(this.txtContraseña);
@@ -169,6 +171,16 @@
             this.btnCerrar.Text = "toolStripButton1";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(425, 58);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Regresar al login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmNuevaContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,5 +219,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnCorreoVolver_Recu;
         private System.Windows.Forms.ToolStripButton btnCerrar;
+        private System.Windows.Forms.Button button1;
     }
 }
