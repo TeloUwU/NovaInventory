@@ -61,7 +61,7 @@ namespace NovaInventory.Vista
             CONSTRUCTORDEFACTURA agrega = new CONSTRUCTORDEFACTURA();
 
             agrega.Cantidad = txtCantidad.Text;
-            agrega.CostoDetalle = txtPrecio.Text;
+            agrega.CostoDetalle = textBox6.Text;
             agrega.Fecha = dtPick.Text;
             agrega.Nombre = dtPick.Text;
             agrega.creado_por = jj;
@@ -75,6 +75,13 @@ namespace NovaInventory.Vista
 
         private void btnCargarLista_Click_1(object sender, EventArgs e)
         {
+            double r, n1, n2;
+
+            n1 = Convert.ToInt16(textBox6.Text);
+            n2 = Convert.ToInt16(txtCantidad.Text);
+            r = (n1 * n2);
+            lblCostoAPagar.Text = Convert.ToString(r);
+
             agregar();
 
         }
@@ -88,7 +95,7 @@ namespace NovaInventory.Vista
         {
             actu.id_factura = Convert.ToInt16(textBox2.Text);
             actu.Nombre = txtNombre.Text;
-            actu.CostoDetalle = txtPrecio.Text;
+            actu.CostoDetalle = textBox6.Text;
             actu.Cantidad = txtCantidad.Text;
             actu.Fecha = dtPick.Text;
             actu.creado_por = textBox3.Text;
@@ -130,6 +137,11 @@ namespace NovaInventory.Vista
         private void button1_Click(object sender, EventArgs e)
         {
             eliminar();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

@@ -35,7 +35,6 @@
             this.btnCargarLista = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbEstado_Fac = new System.Windows.Forms.ComboBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,15 +60,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -126,7 +124,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbEstado_Fac);
-            this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.label2);
@@ -155,15 +152,6 @@
             this.cbEstado_Fac.Size = new System.Drawing.Size(121, 21);
             this.cbEstado_Fac.TabIndex = 15;
             this.cbEstado_Fac.Visible = false;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(344, 129);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.ShortcutsEnabled = false;
-            this.txtPrecio.Size = new System.Drawing.Size(16, 20);
-            this.txtPrecio.TabIndex = 12;
-            this.txtPrecio.Visible = false;
             // 
             // label3
             // 
@@ -417,15 +405,6 @@
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox6.Location = new System.Drawing.Point(100, 12);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ShortcutsEnabled = false;
-            this.textBox6.Size = new System.Drawing.Size(261, 20);
-            this.textBox6.TabIndex = 26;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -482,20 +461,8 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(15, 137);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(261, 25);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "Anular Factura";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.btnVender);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button1);
@@ -519,6 +486,15 @@
             this.groupBox4.Size = new System.Drawing.Size(160, 221);
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox6.Location = new System.Drawing.Point(100, 12);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ShortcutsEnabled = false;
+            this.textBox6.Size = new System.Drawing.Size(261, 20);
+            this.textBox6.TabIndex = 26;
             // 
             // frmFacturacion
             // 
@@ -580,20 +556,18 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cbEstado_Fac;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
