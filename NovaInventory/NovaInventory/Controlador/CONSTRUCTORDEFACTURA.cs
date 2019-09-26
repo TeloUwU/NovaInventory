@@ -8,7 +8,7 @@ namespace NovaInventory.Controlador
 {
     class CONSTRUCTORDEFACTURA
     {
-
+        public int id_factura { get; set; }
         public int id_estado { get; set; }
         public string Cantidad { get; set; }
         public string CostoDetalle { get; set; }

@@ -16,7 +16,7 @@ namespace NovaInventory
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Actualizar_empresa());
+            Application.Run(new frmFacturacion());
         }
     }
 }

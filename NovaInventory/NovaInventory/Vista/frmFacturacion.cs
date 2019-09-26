@@ -58,6 +58,7 @@ namespace NovaInventory.Vista
         void agregar()
         {
             CONSTRUCTORDEFACTURA agrega = new CONSTRUCTORDEFACTURA();
+
             agrega.Cantidad = txtCantidad.Text;
             agrega.CostoDetalle = txtPrecio.Text;
             agrega.Fecha = dtPick.Text;
@@ -80,6 +81,21 @@ namespace NovaInventory.Vista
         private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        
+        void actualizar()
+        {
+            actu.id_factura = Convert.ToInt16(textBox2.Text);
+            actu.Nombre = txtNombre.Text;
+            actu.CostoDetalle = txtPrecio.Text;
+            actu.Cantidad = txtCantidad.Text;
+            actu.Fecha = dtPick.Text;
+            actu.id_estado = Convert.ToInt16(cbEstado_Fac.SelectedValue);
+            control_facturacion.actualizarfac(actu);
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            actualizar();
         }
     }
     }

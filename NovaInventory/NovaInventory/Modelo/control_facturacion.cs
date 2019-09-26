@@ -19,11 +19,11 @@ namespace NovaInventory.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO tbfactura(codigo_bodega, nombre_bodega, direccion, fecha_alta, id_estado, creado_por) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}')", add.Cantidad, add.CostoDetalle), Conexion.obtenerconexion());
+                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO facturacion(id_factura, id_usuarioos, fecha_factura, Pago_total, estaadoos) VALUES ('{0}','{1}','{2}','{3}','{4}')", add.id_factura, add.creado_por,add.Fecha,add.CostoDetalle,add.id_estado), Conexion.obtenerconexion());
                 retorno = Convert.ToInt16(cmdagregar.ExecuteNonQuery());
                 if (retorno > 0)
                 {
-                    MessageBox.Show("La bodega se ingreso correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El producto se ha ingresado correctamente a la factura", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 return retorno;
             }
@@ -35,12 +35,12 @@ namespace NovaInventory.Modelo
         }
 
 
-        public static DataTable mostrar_pro()
+        public static DataTable mostrar_fac()
         {
             DataTable datos;
             try
             {
-                string query = "SELECT * FROM tbbodega";
+                string query = "SELECT * FROM facturacion";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), Conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 datos = new DataTable();
@@ -54,13 +54,13 @@ namespace NovaInventory.Modelo
             }
         }
 
-        public static bool actualizarusu(Constructor_bodega upt)
+        public static bool actualizarfac(CONSTRUCTORDEFACTURA upt)
         {
             bool retorno = false;
             try
             {
 
-                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE tbbodega SET  codigo_bodega='{0}', nombre_bodega='{1}', direccion ='{2}', fecha_alta='{3}', id_estado='{4}' WHERE id_bodega='{5}' ", upt.codigo_bodega, upt.nombre_bodega, upt.direccion, upt.fecha_alta, upt.id_estado, upt.id_bodega), Conexion.obtenerconexion());
+                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE facturacion SET  id_factura='{0}', id_usuarioos='{1}', fecha_factura='{2}', Pago_total='{3}', estaadoos='{4}') VALUES ('{0}','{1}','{2}','{3}','{4}') WHERE id_bodega='{5}' ", upt.codigo_bodega, upt.nombre_bodega, upt.direccion, upt.fecha_alta, upt.id_estado, upt.id_bodega), Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
                 if (true)
                 {

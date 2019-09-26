@@ -34,9 +34,6 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnCargarLista = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -74,6 +71,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cbEstado_Fac = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -129,9 +127,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.cbEstado_Fac);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtPrecio);
@@ -154,33 +150,6 @@
             this.groupBox1.Size = new System.Drawing.Size(820, 160);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(504, 119);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 13);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "Credito Fiscal";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(389, 144);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "label13";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(389, 119);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 13);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Impuesto CESC";
             // 
             // textBox7
             // 
@@ -219,8 +188,9 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(443, 46);
+            this.textBox3.Location = new System.Drawing.Point(446, 47);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.ShortcutsEnabled = false;
             this.textBox3.Size = new System.Drawing.Size(246, 20);
             this.textBox3.TabIndex = 11;
@@ -505,6 +475,7 @@
             this.button2.TabIndex = 28;
             this.button2.Text = "Actualizar detalle";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -554,6 +525,14 @@
             this.groupBox4.Size = new System.Drawing.Size(160, 221);
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
+            // 
+            // cbEstado_Fac
+            // 
+            this.cbEstado_Fac.FormattingEnabled = true;
+            this.cbEstado_Fac.Location = new System.Drawing.Point(528, 129);
+            this.cbEstado_Fac.Name = "cbEstado_Fac";
+            this.cbEstado_Fac.Size = new System.Drawing.Size(121, 21);
+            this.cbEstado_Fac.TabIndex = 15;
             // 
             // frmFacturacion
             // 
@@ -631,8 +610,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbEstado_Fac;
     }
 }
