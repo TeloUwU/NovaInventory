@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_nuevo));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_contf = new System.Windows.Forms.TextBox();
             this.txt_cont = new System.Windows.Forms.TextBox();
@@ -41,6 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,12 +57,6 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(87, 22);
-            this.toolStripLabel1.Text = "Nuevo usuario ";
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
@@ -72,6 +67,12 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(87, 22);
+            this.toolStripLabel1.Text = "Nuevo usuario ";
+            // 
             // button1
             // 
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -79,7 +80,7 @@
             this.button1.Location = new System.Drawing.Point(531, 376);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 32);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Continuar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -87,16 +88,20 @@
             // txt_contf
             // 
             this.txt_contf.Location = new System.Drawing.Point(314, 283);
+            this.txt_contf.MaxLength = 50;
             this.txt_contf.Name = "txt_contf";
+            this.txt_contf.PasswordChar = '*';
             this.txt_contf.Size = new System.Drawing.Size(160, 20);
-            this.txt_contf.TabIndex = 6;
+            this.txt_contf.TabIndex = 2;
             // 
             // txt_cont
             // 
             this.txt_cont.Location = new System.Drawing.Point(314, 137);
+            this.txt_cont.MaxLength = 50;
             this.txt_cont.Name = "txt_cont";
+            this.txt_cont.PasswordChar = '*';
             this.txt_cont.Size = new System.Drawing.Size(160, 20);
-            this.txt_cont.TabIndex = 4;
+            this.txt_cont.TabIndex = 1;
             // 
             // label2
             // 
@@ -159,11 +164,20 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Bienvenido usuario";
             // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(92, 5);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(35, 20);
+            this.id.TabIndex = 10;
+            this.id.Visible = false;
+            // 
             // frm_nuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 409);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_contf);
@@ -198,5 +212,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox id;
     }
 }

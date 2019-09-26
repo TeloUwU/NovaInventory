@@ -40,9 +40,10 @@ namespace NovaInventory.Modelo
                         MySqlDataReader _reader = cmdselect.ExecuteReader();
                         while (_reader.Read())
                         {
+                            Constructor_login.id_usuario = _reader.GetString(0);
                             Constructor_login.nombre = _reader.GetString(2) + " ";
                             Constructor_login.apellido = _reader.GetString(3) + " ";
-                            Constructor_login.nivel = _reader.GetInt16(11);
+                            Constructor_login.nivel = _reader.GetInt16(12);
                             if (rest >= 1)
                             {
                                 MessageBox.Show("Bienvenido Usuario " + Constructor_login.usuario, "Acceso Concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
+using NovaInventory.Config;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 
@@ -47,9 +48,11 @@ namespace NovaInventory.Vista
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error en encontrar usuario" + ex, "Error de encontrame al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Error en encontrar usuario" + ex, "Error al encontrar al usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             cn.Close();
+            
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

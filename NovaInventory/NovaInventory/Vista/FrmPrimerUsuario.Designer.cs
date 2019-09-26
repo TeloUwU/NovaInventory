@@ -67,6 +67,7 @@
             this.BtnSalir = new System.Windows.Forms.ToolStripButton();
             this.txtId = new System.Windows.Forms.ToolStripTextBox();
             this.lblIdusuario = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txt_cel = new System.Windows.Forms.MaskedTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -74,8 +75,11 @@
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.CargarImagen = new System.Windows.Forms.OpenFileDialog();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbPregunta4
@@ -84,7 +88,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbPregunta4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta4.FormattingEnabled = true;
-            this.cmbPregunta4.Location = new System.Drawing.Point(225, 569);
+            this.cmbPregunta4.Location = new System.Drawing.Point(27, 215);
             this.cmbPregunta4.Name = "cmbPregunta4";
             this.cmbPregunta4.Size = new System.Drawing.Size(629, 23);
             this.cmbPregunta4.TabIndex = 62;
@@ -95,7 +99,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbPregunta3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta3.FormattingEnabled = true;
-            this.cmbPregunta3.Location = new System.Drawing.Point(225, 502);
+            this.cmbPregunta3.Location = new System.Drawing.Point(27, 148);
             this.cmbPregunta3.Name = "cmbPregunta3";
             this.cmbPregunta3.Size = new System.Drawing.Size(629, 23);
             this.cmbPregunta3.TabIndex = 60;
@@ -106,7 +110,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbPregunta2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta2.FormattingEnabled = true;
-            this.cmbPregunta2.Location = new System.Drawing.Point(225, 437);
+            this.cmbPregunta2.Location = new System.Drawing.Point(27, 83);
             this.cmbPregunta2.Name = "cmbPregunta2";
             this.cmbPregunta2.Size = new System.Drawing.Size(629, 23);
             this.cmbPregunta2.TabIndex = 58;
@@ -117,7 +121,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbPregunta1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPregunta1.FormattingEnabled = true;
-            this.cmbPregunta1.Location = new System.Drawing.Point(225, 377);
+            this.cmbPregunta1.Location = new System.Drawing.Point(27, 23);
             this.cmbPregunta1.Name = "cmbPregunta1";
             this.cmbPregunta1.Size = new System.Drawing.Size(629, 23);
             this.cmbPregunta1.TabIndex = 56;
@@ -129,7 +133,7 @@
             this.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(813, 650);
+            this.BtnGuardar.Location = new System.Drawing.Point(813, 319);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(188, 44);
             this.BtnGuardar.TabIndex = 18;
@@ -208,6 +212,7 @@
             // 
             this.txtConfClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtConfClave.Location = new System.Drawing.Point(424, 319);
+            this.txtConfClave.MaxLength = 50;
             this.txtConfClave.Name = "txtConfClave";
             this.txtConfClave.ShortcutsEnabled = false;
             this.txtConfClave.Size = new System.Drawing.Size(312, 24);
@@ -218,6 +223,7 @@
             // 
             this.txtApellidos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtApellidos.Location = new System.Drawing.Point(424, 75);
+            this.txtApellidos.MaxLength = 50;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(312, 24);
             this.txtApellidos.TabIndex = 2;
@@ -225,7 +231,8 @@
             // txtRespuesta2
             // 
             this.txtRespuesta2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRespuesta2.Location = new System.Drawing.Point(225, 472);
+            this.txtRespuesta2.Location = new System.Drawing.Point(27, 118);
+            this.txtRespuesta2.MaxLength = 50;
             this.txtRespuesta2.Name = "txtRespuesta2";
             this.txtRespuesta2.Size = new System.Drawing.Size(629, 24);
             this.txtRespuesta2.TabIndex = 15;
@@ -233,7 +240,8 @@
             // txtRespuesta1
             // 
             this.txtRespuesta1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRespuesta1.Location = new System.Drawing.Point(225, 409);
+            this.txtRespuesta1.Location = new System.Drawing.Point(27, 55);
+            this.txtRespuesta1.MaxLength = 50;
             this.txtRespuesta1.Name = "txtRespuesta1";
             this.txtRespuesta1.Size = new System.Drawing.Size(629, 24);
             this.txtRespuesta1.TabIndex = 14;
@@ -242,6 +250,7 @@
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEmail.Location = new System.Drawing.Point(80, 222);
+            this.txtEmail.MaxLength = 150;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(312, 24);
             this.txtEmail.TabIndex = 7;
@@ -250,6 +259,7 @@
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsuario.Location = new System.Drawing.Point(424, 269);
+            this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(312, 24);
@@ -259,7 +269,7 @@
             // 
             this.txtClave.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtClave.Location = new System.Drawing.Point(78, 319);
-            this.txtClave.MaxLength = 45;
+            this.txtClave.MaxLength = 50;
             this.txtClave.Name = "txtClave";
             this.txtClave.ShortcutsEnabled = false;
             this.txtClave.Size = new System.Drawing.Size(311, 24);
@@ -279,7 +289,7 @@
             // 
             this.txtNombres.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombres.Location = new System.Drawing.Point(78, 75);
-            this.txtNombres.MaxLength = 45;
+            this.txtNombres.MaxLength = 50;
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(311, 24);
             this.txtNombres.TabIndex = 1;
@@ -426,7 +436,8 @@
             this.toolStripLabel1,
             this.BtnSalir,
             this.txtId,
-            this.lblIdusuario});
+            this.lblIdusuario,
+            this.toolStripTextBox1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1041, 25);
@@ -462,6 +473,7 @@
             // 
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(116, 25);
+            this.txtId.Visible = false;
             // 
             // lblIdusuario
             // 
@@ -469,6 +481,12 @@
             this.lblIdusuario.Size = new System.Drawing.Size(69, 22);
             this.lblIdusuario.Text = "ID Usuario";
             this.lblIdusuario.Visible = false;
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(116, 25);
+            this.toolStripTextBox1.Visible = false;
             // 
             // label15
             // 
@@ -492,7 +510,8 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(225, 533);
+            this.textBox1.Location = new System.Drawing.Point(27, 179);
+            this.textBox1.MaxLength = 50;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(629, 24);
             this.textBox1.TabIndex = 16;
@@ -500,7 +519,8 @@
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(225, 600);
+            this.textBox2.Location = new System.Drawing.Point(27, 246);
+            this.textBox2.MaxLength = 50;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(629, 24);
             this.textBox2.TabIndex = 17;
@@ -527,23 +547,53 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(813, 650);
+            this.button1.Location = new System.Drawing.Point(813, 642);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 44);
             this.button1.TabIndex = 63;
             this.button1.Text = "Volver al login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cmbPregunta1);
+            this.groupBox1.Controls.Add(this.txtRespuesta1);
+            this.groupBox1.Controls.Add(this.cmbPregunta4);
+            this.groupBox1.Controls.Add(this.txtRespuesta2);
+            this.groupBox1.Controls.Add(this.cmbPregunta3);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cmbPregunta2);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Location = new System.Drawing.Point(123, 396);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(671, 285);
+            this.groupBox1.TabIndex = 64;
+            this.groupBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.BackColor = System.Drawing.Color.Green;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(813, 642);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(188, 44);
+            this.button2.TabIndex = 65;
+            this.button2.Text = "finalizar Preguntas";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FrmPrimerUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1041, 720);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txt_cel);
-            this.Controls.Add(this.cmbPregunta4);
-            this.Controls.Add(this.cmbPregunta3);
-            this.Controls.Add(this.cmbPregunta2);
-            this.Controls.Add(this.cmbPregunta1);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.BtnExaminar);
             this.Controls.Add(this.cmbTipoUsuario);
@@ -554,10 +604,6 @@
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.txtConfClave);
             this.Controls.Add(this.txtApellidos);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtRespuesta2);
-            this.Controls.Add(this.txtRespuesta1);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtClave);
@@ -587,6 +633,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,5 +688,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.OpenFileDialog CargarImagen;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Controlador;
+using MySql.Data.MySqlClient;
+using System.IO;
+using NovaInventory.Config;
 
 namespace NovaInventory.Vista
 {
@@ -16,33 +19,117 @@ namespace NovaInventory.Vista
         public FrmPrincipal()
         {
             InitializeComponent();
+            string query = "SELECT * FROM tbusuarios WHERE id_usuarios =" + Constructor_login.id_usuario;
+            MySqlCommand cmdselect = new MySqlCommand(query, Conexion.obtenerconexion());
+            MySqlDataReader reader;
+            reader = cmdselect.ExecuteReader();
+            if (reader.Read())
+            {
+                byte[] image = Convert.FromBase64String(reader[6].ToString());
+                MemoryStream ms = new MemoryStream(image);
+                pictureBox1.Image = Image.FromStream(ms);
+            }
+
+            //string query1 = "SELECT * FROM datos_empresa WHERE id_datos_empresa = 1 ";
+            //MySqlCommand cmdselect1 = new MySqlCommand(query1, Conexion.obtenerconexion());
+            //MySqlDataReader reader1;
+            //reader1 = cmdselect1.ExecuteReader();
+            //if (reader1.Read())
+            //{
+            //    byte[] imagse = Convert.FromBase64String(reader[4].ToString());
+            //    MemoryStream ms1 = new MemoryStream(imagse);
+            //    pictureBox3.Image = Image.FromStream(ms1);
+            //}
         }
         Form currentForm;
+        void admin()
+        {
+            archivoToolStripMenuItem.Visible = false;
+            buscarToolStripMenuItem.Visible = false;
+            inventarioToolStripMenuItem.Visible = false;
+            facturaciónToolStripMenuItem.Visible = false;
+            gráficosYReportesToolStripMenuItem.Visible = false;
+            button11.Visible = false;
+            button12.Visible = true;
+            button14.Visible = false;
+            button15.Visible = true;
+            button6.Visible = false;
+            button5.Visible = false;
+            ;
+        }
+        void bodeguero()
+        {
+            archivoToolStripMenuItem.Visible = false;
+            buscarToolStripMenuItem.Visible = true;
+            inventarioToolStripMenuItem.Visible = true;
+            facturaciónToolStripMenuItem.Visible = false;
+            gráficosYReportesToolStripMenuItem.Visible = false;
+            button11.Visible = false;
+            button12.Visible = true;
+            button14.Visible = false;
+            button15.Visible = false;
+
+        }
+        void caja()
+        {
+            archivoToolStripMenuItem.Visible = false;
+            buscarToolStripMenuItem.Visible = true;
+            buscarToolStripMenuItem1.Visible = false;
+            agregarProveedorToolStripMenuItem.Visible = false;
+            agregarBodegaToolStripMenuItem.Visible = false;
+            inventarioToolStripMenuItem.Visible = false;
+            facturaciónToolStripMenuItem.Visible = false;
+            gráficosYReportesToolStripMenuItem.Visible = false;
+            button11.Visible = false;
+            button12.Visible = false;
+            button14.Visible = true;
+            button15.Visible = false;
+
+        }
+        void inve()
+        {
+            archivoToolStripMenuItem.Visible = false;
+            buscarToolStripMenuItem.Visible = false;
+            inventarioToolStripMenuItem.Visible = true;
+            facturaciónToolStripMenuItem.Visible = false;
+            gráficosYReportesToolStripMenuItem.Visible = false;
+            button11.Visible = false;
+            button12.Visible = false;
+            button14.Visible = false;
+            button15.Visible = true;
+            button7.Visible = false;
+            btn_compras.Visible = false;
+ 
+        }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             PanelSidebar.Visible = false;
-
+            configuracion();
             lblNombres_Usuario.Text = Constructor_login.nombre;
             lblApellidos_Usuario.Text = Constructor_login.apellido;
             if (Constructor_login.nivel == 1) 
             {
-                lblNivel.Text = ("Root");
+                label1.Text = ("Root");
             }
-            else if (Constructor_login.nivel==2)
+            else if (Constructor_login.nivel== 2)
             {
-                lblNivel.Text = ("Administrador");
+                admin();
+                label1.Text = ("Administrador");
             }
             else if (Constructor_login.nivel == 3)
             {
-                lblNivel.Text = ("Bodeguero");
+                bodeguero();
+                label1.Text = ("Bodeguero");
             }
             else if (Constructor_login.nivel == 4)
             {
-                lblNivel.Text = ("Cajero");
+                caja();
+                label1.Text = ("Cajero");
             }
             else if (Constructor_login.nivel == 5)
             {
-                lblNivel.Text = ("Gerente de inventario");
+
+                label1.Text = ("Gerente de inventario");
             }
         }
 
@@ -155,6 +242,39 @@ namespace NovaInventory.Vista
         {
 
         }
+        private void configuracion()
+        {
+            panel_administracion_inv.Visible = false;
+            panel_administracion.Visible = false;
+            panel_administracion.Visible = false;
+            panel_inventario.Visible = false;
+            panel1.Visible = false;
+        }
+        private void hide_con()
+        {
+            if (panel_inventario.Visible == true)
+                panel_inventario.Visible = false;
+            if (panel_administracion_inv.Visible == true)
+                panel_administracion_inv.Visible = false;
+            if (panel_administracion.Visible == true)
+                panel_administracion.Visible = false;
+            if (panel_administracion.Visible == true)
+                panel_administracion.Visible = false;
+            if (panel1.Visible == true)
+                panel1.Visible = false;
+        }
+        private void show_con(Panel sub)
+        {
+            if (sub.Visible == false)
+            {
+                hide_con();
+                sub.Visible = true;
+            }
+            else
+            {
+                sub.Visible = false;
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -164,34 +284,35 @@ namespace NovaInventory.Vista
         private void button6_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmConfig_Root>();
-            root();
+            
             button6.BackColor = Color.FromArgb(192, 0, 192);
+            hide_con();
         }
 
-        public void root ()
-        {
-            string nombre = "Maria";
-        }
-
+      
         private void button6_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario<frmConfig_Root>();
+            hide_con();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmFacturacion>();
+            hide_con();
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmAdministracion_Empresa>();
+            hide_con();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmCompra>();
+            hide_con();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -204,6 +325,121 @@ namespace NovaInventory.Vista
         private void controlDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmUsuarios>();
+        }
+
+        private void agregarProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmProveedores>();
+        }
+
+        private void ingresarNuevoProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCompra>();
+        }
+
+        private void agregarBodegaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmBodegas>();
+        }
+
+        private void agregarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCompra>();
+        }
+
+        private void inventarioGeneralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmInventarioExistencias>();
+        }
+
+        private void nuevaCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCompra>();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<recuContra_ReinicioAdmin>();
+        }
+
+        private void PanelSidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void agregarCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCompra>();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmUsuarios>();
+            hide_con();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmProveedores>();
+            hide_con();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+            AbrirFormulario<frmInventarioExistencias>();
+            hide_con();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            show_con(panel_administracion_inv);
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            show_con(panel_administracion);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            show_con(panel_inventario);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            show_con(panel1);
+        }
+
+        private void btn_articulos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmProducto>();
+            hide_con();
+        }
+
+        private void btn_productos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCategoria>();
+            hide_con();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmBodegas>();
+            hide_con();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmFacturacion>();
+            hide_con();
+        }
+
+        private void btn_compras_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCompra>();
+            hide_con();
         }
     }
 }

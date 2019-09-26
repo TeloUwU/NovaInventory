@@ -62,6 +62,7 @@
             this.CargarImagen = new System.Windows.Forms.OpenFileDialog();
             this.label12 = new System.Windows.Forms.Label();
             this.cmb_emp = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.tsAdmin_Usuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar_Usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto_Usuario)).BeginInit();
@@ -202,6 +203,7 @@
             // 
             this.txtNombres_Usuario.Location = new System.Drawing.Point(20, 86);
             this.txtNombres_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombres_Usuario.MaxLength = 50;
             this.txtNombres_Usuario.Name = "txtNombres_Usuario";
             this.txtNombres_Usuario.ShortcutsEnabled = false;
             this.txtNombres_Usuario.Size = new System.Drawing.Size(157, 20);
@@ -211,6 +213,7 @@
             // 
             this.txtApellidos_Usuario.Location = new System.Drawing.Point(20, 138);
             this.txtApellidos_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidos_Usuario.MaxLength = 50;
             this.txtApellidos_Usuario.Name = "txtApellidos_Usuario";
             this.txtApellidos_Usuario.ShortcutsEnabled = false;
             this.txtApellidos_Usuario.Size = new System.Drawing.Size(156, 20);
@@ -221,6 +224,7 @@
             // 
             this.txtUsuario.Location = new System.Drawing.Point(19, 192);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(157, 20);
@@ -230,6 +234,7 @@
             // 
             this.txtCorreo_Usuario.Location = new System.Drawing.Point(214, 86);
             this.txtCorreo_Usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo_Usuario.MaxLength = 150;
             this.txtCorreo_Usuario.Name = "txtCorreo_Usuario";
             this.txtCorreo_Usuario.ShortcutsEnabled = false;
             this.txtCorreo_Usuario.Size = new System.Drawing.Size(142, 20);
@@ -325,7 +330,6 @@
             this.button3.TabIndex = 13;
             this.button3.Text = "Actualizar Usuario";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
@@ -426,11 +430,24 @@
             this.cmb_emp.Size = new System.Drawing.Size(126, 21);
             this.cmb_emp.TabIndex = 30;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button5.Location = new System.Drawing.Point(668, 401);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(96, 41);
+            this.button5.TabIndex = 32;
+            this.button5.Text = "prueba";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 540);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cmb_emp);
             this.Controls.Add(this.btnSeleccionarFoto_Usuario);
@@ -513,5 +530,6 @@
         private System.Windows.Forms.OpenFileDialog CargarImagen;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmb_emp;
+        private System.Windows.Forms.Button button5;
     }
 }

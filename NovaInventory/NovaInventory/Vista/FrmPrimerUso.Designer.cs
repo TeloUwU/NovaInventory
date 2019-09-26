@@ -215,7 +215,7 @@
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(187, 38);
             this.BtnGuardar.TabIndex = 7;
-            this.BtnGuardar.Text = "Guardar y Continuar";
+            this.BtnGuardar.Text = "Continuar Con el registro";
             this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
@@ -251,7 +251,7 @@
             this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDireccion.Location = new System.Drawing.Point(27, 256);
             this.TxtDireccion.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtDireccion.MaxLength = 150;
+            this.TxtDireccion.MaxLength = 25;
             this.TxtDireccion.Multiline = true;
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(531, 65);
@@ -262,7 +262,7 @@
             this.TxtLegal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtLegal.Location = new System.Drawing.Point(27, 345);
             this.TxtLegal.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtLegal.MaxLength = 75;
+            this.TxtLegal.MaxLength = 25;
             this.TxtLegal.Name = "TxtLegal";
             this.TxtLegal.Size = new System.Drawing.Size(531, 22);
             this.TxtLegal.TabIndex = 5;
@@ -272,7 +272,7 @@
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(28, 151);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCorreo.MaxLength = 45;
+            this.txtCorreo.MaxLength = 30;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(531, 22);
             this.txtCorreo.TabIndex = 2;
@@ -282,7 +282,7 @@
             this.TxtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmpresa.Location = new System.Drawing.Point(28, 95);
             this.TxtEmpresa.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtEmpresa.MaxLength = 45;
+            this.TxtEmpresa.MaxLength = 15;
             this.TxtEmpresa.Name = "TxtEmpresa";
             this.TxtEmpresa.Size = new System.Drawing.Size(531, 22);
             this.TxtEmpresa.TabIndex = 1;
@@ -400,7 +400,7 @@
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1098, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1121, 27);
             this.toolStrip1.TabIndex = 47;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -439,7 +439,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 572);
+            this.ClientSize = new System.Drawing.Size(1121, 572);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.grpContactos);
             this.Controls.Add(this.grpEmpresa);

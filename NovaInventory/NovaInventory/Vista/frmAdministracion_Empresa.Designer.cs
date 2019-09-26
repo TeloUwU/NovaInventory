@@ -31,11 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministracion_Empresa));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtid_Empresa_Modificacion = new System.Windows.Forms.TextBox();
-            this.BtnGuardar_Gestor = new System.Windows.Forms.Button();
             this.BtnExaminar_Gestor = new System.Windows.Forms.Button();
             this.TxtDireccion_Gestor = new System.Windows.Forms.TextBox();
             this.TxtLegal_Gestor = new System.Windows.Forms.TextBox();
@@ -81,11 +79,9 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txtid_Empresa_Modificacion);
-            this.panel2.Controls.Add(this.BtnGuardar_Gestor);
             this.panel2.Controls.Add(this.BtnExaminar_Gestor);
             this.panel2.Controls.Add(this.pbLogo_Gestor);
             this.panel2.Controls.Add(this.TxtDireccion_Gestor);
@@ -106,18 +102,6 @@
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(408, 393);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 38);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Eliminar Empresa";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DarkCyan;
@@ -125,7 +109,7 @@
             this.button2.Location = new System.Drawing.Point(278, 393);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 38);
+            this.button2.Size = new System.Drawing.Size(211, 38);
             this.button2.TabIndex = 9;
             this.button2.Text = "Modificar Empresa";
             this.button2.UseVisualStyleBackColor = false;
@@ -135,10 +119,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Goldenrod;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(148, 393);
+            this.button1.Location = new System.Drawing.Point(45, 393);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 38);
+            this.button1.Size = new System.Drawing.Size(207, 38);
             this.button1.TabIndex = 8;
             this.button1.Text = "Revisar Empresa";
             this.button1.UseVisualStyleBackColor = false;
@@ -151,23 +135,6 @@
             this.txtid_Empresa_Modificacion.Size = new System.Drawing.Size(30, 20);
             this.txtid_Empresa_Modificacion.TabIndex = 70;
             this.txtid_Empresa_Modificacion.Visible = false;
-            // 
-            // BtnGuardar_Gestor
-            // 
-            this.BtnGuardar_Gestor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnGuardar_Gestor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.BtnGuardar_Gestor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.BtnGuardar_Gestor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardar_Gestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar_Gestor.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar_Gestor.Location = new System.Drawing.Point(10, 393);
-            this.BtnGuardar_Gestor.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnGuardar_Gestor.Name = "BtnGuardar_Gestor";
-            this.BtnGuardar_Gestor.Size = new System.Drawing.Size(116, 38);
-            this.BtnGuardar_Gestor.TabIndex = 7;
-            this.BtnGuardar_Gestor.Text = "Agregar Empresa";
-            this.BtnGuardar_Gestor.UseVisualStyleBackColor = false;
-            this.BtnGuardar_Gestor.Click += new System.EventHandler(this.BtnGuardar_Gestor_Click);
             // 
             // BtnExaminar_Gestor
             // 
@@ -471,7 +438,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button BtnGuardar_Gestor;
         private System.Windows.Forms.Button BtnExaminar_Gestor;
         private System.Windows.Forms.PictureBox pbLogo_Gestor;
         private System.Windows.Forms.TextBox TxtDireccion_Gestor;
@@ -496,6 +462,5 @@
         private System.Windows.Forms.OpenFileDialog cargar_imagen;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
     }
 }

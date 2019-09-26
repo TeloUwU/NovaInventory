@@ -110,6 +110,7 @@
             this.txtContraseña_Root.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtContraseña_Root.Location = new System.Drawing.Point(126, 184);
             this.txtContraseña_Root.Name = "txtContraseña_Root";
+            this.txtContraseña_Root.PasswordChar = '*';
             this.txtContraseña_Root.ShortcutsEnabled = false;
             this.txtContraseña_Root.Size = new System.Drawing.Size(123, 20);
             this.txtContraseña_Root.TabIndex = 2;

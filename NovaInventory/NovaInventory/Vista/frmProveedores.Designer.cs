@@ -50,6 +50,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_creado_por = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -147,6 +151,7 @@
             // 
             this.txtnombre.Location = new System.Drawing.Point(21, 61);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtnombre.MaxLength = 15;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(216, 20);
             this.txtnombre.TabIndex = 1;
@@ -164,6 +169,7 @@
             // 
             this.txtRubro.Location = new System.Drawing.Point(21, 107);
             this.txtRubro.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRubro.MaxLength = 25;
             this.txtRubro.Name = "txtRubro";
             this.txtRubro.Size = new System.Drawing.Size(216, 20);
             this.txtRubro.TabIndex = 2;
@@ -264,6 +270,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(23, 266);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -273,11 +280,54 @@
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // id
+            // 
+            this.id.Location = new System.Drawing.Point(719, 24);
+            this.id.Margin = new System.Windows.Forms.Padding(2);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(26, 20);
+            this.id.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(285, 130);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 23);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Creado por";
+            // 
+            // txt_creado_por
+            // 
+            this.txt_creado_por.Location = new System.Drawing.Point(289, 156);
+            this.txt_creado_por.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_creado_por.Name = "txt_creado_por";
+            this.txt_creado_por.Size = new System.Drawing.Size(216, 20);
+            this.txt_creado_por.TabIndex = 21;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(394, 17);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 31);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Prueba";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 540);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txt_creado_por);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -333,5 +383,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox id;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_creado_por;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -23,7 +23,7 @@ namespace NovaInventory.Modelo
             }
             catch (Exception EX)
             {
-                MessageBox.Show("No se puede acceder a la base de datos porfavor comunicarce  con el administrador de turno ", EX + "error unico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se puede acceder a la base de datos porfavor comunicarce  con el administrador de turno "+ EX , "error unico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
 
             }

@@ -79,6 +79,7 @@
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsuario.Location = new System.Drawing.Point(88, 120);
+            this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
@@ -89,6 +90,7 @@
             // 
             this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContraseña.Location = new System.Drawing.Point(88, 153);
+            this.txtContraseña.MaxLength = 100;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.ShortcutsEnabled = false;
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
@@ -252,6 +254,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.Load += new System.EventHandler(this.frmLogin_Load_1);
             this.toolStrip1.ResumeLayout(false);

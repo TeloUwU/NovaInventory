@@ -15,5 +15,6 @@ namespace NovaInventory.Controlador
         public string nit { get; set; }
         public string rubro { get; set; }
         public int id_estados { get; set; }
+        public string Creado_por { get; set; }
     }
 }

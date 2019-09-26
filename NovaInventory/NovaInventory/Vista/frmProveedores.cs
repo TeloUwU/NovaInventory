@@ -7,27 +7,93 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NovaInventory.Modelo;
 using NovaInventory.Controlador;
+using NovaInventory.Modelo;
+//using NovaInventory.Reportes;
 
 namespace NovaInventory.Vista
 {
     public partial class frmProveedores : Form
+
     {
-        Constructor_proveedor agregar = new Constructor_proveedor();
-        Constructor_proveedor actualizar = new Constructor_proveedor();
+        string uno = Constructor_login.nombre;
+        Constructor_proveedor agre = new Constructor_proveedor();
+        Constructor_proveedor act = new Constructor_proveedor();
         public frmProveedores()
         {
             InitializeComponent();
         }
+        void agregarpro()
+        {
+            agre.nombre = txtnombre.Text;
+            agre.nit = txtNIt.Text;
+            agre.rubro = txtRubro.Text;
+            agre.id_estados = Convert.ToInt16(cbEstado.SelectedValue.ToString());
+            agre.telefono = txtTelefono.Text;
+            agre.direccion = txtdireccion.Text;
+            agre.Creado_por = uno;
+            int retorno = Control_de_proveedores.agregar_usu(agre);
+            cbEstado.Enabled = false;
 
+        }
+        void limpro()
+        {
+            txtnombre.Clear();
+            txtRubro.Clear();
+            txtTelefono.Clear();
+            txtNIt.Clear();
+            txtdireccion.Clear();
+        }
+        void mostrar()
+        {
+            dataGridView1.DataSource = Control_de_proveedores.mostrar_pro();
+            cbEstado.Enabled = false;
+
+        }
+
+        void actuali()
+        {
+            act.id_proveedor = Convert.ToInt16(txtid_proveedor.Text);
+            act.nombre = txtnombre.Text;
+            act.direccion = txtdireccion.Text;
+            act.telefono = txtTelefono.Text;
+            act.nit = txtNIt.Text;
+            act.rubro = txtRubro.Text;
+            act.id_estados =Convert.ToInt16(cbEstado.SelectedValue.ToString());
+            Control_de_proveedores.actualizarusu(act);
+            cbEstado.Enabled = false;
+
+        }
+        void tocar()
+        {
+            int posision;
+            posision = this.dataGridView1.CurrentRow.Index;
+            txtid_proveedor.Text = this.dataGridView1[0, posision].Value.ToString();
+            txtnombre.Text = this.dataGridView1[1, posision].Value.ToString();
+            txtdireccion.Text = this.dataGridView1[2, posision].Value.ToString();
+            txtTelefono.Text = this.dataGridView1[3, posision].Value.ToString();
+            txtNIt.Text = this.dataGridView1[4, posision].Value.ToString();
+            txtRubro.Text = this.dataGridView1[5, posision].Value.ToString();
+
+            cbEstado.Enabled = true;
+
+
+        }
+        void eliminar()
+        {
+            if (MessageBox.Show("¿Esta seguro que desea eliminar el proveedor?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Control_de_proveedores.eliminar(Convert.ToInt32(txtid_proveedor.Text));
+            }
+            cbEstado.Enabled = false;
+
+        }
         private void frmProveedores_Load(object sender, EventArgs e)
         {
-            Mostrar_proveedor();
-
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
-
+            txt_creado_por.Text = uno;
+            txt_creado_por.Enabled = false;
+            cbEstado.Enabled = false;
+            mostrar();
             cbEstado.DataSource = Control_de_proveedores.cargar();
             cbEstado.DisplayMember = "Estado";
             cbEstado.ValueMember = "id_estado";
@@ -36,96 +102,41 @@ namespace NovaInventory.Vista
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            ModificarRegistro();
-            ModificarRegistro();
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnAgregar.Enabled = true;
-            Mostrar_proveedor();
-        }
-
-        public void Agregar_proveedor()
-        {
-            if (txtnombre.Text.Trim() == "" || txtRubro.Text.Trim() == "" ||
-                txtNIt.Text.Trim() == "" || txtTelefono.Text.Trim() == "" )
-            {
-                MessageBox.Show("COMPLETE TODOS LOS DATOS", "FALTA INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                agregar.nombre = txtnombre.Text;
-                agregar.rubro = txtRubro.Text;
-                agregar.nit = txtNIt.Text;
-                agregar.telefono = txtTelefono.Text;
-                int datos = Control_de_proveedores.agregar_usu(agregar);
-            }
-        }
-        public void Mostrar_proveedor()
-        {
-            dataGridView1.DataSource = Control_de_proveedores.Mostrar_proveedor();
-        }
-        public void LimpiarCampos()
-        {
-            txtid_proveedor.Clear();
-            txtnombre.Clear();
-            txtdireccion.Clear();
-            txtNIt.Clear();
-            txtRubro.Clear();
-            txtTelefono.Clear();
-        }
-        public void ModificarRegistro()
-        {
-            actualizar.id_proveedor = Convert.ToInt32(txtid_proveedor.Text);
-            actualizar.nombre = txtnombre.Text;
-            actualizar.direccion = txtdireccion.Text;
-            actualizar.nit = txtNIt.Text;
-            actualizar.rubro = txtRubro.Text;
-            actualizar.telefono = txtTelefono.Text;
-            Control_de_proveedores.Actualizar_proveedor(actualizar);
-        }
-        public void EliminarRegistro()
-        {
-            if (MessageBox.Show("¿Esta seguro que desea eliminar el registro?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Control_de_proveedores.Eliminarproveedor(Convert.ToInt32(txtid_proveedor.Text));
-            }
+            actuali();
+            limpro();
+            mostrar();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Agregar_proveedor();
-            Mostrar_proveedor();
-            LimpiarCampos();
+            agregarpro();
+            limpro();
+            mostrar();
         }
 
         private void btnVer_Click(object sender, EventArgs e)
         {
-            Mostrar_proveedor();
+            mostrar();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posicion;
-            posicion = this.dataGridView1.CurrentRow.Index;
-            txtid_proveedor.Text = this.dataGridView1[0, posicion].Value.ToString();
-            txtnombre.Text = this.dataGridView1[1, posicion].Value.ToString();
-            txtdireccion.Text = this.dataGridView1[2, posicion].Value.ToString();
-            txtNIt.Text = this.dataGridView1[3, posicion].Value.ToString();
-            txtRubro.Text = this.dataGridView1[4, posicion].Value.ToString();
-            txtTelefono.Text = this.dataGridView1[5, posicion].Value.ToString();
-            btnModificar.Enabled = true;
-            btnEliminar.Enabled = true;
-            btnAgregar.Enabled = false;
+            tocar();
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            EliminarRegistro();
-            LimpiarCampos();
-            Mostrar_proveedor();
-            btnModificar.Enabled = false;
-            btnEliminar.Enabled = false;
-            btnAgregar.Enabled = true;
+            eliminar();
+            limpro();
+            mostrar();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //reportes_prov ne = new reportes_prov();
+            //ne.Show();
+            //this.Hide();
         }
     }
 }

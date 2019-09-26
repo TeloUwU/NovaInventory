@@ -40,6 +40,7 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,6 +128,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Finalizar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -138,11 +140,20 @@
             this.label1.Text = "Porfavor llena todas las preguntas que se te indicas\r\nsi no puedes responder una " +
     "cambiala por otra \r\nllena todas las preguntas y no puedes repetir preguntas";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(154, 5);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(41, 20);
+            this.textBox5.TabIndex = 11;
+            this.textBox5.Visible = false;
+            // 
             // agregar_preguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 382);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox4);
@@ -157,6 +168,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "agregar_preguntas";
             this.Text = "agregar_preguntas";
+            this.Load += new System.EventHandler(this.agregar_preguntas_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -178,5 +190,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
