@@ -134,7 +134,7 @@ namespace NovaInventory.Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            reportes_prov ne = new reportes_prov();
+            frm_reporte_prov ne = new frm_reporte_prov();
             ne.Show();
             this.Hide();
         }

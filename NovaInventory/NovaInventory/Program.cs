@@ -1,6 +1,7 @@
 ﻿using System;
 using NovaInventory.Vista;
 using System.Windows.Forms;
+using NovaInventory.Reportes;
 
 namespace NovaInventory
 {

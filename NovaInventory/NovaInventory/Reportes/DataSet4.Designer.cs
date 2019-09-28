@@ -279,15 +279,15 @@ namespace NovaInventory.Reportes {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTableDataTable : global::System.Data.TypedTableBase<DataTableRow> {
             
-            private global::System.Data.DataColumn columnnickname;
+            private global::System.Data.DataColumn columncodigo_bodega;
             
-            private global::System.Data.DataColumn columnnombre_usuario;
+            private global::System.Data.DataColumn columnnombre_bodega;
             
-            private global::System.Data.DataColumn columnapellido_usuario;
+            private global::System.Data.DataColumn columndireccion;
             
-            private global::System.Data.DataColumn columnCorreo;
+            private global::System.Data.DataColumn columncreado_por;
             
-            private global::System.Data.DataColumn columndui;
+            private global::System.Data.DataColumn columnExpr1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -324,41 +324,41 @@ namespace NovaInventory.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nicknameColumn {
+            public global::System.Data.DataColumn codigo_bodegaColumn {
                 get {
-                    return this.columnnickname;
+                    return this.columncodigo_bodega;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombre_usuarioColumn {
+            public global::System.Data.DataColumn nombre_bodegaColumn {
                 get {
-                    return this.columnnombre_usuario;
+                    return this.columnnombre_bodega;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn apellido_usuarioColumn {
+            public global::System.Data.DataColumn direccionColumn {
                 get {
-                    return this.columnapellido_usuario;
+                    return this.columndireccion;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CorreoColumn {
+            public global::System.Data.DataColumn creado_porColumn {
                 get {
-                    return this.columnCorreo;
+                    return this.columncreado_por;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn duiColumn {
+            public global::System.Data.DataColumn Expr1Column {
                 get {
-                    return this.columndui;
+                    return this.columnExpr1;
                 }
             }
             
@@ -399,14 +399,14 @@ namespace NovaInventory.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow AddDataTableRow(string nickname, string nombre_usuario, string apellido_usuario, string Correo, string dui) {
+            public DataTableRow AddDataTableRow(int codigo_bodega, string nombre_bodega, string direccion, string creado_por, string Expr1) {
                 DataTableRow rowDataTableRow = ((DataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        nickname,
-                        nombre_usuario,
-                        apellido_usuario,
-                        Correo,
-                        dui};
+                        codigo_bodega,
+                        nombre_bodega,
+                        direccion,
+                        creado_por,
+                        Expr1};
                 rowDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableRow);
                 return rowDataTableRow;
@@ -429,35 +429,34 @@ namespace NovaInventory.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnnickname = base.Columns["nickname"];
-                this.columnnombre_usuario = base.Columns["nombre_usuario"];
-                this.columnapellido_usuario = base.Columns["apellido_usuario"];
-                this.columnCorreo = base.Columns["Correo"];
-                this.columndui = base.Columns["dui"];
+                this.columncodigo_bodega = base.Columns["codigo_bodega"];
+                this.columnnombre_bodega = base.Columns["nombre_bodega"];
+                this.columndireccion = base.Columns["direccion"];
+                this.columncreado_por = base.Columns["creado_por"];
+                this.columnExpr1 = base.Columns["Expr1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnnickname = new global::System.Data.DataColumn("nickname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnickname);
-                this.columnnombre_usuario = new global::System.Data.DataColumn("nombre_usuario", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre_usuario);
-                this.columnapellido_usuario = new global::System.Data.DataColumn("apellido_usuario", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnapellido_usuario);
-                this.columnCorreo = new global::System.Data.DataColumn("Correo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCorreo);
-                this.columndui = new global::System.Data.DataColumn("dui", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndui);
-                this.columnnickname.AllowDBNull = false;
-                this.columnnickname.MaxLength = 25;
-                this.columnnombre_usuario.AllowDBNull = false;
-                this.columnnombre_usuario.MaxLength = 50;
-                this.columnapellido_usuario.AllowDBNull = false;
-                this.columnapellido_usuario.MaxLength = 50;
-                this.columnCorreo.AllowDBNull = false;
-                this.columnCorreo.MaxLength = 150;
-                this.columndui.MaxLength = 16;
+                this.columncodigo_bodega = new global::System.Data.DataColumn("codigo_bodega", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigo_bodega);
+                this.columnnombre_bodega = new global::System.Data.DataColumn("nombre_bodega", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre_bodega);
+                this.columndireccion = new global::System.Data.DataColumn("direccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndireccion);
+                this.columncreado_por = new global::System.Data.DataColumn("creado_por", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncreado_por);
+                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr1);
+                this.columncodigo_bodega.AllowDBNull = false;
+                this.columnnombre_bodega.AllowDBNull = false;
+                this.columnnombre_bodega.MaxLength = 15;
+                this.columndireccion.AllowDBNull = false;
+                this.columndireccion.MaxLength = 20;
+                this.columncreado_por.MaxLength = 25;
+                this.columnExpr1.AllowDBNull = false;
+                this.columnExpr1.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -600,74 +599,74 @@ namespace NovaInventory.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nickname {
+            public int codigo_bodega {
                 get {
-                    return ((string)(this[this.tableDataTable.nicknameColumn]));
+                    return ((int)(this[this.tableDataTable.codigo_bodegaColumn]));
                 }
                 set {
-                    this[this.tableDataTable.nicknameColumn] = value;
+                    this[this.tableDataTable.codigo_bodegaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre_usuario {
+            public string nombre_bodega {
                 get {
-                    return ((string)(this[this.tableDataTable.nombre_usuarioColumn]));
+                    return ((string)(this[this.tableDataTable.nombre_bodegaColumn]));
                 }
                 set {
-                    this[this.tableDataTable.nombre_usuarioColumn] = value;
+                    this[this.tableDataTable.nombre_bodegaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string apellido_usuario {
+            public string direccion {
                 get {
-                    return ((string)(this[this.tableDataTable.apellido_usuarioColumn]));
+                    return ((string)(this[this.tableDataTable.direccionColumn]));
                 }
                 set {
-                    this[this.tableDataTable.apellido_usuarioColumn] = value;
+                    this[this.tableDataTable.direccionColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Correo {
-                get {
-                    return ((string)(this[this.tableDataTable.CorreoColumn]));
-                }
-                set {
-                    this[this.tableDataTable.CorreoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string dui {
+            public string creado_por {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable.duiColumn]));
+                        return ((string)(this[this.tableDataTable.creado_porColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'dui\' de la tabla \'DataTable\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'creado_por\' de la tabla \'DataTable\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable.duiColumn] = value;
+                    this[this.tableDataTable.creado_porColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsduiNull() {
-                return this.IsNull(this.tableDataTable.duiColumn);
+            public string Expr1 {
+                get {
+                    return ((string)(this[this.tableDataTable.Expr1Column]));
+                }
+                set {
+                    this[this.tableDataTable.Expr1Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetduiNull() {
-                this[this.tableDataTable.duiColumn] = global::System.Convert.DBNull;
+            public bool Iscreado_porNull() {
+                return this.IsNull(this.tableDataTable.creado_porColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcreado_porNull() {
+                this[this.tableDataTable.creado_porColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -830,11 +829,11 @@ namespace NovaInventory.Reportes.DataSet4TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTable";
-            tableMapping.ColumnMappings.Add("nickname", "nickname");
-            tableMapping.ColumnMappings.Add("nombre_usuario", "nombre_usuario");
-            tableMapping.ColumnMappings.Add("apellido_usuario", "apellido_usuario");
-            tableMapping.ColumnMappings.Add("Correo", "Correo");
-            tableMapping.ColumnMappings.Add("dui", "dui");
+            tableMapping.ColumnMappings.Add("codigo_bodega", "codigo_bodega");
+            tableMapping.ColumnMappings.Add("nombre_bodega", "nombre_bodega");
+            tableMapping.ColumnMappings.Add("direccion", "direccion");
+            tableMapping.ColumnMappings.Add("creado_por", "creado_por");
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -842,7 +841,7 @@ namespace NovaInventory.Reportes.DataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.Odbc.OdbcConnection();
-            this._connection.ConnectionString = global::NovaInventory.Properties.Settings.Default.ConnectionString;
+            this._connection.ConnectionString = global::NovaInventory.Properties.Settings.Default.ConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -851,9 +850,9 @@ namespace NovaInventory.Reportes.DataSet4TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        tb.nickname, tb.nombre_usuario, tb.apellido_usuario, tb.Correo, tb.dui
-FROM            tbusuarios tb, estado te, tipo_usuario ti, datos_empresa dp
-WHERE        tb.id_estaado = te.id_estado AND tb.id_tipo_usuarios = ti.id_tipo_usuario AND tb.empresa = dp.id_datos_empresa";
+            this._commandCollection[0].CommandText = "SELECT        tb.codigo_bodega, tb.nombre_bodega, tb.direccion, tb.creado_por, te" +
+                ".Estado AS Expr1\r\nFROM            tbbodega tb, estado te\r\nWHERE        tb.id_est" +
+                "ado = te.id_estado";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

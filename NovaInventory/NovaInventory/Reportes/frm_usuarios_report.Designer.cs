@@ -1,6 +1,6 @@
 ﻿namespace NovaInventory.Reportes
 {
-    partial class Reporte_Bodega
+    partial class frm_usuarios_report
     {
         /// <summary>
         /// Required designer variable.
@@ -31,50 +31,48 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSet1 = new NovaInventory.Reportes.DataSet1();
+            this.data_usu = new NovaInventory.Reportes.data_usu();
             this.DataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataTableTableAdapter = new NovaInventory.Reportes.DataSet1TableAdapters.DataTableTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
+            this.DataTableTableAdapter = new NovaInventory.Reportes.data_usuTableAdapters.DataTableTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.data_usu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.DocumentMapWidth = 46;
-            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Name = "usuario_report";
             reportDataSource1.Value = this.DataTableBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "NovaInventory.Reportes.Report2.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(-2, 2);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(875, 476);
+            this.reportViewer1.Size = new System.Drawing.Size(961, 504);
             this.reportViewer1.TabIndex = 0;
             // 
-            // DataSet1
+            // data_usu
             // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.data_usu.DataSetName = "data_usu";
+            this.data_usu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DataTableBindingSource
             // 
             this.DataTableBindingSource.DataMember = "DataTable";
-            this.DataTableBindingSource.DataSource = this.DataSet1;
+            this.DataTableBindingSource.DataSource = this.data_usu;
             // 
             // DataTableTableAdapter
             // 
             this.DataTableTableAdapter.ClearBeforeFill = true;
             // 
-            // Reporte_Bodega
+            // frm_usuarios_report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 476);
+            this.ClientSize = new System.Drawing.Size(955, 510);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Reporte_Bodega";
-            this.Text = "Reporte_Bodega";
-            this.Load += new System.EventHandler(this.Reporte_Bodega_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
+            this.Name = "frm_usuarios_report";
+            this.Text = "frm_usuarios_report";
+            this.Load += new System.EventHandler(this.frm_usuarios_report_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.data_usu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -84,7 +82,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource DataTableBindingSource;
-        private DataSet1 DataSet1;
-        private DataSet1TableAdapters.DataTableTableAdapter DataTableTableAdapter;
+        private data_usu data_usu;
+        private data_usuTableAdapters.DataTableTableAdapter DataTableTableAdapter;
     }
 }

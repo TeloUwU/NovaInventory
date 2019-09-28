@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Controlador;
 using NovaInventory.Modelo;
+using NovaInventory.Vista;
 
 namespace NovaInventory.Vista
 {
@@ -18,61 +19,27 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
-        string[,] ListaVenta = new string[200, 6];
-        int Fila = 0;
+        string jj = Constructor_login.nombre;
 
         private void btnCargarLista_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtIdArticulo.Text != "" && txtCantidad.Text != "" && txtNombre.Text != "" && txtPrecio.Text != "")
-                {
-                    ListaVenta[Fila, 0] = txtIdArticulo.Text;
-                    ListaVenta[Fila, 1] = txtNombre.Text;
-                    ListaVenta[Fila, 2] = txtPrecio.Text;
-                    ListaVenta[Fila, 3] = txtCantidad.Text;
-                    ListaVenta[Fila, 4] = (float.Parse(txtPrecio.Text) * float.Parse(txtCantidad.Text)).ToString();
 
-                    dgvLista.Rows.Add(ListaVenta[Fila, 0], ListaVenta[Fila, 1], ListaVenta[Fila, 2], ListaVenta[Fila, 3], ListaVenta[Fila, 4]);
-                    Fila++;
-                    txtIdArticulo.Text = txtNombre.Text = txtPrecio.Text = txtCantidad.Text = "";
-                    txtIdArticulo.Focus();
-
-                }
-            }
-            catch
-            {
-
-            }
-            CostoApagar();
-
-            txtIdArticulo.Text = "1" + txtIdArticulo.Text;
-            txtNombre.Text = "2" + "1" + txtNombre.Text;
-            txtPrecio.Text = "3";
-            txtCantidad.Text = "4";
         }
 
+        public void agregar_factura()
+        {
 
+
+        }
+     
         /// <summary>
-
+        void mostra()
+        {
+            dgvLista.DataSource = control_facturacion.mostrar_fac();
+        }
 
         public void CostoApagar()
         {
-            float CostoTotal = 0;
-            int Conteo = 0;
-
-            Conteo = dgvLista.RowCount; // se cuenta los productos y se utilisa el conteo como limite del for
-            for (int i = 0; i < Conteo; i++)
-            {
-
-                CostoTotal += float.Parse(dgvLista.Rows[i].Cells[4].Value.ToString());
-
-
-
-            }
-
-            lblCostoAPagar.Text = CostoTotal.ToString();
-            
         }
 
 
@@ -80,67 +47,28 @@ namespace NovaInventory.Vista
 
         private void frmFacturacion_Load(object sender, EventArgs e)
         {
-
+            mostra();
+            textBox3.Text = jj;
+            textBox3.Enabled = false;
         }
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-            clsFunciones.CreaTicket Ticket1 = new clsFunciones.CreaTicket();
-
-            Ticket1.TextoCentro("Empresa xxxx "); //imprime una linea de descripcion
-            Ticket1.TextoCentro("**********************************");
-
-            Ticket1.TextoIzquierda("Dirc: xxxx");
-            Ticket1.TextoIzquierda("Tel: xxxx");
-            Ticket1.TextoIzquierda("Rnc: xxxx");
-            Ticket1.TextoIzquierda("");
-            Ticket1.TextoCentro("Factura de Venta"); //imprime una linea de descripcion
-            Ticket1.TextoIzquierda("No Fac: 000");
-            Ticket1.TextoIzquierda("Fecha:" + DateTime.Now.ToShortDateString() + " Hora:" + DateTime.Now.ToShortTimeString());
-            Ticket1.TextoIzquierda("Le Atendio: xxxx ");///////////////////////////////////
-            Ticket1.TextoIzquierda("");
-            clsFunciones.CreaTicket.LineasGuion();
-
-            clsFunciones.CreaTicket.EncabezadoVenta();
-            clsFunciones.CreaTicket.LineasGuion();
-            foreach (DataGridViewRow r in dgvLista.Rows)
-            { //                        Nombre del articulo                Precio                                   Cantidad                                SubTotal 
-
-
-                Ticket1.AgregaArticulo(r.Cells[1].Value.ToString(), double.Parse(r.Cells[3].Value.ToString()), int.Parse(r.Cells[2].Value.ToString()), double.Parse(r.Cells[4].Value.ToString())); //imprime una linea de descripcion
-            }
-            //Ticket1.AgregaArticulo(txtNombre.Text,double.Parse (txtPrecio.Text),int.Parse (txtcantidad.Text),double.Parse( "123"));
-
-            clsFunciones.CreaTicket.LineasGuion();
-            Ticket1.AgregaTotales("Sub-Total", double.Parse("0")); // imprime linea con total
-            Ticket1.AgregaTotales("Menos Descuento", double.Parse("0")); // imprime linea con total
-            Ticket1.AgregaTotales("Mas ITBIS", double.Parse("0")); // imprime linea con total
-            Ticket1.TextoIzquierda(" ");
-            Ticket1.AgregaTotales("Total", double.Parse(lblCostoAPagar.Text)); // imprime linea con total
-            Ticket1.TextoIzquierda(" ");
-            Ticket1.AgregaTotales("Efectivo Entregado:", double.Parse(txtEfectivo.Text));
             
-
-
-            // Ticket1.LineasTotales(); // imprime linea 
-
-            Ticket1.TextoIzquierda(" ");
-            Ticket1.TextoCentro("**********************************");
-            Ticket1.TextoCentro("*     Gracias por preferirnos    *");
-
-            Ticket1.TextoCentro("**********************************");
-            Ticket1.TextoIzquierda(" ");
-            string impresora = "Microsoft XPS Document Writer"; //mpueden usar variable
-            Ticket1.ImprimirTiket(impresora);
-            //hasta aqui el codigo de imprimir
-
-
-            Fila = 0;
-            while (dgvLista.RowCount > 0)//limpia el dgv
-            { dgvLista.Rows.Remove(dgvLista.CurrentRow); }
-            //LBLIDnuevaFACTURA.Text = ClaseFunciones.ClsFunciones.IDNUEVAFACTURA().ToString();
-            txtIdArticulo.Text = txtNombre.Text = txtPrecio.Text = txtCantidad.Text = txtEfectivo.Text = "";
             
+        }
+      
+        CONSTRUCTORDEFACTURA actu = new CONSTRUCTORDEFACTURA();
+        void agregar()
+        {
+            CONSTRUCTORDEFACTURA agrega = new CONSTRUCTORDEFACTURA();
+
+            agrega.Cantidad = txtCantidad.Text;
+            agrega.CostoDetalle = textBox6.Text;
+            agrega.Fecha = dtPick.Text;
+            agrega.Nombre = txtNombre.Text;
+            agrega.creado_por = jj;
+            int retorno = control_facturacion.agregar_fac(agrega);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -150,57 +78,88 @@ namespace NovaInventory.Vista
 
         private void btnCargarLista_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtIdArticulo.Text != "" && txtNombre.Text != "" && txtPrecio.Text != "" && txtCantidad.Text != "")
-                {
-                    ListaVenta[Fila, 0] = txtIdArticulo.Text;
-                    ListaVenta[Fila, 1] = txtNombre.Text;
-                    ListaVenta[Fila, 2] = txtPrecio.Text;
-                    ListaVenta[Fila, 3] = txtCantidad.Text;
-                    ListaVenta[Fila, 4] = (float.Parse(txtPrecio.Text) * float.Parse(txtCantidad.Text)).ToString();
+            double r, n1, n2;
 
-                    dgvLista.Rows.Add(ListaVenta[Fila, 0], ListaVenta[Fila, 1], ListaVenta[Fila, 2], ListaVenta[Fila, 3], ListaVenta[Fila, 4]);
+            n1 = Convert.ToInt16(textBox6.Text);
+            n2 = Convert.ToInt16(txtCantidad.Text);
+            r = (n1 * n2);
+            lblCostoAPagar.Text = Convert.ToString(r);
 
-                    Fila++;
-                    txtIdArticulo.Text = txtNombre.Text = txtPrecio.Text = txtCantidad.Text = "";
-
-                    txtIdArticulo.Focus();
-                }
-            }
-            catch
-            {
-
-
-            }
-            CostoApagar();
-
-            txtIdArticulo.Text = "1" + txtIdArticulo.Text;
-            txtNombre.Text = "2" + "1" + txtNombre.Text;
-            txtPrecio.Text = "3";
-            txtCantidad.Text = "4";
-        }
-
-        public void CostoAPagar()
-        {
-            float CostoTotal = 0;
-            int Conteo = 0;
-
-            Conteo = dgvLista.RowCount;
-
-            for (int i = 0; i < Conteo; i++)
-            {
-                CostoTotal += float.Parse(dgvLista.Rows[i].Cells[4].Value.ToString());
-
-
-            }
-            lblCostoAPagar.Text = CostoTotal.ToString();
+            agregar();
 
         }
 
         private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        
+        void actualizar()
+        {
+            actu.id_factura = Convert.ToInt16(textBox2.Text);
+            actu.Nombre = txtNombre.Text;
+            actu.CostoDetalle = textBox6.Text;
+            actu.Cantidad = txtCantidad.Text;
+            actu.Fecha = dtPick.Text;
+            actu.creado_por = textBox3.Text;
+            actu.id_estado = Convert.ToInt16(cbEstado_Fac.SelectedValue);
+            control_facturacion.actualizarfac(actu);
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            actualizar();
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        void toca()
+        {
+            int posision;
+            posision = this.dgvLista.CurrentRow.Index;
+            textBox2.Text = this.dgvLista[0, posision].Value.ToString();
+            txtNombre.Text = this.dgvLista[1, posision].Value.ToString();
+            txtCantidad.Text = this.dgvLista[3, posision].Value.ToString();
+            cbEstado_Fac.Text = Convert.ToString(this.dgvLista[5, posision].Value.ToString());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmInventarioExistencias frm = new frmInventarioExistencias();
+            frm.Show();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        void eliminar()
+        {
+            if (MessageBox.Show("¿Esta seguro que desea eliminar el detalle?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                control_facturacion.eliminar(Convert.ToInt32(txtIdArticulo.Text));
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            eliminar();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvLista_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            toca();
         }
     }
     }

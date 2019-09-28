@@ -49,6 +49,8 @@ namespace NovaInventory.Vista
             string imagen = Convert.ToBase64String(aByte);
             agregar.Foto_usuario = imagen;
             int retorno = Funciones_usuarios.agregar_usu(agregar);
+            MessageBox.Show("La contraseña Por defecto es: ", txtUsuario.Text + 2019);
+         
 
 
         }
@@ -189,6 +191,8 @@ namespace NovaInventory.Vista
             cmb_emp.DataSource = Funciones_usuarios.cargar1();
             cmb_emp.DisplayMember = "nombre";
             cmb_emp.ValueMember = "id_datos_empresa";
+
+            this.dgvMostrar_Usuarios.Columns[0*0].Visible = false;
         }
 
         private void cbEstado_Usuario_SelectedIndexChanged(object sender, EventArgs e)
@@ -198,7 +202,7 @@ namespace NovaInventory.Vista
 
         private void button5_Click(object sender, EventArgs e)
         {
-            reporte_usu mm = new reporte_usu();
+            frm_usuarios_report mm = new frm_usuarios_report();
             mm.Show();
             this.Hide();
         }

@@ -1,6 +1,6 @@
 ﻿namespace NovaInventory.Reportes
 {
-    partial class reporte_usu
+    partial class frm_bodega
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet4 = new NovaInventory.Reportes.DataSet4();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dataSet41 = new NovaInventory.Reportes.DataSet4();
             this.DataTableTableAdapter = new NovaInventory.Reportes.DataSet4TableAdapters.DataTableTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet41)).BeginInit();
             this.SuspendLayout();
             // 
             // DataTableBindingSource
@@ -52,53 +53,46 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.DataTableBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource1.Name = "data_bodega";
+            reportDataSource1.Value = this.DataTableBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "NovaInventory.Reportes.Report3.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1047, 476);
+            this.reportViewer1.Size = new System.Drawing.Size(965, 488);
             this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
+            // dataSet41
+            // 
+            this.dataSet41.DataSetName = "DataSet4";
+            this.dataSet41.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DataTableTableAdapter
             // 
             this.DataTableTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(291, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Reporte de Usuarios";
-            // 
-            // reporte_usu
+            // frm_bodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 476);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(965, 488);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "reporte_usu";
-            this.Text = "reporte_usu";
-            this.Load += new System.EventHandler(this.reporte_usu_Load);
+            this.Name = "frm_bodega";
+            this.Text = "frm_bodega";
+            this.Load += new System.EventHandler(this.frm_bodega_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet41)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private DataSet4 dataSet41;
         private System.Windows.Forms.BindingSource DataTableBindingSource;
         private DataSet4 DataSet4;
         private DataSet4TableAdapters.DataTableTableAdapter DataTableTableAdapter;
-        private System.Windows.Forms.Label label1;
     }
 }

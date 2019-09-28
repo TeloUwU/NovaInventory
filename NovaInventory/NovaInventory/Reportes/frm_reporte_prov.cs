@@ -10,25 +10,21 @@ using System.Windows.Forms;
 
 namespace NovaInventory.Reportes
 {
-    public partial class reporte_usu : Form
+    public partial class frm_reporte_prov : Form
     {
-        public reporte_usu()
+        public frm_reporte_prov()
         {
             InitializeComponent();
         }
 
-        private void reporte_usu_Load(object sender, EventArgs e)
+        private void frm_reporte_prov_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'DataSet1.tbProveedor' Puede moverla o quitarla según sea necesario.
+            this.tbProveedorTableAdapter.Fill(this.DataSet1.tbProveedor);
             // TODO: esta línea de código carga datos en la tabla 'DataSet4.DataTable' Puede moverla o quitarla según sea necesario.
             this.DataTableTableAdapter.Fill(this.DataSet4.DataTable);
 
             this.reportViewer1.RefreshReport();
-        }
-
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
-
         }
     }
 }

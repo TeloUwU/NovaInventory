@@ -51,7 +51,7 @@
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -66,6 +66,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="zxing">
+      <HintPath>..\..\..\..\..\..\Desktop\zxing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\Conexion.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="Controlador\clsFunciones.cs" />
     <Compile Include="Controlador\constructor de respuestas.cs" />
     <Compile Include="Controlador\constructor preguntas.cs" />
+    <Compile Include="Controlador\CONSTRUCTORDEFACTURA.cs" />
     <Compile Include="Controlador\constructorecuperacion.cs" />
     <Compile Include="Controlador\ConstructorExistencias_Inventario.cs" />
     <Compile Include="Controlador\constructorFacturacion.cs" />
@@ -95,11 +99,14 @@
     <Compile Include="Modelo\Control de proveedores.cs" />
     <Compile Include="Modelo\control_de_bodega.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
+    <Compile Include="Modelo\control_facturacion.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
     <Compile Include="Modelo\CrudExistenciaInvent.cs" />
     <Compile Include="Modelo\Crud_de_tres.cs" />
+    <Compile Include="Modelo\Funciones_facturacion.cs" />
     <Compile Include="Modelo\Funciones_producto.cs" />
     <Compile Include="Modelo\Funciones_usuarios.cs" />
+    <Compile Include="Modelo\inventario.cs" />
     <Compile Include="Modelo\preguntas y respuestas.cs" />
     <Compile Include="Modelo\prueba.cs" />
     <Compile Include="Modelo\validar_login.cs" />
@@ -117,31 +124,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet4.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\DataSet_proveedor.cs">
-      <DependentUpon>DataSet_proveedor.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\DataSet_proveedor.Designer.cs">
+    <Compile Include="Reportes\data_usu.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet_proveedor.xsd</DependentUpon>
+      <DependentUpon>data_usu.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\reportes_prov.cs">
+    <Compile Include="Reportes\frm_bodega.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\reportes_prov.Designer.cs">
-      <DependentUpon>reportes_prov.cs</DependentUpon>
+    <Compile Include="Reportes\frm_bodega.Designer.cs">
+      <DependentUpon>frm_bodega.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Reporte_Bodega.cs">
+    <Compile Include="Reportes\frm_reporte_prov.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\Reporte_Bodega.Designer.cs">
-      <DependentUpon>Reporte_Bodega.cs</DependentUpon>
+    <Compile Include="Reportes\frm_reporte_prov.Designer.cs">
+      <DependentUpon>frm_reporte_prov.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\reporte_usu.cs">
+    <Compile Include="Reportes\frm_usuarios_report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\reporte_usu.Designer.cs">
-      <DependentUpon>reporte_usu.cs</DependentUpon>
+    <Compile Include="Reportes\frm_usuarios_report.Designer.cs">
+      <DependentUpon>frm_usuarios_report.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\agregar_preguntas.cs">
       <SubType>Form</SubType>
@@ -154,6 +158,12 @@
     </Compile>
     <Compile Include="Vista\frmCategoria.Designer.cs">
       <DependentUpon>frmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmGenerarQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmGenerarQR.Designer.cs">
+      <DependentUpon>frmGenerarQR.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmInventarioExistencias.cs">
       <SubType>Form</SubType>
@@ -309,18 +319,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\frm_bodega.resx">
+      <DependentUpon>frm_bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frm_reporte_prov.resx">
+      <DependentUpon>frm_reporte_prov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frm_usuarios_report.resx">
+      <DependentUpon>frm_usuarios_report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
-    <EmbeddedResource Include="Reportes\reportes_prov.resx">
-      <DependentUpon>reportes_prov.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Reporte_Bodega.resx">
-      <DependentUpon>Reporte_Bodega.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\reporte_usu.resx">
-      <DependentUpon>reporte_usu.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Report4.rdlc" />
     <EmbeddedResource Include="Vista\agregar_preguntas.resx">
       <DependentUpon>agregar_preguntas.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmFacturacion.resx">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmGenerarQR.resx">
+      <DependentUpon>frmGenerarQR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmInventarioExistencias.resx">
       <DependentUpon>frmInventarioExistencias.cs</DependentUpon>
@@ -435,16 +449,16 @@
     <None Include="Reportes\DataSet4.xss">
       <DependentUpon>DataSet4.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\DataSet_proveedor.xsc">
-      <DependentUpon>DataSet_proveedor.xsd</DependentUpon>
+    <None Include="Reportes\data_usu.xsc">
+      <DependentUpon>data_usu.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\DataSet_proveedor.xsd">
+    <None Include="Reportes\data_usu.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet_proveedor.Designer.cs</LastGenOutput>
+      <LastGenOutput>data_usu.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reportes\DataSet_proveedor.xss">
-      <DependentUpon>DataSet_proveedor.xsd</DependentUpon>
+    <None Include="Reportes\data_usu.xss">
+      <DependentUpon>data_usu.xsd</DependentUpon>
     </None>
     <None Include="Resources\delete_sign_48px.png" />
   </ItemGroup>
@@ -546,6 +560,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\portada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AvRicaldone.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

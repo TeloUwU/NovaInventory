@@ -20,7 +20,7 @@ namespace NovaInventory.Vista
             InitializeComponent();
         }
        
-        string jj = Constructor_login.usuario;
+        string jj = Constructor_login.nombre;
         Constructor_bodega actu = new Constructor_bodega();
         void agre()
         {
@@ -150,7 +150,7 @@ namespace NovaInventory.Vista
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Reporte_Bodega ny = new Reporte_Bodega();
+            frm_bodega ny = new frm_bodega();
             ny.Show();
             this.Hide();
         }
