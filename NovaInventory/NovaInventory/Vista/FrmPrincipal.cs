@@ -447,9 +447,9 @@ namespace NovaInventory.Vista
             hide_con();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<frmGenerarQR>();
-        }
+        //private void pictureBox3_Click(object sender, EventArgs e)
+        //{
+        //    AbrirFormulario<frmGenerarQR>();
+        //}
     }
 }

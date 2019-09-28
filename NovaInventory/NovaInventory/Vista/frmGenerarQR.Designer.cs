@@ -11,14 +11,14 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing && (components != null))
+        //    {
+        //        components.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
 
         #region Windows Form Designer generated code
 
@@ -150,29 +150,29 @@
             // 
             // frmGenerarQR
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 453);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnguardar);
-            this.Controls.Add(this.btnabrir);
-            this.Controls.Add(this.txtnombre);
-            this.Controls.Add(this.txtmostrar);
-            this.Controls.Add(this.pbgenerar);
-            this.Controls.Add(this.pbmostrararchivo);
-            this.Controls.Add(this.toolStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmGenerarQR";
-            this.Text = "frmGenerarQR";
-            this.Load += new System.EventHandler(this.frmGenerarQR_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbmostrararchivo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbgenerar)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.ClientSize = new System.Drawing.Size(736, 453);
+            //this.Controls.Add(this.label3);
+            //this.Controls.Add(this.label2);
+            //this.Controls.Add(this.label1);
+            //this.Controls.Add(this.btnguardar);
+            //this.Controls.Add(this.btnabrir);
+            //this.Controls.Add(this.txtnombre);
+            //this.Controls.Add(this.txtmostrar);
+            //this.Controls.Add(this.pbgenerar);
+            //this.Controls.Add(this.pbmostrararchivo);
+            //this.Controls.Add(this.toolStrip1);
+            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //this.Name = "frmGenerarQR";
+            //this.Text = "frmGenerarQR";
+            //this.Load += new System.EventHandler(this.frmGenerarQR_Load);
+            //this.toolStrip1.ResumeLayout(false);
+            //this.toolStrip1.PerformLayout();
+            //((System.ComponentModel.ISupportInitialize)(this.pbmostrararchivo)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pbgenerar)).EndInit();
+            //this.ResumeLayout(false);
+            //this.PerformLayout();
 
         }
 
