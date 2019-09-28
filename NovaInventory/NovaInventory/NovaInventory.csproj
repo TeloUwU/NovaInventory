@@ -75,6 +75,7 @@
     <Compile Include="Controlador\constructor de respuestas.cs" />
     <Compile Include="Controlador\constructor preguntas.cs" />
     <Compile Include="Controlador\constructorecuperacion.cs" />
+    <Compile Include="Controlador\ConstructorExistencias_Inventario.cs" />
     <Compile Include="Controlador\constructorFacturacion.cs" />
     <Compile Include="Controlador\Constructor_bodega.cs" />
     <Compile Include="Controlador\Constructor_empresa.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Modelo\control_de_bodega.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
+    <Compile Include="Modelo\CrudExistenciaInvent.cs" />
     <Compile Include="Modelo\Crud_de_tres.cs" />
     <Compile Include="Modelo\Funciones_producto.cs" />
     <Compile Include="Modelo\Funciones_usuarios.cs" />

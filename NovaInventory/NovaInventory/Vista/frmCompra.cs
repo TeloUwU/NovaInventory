@@ -19,6 +19,10 @@ namespace NovaInventory.Vista
         constructor_Compra agregar = new constructor_Compra();
 
         constructor_Compra actualizar = new constructor_Compra();
+
+        ConstructorExistencias_Inventario Ingr = new ConstructorExistencias_Inventario();
+
+        ConstructorExistencias_Inventario Act = new ConstructorExistencias_Inventario();
         public frmCompra()
         {
             InitializeComponent();
@@ -190,6 +194,13 @@ namespace NovaInventory.Vista
             cbModelo_Compra.ValueMember = "modelo";
         }
 
+        private void CargarBodega()
+        {
+            cbBodega.DataSource = crudCompra.Bodega();
+            cbBodega.DisplayMember = "id_bodega";
+            cbBodega.ValueMember = "bodegas";
+        }
+
         public void AgregarCompra()
         {
             if ( cbProveedor_Compra.Text.Trim() == "" || cbProducto_Compra.Text.Trim() == "" || txtPrecio_Unitario.Text.Trim() == "" ||
@@ -215,6 +226,38 @@ namespace NovaInventory.Vista
             }
         }
 
+        
+        
+            int NumProd = Convert.ToInt16("SELECT cantidad FROM existencias_inventario;");
+            int PrecioUnitario = Convert.ToInt16("SELECT Precio_unitario FROM existencias_inventario;");
+            int TotalInvertido = Convert.ToInt16("SELECT Precio_total FROM existencias_inventario;");
+        
+
+
+        
+
+        public void AgregarExistencia()
+        {
+            int nuevoNumProd = Convert.ToInt16(NumProd + nUDCantidad.Value);
+            int nuevoPrecioTotal = Convert.ToInt16(TotalInvertido + txtTotal.Text);
+            string nuevoPrecio = Convert.ToString(nuevoPrecioTotal / nuevoNumProd);
+            Ingr.id_articuloss = Convert.ToInt16(txtid_articulo.Text);
+            Ingr.id_bodega = Convert.ToInt16(cbBodega.Text);
+            Ingr.serie = Convert.ToString(txtNumeroSerie.Text);
+            Ingr.cantidad = nuevoNumProd;
+            Ingr.Precio_unitario = Convert.ToInt16(nuevoPrecio);
+            Ingr.Precio_total = nuevoPrecioTotal;
+            Ingr.Desde = Convert.ToString(dtpRealización_Compra);
+
+            
+        }
+
+        public void ActualizarExistencia()
+        {
+            Act.Hasta = Convert.ToString(dtpRealización_Compra.Text);
+        }
+        
+
         private void btnAgregarCompra_Click(object sender, EventArgs e)
         {
             Proveedor();
@@ -226,6 +269,34 @@ namespace NovaInventory.Vista
             VerCompras();
         }
 
+        public int Validarproducto()
+        {
+            int retorno = 0;
+            try
+            {
+
+                MySqlCommand existe = new MySqlCommand(string.Format("SELECT id_exixtencia_inventario FROM existencias_inventario WHERE id_articuloss = '" + txtid_articulo + "';"), Conexion.obtenerconexion());
+                retorno = Convert.ToInt16(existe.ExecuteScalar());
+                if (retorno >= 1)
+                {
+                    ActualizarExistencia();
+                    AgregarExistencia();
+                }
+                else
+                {
+                    AgregarExistencia();   
+                }
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El producto no se ha ingresado ni actualizado en la base de datos" + ex, "Error Grave", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return retorno;
+            }
+        }
+
+        
+
         private void cbProducto_Compra_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -236,10 +307,7 @@ namespace NovaInventory.Vista
             Total();
         }
 
-        //public void validar_primeracompra()
-        //{
-        //    MySqlCommand validar = new MySqlCommand(string.Format(""), Conexion.obtenerconexion());
-        //}
+        
         
         
 

@@ -66,6 +66,9 @@
             this.txtPrecio_Unitario = new System.Windows.Forms.TextBox();
             this.lblUsuarioCOmpro = new System.Windows.Forms.Label();
             this.txtUsuario_queCompro = new System.Windows.Forms.TextBox();
+            this.cbBodega = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNumeroSerie = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
@@ -116,7 +119,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(324, 78);
+            this.label2.Location = new System.Drawing.Point(298, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 2;
@@ -126,7 +129,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(164, 78);
+            this.label4.Location = new System.Drawing.Point(153, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 4;
@@ -146,7 +149,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(164, 140);
+            this.label6.Location = new System.Drawing.Point(153, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 17);
             this.label6.TabIndex = 6;
@@ -156,7 +159,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(320, 140);
+            this.label7.Location = new System.Drawing.Point(294, 140);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 17);
             this.label7.TabIndex = 7;
@@ -166,7 +169,7 @@
             // 
             this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(323, 160);
+            this.txtTotal.Location = new System.Drawing.Point(297, 160);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(121, 22);
@@ -189,7 +192,7 @@
             this.cbProducto_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbProducto_Compra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProducto_Compra.FormattingEnabled = true;
-            this.cbProducto_Compra.Location = new System.Drawing.Point(167, 97);
+            this.cbProducto_Compra.Location = new System.Drawing.Point(156, 97);
             this.cbProducto_Compra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbProducto_Compra.Name = "cbProducto_Compra";
             this.cbProducto_Compra.Size = new System.Drawing.Size(121, 24);
@@ -201,7 +204,7 @@
             this.cbModelo_Compra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbModelo_Compra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbModelo_Compra.FormattingEnabled = true;
-            this.cbModelo_Compra.Location = new System.Drawing.Point(327, 97);
+            this.cbModelo_Compra.Location = new System.Drawing.Point(301, 97);
             this.cbModelo_Compra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbModelo_Compra.Name = "cbModelo_Compra";
             this.cbModelo_Compra.Size = new System.Drawing.Size(121, 24);
@@ -220,7 +223,7 @@
             // monthCalendar1
             // 
             this.monthCalendar1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.monthCalendar1.Location = new System.Drawing.Point(701, 97);
+            this.monthCalendar1.Location = new System.Drawing.Point(742, 107);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
             // 
@@ -287,18 +290,18 @@
             // txtDescripción
             // 
             this.txtDescripción.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDescripción.Location = new System.Drawing.Point(483, 160);
+            this.txtDescripción.Location = new System.Drawing.Point(449, 160);
             this.txtDescripción.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripción.Multiline = true;
             this.txtDescripción.Name = "txtDescripción";
-            this.txtDescripción.Size = new System.Drawing.Size(205, 78);
+            this.txtDescripción.Size = new System.Drawing.Size(170, 78);
             this.txtDescripción.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(480, 140);
+            this.label8.Location = new System.Drawing.Point(446, 140);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 17);
             this.label8.TabIndex = 15;
@@ -308,7 +311,7 @@
             // 
             this.txtNum_factura.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNum_factura.Enabled = false;
-            this.txtNum_factura.Location = new System.Drawing.Point(15, 218);
+            this.txtNum_factura.Location = new System.Drawing.Point(870, 64);
             this.txtNum_factura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNum_factura.Name = "txtNum_factura";
             this.txtNum_factura.Size = new System.Drawing.Size(121, 22);
@@ -322,15 +325,15 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(12, 198);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 17);
+            this.label9.Size = new System.Drawing.Size(143, 17);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Numero de Factura";
+            this.label9.Text = "Bodega Contenedora";
             // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(480, 78);
+            this.label10.Location = new System.Drawing.Point(446, 78);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(93, 17);
             this.label10.TabIndex = 18;
@@ -373,7 +376,7 @@
             this.cbTipo_Pago.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbTipo_Pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipo_Pago.FormattingEnabled = true;
-            this.cbTipo_Pago.Location = new System.Drawing.Point(483, 97);
+            this.cbTipo_Pago.Location = new System.Drawing.Point(449, 97);
             this.cbTipo_Pago.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbTipo_Pago.Name = "cbTipo_Pago";
             this.cbTipo_Pago.Size = new System.Drawing.Size(121, 24);
@@ -432,7 +435,7 @@
             // txtPrecio_Unitario
             // 
             this.txtPrecio_Unitario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPrecio_Unitario.Location = new System.Drawing.Point(167, 160);
+            this.txtPrecio_Unitario.Location = new System.Drawing.Point(156, 160);
             this.txtPrecio_Unitario.Name = "txtPrecio_Unitario";
             this.txtPrecio_Unitario.Size = new System.Drawing.Size(121, 22);
             this.txtPrecio_Unitario.TabIndex = 24;
@@ -443,7 +446,7 @@
             // 
             this.lblUsuarioCOmpro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblUsuarioCOmpro.AutoSize = true;
-            this.lblUsuarioCOmpro.Location = new System.Drawing.Point(164, 198);
+            this.lblUsuarioCOmpro.Location = new System.Drawing.Point(153, 198);
             this.lblUsuarioCOmpro.Name = "lblUsuarioCOmpro";
             this.lblUsuarioCOmpro.Size = new System.Drawing.Size(199, 17);
             this.lblUsuarioCOmpro.TabIndex = 25;
@@ -453,17 +456,45 @@
             // txtUsuario_queCompro
             // 
             this.txtUsuario_queCompro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtUsuario_queCompro.Location = new System.Drawing.Point(167, 218);
+            this.txtUsuario_queCompro.Location = new System.Drawing.Point(156, 218);
             this.txtUsuario_queCompro.Name = "txtUsuario_queCompro";
             this.txtUsuario_queCompro.Size = new System.Drawing.Size(281, 22);
             this.txtUsuario_queCompro.TabIndex = 26;
             this.txtUsuario_queCompro.Visible = false;
+            // 
+            // cbBodega
+            // 
+            this.cbBodega.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBodega.FormattingEnabled = true;
+            this.cbBodega.Location = new System.Drawing.Point(15, 218);
+            this.cbBodega.Name = "cbBodega";
+            this.cbBodega.Size = new System.Drawing.Size(121, 24);
+            this.cbBodega.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(592, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 17);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Numero de Serie";
+            // 
+            // txtNumeroSerie
+            // 
+            this.txtNumeroSerie.Location = new System.Drawing.Point(595, 99);
+            this.txtNumeroSerie.Name = "txtNumeroSerie";
+            this.txtNumeroSerie.Size = new System.Drawing.Size(100, 22);
+            this.txtNumeroSerie.TabIndex = 29;
             // 
             // frmCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 665);
+            this.Controls.Add(this.txtNumeroSerie);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbBodega);
             this.Controls.Add(this.txtUsuario_queCompro);
             this.Controls.Add(this.lblUsuarioCOmpro);
             this.Controls.Add(this.txtPrecio_Unitario);
@@ -552,5 +583,8 @@
         private System.Windows.Forms.TextBox txtPrecio_Unitario;
         private System.Windows.Forms.Label lblUsuarioCOmpro;
         private System.Windows.Forms.TextBox txtUsuario_queCompro;
+        private System.Windows.Forms.ComboBox cbBodega;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNumeroSerie;
     }
 }
