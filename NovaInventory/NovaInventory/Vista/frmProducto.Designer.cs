@@ -234,7 +234,6 @@
             this.cmb_estados.Name = "cmb_estados";
             this.cmb_estados.Size = new System.Drawing.Size(171, 21);
             this.cmb_estados.TabIndex = 4;
-            //this.cmb_estados.SelectedIndexChanged += new System.EventHandler(this.combxmarca_SelectedIndexChanged);
             // 
             // cmb_productos
             // 
@@ -256,7 +255,6 @@
             this.cmb_proveedor.Name = "cmb_proveedor";
             this.cmb_proveedor.Size = new System.Drawing.Size(171, 21);
             this.cmb_proveedor.TabIndex = 1;
-            //this.cmb_proveedor.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // Cmb_bodegas
             // 
@@ -274,6 +272,7 @@
             this.txt_serie.Name = "txt_serie";
             this.txt_serie.Size = new System.Drawing.Size(171, 20);
             this.txt_serie.TabIndex = 23;
+            this.txt_serie.TabStop = false;
             // 
             // label1
             // 

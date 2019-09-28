@@ -159,7 +159,7 @@
             this.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(24, 24);
-            this.btnCerrar.Text = "toolStripButton1";
+            this.btnCerrar.Text = "Cerrar Sistema";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnMinmizar_Login

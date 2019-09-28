@@ -61,12 +61,13 @@ namespace NovaInventory.Vista
         {
             archivoToolStripMenuItem.Visible = false;
             buscarToolStripMenuItem.Visible = true;
+            administraciónToolStripMenuItem.Visible = false; 
             inventarioToolStripMenuItem.Visible = true;
             facturaciónToolStripMenuItem.Visible = false;
             gráficosYReportesToolStripMenuItem.Visible = false;
-            button11.Visible = false;
-            button12.Visible = true;
-            button14.Visible = false;
+            button11.Visible = true;
+            button12.Visible = false;
+            button14.Visible = true;
             button15.Visible = false;
 
         }
@@ -107,6 +108,10 @@ namespace NovaInventory.Vista
             configuracion();
             lblNombres_Usuario.Text = Constructor_login.nombre;
             lblApellidos_Usuario.Text = Constructor_login.apellido;
+            label2.Text= Constructor_login.nombre;
+            label4.Text = Constructor_login.apellido;
+            label5.Text = Constructor_login.usuario;
+
             if (Constructor_login.nivel == 1) 
             {
                 label1.Text = ("Root");

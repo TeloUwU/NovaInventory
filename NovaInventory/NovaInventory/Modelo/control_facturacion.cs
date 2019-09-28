@@ -19,7 +19,7 @@ namespace NovaInventory.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO facturacion(id_factura, id_usuarioos, fecha_factura, Pago_total, estaadoos) VALUES ('{0}','{1}','{2}','{3}','{4}')", add.id_factura, add.creado_por,add.Fecha,add.CostoDetalle,add.id_estado), Conexion.obtenerconexion());
+                MySqlCommand cmdagregar = new MySqlCommand(string.Format("INSERT INTO facturacion(id_usuarioos, fecha_factura, Pago_total, estaadoos) VALUES ('{0}','{1}','{2}','{3}')", add.creado_por,add.Fecha,add.CostoDetalle,add.id_estado), Conexion.obtenerconexion());
                 retorno = Convert.ToInt32(cmdagregar.ExecuteNonQuery());
                 if (retorno > 0)
                 {
@@ -60,7 +60,7 @@ namespace NovaInventory.Modelo
             try
             {
 
-                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE facturacion SET  id_factura='{0}', id_usuarioos='{1}', fecha_factura='{2}', Pago_total='{3}', estaadoos='{4}') VALUES ('{0}','{1}','{2}','{3}','{4}') WHERE id_bodega='{5}' ", upt.id_factura, upt.creado_por, upt.Fecha, upt.CostoDetalle, upt.id_estado), Conexion.obtenerconexion());
+                MySqlCommand cmdupt = new MySqlCommand(string.Format("UPDATE facturacion SET id_usuarioos='{0}', fecha_factura='{1}', Pago_total='{2}', estaadoos='{3}' WHERE id_factura='{4}' ", upt.creado_por, upt.Fecha, upt.CostoDetalle, upt.id_estado, upt.id_factura), Conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupt.ExecuteNonQuery());
                 if (true)
                 {

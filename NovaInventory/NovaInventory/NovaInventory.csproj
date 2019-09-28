@@ -329,6 +329,7 @@
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\Report4.rdlc" />
     <EmbeddedResource Include="Vista\agregar_preguntas.resx">
       <DependentUpon>agregar_preguntas.cs</DependentUpon>
     </EmbeddedResource>

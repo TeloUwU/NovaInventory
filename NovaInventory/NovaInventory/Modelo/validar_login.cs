@@ -23,6 +23,7 @@ namespace NovaInventory.Modelo
                 cmdselect.Parameters.Add(new MySqlParameter("user", Constructor_login.usuario));
                 cmdselect.Parameters.Add(new MySqlParameter("pass", log.clave));
                 retorno = Convert.ToBoolean(cmdselect.ExecuteScalar());
+             
                 if (retorno == true)
                 {
                     int estado = 1;

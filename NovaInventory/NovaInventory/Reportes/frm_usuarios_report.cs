@@ -19,6 +19,8 @@ namespace NovaInventory.Reportes
 
         private void frm_usuarios_report_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'data_usu.DataTable' Puede moverla o quitarla según sea necesario.
+            this.DataTableTableAdapter.Fill(this.data_usu.DataTable);
 
             this.reportViewer1.RefreshReport();
         }

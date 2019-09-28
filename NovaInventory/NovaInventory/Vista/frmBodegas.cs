@@ -20,7 +20,7 @@ namespace NovaInventory.Vista
             InitializeComponent();
         }
        
-        string jj = Constructor_login.usuario;
+        string jj = Constructor_login.nombre;
         Constructor_bodega actu = new Constructor_bodega();
         void agre()
         {

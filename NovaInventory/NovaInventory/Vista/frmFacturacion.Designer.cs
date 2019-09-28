@@ -48,16 +48,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.lblCostoAPagar = new System.Windows.Forms.Label();
-            this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVender = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnCerrar = new System.Windows.Forms.ToolStripButton();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,13 +62,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.dgvLista = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -287,38 +284,6 @@
             this.lblCostoAPagar.TabIndex = 11;
             this.lblCostoAPagar.Text = "0.00";
             // 
-            // dgvLista
-            // 
-            this.dgvLista.AllowUserToAddRows = false;
-            this.dgvLista.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column4,
-            this.Column5});
-            this.dgvLista.Location = new System.Drawing.Point(21, 251);
-            this.dgvLista.Name = "dgvLista";
-            this.dgvLista.Size = new System.Drawing.Size(343, 244);
-            this.dgvLista.TabIndex = 16;
-            this.dgvLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellContentClick);
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Producto";
-            this.Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Cantidad";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Pago Parcial";
-            this.Column5.Name = "Column5";
-            // 
             // btnVender
             // 
             this.btnVender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -384,6 +349,15 @@
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox6.Location = new System.Drawing.Point(100, 12);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ShortcutsEnabled = false;
+            this.textBox6.Size = new System.Drawing.Size(261, 20);
+            this.textBox6.TabIndex = 26;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -438,6 +412,7 @@
             this.button3.TabIndex = 29;
             this.button3.Text = "Consultar inventario";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox3
@@ -464,23 +439,23 @@
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
             // 
-            // textBox6
+            // dgvLista
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox6.Location = new System.Drawing.Point(100, 12);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ShortcutsEnabled = false;
-            this.textBox6.Size = new System.Drawing.Size(261, 20);
-            this.textBox6.TabIndex = 26;
+            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLista.Location = new System.Drawing.Point(21, 260);
+            this.dgvLista.Name = "dgvLista";
+            this.dgvLista.Size = new System.Drawing.Size(338, 235);
+            this.dgvLista.TabIndex = 33;
+            this.dgvLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellClick);
             // 
             // frmFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 520);
+            this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.dgvLista);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
@@ -491,7 +466,6 @@
             this.Load += new System.EventHandler(this.frmFacturacion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -499,6 +473,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,7 +495,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblCostoAPagar;
-        private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnCerrar;
@@ -533,9 +507,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -544,5 +515,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox cbEstado_Fac;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.DataGridView dgvLista;
     }
 }

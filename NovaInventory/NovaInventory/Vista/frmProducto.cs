@@ -28,16 +28,28 @@ namespace NovaInventory.Vista
 
             btnactualizar_producto.Enabled = false;
             btneliminar_producto.Enabled = false;
+            txt_serie.Enabled = false;
 
-            cargar_Estado();
-            cargar_proveedor();
-            cargar_productos();
+            cmb_proveedor.DataSource = Funciones_producto.Cargarproveedor();
+            cmb_proveedor.DisplayMember = "nombre";
+            cmb_proveedor.ValueMember = "id_proveedor";
+ 
+            cmb_estados.DataSource = Funciones_producto.Cargar_estado();
+            cmb_estados.DisplayMember = "Estado";
+            cmb_estados.ValueMember = "id_estado";
+
+            cmb_productos.DataSource = Funciones_producto.productos();
+            cmb_productos.DisplayMember = "producto";
+            cmb_productos.ValueMember = "id_producto";
+
             Cmb_bodegas.DataSource = Funciones_producto.bodega();
             Cmb_bodegas.DisplayMember = "nombre_bodega";
             Cmb_bodegas.ValueMember = "id_bodega";
+
             comboBox2.DataSource = Funciones_producto.Categoria();
             comboBox2.DisplayMember = "categoria";
             comboBox2.ValueMember = "id_categoria";
+
             comboBox1.DataSource = Funciones_producto.modelo();
             comboBox1.DisplayMember = "modelo";
             comboBox1.ValueMember = "id_modelo";
@@ -173,25 +185,7 @@ namespace NovaInventory.Vista
         {
             cmb_productos.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-        void cargar_proveedor()
-        {
-            cmb_proveedor.DataSource = Funciones_producto.Cargarproveedor();
-            cmb_proveedor.DisplayMember = "nombre";
-            cmb_proveedor.ValueMember = "id_proveedor";
-        }
-        void cargar_Estado()
-        {
-            cmb_estados.DataSource = Funciones_producto.Cargar_estado();
-            cmb_estados.DisplayMember = "Estado";
-            cmb_estados.ValueMember = "id_estado";
-        }
-        void cargar_productos()
-        {
-            cmb_productos.DataSource = Funciones_producto.productos();
-            cmb_productos.DisplayMember = "Estado";
-            cmb_productos.ValueMember = "id_estado";
-
-        }
+    
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {

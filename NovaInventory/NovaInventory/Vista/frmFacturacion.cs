@@ -19,13 +19,11 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
-        string[,] ListaVenta = new string[200, 6];
-        int Fila = 0;
-       
+        string jj = Constructor_login.nombre;
 
         private void btnCargarLista_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         public void agregar_factura()
@@ -33,9 +31,12 @@ namespace NovaInventory.Vista
 
 
         }
-
+     
         /// <summary>
-
+        void mostra()
+        {
+            dgvLista.DataSource = control_facturacion.mostrar_fac();
+        }
 
         public void CostoApagar()
         {
@@ -46,7 +47,9 @@ namespace NovaInventory.Vista
 
         private void frmFacturacion_Load(object sender, EventArgs e)
         {
-
+            mostra();
+            textBox3.Text = jj;
+            textBox3.Enabled = false;
         }
 
         private void btnVender_Click(object sender, EventArgs e)
@@ -54,7 +57,7 @@ namespace NovaInventory.Vista
             
             
         }
-        string jj = Constructor_login.usuario;
+      
         CONSTRUCTORDEFACTURA actu = new CONSTRUCTORDEFACTURA();
         void agregar()
         {
@@ -63,7 +66,7 @@ namespace NovaInventory.Vista
             agrega.Cantidad = txtCantidad.Text;
             agrega.CostoDetalle = textBox6.Text;
             agrega.Fecha = dtPick.Text;
-            agrega.Nombre = dtPick.Text;
+            agrega.Nombre = txtNombre.Text;
             agrega.creado_por = jj;
             int retorno = control_facturacion.agregar_fac(agrega);
         }
@@ -111,6 +114,15 @@ namespace NovaInventory.Vista
         {
 
         }
+        void toca()
+        {
+            int posision;
+            posision = this.dgvLista.CurrentRow.Index;
+            textBox2.Text = this.dgvLista[0, posision].Value.ToString();
+            txtNombre.Text = this.dgvLista[1, posision].Value.ToString();
+            txtCantidad.Text = this.dgvLista[3, posision].Value.ToString();
+            cbEstado_Fac.Text = Convert.ToString(this.dgvLista[5, posision].Value.ToString());
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -127,6 +139,7 @@ namespace NovaInventory.Vista
         {
 
         }
+
         void eliminar()
         {
             if (MessageBox.Show("¿Esta seguro que desea eliminar el detalle?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -142,6 +155,11 @@ namespace NovaInventory.Vista
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvLista_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            toca();
         }
     }
     }
