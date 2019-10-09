@@ -42,7 +42,7 @@
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbmostrararchivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbgenerar)).BeginInit();
-            this.SuspendLayout();
+            //this.SuspendLayout();
             // 
             // toolStrip1
             // 
@@ -63,7 +63,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            //this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // pbmostrararchivo
             // 
@@ -96,7 +96,7 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(183, 20);
             this.txtnombre.TabIndex = 4;
-            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged_1);
+            //this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged_1);
             // 
             // btnabrir
             // 
@@ -107,7 +107,7 @@
             this.btnabrir.TabIndex = 5;
             this.btnabrir.Text = "Abrir";
             this.btnabrir.UseVisualStyleBackColor = false;
-            this.btnabrir.Click += new System.EventHandler(this.btnabrir_Click_1);
+            //this.btnabrir.Click += new System.EventHandler(this.btnabrir_Click_1);
             // 
             // btnguardar
             // 
@@ -118,7 +118,7 @@
             this.btnguardar.TabIndex = 6;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = false;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click_1);
+            //this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click_1);
             // 
             // label1
             // 

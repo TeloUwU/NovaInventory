@@ -91,6 +91,11 @@
     <Compile Include="Controlador\costructor_categoria.cs" />
     <Compile Include="Controlador\costructor_modelos.cs" />
     <Compile Include="Controlador\crudCompra.cs" />
+    <Compile Include="idioma\ingles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ingles.resx</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Actualizar_Root.cs" />
     <Compile Include="Modelo\contraypreguntas.cs" />
     <Compile Include="Modelo\Control de proveedores.cs" />
@@ -304,6 +309,10 @@
     <Compile Include="Vista\recuContra_ReinicioAdmin.Designer.cs">
       <DependentUpon>recuContra_ReinicioAdmin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="idioma\ingles.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ingles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -11,10 +11,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace NovaInventory.Vista
 {
     public partial class frmCompra : Form
     {
+        public static int idiom;
 
         constructor_Compra agregar = new constructor_Compra();
 
@@ -23,15 +25,23 @@ namespace NovaInventory.Vista
         ConstructorExistencias_Inventario Ingr = new ConstructorExistencias_Inventario();
 
         ConstructorExistencias_Inventario Act = new ConstructorExistencias_Inventario();
+
+
+
+
         public frmCompra()
         {
             InitializeComponent();
         }
 
+
+
+
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
+    
 
         private void frmCompra_Load(object sender, EventArgs e)
         {
@@ -315,6 +325,23 @@ namespace NovaInventory.Vista
         {
             
         }
+
+        //void CambiarIdioma()
+        //{
+        //    lblatraducir.Text = carpetaconTraducciónes.lbltraducido;
+        //}
+
+        public static int idioma = 0;
+
+        //FormaDeCambiarIdioma
+        //{
+        //    idioma = 1;
+        //    if ()
+	       // {
+               
+	       // }
+        //    CambiarIdioma();
+        //}
             
         public void Total()
         {
@@ -425,6 +452,19 @@ namespace NovaInventory.Vista
         private void txtPrecio_Unitario_TextChanged(object sender, EventArgs e)
         {
             Total();
+        }
+
+        private void chkcompras_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkcompras.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
         }
     }
 }

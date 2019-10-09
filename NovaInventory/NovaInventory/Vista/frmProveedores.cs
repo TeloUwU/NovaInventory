@@ -19,6 +19,7 @@ namespace NovaInventory.Vista
         string uno = Constructor_login.nombre;
         Constructor_proveedor agre = new Constructor_proveedor();
         Constructor_proveedor act = new Constructor_proveedor();
+        public static int idiom;
         public frmProveedores()
         {
             InitializeComponent();
@@ -88,6 +89,50 @@ namespace NovaInventory.Vista
             cbEstado.Enabled = false;
 
         }
+
+        public void ingles()
+        {
+
+            if (idiom == 1)
+            {
+                toolStripButton1.Text = idioma.ingles.toolStripButton1;
+                label1.Text = idioma.ingles.nombre_proveedor;
+                label4.Text = idioma.ingles.label4;
+                button1.Text = idioma.ingles.button1;
+                chkEnglish_proveedor.Text = idioma.ingles.chkEnglish_proveedor;
+                toolStripButton2.Text = idioma.ingles.toolStripButton2;
+                label5.Text = idioma.ingles.label5;
+                label6.Text = idioma.ingles.label6;
+                label2.Text = idioma.ingles.Dirección;
+                label3.Text = idioma.ingles.label3;
+                label7.Text = idioma.ingles.label7;
+                btnAgregar.Text = idioma.ingles.btnAgregar;
+                btnVer.Text = idioma.ingles.btnVer;
+                btnModificar.Text = idioma.ingles.btnModificar;
+                btnEliminar.Text = idioma.ingles.btnEliminar;
+
+            }
+            else
+            {
+                toolStripButton1.Text = ("Gestion de Proveedores");
+                label1.Text = ("Nombre Proveedor:");
+                label4.Text = ("NIT:");
+                button1.Text = ("Reporte");
+                chkEnglish_proveedor.Text = ("English Language");
+                toolStripButton2.Text = ("Cerrar Formulario");
+                label5.Text = ("Rubro");
+                label6.Text = ("Estado:");
+                label2.Text = ("Dirección:");
+                label3.Text = ("Telefono");
+                label7.Text = ("Creado Por");
+                btnAgregar.Text = ("Agregar Proveedor");
+                btnVer.Text = ("Ver Proveedor ");
+                btnModificar.Text = ("Modificar Proveedor");
+                btnEliminar.Text = ("Eliminar Proveedor");
+            }
+
+        }
+
         private void frmProveedores_Load(object sender, EventArgs e)
         {
             txt_creado_por.Text = uno;
@@ -137,6 +182,19 @@ namespace NovaInventory.Vista
             frm_reporte_prov ne = new frm_reporte_prov();
             ne.Show();
             this.Hide();
+        }
+
+        private void chkEnglish_proveedor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkEnglish_proveedor.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
         }
     }
 }

@@ -14,11 +14,57 @@ namespace NovaInventory.Vista
 {
     public partial class frmProducto : Form
     {
+
         Constructor_producto agregar = new Constructor_producto();
         Constructor_producto actualizar = new Constructor_producto();
+
+        public static int idiom;
         public frmProducto()
         {
             InitializeComponent();
+        }
+
+        public void ingles()
+        {
+
+            if (idiom == 1)
+            {
+                toolStripLabel1.Text = idioma.ingles.toolStripLabel1;
+                id_proveedor.Text = idioma.ingles.id_proveedor;
+                lblfecha.Text = idioma.ingles.lblfecha;
+                lblforma_de_pago.Text = idioma.ingles.lblforma_de_pago;
+                lblcodigo_producto_seriado.Text = idioma.ingles.lblcodigo_producto_seriado;
+                id_categoria.Text = idioma.ingles.id_categoria;
+                lblproveedores.Text = idioma.ingles.lblproveedores;
+                lblprecio.Text = idioma.ingles.lblprecio;
+                label2.Text = idioma.ingles.label2;
+                label1.Text = idioma.ingles.label1;
+                btnAgregar_producto.Text = idioma.ingles.btnAgregar_producto;
+                btn_mostrar.Text = idioma.ingles.btn_mostrar;
+                btnactualizar_producto.Text = idioma.ingles.btnactualizar_producto;
+                btneliminar_producto.Text = idioma.ingles.btneliminar_producto;
+                chkenglish.Text = idioma.ingles.chkenglish;
+                
+            }
+            else
+            {
+                toolStripLabel1.Text = ("Artículos");
+                id_proveedor.Text = ("Proveedores:");
+                lblfecha.Text = ("Estado:");
+                lblforma_de_pago.Text = ("Productos");
+                lblcodigo_producto_seriado.Text = ("Bodegas");
+                id_categoria.Text = ("Categoria");
+                lblproveedores.Text = ("Codigo Artículo");
+                lblprecio.Text = ("Modelos:");
+                label2.Text = ("Marca:");
+                label1.Text = ("Seriado");
+                btnAgregar_producto.Text = ("Agregar Artículo");
+                btn_mostrar.Text = ("Mostrar Artículo");
+                btnactualizar_producto.Text = ("Actualizar Artículo");
+                btneliminar_producto.Text = ("Eliminar Artículo");
+                chkenglish.Text = ("English Language");
+            }
+
         }
 
         private void frmProducto_Load(object sender, EventArgs e)
@@ -215,6 +261,19 @@ namespace NovaInventory.Vista
         private void lblprecio_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void chkenglish_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkenglish.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
         }
     }
 }

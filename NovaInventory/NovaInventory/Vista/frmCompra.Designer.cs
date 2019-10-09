@@ -69,6 +69,7 @@
             this.cbBodega = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNumeroSerie = new System.Windows.Forms.TextBox();
+            this.chkcompras = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
@@ -487,11 +488,23 @@
             this.txtNumeroSerie.Size = new System.Drawing.Size(100, 22);
             this.txtNumeroSerie.TabIndex = 29;
             // 
+            // chkcompras
+            // 
+            this.chkcompras.AutoSize = true;
+            this.chkcompras.Location = new System.Drawing.Point(727, 2);
+            this.chkcompras.Name = "chkcompras";
+            this.chkcompras.Size = new System.Drawing.Size(144, 21);
+            this.chkcompras.TabIndex = 30;
+            this.chkcompras.Text = "English Language";
+            this.chkcompras.UseVisualStyleBackColor = true;
+            this.chkcompras.CheckedChanged += new System.EventHandler(this.chkcompras_CheckedChanged);
+            // 
             // frmCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 665);
+            this.Controls.Add(this.chkcompras);
             this.Controls.Add(this.txtNumeroSerie);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbBodega);
@@ -586,5 +599,6 @@
         private System.Windows.Forms.ComboBox cbBodega;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNumeroSerie;
+        private System.Windows.Forms.CheckBox chkcompras;
     }
 }
