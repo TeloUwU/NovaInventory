@@ -24,5 +24,10 @@ namespace NovaInventory.Vista
         {
 
         }
+
+        private void btnAgregarTelefono_Gestor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
