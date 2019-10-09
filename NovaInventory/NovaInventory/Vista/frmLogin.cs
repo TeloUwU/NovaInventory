@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using NovaInventory.idioma;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Modelo;
@@ -15,6 +16,9 @@ namespace NovaInventory.Vista
 {
     public partial class frmLogin : Form
     {
+    
+        public static int idiom;
+
         public frmLogin()
         {
             InitializeComponent();
@@ -60,6 +64,30 @@ namespace NovaInventory.Vista
 
             }
         }
+        
+        public void ingles()
+        {
+         
+            if (idiom == 1)
+            {
+                label1.Text = idioma.ingles.lgusu;
+                label2.Text = idioma.ingles.lgcontra;
+                btnIniciar_Sesion.Text = idioma.ingles.lgbtn_iniciar;
+                lklRecuperar_Contraseña.Text = idioma.ingles.lgolvide;
+                btnPrimer_Uso.Text = idioma.ingles.lgbtnprimer;
+                checingles.Text = idioma.ingles.check;
+            }
+            else
+            {
+                label1.Text = ("Usuario:");
+                label2.Text = ("Contraseña:");
+                btnIniciar_Sesion.Text = ("Iniciar Sesión");
+                lklRecuperar_Contraseña.Text = ("Olvidé Mi Contraseña");
+                btnPrimer_Uso.Text = ("Primer Uso");
+                checingles.Text=("English Language");
+            }
+
+        }
         private void frmLogin_Load(object sender, EventArgs e)
         {
             if (Validar_primer_uso.verificar_emo() == true)
@@ -88,6 +116,7 @@ namespace NovaInventory.Vista
                 btnPrimer_Uso.Visible = true;
                 lklRecuperar_Contraseña.Enabled = false;
             }
+
         }
 
 
@@ -118,16 +147,17 @@ namespace NovaInventory.Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (btnPrimer_Uso.Text == "Primer Uso")
-            {
-                FrmPrimerUso primer_uso = new FrmPrimerUso();
-                primer_uso.Show();
-                this.Hide();
-            }
-            else
+            if (btnPrimer_Uso.Text == "Primer Usuario")
             {
                 FrmPrimerUsuario primer_usuario = new FrmPrimerUsuario();
                 primer_usuario.Show();
+                this.Hide();
+              
+            }
+            else
+            {
+                FrmPrimerUso primer_uso = new FrmPrimerUso();
+                primer_uso.Show();
                 this.Hide();
             }
             
@@ -160,6 +190,8 @@ namespace NovaInventory.Vista
 
         private void frmLogin_Load_1(object sender, EventArgs e)
         {
+            
+
 
             if (Validar_primer_uso.verificar_emo() == true)
             {
@@ -188,5 +220,21 @@ namespace NovaInventory.Vista
                 lklRecuperar_Contraseña.Enabled = false;
             }
         }
+
+        private void checingles_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checingles.Checked== true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
+
+
+        }
+
     }
 }

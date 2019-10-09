@@ -15,12 +15,13 @@ namespace NovaInventory.Vista
 {
     public partial class frmBodegas : Form
     {
+        public static int idiom;
         public frmBodegas()
         {
             InitializeComponent();
         }
        
-        string jj = Constructor_login.usuario;
+        string jj = Constructor_login.nombre;
         Constructor_bodega actu = new Constructor_bodega();
         void agre()
         {
@@ -68,6 +69,47 @@ namespace NovaInventory.Vista
             txtCodigo_Bodega.Clear();
             txtNombre_Bodega.Clear();
             txtDirección.Clear();
+        }
+
+        public void ingles()
+        {
+
+            if (idiom == 1)
+            {
+                toolStripButton1.Text = idioma.ingles.Gestion_bodegas;
+                chkGestion_bodega.Text = idioma.ingles.chkenglish;
+                toolStripButton2.Text = idioma.ingles.StringCerrar;
+                label2.Text = idioma.ingles.Codigo_bodega;
+                label3.Text = idioma.ingles.estado;
+                button5.Text = idioma.ingles.Reporte;
+                label1.Text = idioma.ingles.Direccion;
+                label4.Text = idioma.ingles.Nombre;
+                fecha.Text = idioma.ingles.label6;
+                button1.Text = idioma.ingles.Agregar_bodega;
+                button2.Text = idioma.ingles.Ver_bodega;
+                button3.Text = idioma.ingles.Actualizar_bodega;
+                button4.Text = idioma.ingles.Eliminar_bodega;
+
+
+            }
+            else
+            {
+                toolStripButton1.Text = ("Gestion de Bodegas");
+                chkGestion_bodega.Text = ("English Language:");
+                toolStripButton2.Text = ("Cerrar Formulario");
+                label2.Text = ("Codigo de Bodega");
+                label3.Text = ("Estado");
+                button5.Text = ("Reporte");
+                label1.Text = ("Dirección");
+                label4.Text = ("Nombre:");
+                fecha.Text = ("Creado Por:");
+                button1.Text = ("Agregar Bodega");
+                button2.Text = ("Ver Bodega ");
+                button3.Text = ("Actualizar Bodega ");
+                button4.Text = ("Eliminar Bodega ");
+
+
+            }
         }
         private void frmBodegas_Load(object sender, EventArgs e)
         {
@@ -150,9 +192,23 @@ namespace NovaInventory.Vista
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //Reporte_Bodega ny = new Reporte_Bodega();
-            //ny.Show();
-            //this.Hide();
+            frm_bodega ny = new frm_bodega();
+            ny.Show();
+            this.Hide();
+        }
+
+        private void chkGestion_bodega_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkGestion_bodega.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
+
         }
     }
 }

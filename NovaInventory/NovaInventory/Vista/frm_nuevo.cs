@@ -21,6 +21,7 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
+        Constructor_login log;
         constructor_primer_usuario act = new constructor_primer_usuario();
         private void button1_Click(object sender, EventArgs e)
         {

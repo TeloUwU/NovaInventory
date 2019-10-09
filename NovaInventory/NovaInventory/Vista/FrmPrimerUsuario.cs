@@ -12,11 +12,14 @@ using System.Windows.Forms;
 using NovaInventory.Config;
 using NovaInventory.Controlador;
 using NovaInventory.Modelo;
+using NovaInventory.idioma;
 
 namespace NovaInventory.Vista
 {
     public partial class FrmPrimerUsuario : Form
     {
+        public static int idiom;
+
         public FrmPrimerUsuario()
         {
             InitializeComponent();
@@ -117,6 +120,19 @@ namespace NovaInventory.Vista
         {
 
         }
+        void ingles()
+        {
+            label1.Text = idioma.ingles.usu;
+            label2.Text = idioma.ingles.usua;
+            label3.Text = idioma.ingles.usufoto;
+            label4.Text = idioma.ingles.usud;
+            label5.Text = idioma.ingles.usun;
+            label6.Text = idioma.ingles.usue;
+            label15.Text = idioma.ingles.usunum;
+            label14.Text = idioma.ingles.usuC;
+            label8.Text = idioma.ingles.usut;
+            label7.Text = idioma.ingles.usue;
+        }
 
         private void FrmPrimerUsuario_Load_1(object sender, EventArgs e)
         {
@@ -201,6 +217,19 @@ namespace NovaInventory.Vista
             button2.Visible = false;
             BtnGuardar.Visible = false;
             button1.Visible = true;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checingles.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
         }
     }
 }

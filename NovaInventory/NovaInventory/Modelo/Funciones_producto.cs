@@ -107,7 +107,7 @@ namespace NovaInventory.Modelo
 
             try
             {
-                string query = "SELECT id_proveedor, CONCAT(Estado) AS Estado FROM estado";
+                string query = "SELECT id_estado, CONCAT(Estado) AS Estado FROM estado";
                 MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
                 MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);  
 
@@ -124,24 +124,21 @@ namespace NovaInventory.Modelo
         }
 
         public static DataTable Cargarproveedor()
-        {
-            DataTable data = new DataTable();
+        {      
+            DataTable datos = new DataTable();
 
             try
             {
-                string query = "SELECT id_estado, CONCAT(nombre) AS nombre FROM tbproveedor";
-                MySqlCommand cargar = new MySqlCommand(query, Conexion.obtenerconexion());
-                MySqlDataAdapter cmd = new MySqlDataAdapter(cargar);
-
-                cmd.Fill(data);
-
-                return data;
+                string query = " SELECT id_proveedor, CONCAT(nombre)AS nombre FROM tbproveedor";
+                MySqlCommand mcdquery = new MySqlCommand(query, Conexion.obtenerconexion());
+                MySqlDataAdapter adaptar = new MySqlDataAdapter(mcdquery);
+                adaptar.Fill(datos);
+                return datos;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(" " + e);
-
-                return data;
+                MessageBox.Show("oops, no se pudieron cargar los datos de la base de datos porfavor comunicarse con el programador" + ex, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return datos;
             }
         }
         public static DataTable productos()

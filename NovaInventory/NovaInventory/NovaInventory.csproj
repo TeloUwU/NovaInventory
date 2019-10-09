@@ -51,7 +51,7 @@
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -74,7 +74,9 @@
     <Compile Include="Controlador\clsFunciones.cs" />
     <Compile Include="Controlador\constructor de respuestas.cs" />
     <Compile Include="Controlador\constructor preguntas.cs" />
+    <Compile Include="Controlador\CONSTRUCTORDEFACTURA.cs" />
     <Compile Include="Controlador\constructorecuperacion.cs" />
+    <Compile Include="Controlador\ConstructorExistencias_Inventario.cs" />
     <Compile Include="Controlador\constructorFacturacion.cs" />
     <Compile Include="Controlador\Constructor_bodega.cs" />
     <Compile Include="Controlador\Constructor_empresa.cs" />
@@ -89,16 +91,24 @@
     <Compile Include="Controlador\costructor_categoria.cs" />
     <Compile Include="Controlador\costructor_modelos.cs" />
     <Compile Include="Controlador\crudCompra.cs" />
+    <Compile Include="idioma\ingles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ingles.resx</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\Actualizar_Root.cs" />
     <Compile Include="Modelo\contraypreguntas.cs" />
     <Compile Include="Modelo\Control de proveedores.cs" />
     <Compile Include="Modelo\control_de_bodega.cs" />
     <Compile Include="Modelo\control_empresa.cs" />
+    <Compile Include="Modelo\control_facturacion.cs" />
     <Compile Include="Modelo\control_usuario.cs" />
+    <Compile Include="Modelo\CrudExistenciaInvent.cs" />
     <Compile Include="Modelo\Crud_de_tres.cs" />
     <Compile Include="Modelo\Funciones_facturacion.cs" />
     <Compile Include="Modelo\Funciones_producto.cs" />
     <Compile Include="Modelo\Funciones_usuarios.cs" />
+    <Compile Include="Modelo\inventario.cs" />
     <Compile Include="Modelo\preguntas y respuestas.cs" />
     <Compile Include="Modelo\prueba.cs" />
     <Compile Include="Modelo\validar_login.cs" />
@@ -150,6 +160,10 @@
     </Compile>
     <Compile Include="Vista\frmCategoria.Designer.cs">
       <DependentUpon>frmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmGenerarQR.cs" />
+    <Compile Include="Vista\frmGenerarQR.Designer.cs">
+      <DependentUpon>frmGenerarQR.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmInventarioExistencias.cs">
       <SubType>Form</SubType>
@@ -295,6 +309,10 @@
     <Compile Include="Vista\recuContra_ReinicioAdmin.Designer.cs">
       <DependentUpon>recuContra_ReinicioAdmin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="idioma\ingles.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ingles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -317,6 +335,7 @@
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\Report4.rdlc" />
     <EmbeddedResource Include="Vista\agregar_preguntas.resx">
       <DependentUpon>agregar_preguntas.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmFacturacion.resx">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmGenerarQR.resx">
+      <DependentUpon>frmGenerarQR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmInventarioExistencias.resx">
       <DependentUpon>frmInventarioExistencias.cs</DependentUpon>
@@ -543,7 +565,9 @@
   <ItemGroup>
     <None Include="Resources\portada.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\AvRicaldone.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
