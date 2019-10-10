@@ -79,11 +79,155 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a provider.
+        /// </summary>
+        internal static string bt_pro {
+            get {
+                return ResourceManager.GetString("bt_pro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Send Email.
+        /// </summary>
+        internal static string btenviar_Correo {
+            get {
+                return ResourceManager.GetString("btenviar_Correo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a restore password.
+        /// </summary>
+        internal static string btn_adcontra {
+            get {
+                return ResourceManager.GetString("btn_adcontra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a business Administration.
+        /// </summary>
+        internal static string btn_ademp {
+            get {
+                return ResourceManager.GetString("btn_ademp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a inventory management.
+        /// </summary>
+        internal static string btn_adin {
+            get {
+                return ResourceManager.GetString("btn_adin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Users Management.
+        /// </summary>
+        internal static string btn_adusu {
+            get {
+                return ResourceManager.GetString("btn_adusu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a articles.
+        /// </summary>
+        internal static string btn_art {
+            get {
+                return ResourceManager.GetString("btn_art", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cellar.
+        /// </summary>
+        internal static string btn_bo {
+            get {
+                return ResourceManager.GetString("btn_bo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a shopping.
+        /// </summary>
+        internal static string btn_compra {
+            get {
+                return ResourceManager.GetString("btn_compra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Setting.
+        /// </summary>
+        internal static string btn_config {
+            get {
+                return ResourceManager.GetString("btn_config", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a root user settings.
+        /// </summary>
+        internal static string btn_configroot {
+            get {
+                return ResourceManager.GetString("btn_configroot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Generate invoice.
+        /// </summary>
+        internal static string btn_generar {
+            get {
+                return ResourceManager.GetString("btn_generar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a General Inventory.
+        /// </summary>
+        internal static string btn_inge {
+            get {
+                return ResourceManager.GetString("btn_inge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Inventory.
+        /// </summary>
+        internal static string btn_inv {
+            get {
+                return ResourceManager.GetString("btn_inv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Show Article.
         /// </summary>
         internal static string btn_mostrar {
             get {
                 return ResourceManager.GetString("btn_mostrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a products.
+        /// </summary>
+        internal static string btn_productos {
+            get {
+                return ResourceManager.GetString("btn_productos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sign off.
+        /// </summary>
+        internal static string btn_serar {
+            get {
+                return ResourceManager.GetString("btn_serar", resourceCulture);
             }
         }
         
@@ -349,6 +493,24 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Email.
+        /// </summary>
+        internal static string lblCorreoElectronico {
+            get {
+                return ResourceManager.GetString("lblCorreoElectronico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enter your email.
+        /// </summary>
+        internal static string lblCorreoElectronico12 {
+            get {
+                return ResourceManager.GetString("lblCorreoElectronico12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a State.
         /// </summary>
         internal static string lblfecha {
@@ -376,11 +538,38 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a online.
+        /// </summary>
+        internal static string lblpri {
+            get {
+                return ResourceManager.GetString("lblpri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Item Code.
         /// </summary>
         internal static string lblproveedores {
             get {
                 return ResourceManager.GetString("lblproveedores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enter again the password.
+        /// </summary>
+        internal static string lblREpeatcontra {
+            get {
+                return ResourceManager.GetString("lblREpeatcontra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a User.
+        /// </summary>
+        internal static string lblUser1 {
+            get {
+                return ResourceManager.GetString("lblUser1", resourceCulture);
             }
         }
         
@@ -430,6 +619,15 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Required fields**.
+        /// </summary>
+        internal static string me {
+            get {
+                return ResourceManager.GetString("me", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Name.
         /// </summary>
         internal static string Nombre {
@@ -444,6 +642,15 @@ namespace NovaInventory.idioma {
         internal static string nombre_proveedor {
             get {
                 return ResourceManager.GetString("nombre_proveedor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enter a new Password.
+        /// </summary>
+        internal static string nuevacontra {
+            get {
+                return ResourceManager.GetString("nuevacontra", resourceCulture);
             }
         }
         
@@ -588,6 +795,15 @@ namespace NovaInventory.idioma {
         internal static string prinums {
             get {
                 return ResourceManager.GetString("prinums", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Recover Password.
+        /// </summary>
+        internal static string Recuperarcontraseña {
+            get {
+                return ResourceManager.GetString("Recuperarcontraseña", resourceCulture);
             }
         }
         

@@ -30,12 +30,12 @@
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnCambiar_Recu = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCorreoElectronico = new System.Windows.Forms.Label();
+            this.lblCorreoElectronico12 = new System.Windows.Forms.Label();
             this.txtCorreo_Recu = new System.Windows.Forms.TextBox();
             this.btenviar_Correo = new System.Windows.Forms.Button();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblUser1 = new System.Windows.Forms.Label();
             this.emisotr = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
@@ -43,11 +43,12 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCambiar_Recu});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(353, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(471, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -56,46 +57,50 @@
             this.btnCambiar_Recu.Name = "btnCambiar_Recu";
             this.btnCambiar_Recu.Size = new System.Drawing.Size(23, 22);
             // 
-            // label1
+            // lblCorreoElectronico
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Correo Electronico";
+            this.lblCorreoElectronico.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCorreoElectronico.AutoSize = true;
+            this.lblCorreoElectronico.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreoElectronico.Location = new System.Drawing.Point(117, 55);
+            this.lblCorreoElectronico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCorreoElectronico.Name = "lblCorreoElectronico";
+            this.lblCorreoElectronico.Size = new System.Drawing.Size(214, 33);
+            this.lblCorreoElectronico.TabIndex = 1;
+            this.lblCorreoElectronico.Text = "Correo Electronico";
             // 
-            // label2
+            // lblCorreoElectronico12
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 164);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Ingresa tu Coreo Electronico:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblCorreoElectronico12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCorreoElectronico12.AutoSize = true;
+            this.lblCorreoElectronico12.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreoElectronico12.Location = new System.Drawing.Point(112, 202);
+            this.lblCorreoElectronico12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCorreoElectronico12.Name = "lblCorreoElectronico12";
+            this.lblCorreoElectronico12.Size = new System.Drawing.Size(232, 23);
+            this.lblCorreoElectronico12.TabIndex = 2;
+            this.lblCorreoElectronico12.Text = "Ingresa tu Coreo Electronico:";
+            this.lblCorreoElectronico12.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtCorreo_Recu
             // 
             this.txtCorreo_Recu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCorreo_Recu.Location = new System.Drawing.Point(93, 190);
+            this.txtCorreo_Recu.Location = new System.Drawing.Point(124, 234);
+            this.txtCorreo_Recu.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo_Recu.MaxLength = 150;
             this.txtCorreo_Recu.Name = "txtCorreo_Recu";
             this.txtCorreo_Recu.ShortcutsEnabled = false;
-            this.txtCorreo_Recu.Size = new System.Drawing.Size(173, 20);
+            this.txtCorreo_Recu.Size = new System.Drawing.Size(229, 22);
             this.txtCorreo_Recu.TabIndex = 1;
             // 
             // btenviar_Correo
             // 
             this.btenviar_Correo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btenviar_Correo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btenviar_Correo.Location = new System.Drawing.Point(91, 233);
+            this.btenviar_Correo.Location = new System.Drawing.Point(121, 287);
+            this.btenviar_Correo.Margin = new System.Windows.Forms.Padding(4);
             this.btenviar_Correo.Name = "btenviar_Correo";
-            this.btenviar_Correo.Size = new System.Drawing.Size(184, 44);
+            this.btenviar_Correo.Size = new System.Drawing.Size(245, 54);
             this.btenviar_Correo.TabIndex = 2;
             this.btenviar_Correo.Text = "Enviar Correo Electronico";
             this.btenviar_Correo.UseVisualStyleBackColor = true;
@@ -104,39 +109,43 @@
             // txtUsuario
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtUsuario.Location = new System.Drawing.Point(93, 128);
+            this.txtUsuario.Location = new System.Drawing.Point(124, 158);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.ShortcutsEnabled = false;
-            this.txtUsuario.Size = new System.Drawing.Size(173, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(229, 22);
             this.txtUsuario.TabIndex = 3;
             // 
-            // label3
+            // lblUser1
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(152, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Usuario:";
+            this.lblUser1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUser1.AutoSize = true;
+            this.lblUser1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser1.Location = new System.Drawing.Point(203, 132);
+            this.lblUser1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUser1.Name = "lblUser1";
+            this.lblUser1.Size = new System.Drawing.Size(75, 23);
+            this.lblUser1.TabIndex = 4;
+            this.lblUser1.Text = "Usuario:";
             // 
             // emisotr
             // 
             this.emisotr.AutoSize = true;
-            this.emisotr.Location = new System.Drawing.Point(21, 12);
+            this.emisotr.Location = new System.Drawing.Point(28, 15);
+            this.emisotr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emisotr.Name = "emisotr";
-            this.emisotr.Size = new System.Drawing.Size(95, 13);
+            this.emisotr.Size = new System.Drawing.Size(124, 17);
             this.emisotr.TabIndex = 5;
             this.emisotr.Text = "Nueva contraseña";
             this.emisotr.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(239, 19);
+            this.button1.Location = new System.Drawing.Point(319, 23);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.Size = new System.Drawing.Size(136, 28);
             this.button1.TabIndex = 17;
             this.button1.Text = "Regresar al login";
             this.button1.UseVisualStyleBackColor = true;
@@ -144,21 +153,22 @@
             // 
             // frmCorreo_RecuContra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 354);
+            this.ClientSize = new System.Drawing.Size(471, 436);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.emisotr);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblUser1);
             this.Controls.Add(this.btenviar_Correo);
             this.Controls.Add(this.txtCorreo_Recu);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCorreoElectronico12);
+            this.Controls.Add(this.lblCorreoElectronico);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCorreo_RecuContra";
-            this.Text = "frmCorreo_RecuContra";
+            this.Text = "cua";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -169,13 +179,13 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCorreoElectronico;
+        private System.Windows.Forms.Label lblCorreoElectronico12;
         private System.Windows.Forms.TextBox txtCorreo_Recu;
         private System.Windows.Forms.Button btenviar_Correo;
         private System.Windows.Forms.ToolStripButton btnCambiar_Recu;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUser1;
         private System.Windows.Forms.Label emisotr;
         private System.Windows.Forms.Button button1;
     }

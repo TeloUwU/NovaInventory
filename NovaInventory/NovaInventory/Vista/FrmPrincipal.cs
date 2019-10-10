@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NovaInventory.Controlador;
 using MySql.Data.MySqlClient;
+using NovaInventory.idioma;
 using System.IO;
 using NovaInventory.Config;
 
@@ -104,7 +105,7 @@ namespace NovaInventory.Vista
         }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            PanelSidebar.Visible = false;
+            PanelSidebar.Visible = true;
             configuracion();
             lblNombres_Usuario.Text = Constructor_login.nombre;
             lblApellidos_Usuario.Text = Constructor_login.apellido;
@@ -142,7 +143,7 @@ namespace NovaInventory.Vista
         {
             if (PanelSidebar.Visible == true)
             {
-                PanelSidebar.Visible = false;
+                PanelSidebar.Visible = true;
                 panelDeNavegaciónToolStripMenuItem.Text = "Mostrar panel de navegación";
             }
             else
@@ -445,6 +446,44 @@ namespace NovaInventory.Vista
         {
             AbrirFormulario<frmCompra>();
             hide_con();
+        }
+
+        public static int idiom;
+void ingles()
+        {
+            if (idiom==1)
+            {
+                button11.Text = idioma.ingles.btn_adin;
+                btn_articulos.Text = idioma.ingles.btn_art;
+                btn_productos.Text = idioma.ingles.btn_productos;
+                button9.Text = idioma.ingles.bt_pro;
+                button2.Text = idioma.ingles.btn_compra;
+                button8.Text = idioma.ingles.btn_bo;
+                lblEstado.Text = idioma.ingles.lblpri;
+                button12.Text = idioma.ingles.btn_adusu;
+                button4.Text = idioma.ingles.btn_adusu;
+                button14.Text = idioma.ingles.btn_inv;
+                button7.Text = idioma.ingles.btn_generar;
+                button10.Text = idioma.ingles.btn_inge;
+                btn_compras.Text = idioma.ingles.btn_compra;
+                button15.Text = idioma.ingles.btn_config;
+                button3.Text = idioma.ingles.btn_adcontra;
+                button6.Text = idioma.ingles.btn_configroot;
+                button5.Text = idioma.ingles.btn_ademp;
+                button1.Text = idioma.ingles.btn_serar;
+            }
+        }
+        private void cheingles_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cheingles.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
         }
 
         //private void pictureBox3_Click(object sender, EventArgs e)

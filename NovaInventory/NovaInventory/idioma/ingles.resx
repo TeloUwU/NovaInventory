@@ -363,4 +363,76 @@
   <data name="Ver_bodega" xml:space="preserve">
     <value>See Sellar</value>
   </data>
+  <data name="btenviar_Correo" xml:space="preserve">
+    <value>Send Email</value>
+  </data>
+  <data name="lblCorreoElectronico" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="lblCorreoElectronico12" xml:space="preserve">
+    <value>Enter your email</value>
+  </data>
+  <data name="lblREpeatcontra" xml:space="preserve">
+    <value>Enter again the password</value>
+  </data>
+  <data name="lblUser1" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="me" xml:space="preserve">
+    <value>Required fields**</value>
+  </data>
+  <data name="nuevacontra" xml:space="preserve">
+    <value>Enter a new Password</value>
+  </data>
+  <data name="Recuperarcontraseña" xml:space="preserve">
+    <value>Recover Password</value>
+  </data>
+  <data name="btn_adcontra" xml:space="preserve">
+    <value>restore password</value>
+  </data>
+  <data name="btn_ademp" xml:space="preserve">
+    <value>business Administration</value>
+  </data>
+  <data name="btn_adin" xml:space="preserve">
+    <value>inventory management</value>
+  </data>
+  <data name="btn_adusu" xml:space="preserve">
+    <value>Users Management</value>
+  </data>
+  <data name="btn_art" xml:space="preserve">
+    <value>articles</value>
+  </data>
+  <data name="btn_bo" xml:space="preserve">
+    <value>Cellar</value>
+  </data>
+  <data name="btn_compra" xml:space="preserve">
+    <value>shopping</value>
+  </data>
+  <data name="btn_config" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="btn_configroot" xml:space="preserve">
+    <value>root user settings</value>
+  </data>
+  <data name="btn_generar" xml:space="preserve">
+    <value>Generate invoice</value>
+  </data>
+  <data name="btn_inge" xml:space="preserve">
+    <value>General Inventory</value>
+  </data>
+  <data name="btn_inv" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="btn_productos" xml:space="preserve">
+    <value>products</value>
+  </data>
+  <data name="btn_serar" xml:space="preserve">
+    <value>Sign off</value>
+  </data>
+  <data name="bt_pro" xml:space="preserve">
+    <value>provider</value>
+  </data>
+  <data name="lblpri" xml:space="preserve">
+    <value>online</value>
+  </data>
 </root>
