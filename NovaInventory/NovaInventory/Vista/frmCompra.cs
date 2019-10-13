@@ -239,9 +239,9 @@ namespace NovaInventory.Vista
 
         
         
-            int NumProd = Convert.ToInt16("SELECT cantidad FROM existencias_inventario;");
-            int PrecioUnitario = Convert.ToInt16("SELECT Precio_unitario FROM existencias_inventario;");
-            int TotalInvertido = Convert.ToInt16("SELECT Precio_total FROM existencias_inventario;");
+            //int NumProd = Convert.ToInt16("SELECT cantidad FROM existencias_inventario;");
+            //int PrecioUnitario = Convert.ToInt16("SELECT Precio_unitario FROM existencias_inventario;");
+            //int TotalInvertido = Convert.ToInt16("SELECT Precio_total FROM existencias_inventario;");
         
 
 
@@ -249,15 +249,15 @@ namespace NovaInventory.Vista
 
         public void AgregarExistencia()
         {
-            int nuevoNumProd = Convert.ToInt16(NumProd + nUDCantidad.Value);
-            int nuevoPrecioTotal = Convert.ToInt16(TotalInvertido + txtTotal.Text);
-            string nuevoPrecio = Convert.ToString(nuevoPrecioTotal / nuevoNumProd);
+            //int nuevoNumProd = Convert.ToInt16(NumProd + nUDCantidad.Value);
+            //int nuevoPrecioTotal = Convert.ToInt16(TotalInvertido + txtTotal.Text);
+            //string nuevoPrecio = Convert.ToString(nuevoPrecioTotal / nuevoNumProd);
             Ingr.id_articuloss = Convert.ToInt16(txtid_articulo.Text);
             Ingr.id_bodega = Convert.ToInt16(cbBodega.Text);
             Ingr.serie = Convert.ToString(txtNumeroSerie.Text);
-            Ingr.cantidad = nuevoNumProd;
-            Ingr.Precio_unitario = Convert.ToInt16(nuevoPrecio);
-            Ingr.Precio_total = nuevoPrecioTotal;
+            //Ingr.cantidad = nuevoNumProd;
+            //Ingr.Precio_unitario = Convert.ToInt16(nuevoPrecio);
+            //Ingr.Precio_total = nuevoPrecioTotal;
             Ingr.Desde = Convert.ToString(dtpRealización_Compra);
 
             
@@ -331,31 +331,7 @@ namespace NovaInventory.Vista
 
       
 
-        void ingles()
-        {
-            if (idiom == 1)
-	        {
-
-                label1.Text = idioma.ingles.bt_pro;
-                label4.Text = idioma.ingles.btn_productos;
-                label2.Text = idioma.ingles.nose_mo;
-                label10.Text = idioma.ingles.hola;
-                label3.Text = idioma.ingles.barraza;
-                label5.Text = idioma.ingles.andrea;
-                label6.Text = idioma.ingles.maria;
-                label8.Text = idioma.ingles.turcios;
-                lblUsuarioCOmpro.Text = idioma.ingles.barquero;
-                label9.Text = idioma.ingles.btn_bo;
-                btnAgregarCompra.Text = idioma.ingles.sandor;
-                btnMostrar.Text = idioma.ingles.brix;
-                btnActualizar_Compra.Text = idioma.ingles.sara;
-                toolStripButton2.Text = idioma.ingles.toolStripButton2;
-                toolStripButton1.Text = idioma.ingles.garcia;
-
-
-	        }
-          
-    }
+        
 
     public void Total()
         {
@@ -468,6 +444,50 @@ namespace NovaInventory.Vista
             Total();
         }
 
+        public void ingle()
+        {
+            if (idiom == 1)
+            {
+
+                label1.Text = idioma.ingles.bt_pro;
+                label4.Text = idioma.ingles.btn_productos;
+                label2.Text = idioma.ingles.nose_mo;
+                label10.Text = idioma.ingles.hola;
+                label3.Text = idioma.ingles.barraza;
+                label5.Text = idioma.ingles.andrea;
+                label6.Text = idioma.ingles.maria;
+                label8.Text = idioma.ingles.turcios;
+                lblUsuarioCOmpro.Text = idioma.ingles.barquero;
+                label9.Text = idioma.ingles.btn_bo;
+                btnAgregarCompra.Text = idioma.ingles.sandor;
+                btnMostrar.Text = idioma.ingles.brix;
+                btnActualizar_Compra.Text = idioma.ingles.sara;
+                toolStripButton2.Text = idioma.ingles.toolStripButton2;
+                toolStripButton1.Text = idioma.ingles.garcia;
+                button4.Text = idioma.ingles.verkardEX;
+            }
+            else
+            {
+                label1.Text = ("Proveedor");
+                label4.Text = ("Producto");
+                label2.Text = ("Modelo");
+                label10.Text = ("Tipo de Pago");
+                label3.Text = ("Numero de Serie");
+                label5.Text = ("Cantidad");
+                label6.Text = ("Precio Unitario");
+                label8.Text = ("Descripción");
+                lblUsuarioCOmpro.Text = ("Usuario que realizo la Compra");
+                label9.Text = ("Bodega Contenedora");
+                toolStripButton2.Text = ("Cerrar Formulario");
+                toolStripButton1.Text = ("Formulario Compras");
+                btnAgregarCompra.Text = ("Hacer Compra");
+                btnMostrar.Text = ("Mostrar Compras");
+                btnActualizar_Compra.Text = ("Actualizar Compra");
+                button4.Text = ("Ver Kardex");
+            }
+
+        }
+
         private void chkcompras_CheckedChanged(object sender, EventArgs e)
         {
             if (chkcompras.Checked == true)
@@ -478,7 +498,7 @@ namespace NovaInventory.Vista
             {
                 idiom = 0;
             }
-            ingles();
+            ingle();
         }
     }
 }

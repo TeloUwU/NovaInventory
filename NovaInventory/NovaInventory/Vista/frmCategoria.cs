@@ -325,7 +325,7 @@ namespace NovaInventory.Vista
         }
         void ingle()
         {
-            if (idiom==1)
+            if (idiom == 1)
             {
                 label1.Text = ingles.gabriel;
                 label2.Text = ingles.daniel;
@@ -344,7 +344,24 @@ namespace NovaInventory.Vista
                 button1.Text = ingles.lol;
             }
 
-
+            else
+            {
+                label1.Text = ("Categoria del producto");
+                label2.Text = ("Productos");
+                label3.Text = ("Modelo del producto");
+                btn_agregar.Text = ("Agregar");
+                btn_mostrar.Text = ("Mostrar");
+                btn_actualizar.Text = ("Actualizar");
+                btn_eliminar.Text = ("Eliminar");
+                btn_agregar_pr.Text = ("Agregar");
+                btn_mostrar_pr.Text = ("Mostrar");
+                btn_actualizar.Text = ("Actualizar");
+                btn_eliminar_prr.Text = ("Eliminar");
+                button4.Text = ("Agregar");
+                button3.Text = ("Mostrar");
+                button2.Text = ("Actualizar");
+                button1.Text = ("Eliminar");
+            }
             
         }
 

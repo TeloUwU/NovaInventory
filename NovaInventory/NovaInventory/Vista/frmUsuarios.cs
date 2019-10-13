@@ -210,8 +210,44 @@ namespace NovaInventory.Vista
         }
         void ingle()
         {
-           // label2.Text=
-
+            if (idiom == 1)
+            {
+                label2.Text = ingles.userrrrrrrrrrrrrrrrrrrrr;
+                label3.Text = ingles.APELLIDOS;
+                label4.Text = ingles.USUARRRIO;
+                label5.Text = ingles.TELEEEE;
+                label6.Text = ingles.FOOOOOOOOOOTOOO;
+                label7.Text = ingles.CORREEEEOOO;
+                label10.Text = ingles.ESTADOS_UNIDOS;
+                label11.Text = ingles.TIPOSDEUSEEEER;
+                label12.Text = ingles.empresa;
+                label1.Text = ingles.administracionusuarios;
+                btnSeleccionarFoto_Usuario.Text = ingles.BTNSELECCIONARFOTOUSUAIRO;
+                button1.Text = ingles.BUTON1;
+                button2.Text = ingles.BUTON2;
+                button3.Text = ingles.BUTON3;
+                button4.Text = ingles.BUTON4;
+                button5.Text = ingles.BUTON5;
+            }
+            else
+            {
+                label2.Text = ("Nombres del Usuario:");
+                label3.Text = ("Apellidos del Usuario:");
+                label4.Text = ("Usuario:");
+                label5.Text = ("Telefono:");
+                label6.Text = ("Foto:");
+                label7.Text = ("Correo:");
+                label10.Text = ("Estado:");
+                label11.Text = ("Tipo de Usuario:");
+                label12.Text = ("Empresa:");
+                label1.Text = ("Administración de Usuarios");
+                btnSeleccionarFoto_Usuario.Text = ("Seleccionar Foto");
+                button1.Text = ("Agregar Usuario");
+                button2.Text = ("Mostrar Usuario");
+                button3.Text = ("Actualizar Usuario");
+                button4.Text = ("Eliminar Usuario");
+                button5.Text = ("Reporte");
+            }
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {

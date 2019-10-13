@@ -16,6 +16,8 @@ namespace NovaInventory.Vista
 {
     public partial class frmInventarioExistencias : Form
     {
+
+        public static int idiom;
         public frmInventarioExistencias()
         {
             InitializeComponent();
@@ -67,6 +69,35 @@ namespace NovaInventory.Vista
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void ingles()
+        {
+            if (idiom == 1)
+            {
+                btnBuscarProducto.Text = idioma.ingles.Buscar_Producto;
+                tslExisInventario.Text = idioma.ingles.Existencias_Inventario;
+                tslCerrar.Text = idioma.ingles.Cerrar_Formulario;
+            }
+            else
+            {
+                btnBuscarProducto.Text = ("Buscar Producto");
+                tslExisInventario.Text = ("Existencias del Inventario");
+                tslCerrar.Text = ("Cerrar Formulario");
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
         }
     }
 }

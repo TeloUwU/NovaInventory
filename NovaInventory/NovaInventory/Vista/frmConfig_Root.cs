@@ -20,6 +20,8 @@ namespace NovaInventory.Vista
 {
     public partial class frmConfig_Root : Form
     {
+
+        public static int idiom;
         Constructor_Root actualizar = new Constructor_Root();
 
 
@@ -285,6 +287,63 @@ namespace NovaInventory.Vista
             //MemoryStream mas = new MemoryStream(image);
             //pbFoto_Root.Image = Image.FromStream(mas);
 
+        }
+
+        public void ingles()
+        {
+            if (idiom == 1)
+            {
+                label1.Text = idioma.ingles.Nombre;
+                label2.Text = idioma.ingles.apelli2;
+                label12.Text = idioma.ingles.PEREJILDEFACEBOOK;
+                label5.Text = idioma.ingles.NACIMIENTODEAGUACRISTAL;
+                label4.Text = idioma.ingles.DIUUU;
+                label6.Text = idioma.ingles.EMPRESADEPERTENECIMIEEENTO;
+                label15.Text = idioma.ingles.TELEEEE;
+                label3.Text = idioma.ingles.USUARRRIO;
+                label7.Text = idioma.ingles.ESTADOS_UNIDOS;
+                BtnCargarImagen_Root.Text = idioma.ingles.BTNSELECCIONARFOTOUSUAIRO;
+                button_actualizar.Text = idioma.ingles.BUTON3;
+                btnCambiar_clave.Text = idioma.ingles.CAMBIAAAAAAAAAAAAAAMELACLAAAAAAAAAAAVE;
+                label11.Text = idioma.ingles.CLAAVE;
+                label9.Text = idioma.ingles.CONFIRMAAAAALAPELOTUDO;
+                label14.Text = idioma.ingles.CORREEEEOOO;
+                toolStripLabel1.Text = idioma.ingles.EOOT;
+                linkLabel1.Text = idioma.ingles.AAAAAAAAADVICE;
+            }
+            else
+            {
+                label1.Text = ("Nombres:");
+                label2.Text = ("Apellidos:");
+                label12.Text = ("Foto de perfil:");
+                label5.Text = ("Nacimiento:");
+                label4.Text = ("Documento:");
+                label6.Text = ("Empresa a la que pertenece:");
+                label15.Text = ("Numero Telefonico:");
+                label3.Text = ("Usuario:");
+                label7.Text = ("Estado:");
+                BtnCargarImagen_Root.Text = ("Cargar Imagen");
+                button_actualizar.Text = ("Actualizar Datos");
+                btnCambiar_clave.Text = ("Cambiar Clave");
+                label11.Text = ("Clave:");
+                label9.Text = ("Confirmar clave:");
+                label14.Text = ("Correo electrónico:");
+                toolStripLabel1.Text = ("Configuracion de Root");
+                linkLabel1.Text = ("La contraseña debe de tener un maximo de 8 caracteres");
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
         }
     }
 }

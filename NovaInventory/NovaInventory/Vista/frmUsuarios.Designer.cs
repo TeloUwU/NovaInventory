@@ -436,9 +436,9 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(25, 30);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(75, 21);
+            this.checkBox1.Size = new System.Drawing.Size(76, 21);
             this.checkBox1.TabIndex = 33;
-            this.checkBox1.Text = "english";
+            this.checkBox1.Text = "English";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 

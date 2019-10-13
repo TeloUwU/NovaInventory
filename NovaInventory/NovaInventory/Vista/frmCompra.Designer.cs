@@ -458,6 +458,7 @@
             // 
             // cbBodega
             // 
+            this.cbBodega.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbBodega.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBodega.FormattingEnabled = true;
             this.cbBodega.Location = new System.Drawing.Point(15, 218);
@@ -467,6 +468,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(592, 78);
             this.label3.Name = "label3";
@@ -476,7 +478,8 @@
             // 
             // txtNumeroSerie
             // 
-            this.txtNumeroSerie.Location = new System.Drawing.Point(595, 99);
+            this.txtNumeroSerie.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNumeroSerie.Location = new System.Drawing.Point(595, 97);
             this.txtNumeroSerie.Name = "txtNumeroSerie";
             this.txtNumeroSerie.Size = new System.Drawing.Size(100, 22);
             this.txtNumeroSerie.TabIndex = 29;

@@ -72,10 +72,20 @@ namespace NovaInventory.Vista
         }
         void ingle()
         {
-            label1.Text = ingles.mecago;
-            label2.Text = ingles.hh;
-            button1.Text = ingles.ca;
-            button4.Text = ingles.h;
+            if (idiom == 1)
+            {
+                label1.Text = ingles.mecago;
+                label2.Text = ingles.hh;
+                button1.Text = ingles.ca;
+                button4.Text = ingles.h;
+            }
+            else
+            {
+                label1.Text = ("Administración de Usuarios");
+                label2.Text = ("Nombre del usuario:");
+                button1.Text = ("Mostrar Usuarios");
+                button4.Text = ("Clave Default");
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

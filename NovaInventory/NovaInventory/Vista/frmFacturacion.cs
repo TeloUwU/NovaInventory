@@ -15,6 +15,7 @@ namespace NovaInventory.Vista
 {
     public partial class frmFacturacion : Form
     {
+        public static int idiom;
         public frmFacturacion()
         {
             InitializeComponent();
@@ -160,6 +161,59 @@ namespace NovaInventory.Vista
         private void dgvLista_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             toca();
+        }
+
+        public void ingles()
+        {
+            if (idiom == 1)
+            {
+                label2.Text = idioma.ingles.nFactura;
+                lblNombre.Text = idioma.ingles.Nombre_producto;
+                label1.Text = idioma.ingles.id_art;
+                lblCantidad.Text = idioma.ingles.cantiDAD;
+                label9.Text = idioma.ingles.PrecioUnitariooooo;
+                label8.Text = idioma.ingles.FACturadetallE;
+                label5.Text = idioma.ingles.CREACION;
+                label3.Text = idioma.ingles.Cajero;
+                btnCargarLista.Text = idioma.ingles.AgrFact;
+                label4.Text = idioma.ingles.DIsponibilidad;
+                label7.Text = idioma.ingles.TtPagar;
+                btnVender.Text = idioma.ingles.FinFact;
+                button2.Text = idioma.ingles.ActuDet;
+                button1.Text = idioma.ingles.EliminFact;
+                button3.Text = idioma.ingles.ConsultInvent;
+            }
+            else
+            {
+                label2.Text = ("N° Factura");
+                lblNombre.Text = ("Código o Nombre del producto");
+                label1.Text = ("Id Artículo");
+                lblCantidad.Text = ("Cantidad");
+                label9.Text = ("Precio Unitario");
+                label8.Text = ("Detalle de Factura:");
+                label5.Text = ("Fecha");
+                label3.Text = ("Cajero/a");
+                btnCargarLista.Text = ("Agregar a factura");
+                label4.Text = ("Disponibilidad");
+                label7.Text = ("Total a pagar");
+                btnVender.Text = ("Finalizar Factura");
+                button2.Text = ("Actualizar detalle");
+                button1.Text = ("Eliminar del detalle");
+                button3.Text = ("Consultar inventario");
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
         }
     }
     }
