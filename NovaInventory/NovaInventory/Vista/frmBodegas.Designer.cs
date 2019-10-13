@@ -346,7 +346,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmBodegas";
-            this.Text = "frmBodegas";
+            this.Text = "´´";
             this.Load += new System.EventHandler(this.frmBodegas_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

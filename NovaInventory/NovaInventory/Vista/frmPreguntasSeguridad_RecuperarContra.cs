@@ -12,6 +12,7 @@ using NovaInventory.Controlador;
 using MySql.Data;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
+using NovaInventory.idioma;
 using System.Collections;
 
 namespace NovaInventory.Vista
@@ -22,8 +23,8 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
-        
 
+        public static int idiom;
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             frmRecuperar_Contraseña Recuperar = new frmRecuperar_Contraseña();
@@ -71,7 +72,7 @@ namespace NovaInventory.Vista
                     && cbPregunta_2.Text != cbPregunta_3.Text && cbPregunta_2.Text != cbPregunta_4.Text &&
                     cbPregunta_3.Text != cbPregunta_4.Text)
                 {
-                    Console.WriteLine("asdfa"+ cbPregunta_1.SelectedValue);
+                    Console.WriteLine("asdfa" + cbPregunta_1.SelectedValue);
                     int idpregunta1 = (int)cbPregunta_1.SelectedValue;
                     int idpregunta2 = (int)cbPregunta_2.SelectedValue;
                     int idpregunta3 = (int)cbPregunta_3.SelectedValue;
@@ -128,7 +129,7 @@ namespace NovaInventory.Vista
 
             try
             {
-                cmd.CommandText = "select count(*) from tbrespuesta where respuesta = '" + txtRespuesta_1.Text +"'";
+                cmd.CommandText = "select count(*) from tbrespuesta where respuesta = '" + txtRespuesta_1.Text + "'";
                 int valor = int.Parse(cmd.ExecuteScalar().ToString());
                 //Comparamos si el valor recibido es 1 entonces existe si no NO
 
@@ -153,6 +154,32 @@ namespace NovaInventory.Vista
             frmLogin frm = new frmLogin();
             frm.Show();
             this.Hide();
+        }
+        void ingle()
+        {
+            if (idiom==1)
+            {
+                label1.Text = ingles.uno;
+                lblUsuario.Text = ingles.usuu;
+                label2.Text = ingles.dos;
+                label3.Text = ingles.tres;
+                label4.Text = ingles.cuatro;
+                label5.Text = ingles.cinco;
+            }
+          
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingle();
         }
     }
 }

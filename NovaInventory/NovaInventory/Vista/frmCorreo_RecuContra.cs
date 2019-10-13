@@ -19,6 +19,7 @@ namespace NovaInventory.Vista
 {
     public partial class frmCorreo_RecuContra : Form
     {
+        public static int idiom;
         public frmCorreo_RecuContra()
         {
             InitializeComponent();
@@ -119,6 +120,58 @@ namespace NovaInventory.Vista
             frmLogin frm = new frmLogin();
             frm.Show();
             this.Hide();
+        }
+
+        private void checkBox_correo_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void checkBox_correo_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBox_correo.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
+        }
+
+        public void ingles()
+        {
+
+            if (idiom == 1)
+            {
+                emisotr.Text = idioma.ingles.nueva_contraseña;
+                checkBox_correo.Text = idioma.ingles.check_correo;
+                button1.Text = idioma.ingles.Regresar;
+                lblCorreoElectronico.Text = idioma.ingles.Correp;
+                lblUser1.Text = idioma.ingles.usuari;
+                lblCorreoElectronico.Text = idioma.ingles.Ingresa_correo;
+                btenviar_Correo.Text = idioma.ingles.Enviar;
+
+
+            }
+            else
+            {
+                emisotr.Text = ("Nueva Contraseña");
+                checkBox_correo.Text = ("Idioma Español");
+                button1.Text = ("Regresar al LOGIN");
+                lblCorreoElectronico.Text = ("Correo Electronico");
+                lblUser1.Text = ("Usuario");
+                lblCorreoElectronico.Text = ("Ingresa tu Correo Electronico");
+                btenviar_Correo.Text = ("Enviar Correo Electronico");
+            }
+        }
+
+
+
+        private void frmCorreo_RecuContra_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

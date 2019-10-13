@@ -232,7 +232,7 @@
             // 
             this.lblNombres_Usuario.AutoSize = true;
             this.lblNombres_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombres_Usuario.Location = new System.Drawing.Point(347, 219);
+            this.lblNombres_Usuario.Location = new System.Drawing.Point(347, 206);
             this.lblNombres_Usuario.Name = "lblNombres_Usuario";
             this.lblNombres_Usuario.Size = new System.Drawing.Size(109, 39);
             this.lblNombres_Usuario.TabIndex = 1;
@@ -302,6 +302,7 @@
             this.button5.TabIndex = 8;
             this.button5.Text = "Administración de Empresas";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
@@ -585,11 +586,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(120, 131);
+            this.label3.Location = new System.Drawing.Point(120, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 20);
             this.label3.TabIndex = 29;
             this.label3.Text = " ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 

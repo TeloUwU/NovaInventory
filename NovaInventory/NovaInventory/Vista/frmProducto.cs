@@ -74,7 +74,7 @@ namespace NovaInventory.Vista
 
             btnactualizar_producto.Enabled = false;
             btneliminar_producto.Enabled = false;
-            txt_serie.Enabled = false;
+            //txt_serie.Enabled = false;
 
             cmb_proveedor.DataSource = Funciones_producto.Cargarproveedor();
             cmb_proveedor.DisplayMember = "nombre";
@@ -112,7 +112,7 @@ namespace NovaInventory.Vista
         {
             if (cmb_proveedor.Text.Trim() == "" || txt_marca.Text.Trim() == "" ||
                 txt_codigo_art.Text.Trim() == "" || cmb_estados.Text.Trim() == "" ||
-                Cmb_bodegas.Text.Trim() == "" || txt_serie.Text.Trim() == "" ||
+                Cmb_bodegas.Text.Trim() == "" ||
                 cmb_productos.Text.Trim() == "" || cmb_estados.Text.Trim()=="" )
             {
                 MessageBox.Show("COMPLETE TODOS LOS DATOS", "FALTA INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -274,6 +274,11 @@ namespace NovaInventory.Vista
                 idiom = 0;
             }
             ingles();
+        }
+
+        private void txt_serie_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

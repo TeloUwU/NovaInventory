@@ -11,6 +11,7 @@ using NovaInventory.Modelo;
 using NovaInventory.Controlador;
 using NovaInventory.Vista;
 using NovaInventory.Config;
+using NovaInventory.idioma;
 
 namespace NovaInventory.Vista
 {
@@ -20,6 +21,7 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
+        public static int idiom;
         constructor_primer_usuario actualizar = new constructor_primer_usuario();
         
         void act()
@@ -67,6 +69,26 @@ namespace NovaInventory.Vista
         private void dgvMostrar_Usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             pon();
+        }
+        void ingle()
+        {
+            label1.Text = ingles.mecago;
+            label2.Text = ingles.hh;
+            button1.Text = ingles.ca;
+            button4.Text = ingles.h;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingle();
         }
     }
 }

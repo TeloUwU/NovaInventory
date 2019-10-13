@@ -12,6 +12,7 @@ namespace NovaInventory.Vista
 {
     public partial class frmRecuperar_Contraseña : Form
     {
+        public static int idiom;
         public frmRecuperar_Contraseña()
         {
             InitializeComponent();
@@ -60,6 +61,50 @@ namespace NovaInventory.Vista
             frmItervencionAdmin_RecuContra frm = new frmItervencionAdmin_RecuContra();
             frm.Show();
             this.Hide();
+        }
+
+        private void checkBox_recuperar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_recuperar.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingles();
+        }
+
+        public void ingles()
+        {
+
+            if (idiom == 1)
+            {
+                label1.Text = idioma.ingles.seleccione;
+                label2.Text = idioma.ingles.preguntas_seguridad;
+                label3.Text = idioma.ingles.correo;
+                label4.Text = idioma.ingles.intervencion;
+                checkBox_recuperar.Text = idioma.ingles.checkrecuperar;
+
+
+            }
+            else
+            {
+                label1.Text = ("Seleccione el metodo de recuperación de Contraseña que desea utilizar");
+                label2.Text = ("Preguntas de Seguridad");
+                label3.Text = ("Correo Electronico");
+                label4.Text = ("Intervención del Administrador");
+                checkBox_recuperar.Text = ("Idioma Español");
+
+            }
+
+        }
+
+
+        private void frmRecuperar_Contraseña_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

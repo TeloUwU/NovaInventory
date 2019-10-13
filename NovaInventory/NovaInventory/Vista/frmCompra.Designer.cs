@@ -104,7 +104,6 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(149, 24);
             this.toolStripButton2.Text = "Cerrar Formulario";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
             // 
             // label1
             // 
@@ -238,8 +237,6 @@
             this.dgvCompras.RowTemplate.Height = 24;
             this.dgvCompras.Size = new System.Drawing.Size(1020, 320);
             this.dgvCompras.TabIndex = 10;
-            this.dgvCompras.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCompras_CellClick);
-            this.dgvCompras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCompras_CellContentClick);
             // 
             // btnMostrar
             // 
@@ -251,7 +248,6 @@
             this.btnMostrar.TabIndex = 12;
             this.btnMostrar.Text = "Mostrar Compras";
             this.btnMostrar.UseVisualStyleBackColor = true;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // btnActualizar_Compra
             // 
@@ -263,7 +259,6 @@
             this.btnActualizar_Compra.TabIndex = 13;
             this.btnActualizar_Compra.Text = "Actualizar Compra";
             this.btnActualizar_Compra.UseVisualStyleBackColor = true;
-            this.btnActualizar_Compra.Click += new System.EventHandler(this.btnActualizar_Compra_Click);
             // 
             // button4
             // 
@@ -275,6 +270,7 @@
             this.button4.TabIndex = 14;
             this.button4.Text = "Ver Kardex";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
             // 
             // btnAgregarCompra
             // 
@@ -318,7 +314,6 @@
             this.txtNum_factura.Size = new System.Drawing.Size(121, 22);
             this.txtNum_factura.TabIndex = 0;
             this.txtNum_factura.Text = "000001";
-            this.txtNum_factura.TextChanged += new System.EventHandler(this.txtNum_factura_TextChanged);
             // 
             // label9
             // 
@@ -440,8 +435,6 @@
             this.txtPrecio_Unitario.Name = "txtPrecio_Unitario";
             this.txtPrecio_Unitario.Size = new System.Drawing.Size(121, 22);
             this.txtPrecio_Unitario.TabIndex = 24;
-            this.txtPrecio_Unitario.TextChanged += new System.EventHandler(this.txtPrecio_Unitario_TextChanged);
-            this.txtPrecio_Unitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_Unitario_KeyPress);
             // 
             // lblUsuarioCOmpro
             // 
@@ -497,7 +490,6 @@
             this.chkcompras.TabIndex = 30;
             this.chkcompras.Text = "English Language";
             this.chkcompras.UseVisualStyleBackColor = true;
-            this.chkcompras.CheckedChanged += new System.EventHandler(this.chkcompras_CheckedChanged);
             // 
             // frmCompra
             // 

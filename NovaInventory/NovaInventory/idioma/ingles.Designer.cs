@@ -79,6 +79,42 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a amount.
+        /// </summary>
+        internal static string andrea {
+            get {
+                return ResourceManager.GetString("andrea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a user who made the purchase.
+        /// </summary>
+        internal static string barquero {
+            get {
+                return ResourceManager.GetString("barquero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a serial  number.
+        /// </summary>
+        internal static string barraza {
+            get {
+                return ResourceManager.GetString("barraza", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a show purchase.
+        /// </summary>
+        internal static string brix {
+            get {
+                return ResourceManager.GetString("brix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a provider.
         /// </summary>
         internal static string bt_pro {
@@ -304,11 +340,38 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a show user.
+        /// </summary>
+        internal static string ca {
+            get {
+                return ResourceManager.GetString("ca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a idioma español.
         /// </summary>
         internal static string check {
             get {
                 return ResourceManager.GetString("check", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Idioma Español.
+        /// </summary>
+        internal static string check_correo {
+            get {
+                return ResourceManager.GetString("check_correo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Idioma Español.
+        /// </summary>
+        internal static string checkrecuperar {
+            get {
+                return ResourceManager.GetString("checkrecuperar", resourceCulture);
             }
         }
         
@@ -331,11 +394,83 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a mandatory field**.
+        /// </summary>
+        internal static string cinco {
+            get {
+                return ResourceManager.GetString("cinco", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Warehouse Code.
         /// </summary>
         internal static string Codigo_bodega {
             get {
                 return ResourceManager.GetString("Codigo_bodega", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a photo.
+        /// </summary>
+        internal static string como_sea {
+            get {
+                return ResourceManager.GetString("como_sea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a user administration.
+        /// </summary>
+        internal static string cora_roto {
+            get {
+                return ResourceManager.GetString("cora_roto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Email.
+        /// </summary>
+        internal static string correo {
+            get {
+                return ResourceManager.GetString("correo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Email.
+        /// </summary>
+        internal static string Correp {
+            get {
+                return ResourceManager.GetString("Correp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a questions should not be repeated*.
+        /// </summary>
+        internal static string cuatro {
+            get {
+                return ResourceManager.GetString("cuatro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a product.
+        /// </summary>
+        internal static string daniel {
+            get {
+                return ResourceManager.GetString("daniel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a company.
+        /// </summary>
+        internal static string desamor {
+            get {
+                return ResourceManager.GetString("desamor", resourceCulture);
             }
         }
         
@@ -358,6 +493,15 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a select your questions.
+        /// </summary>
+        internal static string dos {
+            get {
+                return ResourceManager.GetString("dos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Delete Sellar.
         /// </summary>
         internal static string Eliminar_bodega {
@@ -367,11 +511,38 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a user names.
+        /// </summary>
+        internal static string enojada {
+            get {
+                return ResourceManager.GetString("enojada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Send the email .
+        /// </summary>
+        internal static string Enviar {
+            get {
+                return ResourceManager.GetString("Enviar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a State.
         /// </summary>
         internal static string estado {
             get {
                 return ResourceManager.GetString("estado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a delete user.
+        /// </summary>
+        internal static string estare {
+            get {
+                return ResourceManager.GetString("estare", resourceCulture);
             }
         }
         
@@ -394,11 +565,56 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a product category.
+        /// </summary>
+        internal static string gabriel {
+            get {
+                return ResourceManager.GetString("gabriel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a purchase form.
+        /// </summary>
+        internal static string garcia {
+            get {
+                return ResourceManager.GetString("garcia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Warehouse Management.
         /// </summary>
         internal static string Gestion_bodegas {
             get {
                 return ResourceManager.GetString("Gestion_bodegas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a reset the password.
+        /// </summary>
+        internal static string h {
+            get {
+                return ResourceManager.GetString("h", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a name of user.
+        /// </summary>
+        internal static string hh {
+            get {
+                return ResourceManager.GetString("hh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a payment type.
+        /// </summary>
+        internal static string hola {
+            get {
+                return ResourceManager.GetString("hola", resourceCulture);
             }
         }
         
@@ -417,6 +633,33 @@ namespace NovaInventory.idioma {
         internal static string id_proveedor {
             get {
                 return ResourceManager.GetString("id_proveedor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Insert your email.
+        /// </summary>
+        internal static string Ingresa_correo {
+            get {
+                return ResourceManager.GetString("Ingresa_correo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Intervention of the Admin.
+        /// </summary>
+        internal static string intervencion {
+            get {
+                return ResourceManager.GetString("intervencion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a username.
+        /// </summary>
+        internal static string ira {
+            get {
+                return ResourceManager.GetString("ira", resourceCulture);
             }
         }
         
@@ -619,11 +862,74 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a delete.
+        /// </summary>
+        internal static string lol {
+            get {
+                return ResourceManager.GetString("lol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a unit price.
+        /// </summary>
+        internal static string maria {
+            get {
+                return ResourceManager.GetString("maria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a product model.
+        /// </summary>
+        internal static string mate {
+            get {
+                return ResourceManager.GetString("mate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Required fields**.
         /// </summary>
         internal static string me {
             get {
                 return ResourceManager.GetString("me", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a user management.
+        /// </summary>
+        internal static string mecago {
+            get {
+                return ResourceManager.GetString("mecago", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a show.
+        /// </summary>
+        internal static string monti {
+            get {
+                return ResourceManager.GetString("monti", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a phone.
+        /// </summary>
+        internal static string nadie_me_quiere {
+            get {
+                return ResourceManager.GetString("nadie_me_quiere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a update.
+        /// </summary>
+        internal static string no {
+            get {
+                return ResourceManager.GetString("no", resourceCulture);
             }
         }
         
@@ -646,11 +952,56 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a model.
+        /// </summary>
+        internal static string nose_mo {
+            get {
+                return ResourceManager.GetString("nose_mo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a New Password.
+        /// </summary>
+        internal static string nueva_contraseña {
+            get {
+                return ResourceManager.GetString("nueva_contraseña", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Enter a new Password.
         /// </summary>
         internal static string nuevacontra {
             get {
                 return ResourceManager.GetString("nuevacontra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Type of user.
+        /// </summary>
+        internal static string odio {
+            get {
+                return ResourceManager.GetString("odio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a show user.
+        /// </summary>
+        internal static string por {
+            get {
+                return ResourceManager.GetString("por", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Segurity Questions.
+        /// </summary>
+        internal static string preguntas_seguridad {
+            get {
+                return ResourceManager.GetString("preguntas_seguridad", resourceCulture);
             }
         }
         
@@ -799,6 +1150,15 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a mail.
+        /// </summary>
+        internal static string ravia {
+            get {
+                return ResourceManager.GetString("ravia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Recover Password.
         /// </summary>
         internal static string Recuperarcontraseña {
@@ -808,11 +1168,83 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Before the login.
+        /// </summary>
+        internal static string Regresar {
+            get {
+                return ResourceManager.GetString("Regresar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Report.
         /// </summary>
         internal static string Reporte {
             get {
                 return ResourceManager.GetString("Reporte", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a make a purchase.
+        /// </summary>
+        internal static string sandor {
+            get {
+                return ResourceManager.GetString("sandor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a update purchase.
+        /// </summary>
+        internal static string sara {
+            get {
+                return ResourceManager.GetString("sara", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Select the method the reset your password .
+        /// </summary>
+        internal static string seleccione {
+            get {
+                return ResourceManager.GetString("seleccione", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a update user .
+        /// </summary>
+        internal static string siempre {
+            get {
+                return ResourceManager.GetString("siempre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a add user.
+        /// </summary>
+        internal static string solo {
+            get {
+                return ResourceManager.GetString("solo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a select photo.
+        /// </summary>
+        internal static string solo_le_importa_lo_suyo {
+            get {
+                return ResourceManager.GetString("solo_le_importa_lo_suyo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a states.
+        /// </summary>
+        internal static string solo_queria_atencion {
+            get {
+                return ResourceManager.GetString("solo_queria_atencion", resourceCulture);
             }
         }
         
@@ -862,6 +1294,42 @@ namespace NovaInventory.idioma {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a enter your answer.
+        /// </summary>
+        internal static string tres {
+            get {
+                return ResourceManager.GetString("tres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a user lastnames.
+        /// </summary>
+        internal static string tristesa {
+            get {
+                return ResourceManager.GetString("tristesa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Description.
+        /// </summary>
+        internal static string turcios {
+            get {
+                return ResourceManager.GetString("turcios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a segurity questions.
+        /// </summary>
+        internal static string uno {
+            get {
+                return ResourceManager.GetString("uno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Name.
         /// </summary>
         internal static string usu {
@@ -876,6 +1344,15 @@ namespace NovaInventory.idioma {
         internal static string usua {
             get {
                 return ResourceManager.GetString("usua", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a User.
+        /// </summary>
+        internal static string usuari {
+            get {
+                return ResourceManager.GetString("usuari", resourceCulture);
             }
         }
         
@@ -1011,6 +1488,15 @@ namespace NovaInventory.idioma {
         internal static string Ver_bodega {
             get {
                 return ResourceManager.GetString("Ver_bodega", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a add.
+        /// </summary>
+        internal static string xd {
+            get {
+                return ResourceManager.GetString("xd", resourceCulture);
             }
         }
     }

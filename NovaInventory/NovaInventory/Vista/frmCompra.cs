@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using NovaInventory.Config;
+using NovaInventory.idioma;
 using NovaInventory.Controlador;
 using System;
 using System.Collections.Generic;
@@ -326,24 +327,37 @@ namespace NovaInventory.Vista
             
         }
 
-        //void CambiarIdioma()
-        //{
-        //    lblatraducir.Text = carpetaconTraducciónes.lbltraducido;
-        //}
+   
 
-        public static int idioma = 0;
+      
 
-        //FormaDeCambiarIdioma
-        //{
-        //    idioma = 1;
-        //    if ()
-	       // {
-               
-	       // }
-        //    CambiarIdioma();
-        //}
-            
-        public void Total()
+        void ingles()
+        {
+            if (idiom == 1)
+	        {
+
+                label1.Text = idioma.ingles.bt_pro;
+                label4.Text = idioma.ingles.btn_productos;
+                label2.Text = idioma.ingles.nose_mo;
+                label10.Text = idioma.ingles.hola;
+                label3.Text = idioma.ingles.barraza;
+                label5.Text = idioma.ingles.andrea;
+                label6.Text = idioma.ingles.maria;
+                label8.Text = idioma.ingles.turcios;
+                lblUsuarioCOmpro.Text = idioma.ingles.barquero;
+                label9.Text = idioma.ingles.btn_bo;
+                btnAgregarCompra.Text = idioma.ingles.sandor;
+                btnMostrar.Text = idioma.ingles.brix;
+                btnActualizar_Compra.Text = idioma.ingles.sara;
+                toolStripButton2.Text = idioma.ingles.toolStripButton2;
+                toolStripButton1.Text = idioma.ingles.garcia;
+
+
+	        }
+          
+    }
+
+    public void Total()
         {
             
 

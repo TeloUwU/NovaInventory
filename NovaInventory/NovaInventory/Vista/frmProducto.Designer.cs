@@ -289,6 +289,7 @@
             this.txt_serie.Size = new System.Drawing.Size(227, 22);
             this.txt_serie.TabIndex = 23;
             this.txt_serie.TabStop = false;
+            this.txt_serie.TextChanged += new System.EventHandler(this.txt_serie_TextChanged);
             // 
             // label1
             // 

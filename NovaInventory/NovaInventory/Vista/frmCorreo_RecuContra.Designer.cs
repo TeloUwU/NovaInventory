@@ -38,6 +38,7 @@
             this.lblUser1 = new System.Windows.Forms.Label();
             this.emisotr = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.checkBox_correo = new System.Windows.Forms.CheckBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,11 +152,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // checkBox_correo
+            // 
+            this.checkBox_correo.AutoSize = true;
+            this.checkBox_correo.Location = new System.Drawing.Point(167, 23);
+            this.checkBox_correo.Name = "checkBox_correo";
+            this.checkBox_correo.Size = new System.Drawing.Size(144, 21);
+            this.checkBox_correo.TabIndex = 18;
+            this.checkBox_correo.Text = "English Language";
+            this.checkBox_correo.UseVisualStyleBackColor = true;
+            this.checkBox_correo.CheckedChanged += new System.EventHandler(this.checkBox_correo_CheckedChanged_1);
+            // 
             // frmCorreo_RecuContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 436);
+            this.Controls.Add(this.checkBox_correo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.emisotr);
             this.Controls.Add(this.txtUsuario);
@@ -169,6 +182,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCorreo_RecuContra";
             this.Text = "cua";
+            this.Load += new System.EventHandler(this.frmCorreo_RecuContra_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -188,5 +202,6 @@
         private System.Windows.Forms.Label lblUser1;
         private System.Windows.Forms.Label emisotr;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox_correo;
     }
 }

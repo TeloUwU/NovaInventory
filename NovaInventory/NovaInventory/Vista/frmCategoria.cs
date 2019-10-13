@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using NovaInventory.Modelo;
 using NovaInventory.Config;
 using NovaInventory.Controlador;
+using NovaInventory.idioma;
 
 namespace NovaInventory.Vista
 {
@@ -19,6 +20,7 @@ namespace NovaInventory.Vista
         {
             InitializeComponent();
         }
+        public static int idiom;
         constructor_productos agregar = new constructor_productos();
         constructor_productos actualizar = new constructor_productos();
         costructor_categoria agre = new costructor_categoria();
@@ -320,6 +322,43 @@ namespace NovaInventory.Vista
         private void dgb_modelo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             toca2();
+        }
+        void ingle()
+        {
+            if (idiom==1)
+            {
+                label1.Text = ingles.gabriel;
+                label2.Text = ingles.daniel;
+                label3.Text = ingles.mate;
+                btn_agregar.Text = ingles.xd;
+                btn_mostrar.Text = ingles.monti;
+                btn_actualizar.Text = ingles.no;
+                btn_eliminar.Text = ingles.lol;
+                btn_agregar_pr.Text = ingles.xd;
+                btn_mostrar_pr.Text = ingles.monti;
+                btn_actualizar.Text = ingles.no;
+                btn_eliminar_prr.Text = ingles.lol;
+                button4.Text = ingles.xd;
+                button3.Text = ingles.monti;
+                button2.Text = ingles.no;
+                button1.Text = ingles.lol;
+            }
+
+
+            
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingle();
         }
     }
 }

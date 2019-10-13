@@ -13,12 +13,14 @@ using NovaInventory.Controlador;
 using NovaInventory.Modelo;
 using NovaInventory.Config;
 using NovaInventory.Reportes;
+using NovaInventory.idioma;
 using MySql.Data.MySqlClient;
 
 namespace NovaInventory.Vista
 {
     public partial class frmUsuarios : Form
     {
+        public static int idiom;
         constructor_primer_usuario agregar = new constructor_primer_usuario();
         constructor_primer_usuario actualizar = new constructor_primer_usuario();
         constructor_de_respuestas ac = new constructor_de_respuestas();
@@ -205,6 +207,23 @@ namespace NovaInventory.Vista
             frm_usuarios_report mm = new frm_usuarios_report();
             mm.Show();
             this.Hide();
+        }
+        void ingle()
+        {
+           // label2.Text=
+
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                idiom = 1;
+            }
+            else
+            {
+                idiom = 0;
+            }
+            ingle();
         }
     }
 }
