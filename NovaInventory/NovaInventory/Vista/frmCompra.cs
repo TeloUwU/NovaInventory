@@ -490,6 +490,11 @@ namespace NovaInventory.Vista
 
         private void chkcompras_CheckedChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void chkcompras_CheckedChanged_1(object sender, EventArgs e)
+        {
             if (chkcompras.Checked == true)
             {
                 idiom = 1;

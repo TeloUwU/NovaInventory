@@ -66,6 +66,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="zxing">
+      <HintPath>..\..\..\..\..\..\Desktop\Yo\zxing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\Conexion.cs" />
@@ -161,7 +164,9 @@
     <Compile Include="Vista\frmCategoria.Designer.cs">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmGenerarQR.cs" />
+    <Compile Include="Vista\frmGenerarQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vista\frmGenerarQR.Designer.cs">
       <DependentUpon>frmGenerarQR.cs</DependentUpon>
     </Compile>

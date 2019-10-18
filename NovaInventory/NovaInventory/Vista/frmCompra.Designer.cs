@@ -493,6 +493,7 @@
             this.chkcompras.TabIndex = 30;
             this.chkcompras.Text = "English Language";
             this.chkcompras.UseVisualStyleBackColor = true;
+            this.chkcompras.CheckedChanged += new System.EventHandler(this.chkcompras_CheckedChanged_1);
             // 
             // frmCompra
             // 
